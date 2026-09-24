@@ -200,3 +200,36 @@ Net: R-1-6 is now the best-documented R-1 district (lot/height/setbacks/accessor
 - `rulegraph/murray_pilot_report.md` (Pack-7: this Wave 4 section; amendment-watch resolved)
 
 Canonical `verified_rules.json` and MU overlays untouched. DRAFT/UNVERIFIED status preserved.
+
+## Wave 5 notes — Pack-8, 2026-09-24
+
+**Target — R-1-12 lot/setbacks/width/coverage from primary code: STILL NULL (dated evidence of absence).**
+
+Pack-8 ran the remaining primary-code angles for §§17.108.080 (YARD REQUIREMENTS) and 17.108.130 (coverage) plus the lot-area/width provisions, and closed none of them. All values stay `null`; the gaps below are now evidenced absences, not unexplored territory:
+
+1. **~14 indexed-search variants** for the .080/.130 page text (section numbers alone, with `murrayut`/`codelibrary`, "YARD REQUIREMENTS", distinctive-phrase patterns, neighboring-section sweeps .070–.140): **0 Murray hits**. Bare-number queries (`"17.108.080"`, `"17.108.130"`) return Sacramento/Lathrop/Corona results only. The two section pages are not indexed in the free corpus.
+2. **June 2025 packet fully text-mined** (https://www.murray.utah.gov/DocumentCenter/View/16772/060525-Planning-Commission-Packet?bidId — 17,696 text lines): its EXISTING CODE appendix quotes **§17.108.100 yard exceptions only**; the staff analysis states no base yard numbers. Confirms Ord. 25-30 touched exceptions, not base yards.
+3. **2021-05-06 packet text-mined** (https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=): Figure 3 covers **A-1 / R-1-6 / R-M-15 only** (R-1-6: front 20', rear 25', side 5', corner 20' — corroborates Pack-6). No R-1-12.
+4. **2021-03-04 packet text-mined** (https://www.murray.utah.gov/DocumentCenter/View/11743/030421-Planning-Commission-Packet?bidId=): R-1-12 appears only in general-plan discussion ("detached in character"; rezoning to R-1-12/R-1-10/R-1-6/R-2-10 "generally supported"). No numbers.
+5. **2025-07-09 PC minutes** (https://www.utah.gov/pmn/files/1296915.pdf): staff "detailed the differences between R-1-6, R-1-10, and R-1-12 zones, including … Minimum lot sizes and widths … Setback requirements" — the minutes record the **categories only, no R-1-12 numbers**.
+6. **Access limits**: amlegal direct curl returns HTTP 403 (Cloudflare); Wayback/CDX has no archived Murray section pages; browser page-fetch is terminal this turn. The .080/.130 text exists behind amlegal's JS client rendering — reachable only via the live browser or a JS-capable crawl.
+
+**Future lead (recorded, not pursued this turn):** Murray staff reports use a *"Setbacks, Height, Lot Width — The R-1-X Zone requires the following"* template. An **R-1-12 subdivision/flag-lot packet** using that template would quote the base numbers verbatim. Also the **July 2025 PC packet** (rezone item compared R-1-6/R-1-10/R-1-12) may carry a Figure-3-style table.
+
+**BONUS — R-1-8 secondary setbacks + width CLOSED (official-city-document tier):**
+
+7. **2020-05-07 PC packet** (https://murray.utah.gov/DocumentCenter/View/11088/050720-Planning-Commission-Packet?bidId= — Lois Lane Subdivision, Project 19-055) staff report, "Setbacks, Height, Lot Width" section: *"The R-1-8 Zone requires the following: Height: 35' maximum (dwelling); Front Yard: 25' minimum; Rear Yard: 25' minimum; Side Yard, interior: 8' minimum (must total 20'); Side Yard, corner: 20' minimum."* Same report: single-family R-1-8 lots = 8,000 sq ft basic requirement (corroborates existing secondary lot value).
+8. **2022-10-20 PC minutes** (https://murray.utah.gov/Archive/ViewFile/Item/6217 — Hoggan Haven flag lot, Project 22-072): *"25-foot setbacks in the front and rear, and a minimum of eight feet on one side for a total of 20 on each side"* — independent corroboration.
+9. **2021-06-03 PC minutes** (https://www.murray.utah.gov/ArchiveCenter/ViewFile/Item/5604): *"The R-1-8 zone requires that lots have a minimum width of 80' as measured at the 25' building setback line."*
+
+Recorded in JSON as `districts.R-1-8.front/rear/side/corner_side_setback_ft` (25/25/8/20) and `min_lot_width_ft` (80), all `secondary_official_document` tier with "supersede with primary" notes. R-1-8 coverage still null; R-1-12 min lot / setbacks / width / coverage still null.
+
+**Method lesson:** Murray's staff-report template (*"The R-1-X Zone requires the following"*) is a better secondary source for base yards than code-text search — it quotes the numbers verbatim in subdivision items. When primary pages are JS-walled, mine the packet corpus by zone + "requires the following".
+
+## Files changed (Pack-8)
+
+- `rulegraph/murray_params_draft.json` (Pack-8: R-1-12 gap notes extended with dated evidence-of-absence — 14 search angles, 3 packets + 1 minutes set text-mined; R-1-8 secondary setbacks 25/25/8/20 + width 80' added with tiered sources; status + provenance updated; JSON validates)
+- `rulegraph/murray_title16_map.md` (Pack-8: 17.100 row updated to secondary setbacks/width; 17.108 row notes Pack-8 angles + future lead)
+- `rulegraph/murray_pilot_report.md` (Pack-8: this Wave 5 section)
+
+Canonical `verified_rules.json` and MU overlays untouched. DRAFT/UNVERIFIED status preserved.

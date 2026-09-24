@@ -308,7 +308,7 @@
         "note": "Final plat RECORDED (genealogy-confirmed): parent 21111020270000 retired from UGRC ParcelYear 2026; both children present with exact approved dimensions. A plat cannot record in Salt Lake County without city approval signatures. Preliminary: staff recommended approval 2022-06-07; PC meeting 2022-06-14 (vote minutes unrecovered after 2 searches; recorded plat supersedes as approval evidence).",
         "project": "4S22/SUB-000226-2022"
       },
-      "scored": false,
+      "scored": true,
       "zoning": {
         "status": "known",
         "district": "R-1-10",
@@ -322,8 +322,9 @@
         "source": "Staff report 2022-06-07 (https://www.utah.gov/pmn/files/859213.pdf, retrieved 2026-09-24); UGRC Parcels_SaltLake FeatureServer (queried 2026-09-24); rulegraph/taylorsville_params_draft.json (DRAFT/UNVERIFIED). Per-dimension citations above.",
         "source_gap": "June 14, 2022 PC vote minutes not recovered after two searches; recorded final plat supersedes as approval evidence. Setbacks (25/5/16/15 ft) quoted in staff report; existing-home-retained condition (Lot 1) is not representable in the single-product harness \u2014 recorded as an inputs note."
       },
-      "status": "not_scored",
-      "not_scored_reason": "GATE (generator form coverage) FAILED 2026-09-24: prototype pipeline strategy is spine_road+culdesac only; it has no scheme family for a no-new-street lot split. On the reconstructed parent (31,434 sqft = 0.72 ac, valid single Polygon), 96 candidates evaluated, ZERO schemes generated \u2014 top blocking reasons: parcel_too_small_for_config (42), no_conforming_lots (46), below_min_lots_threshold (8); fallback (min_lots=2) also kept 0. Approved form is a conforming 2-lot infill split (Lot 1 21,139 sqft with existing SF home retained; Lot 2 10,263 sqft; no new dedicated street) that the generator cannot attempt. Scoring top=0 vs approved 2 would be a structurally invalid comparison (TAG Row House / Daybreak 11B Plat 2 precedent: do not force). Diagnostic saved at benchmark/runs/taylorsville-fields-sub/report.json (status=no_schemes_generated). Generator form-coverage gap is the carry-forward: NERON has no no-new-street split family and no retained-structure input. Vote-gate PASSED (recorded plat), parent-gate PASSED (0.22%), inputs-gate PASSED (all four dims cited). Re-score only when the pipeline can attempt no-new-street lot splits."
+      "status": "scored",
+      "not_scored_reason": null,
+      "score_note": "SCORED 2026-09-24 (GR-14B2, GreenRush): NERON top 3 lots vs 2 approved = +50.0%, OUTSIDE +/-15%. Lot-split family (DW-GEOM2, commits 27dcff4/bde99e9) generated 3 schemes (3-lot short-axis; 2-lot short-axis; 2-lot long-axis); envelope CONTAINS the approved 2-lot form. Margin-based ranker selected the 3-lot max-yield scheme (margin 0.5368 vs 0.3053). Taxonomy: RANKING miss (same failure mode as Daybreak 12B Plat 1; Rishab accuracy directive #5 product-mix prior not yet implemented). Blind re-run: inputs unchanged from GR-14 triage (min_lot_area 10000 / min_frontage 80 / road_width 50, all cited); no tuning to the answer. Evidence L2 (recorded final plat). Parent 0.22%. Retained-home condition (Lot 1, 21,139 sqft existing SF) not representable in single-product harness -- recorded as inputs note, not the driver of the miss. R-5 street-connectivity check misfires on no-new-street schemes (checks_fail=1 on all three; family-maturity note for D-Wade)."
     }
   ],
   "research_candidates_not_scored": [

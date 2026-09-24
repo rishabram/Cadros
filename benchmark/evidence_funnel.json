@@ -70,12 +70,12 @@
    "jurisdiction": "Taylorsville",
    "file_number": "4S22/SUB-000226-2022",
    "reported_lots": 2,
-   "stage": "TRIAGED",
+   "stage": "SCORED",
    "discovered_at": "2026-09-24T11:30:00-06:00",
    "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (staff report link not included in doc post)",
-   "evidence_level": "L1",
+   "evidence_level": "L2",
    "packet_complete": true,
-   "note": "PRIORITY 2 COMPLETE. Full 11-field packet. CLEANEST parent reconstruction in benchmark: exact 0.00% child-dim match. Final plat recorded = closed case.",
+   "note": "SCORED 2026-09-24 (GR-14B2): NERON top 3 vs 2 approved = +50%, outside +/-15%. DW-GEOM2 lot-split family generated 3 schemes; envelope contains approved 2-lot form; margin ranker chose max-yield 3-lot. RANKING miss (Daybreak-12B pattern).",
    "address": "4768 S 1175 W, Taylorsville, UT",
    "applicant": "Nancy Fields",
    "approval": "FINAL PLAT RECORDED (genealogy-confirmed); preliminary staff-recommended 2022-06-07, PC meeting 2022-06-14",
@@ -109,7 +109,14 @@
     "June 14 2022 vote minutes unrecovered (recorded plat supersedes)"
    ],
    "gate_outcome": "TRIAGED 2026-09-24 (GreenRush-14). Vote-gate PASS (final plat recorded; June 2022 minutes superseded). Parent-gate PASS (child-union 0.7216 ac vs 0.72 official, 0.22%; exact 0.00% child-dim match). Inputs-gate PASS (min_lot_area 10000 sqft / min_frontage 80 ft from approval-date staff report; road_width 50 ft Taylorsville Sec. 13.21.100 local ROW; consistency check: 0 mismatches). GENERATOR-GATE FAILED: prototype spine_road+culdesac-only generator produced 0 schemes (24 candidates on clean tree, 96 with D-Wade's in-flight culdesac work \u2014 all rejected; top reason no_conforming_lots). Approved form is a conforming 2-lot no-new-street infill split with a retained home \u2014 no scheme family exists. NOT scored (do-not-force precedent); re-score only when the pipeline can attempt no-new-street splits. Diagnostic: benchmark/runs/taylorsville-fields-sub/report.json. Stage: UNSCORABLE on generator form coverage, not on evidence.",
-   "stage_detail": "TRIAGED -> UNSCORABLE (generator form-coverage gap)"
+   "stage_detail": "TRIAGED -> UNSCORABLE (generator form-coverage gap) -> SCORED",
+   "scored_at": "2026-09-24T17:16:23-0600",
+   "approved_lots": 2,
+   "neron_top": 3,
+   "relative_error": 0.5,
+   "within_15pct": false,
+   "error_taxonomy": "RANKING",
+   "discovered_to_scoreable_hours": 5.77
   },
   {
    "id": "herriman-oaklie-estates",

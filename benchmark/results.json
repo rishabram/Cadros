@@ -67,7 +67,7 @@
     {
       "approved_lots": 26,
       "plat_id": "meadows-of-murray",
-      "reason": "min_frontage_ft unsourceable: approval-date R-N-B twinhome standards (Sec. 17.140.040 as amended 2020-03-17) state 5,000 sqft minimum lot area and setbacks (front 25', rear 25', interior common side 0', interior side 8', corner side 20') but NO minimum lot width. Staff report header 'Lot Area, Width, Setbacks, and Height Standards' lists no width value. Per ZONING_POLICY, width proxy requires code-stated width minimum; none exists. Frontage is a genuine gap, not a research failure. Harness requires min_frontage_ft for scored plats.",
+      "reason": "ZONING BLOCK LIFTED 2026-09-24 (DW-PROD1): attached_twinhome mode supports width-less frontage (no min_frontage_ft required; product unit widths 30/35/40 as design search, not a zoning proxy). PARENT BLOCK REMAINS: 10 vacant parcels totaling 4.41 acres (parcel IDs 22-19-279-015, -016, -018, -024, -025, -027, -028, -021, -009, -010 per staff report); retired from current UGRC fabric; parent reconstruction not yet attempted. Plat stays unscored until parent polygon is reconstructed.",
       "status": "not_scored"
     },
     {
@@ -127,12 +127,29 @@
     },
     {
       "approved_lots": 2,
+      "neron_top_ranked_lots": 3,
       "plat_id": "taylorsville-fields-sub",
-      "reason": "no reason recorded",
-      "status": "not_scored"
+      "relative_error": 0.5,
+      "schemes": [
+        {
+          "lots": 3,
+          "scheme_id": "21111020270000-split-short-3"
+        },
+        {
+          "lots": 2,
+          "scheme_id": "21111020270000-split-short-2"
+        },
+        {
+          "lots": 2,
+          "scheme_id": "21111020270000-split-long-2"
+        }
+      ],
+      "status": "scored",
+      "within_15pct": false,
+      "zoning_source": "Staff report 2022-06-07 (https://www.utah.gov/pmn/files/859213.pdf, retrieved 2026-09-24); UGRC Parcels_SaltLake FeatureServer (queried 2026-09-24); rulegraph/taylorsville_params_draft.json (DRAFT/UNVERIFIED). Per-dimension citations above."
     }
   ],
-  "scored_plats": 2,
+  "scored_plats": 3,
   "tolerance": 0.15,
   "within_tolerance": 0
 }

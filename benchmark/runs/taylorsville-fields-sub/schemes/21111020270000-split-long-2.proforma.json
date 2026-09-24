@@ -1,0 +1,19 @@
+{
+  "scheme_id": "21111020270000-split-long-2",
+  "assumptions": {
+    "sale_price_per_lot": 95000.0,
+    "road_cost_per_lf": 500.0,
+    "soft_costs_fixed": 120000.0,
+    "contingency_pct": 0.1,
+    "road_length_ft": 0,
+    "source": "Placeholder assumptions for demo pro forma. Override per project; MarketGraph (\u00a74) will supply these from market evidence."
+  },
+  "lot_count": 2,
+  "revenue": 190000.0,
+  "infra_cost": 0.0,
+  "soft_costs": 120000.0,
+  "contingency": 12000.0,
+  "total_cost": 132000.0,
+  "profit": 58000.0,
+  "margin": 0.3053
+}

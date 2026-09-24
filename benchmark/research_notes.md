@@ -714,3 +714,13 @@ name parent parcel IDs, plat ROW widths, and lot layout in one shot.
 **Outcome:** scored set remains 2/17 (Tripp Lane + Daybreak V12B Plat 1), 0/2 within ±15%. GR-13 banks two plats.json entries (daybreak-v11b-plat2: not_scored, product-gate failure documented; daybreak-v12b-plat4: vote_confirmed_document_incomplete) and leaves the product-mix gap as the binding constraint for the next scoring wave.
 
 **Carry-forward lesson:** run the PRODUCT gate before the DOCUMENT deep-dive when the candidate is mixed-use — GR-13 spent document effort on V11B Plat 2 before confirming the harness couldn't score it. Vote-first, product-second, documents-third.
+
+## GR-14B2 — Taylorsville Fields Subdivision SCORED (2026-09-24) — RANKING miss, +50%
+
+**Mission:** re-run the Fields benchmark against the engine with D-Wade's DW-GEOM2 lot-split scheme family (commits 27dcff4, bde99e9), resolving the GR-14 GENERATOR-GATE failure (0 schemes; spine_road+culdesac only).
+
+**Blind protocol.** Inputs frozen from the GR-14 triage (staff report 2022-06-07; UGRC child-union parent; rule-pack dims); no tuning to the approved 2-lot answer. `plan_generation` now auto-tries `plan_generation_split` when street strategies yield nothing — no sentinel override needed; road_width_ft stayed at the cited 50 ft code value per the cross-lane consistency directive.
+
+**Outcome:** 3 schemes (split-short-3 / split-short-2 / split-long-2); top = 3 lots vs 2 approved → +50.0%, outside ±15%. Scored set 3/17, 0/3 within tolerance. Taxonomy: RANKING — envelope contains the approved form; margin ranker picked max yield (0.5368 vs 0.3053). Second replication of the Daybreak-12B ranking pattern at infill scale; retained-home condition (Lot 1, 21,139 sqft existing SF kept whole) is an inputs note, not the miss driver. Artifacts: benchmark/runs/taylorsville-fields-sub/ (report.json, comparison.csv, 3 DXF + proformas). Funnel DISCOVERED→SCOREABLE: 5.77 h.
+
+**Carry-forward lesson:** when a new scheme family lands, the honest re-score is (1) freeze triage inputs, (2) re-run with zero tuning, (3) classify the miss before celebrating the unblock — the generator gate opening does not imply the score passes. Also: always revert harness re-run artifacts for OTHER plats (the full-harness re-run regenerated daybreak/tripp DXFs with cosmetic CLASS-record diffs from the fast-DXF writer; reverted to keep the diff reviewable).

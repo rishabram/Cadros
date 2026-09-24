@@ -1,28 +1,30 @@
 {
   "parcel_id": "21111020270000",
-  "status": "no_schemes_generated",
+  "status": "ok",
   "scheme_generation": {
-    "strategy": "spine_road",
-    "candidates_evaluated": 24,
+    "strategy": "spine_road+culdesac",
+    "candidates_evaluated": 96,
     "size_threshold_ratio": 2.0,
     "area_min_lot_ratio": 3.14,
     "primary_min_lots": 4,
     "primary_schemes_kept": 0,
     "primary_blocking_reasons": {
-      "below_min_lots_threshold": 3,
-      "no_conforming_lots": 15,
-      "parcel_too_small_for_config": 6
+      "below_min_lots_threshold": 8,
+      "no_conforming_lots": 46,
+      "parcel_too_small_for_config": 42
     },
     "fallback_used": true,
     "fallback_min_lots": 2,
     "fallback_schemes_kept": 0,
     "fallback_blocking_reasons": {
-      "below_min_lots_threshold": 3,
-      "no_conforming_lots": 15,
-      "parcel_too_small_for_config": 6
+      "below_min_lots_threshold": 8,
+      "no_conforming_lots": 46,
+      "parcel_too_small_for_config": 42
     },
     "top_blocking_reason": "no_conforming_lots",
-    "verdict": "no_schemes__unexpected"
+    "verdict": "schemes_found",
+    "lot_split_used": true,
+    "lot_split_schemes_kept": 3
   },
   "parcel_area_sqft": 31434.3,
   "parcel_area_acres": 0.72,
@@ -97,15 +99,1460 @@
       "source": "derived from R-1"
     }
   ],
-  "schemes": [],
-  "ranked_order": [],
+  "schemes": [
+    {
+      "scheme_id": "21111020270000-split-short-3",
+      "lots": 3,
+      "road_ft": 0,
+      "params": {},
+      "fingerprint": "f413011e43351544",
+      "proforma": {
+        "scheme_id": "21111020270000-split-short-3",
+        "assumptions": {
+          "sale_price_per_lot": 95000.0,
+          "road_cost_per_lf": 500.0,
+          "soft_costs_fixed": 120000.0,
+          "contingency_pct": 0.1,
+          "road_length_ft": 0,
+          "source": "Placeholder assumptions for demo pro forma. Override per project; MarketGraph (\u00a74) will supply these from market evidence."
+        },
+        "lot_count": 3,
+        "revenue": 285000.0,
+        "infra_cost": 0.0,
+        "soft_costs": 120000.0,
+        "contingency": 12000.0,
+        "total_cost": 132000.0,
+        "profit": 153000.0,
+        "margin": 0.5368
+      },
+      "validation": [
+        {
+          "rule_id": "R-1",
+          "status": "pass",
+          "detail": "3/3 lots meet min area"
+        },
+        {
+          "rule_id": "R-2",
+          "status": "pass",
+          "detail": "3/3 lots meet min frontage"
+        },
+        {
+          "rule_id": "R-3",
+          "status": "pass",
+          "detail": "all lots within parcel"
+        },
+        {
+          "rule_id": "R-4",
+          "status": "pass",
+          "detail": "max pairwise lot overlap: 0.00 sqft"
+        },
+        {
+          "rule_id": "R-5",
+          "status": "fail",
+          "detail": "road meets parcel boundary in 0 place(s)"
+        },
+        {
+          "rule_id": "R-6",
+          "status": "pass",
+          "detail": "3 lots vs theoretical max 3.1"
+        }
+      ],
+      "clean": false,
+      "rulegraph_verdict": "PASS",
+      "rulegraph_applicable_rules": 0,
+      "rulegraph": [
+        {
+          "rule_id": "MU-5-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-12",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-13",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-14",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-15",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-16",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-12",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-13",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-14",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-15",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-16",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-OPENSPACE-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule districts ['MU-5', 'MU-6', 'MU-11'] do not include parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        }
+      ],
+      "use_verdict": "UNKNOWN",
+      "use_applicable_rows": 0,
+      "use_allowance": [],
+      "dxf": "schemes/21111020270000-split-short-3.dxf"
+    },
+    {
+      "scheme_id": "21111020270000-split-short-2",
+      "lots": 2,
+      "road_ft": 0,
+      "params": {},
+      "fingerprint": "7d39cfe2683339bc",
+      "proforma": {
+        "scheme_id": "21111020270000-split-short-2",
+        "assumptions": {
+          "sale_price_per_lot": 95000.0,
+          "road_cost_per_lf": 500.0,
+          "soft_costs_fixed": 120000.0,
+          "contingency_pct": 0.1,
+          "road_length_ft": 0,
+          "source": "Placeholder assumptions for demo pro forma. Override per project; MarketGraph (\u00a74) will supply these from market evidence."
+        },
+        "lot_count": 2,
+        "revenue": 190000.0,
+        "infra_cost": 0.0,
+        "soft_costs": 120000.0,
+        "contingency": 12000.0,
+        "total_cost": 132000.0,
+        "profit": 58000.0,
+        "margin": 0.3053
+      },
+      "validation": [
+        {
+          "rule_id": "R-1",
+          "status": "pass",
+          "detail": "2/2 lots meet min area"
+        },
+        {
+          "rule_id": "R-2",
+          "status": "pass",
+          "detail": "2/2 lots meet min frontage"
+        },
+        {
+          "rule_id": "R-3",
+          "status": "pass",
+          "detail": "all lots within parcel"
+        },
+        {
+          "rule_id": "R-4",
+          "status": "pass",
+          "detail": "max pairwise lot overlap: 0.00 sqft"
+        },
+        {
+          "rule_id": "R-5",
+          "status": "fail",
+          "detail": "road meets parcel boundary in 0 place(s)"
+        },
+        {
+          "rule_id": "R-6",
+          "status": "pass",
+          "detail": "2 lots vs theoretical max 3.1"
+        }
+      ],
+      "clean": false,
+      "rulegraph_verdict": "PASS",
+      "rulegraph_applicable_rules": 0,
+      "rulegraph": [
+        {
+          "rule_id": "MU-5-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-12",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-13",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-14",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-15",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-16",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-12",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-13",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-14",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-15",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-16",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-OPENSPACE-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule districts ['MU-5', 'MU-6', 'MU-11'] do not include parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        }
+      ],
+      "use_verdict": "UNKNOWN",
+      "use_applicable_rows": 0,
+      "use_allowance": [],
+      "dxf": "schemes/21111020270000-split-short-2.dxf"
+    },
+    {
+      "scheme_id": "21111020270000-split-long-2",
+      "lots": 2,
+      "road_ft": 0,
+      "params": {},
+      "fingerprint": "124876524924cd81",
+      "proforma": {
+        "scheme_id": "21111020270000-split-long-2",
+        "assumptions": {
+          "sale_price_per_lot": 95000.0,
+          "road_cost_per_lf": 500.0,
+          "soft_costs_fixed": 120000.0,
+          "contingency_pct": 0.1,
+          "road_length_ft": 0,
+          "source": "Placeholder assumptions for demo pro forma. Override per project; MarketGraph (\u00a74) will supply these from market evidence."
+        },
+        "lot_count": 2,
+        "revenue": 190000.0,
+        "infra_cost": 0.0,
+        "soft_costs": 120000.0,
+        "contingency": 12000.0,
+        "total_cost": 132000.0,
+        "profit": 58000.0,
+        "margin": 0.3053
+      },
+      "validation": [
+        {
+          "rule_id": "R-1",
+          "status": "pass",
+          "detail": "2/2 lots meet min area"
+        },
+        {
+          "rule_id": "R-2",
+          "status": "pass",
+          "detail": "2/2 lots meet min frontage"
+        },
+        {
+          "rule_id": "R-3",
+          "status": "pass",
+          "detail": "all lots within parcel"
+        },
+        {
+          "rule_id": "R-4",
+          "status": "pass",
+          "detail": "max pairwise lot overlap: 0.00 sqft"
+        },
+        {
+          "rule_id": "R-5",
+          "status": "fail",
+          "detail": "road meets parcel boundary in 0 place(s)"
+        },
+        {
+          "rule_id": "R-6",
+          "status": "pass",
+          "detail": "2 lots vs theoretical max 3.1"
+        }
+      ],
+      "clean": false,
+      "rulegraph_verdict": "PASS",
+      "rulegraph_applicable_rules": 0,
+      "rulegraph": [
+        {
+          "rule_id": "MU-5-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-12",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-13",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-14",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-15",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-5-16",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-5 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-12",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-13",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-14",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-15",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-6-16",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-6 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-07",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-08",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-09",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-10",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-11-11",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district MU-11 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "MU-OPENSPACE-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule districts ['MU-5', 'MU-6', 'MU-11'] do not include parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "M-1-06",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district M-1 != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "OS-05",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district OS != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-01",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-02",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-03",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        },
+        {
+          "rule_id": "PL-04",
+          "outcome": "PASS",
+          "applicable": false,
+          "reason": "not applicable: rule district PL != parcel district R-1-10",
+          "status": "VERIFIED"
+        }
+      ],
+      "use_verdict": "UNKNOWN",
+      "use_applicable_rows": 0,
+      "use_allowance": [],
+      "dxf": "schemes/21111020270000-split-long-2.dxf"
+    }
+  ],
+  "ranked_order": [
+    "21111020270000-split-short-3",
+    "21111020270000-split-short-2",
+    "21111020270000-split-long-2"
+  ],
   "rulegraph": {
     "store": "rulegraph/verified_rules.json",
     "store_fingerprint": "9cc91ac71f5f1de221b9609291ce264ca33d6c6ba9b98f7e7f898778fd0cfd1c",
     "rules_evaluated": 59,
     "program_supplied": false,
     "scheme_verdicts": {
-      "PASS": 0,
+      "PASS": 3,
       "FAIL": 0,
       "UNKNOWN": 0
     },
@@ -401,7 +1848,7 @@
       "PASS": 0,
       "CONDITIONAL_PASS": 0,
       "FAIL": 0,
-      "UNKNOWN": 0,
+      "UNKNOWN": 3,
       "MANUAL_REVIEW": 0
     },
     "note": "Use-allowance verdicts are machine-evaluated against the human-verified \u00a721A.33 use-table packs: 191 M-1/OS/PL rows (human verdicts by Rohan, 2026-09-23) + 322 MU-5/MU-6/MU-11 rows (batch-verified by Rohan, 2026-09-23; the machine evaluates, never verifies). UNKNOWN never means allowed \u2014 it means the use could not be confirmed (no proposed uses supplied, no use rows for the district, no matching verified row, or an ambiguous row such as M1-U-28). MANUAL_REVIEW means a qualifying-provision footnote whose text was not retrieved needs a human read. FAIL rows are blank-cell code facts (the \u00a721A.33 legend: blank = not permitted)."

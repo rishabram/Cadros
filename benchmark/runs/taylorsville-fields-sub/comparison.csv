@@ -1,0 +1,4 @@
+scheme_id,lots,road_ft,angle_deg,road_offset_frac,revenue,infra_cost,soft_costs,contingency,total_cost,profit,margin,checks_fail,checks_warning
+21111020270000-split-short-3,3,0,,,285000.0,0.0,120000.0,12000.0,132000.0,153000.0,0.5368,1,0
+21111020270000-split-short-2,2,0,,,190000.0,0.0,120000.0,12000.0,132000.0,58000.0,0.3053,1,0
+21111020270000-split-long-2,2,0,,,190000.0,0.0,120000.0,12000.0,132000.0,58000.0,0.3053,1,0

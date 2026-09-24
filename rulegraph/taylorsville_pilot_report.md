@@ -48,3 +48,22 @@ Closed 5 of Pack-1's 7 assigned gaps (2 closed fully, 3 closed partially; the re
 - Remaining Title 13 work: ~15 unextracted chapters with dimensional rules (13.07, 13.08, 13.09, 13.10, 13.11, 13.12, 13.13, 13.15–13.18, 13.22, 13.23, 13.25–13.29, 13.37) + primary fetch of §13.24.080 + use-table rows.
 - Rule-volume estimate: pilot yielded ~120 numeric values from 5 sections. Full pack likely **400–700 numeric params** across **15–20 sections** — roughly **3–5 waves of this size**, or one large lane run of ~6–8 hours wall-clock with verification.
 - Recommendation: next wave = §13.23 (non-residential dimensional) + §13.24.080 primary fetch + §13.07/13.08 use tables (uses-per-story analogs). After that, overlays 13.15–13.18 + 13.12.
+
+## Pack-3 (Wave 2) — 2026-09-24: gap-closure results
+
+**Closed / materially advanced:**
+
+1. **RM density column 1 → RM-4 (PROVISIONAL).** Was: unnamed, "do not infer RM-4". Now: assigned RM-4 as a draft inference on two independent legs — (a) the RM-N = N u/acre naming correspondence is exact for all six code-listed columns, and (b) RM-4 appears as an applied district label on official City zoning maps in 7 Planning Commission staff reports spanning 2022-01-14 to 2025-06-02. Honest caveat recorded in-file: current §13.07.010 text (fetched primary, amlegal 0-0-0-5686) lists only RM-6/8/10/12/16/S — the code text and the zoning map disagree, so this stays PROVISIONAL until a code-text source confirms RM-4.
+2. **R-1/R-2 lot width/frontage → EVIDENCED ABSENCE.** Fetched the primary §13.04.020 page (amlegal 0-0-0-5538): the district table has a minimum-lot-size column only — no width column exists. Combined with the full §13.20.020 table read (no width/frontage rows) and §13.21.210 (frontage required on dedicated/improved street, no numeric value), the file now records that Taylorsville's code states no numeric R-1/R-2 lot-width or frontage minimum, rather than "not found yet".
+3. **R-1/R-2 lot coverage → EVIDENCED ABSENCE.** Full §13.20.020 table (primary page) contains no coverage row. MH remains 75% per §13.20.070(L).
+4. **§13.23.070 screening wall — NEW.** Captured from the Jan 2022 PC staff report for File #48C21 (quoting code text, Ord. 18-07): opaque masonry wall 6–8 ft where commercial/industrial abuts residential. Secondary source; recorded as such.
+5. **RM-16 blank column explained.** Ord. 20-12 (April 2020) added the 16-u/acre tier per council minutes; the codified table's value cells were left blank. Recorded in the density-table gap note.
+
+**Strengthened but still open:**
+
+6. **R-1 accessory setback.** No codified standard located (bounded ch-13.24 search added). New secondary context: Oct 2024 PC minutes paraphrase staff that detached residential structures need "minimum 5 feet from the property line" (no section cited) — recorded as context, not a standard; consistent with §13.20.020 note 4's 5-ft fire-wall threshold.
+7. **Primary §13.24.080 page.** Still not indexed on amlegal after additional bounded searches. Residential rows remain backed by two official-city secondary sources (Nov 2024 PC staff report Exhibit A quoting current text; Ord 24-05 for school/microeducation rows).
+
+**Not attempted this wave (unchanged):** use tables §13.07/13.08, chapters 13.25–13.29/13.37, overlays, procedures, non-residential §13.24.080 rows, main §13.23 dimensional table (alternate angles exhausted for now: site-plan staff reports yielded §13.23.070/13.23.240(B) references but no dimensional table).
+
+**Files changed:** `rulegraph/taylorsville_params_draft.json` (single-line format preserved; JSON parses), `rulegraph/taylorsville_title13_map.md`, `rulegraph/taylorsville_pilot_report.md`. Canonical `verified_rules.json` and MU overlays untouched.

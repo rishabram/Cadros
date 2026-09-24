@@ -67,3 +67,17 @@ Closed 5 of Pack-1's 7 assigned gaps (2 closed fully, 3 closed partially; the re
 **Not attempted this wave (unchanged):** use tables §13.07/13.08, chapters 13.25–13.29/13.37, overlays, procedures, non-residential §13.24.080 rows, main §13.23 dimensional table (alternate angles exhausted for now: site-plan staff reports yielded §13.23.070/13.23.240(B) references but no dimensional table).
 
 **Files changed:** `rulegraph/taylorsville_params_draft.json` (single-line format preserved; JSON parses), `rulegraph/taylorsville_title13_map.md`, `rulegraph/taylorsville_pilot_report.md`. Canonical `verified_rules.json` and MU overlays untouched.
+
+## Pack-W3 (Wave 3) — 2026-09-24: reconciliation of the three remaining nulls
+
+**Outcome: all three honestly resolved; none filled.** This wave converted three "not found yet" gaps into characterized, source-tiered, dated records.
+
+**Resolved:**
+
+1. **R-1 accessory setback → strengthened null.** The 5-ft minutes statement is now fully identified: 2024-10-22 PC minutes, File #29C24-CUP-000487-2024, 1285 W Taylorsville Expressway, OS zone — an Open Space CUP for a detached structure at Fore Lakes Golf Course; minutes record staff stating verbatim "Detached structure on residential lots were required to be minimum 5 feet from the property line" (no section cited; official-secondary, uncited). New search angles (site:taylorsvilleut.gov, §13.11, building/shed-permit pages) found no Taylorsville-published standard — shed-permit results were all other jurisdictions. `setback_ft` stays null; the file now explicitly warns against converting the paraphrase into a codified standard.
+2. **Primary §13.24.080 page → EVIDENCED ABSENCE.** Five bounded search angles located no American Legal page for Taylorsville §13.24.080 as of 2026-09-24 (site: search collision with Lake Havasu AZ noted as number-collision evidence). The section exists (Ord 24-05 reproduces its full amended text) but amlegal does not expose a page. Residential rows remain official-secondary.
+3. **RM-4 → characterized conflict, still PROVISIONAL.** Primary §13.20.060 page (amlegal 0-0-0-7605) confirms 7 value columns, empty header cells in machine-readable text, and a 2013-dating history line. Precise conflict statement now on record: codified density table (7 columns incl. 4 u/a) vs codified district list (6 names), with 7 official zoning maps (2022→2025) siding with the table. No web source confirms a current codified RM-4 in Taylorsville. PROVISIONAL label retained; graduation requires human/code-history reconciliation.
+
+**Files changed:** `rulegraph/taylorsville_params_draft.json` (gap reasons + `wave3` fields + provenance + status line; single-line format preserved, JSON parses), `rulegraph/taylorsville_title13_map.md`, `rulegraph/taylorsville_pilot_report.md`. Canonical `verified_rules.json` and MU overlays untouched.
+
+**Follow-ups for later waves/humans:** (a) code-history reconciliation of RM-4 — find the originating pre-2013 ordinance or the amendment that dropped RM-4 from the §13.07.010 list; (b) planner/PE read on whether the Oct 2024 minutes' 5-ft statement reflects codified practice elsewhere (e.g., Title 15 building-code adoption); (c) §13.24.080 primary page — retry amlegal after index refresh; a direct ask to the city recorder is possible.

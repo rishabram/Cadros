@@ -669,3 +669,25 @@ name parent parcel IDs, plat ROW widths, and lot layout in one shot.
 **Harness inputs:** min_frontage_ft=30 (Small Lot, quoted); min_lot_area_sqft=1500 (DERIVED 30'×50', documented); road_width_ft=28 (South Jordan S-1 residential). All in plats.json with per-dimension citations.
 
 **Result:** NERON top-ranked 76 vs 61 approved (24.6% over; outside ±15%). Envelope 49–76 brackets 61 (59/60/62 within tolerance); max-yield ranker picks 76. 0/2 within tolerance. See results_narrative.md for the product reading (over-yield on mixed-product P-C; ranking gap, not generation gap).
+
+## GreenRush-12 — Daybreak Village 12B Plat 3 replication test — NOT SCOREABLE, geometry leg failed (2026-09-24)
+
+**Mission:** replication test of the Plat 1 over-yield pattern (GR11: NERON 76 vs 61 approved, +24.6%; ranking gap not generation gap). Target: Daybreak Village 12B Plat 3 (South Jordan PLPP202400186): 30 SF lots + 3 park lots, 7.529 ac, P-C, preliminary approval 6-0 on 2024-12-10.
+
+**Document legs (all green).**
+- Staff report re-verified HTTP 200 on 2026-09-24 (990 KB PDF): https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e290d8f6b578423f9ab8c6b58c34d6ae/ITEM-Attachment-001-8827ff0b4f99463fbed00f32527460ca.pdf
+- Report facts: "Generally 7120 West Docksider Drive"; 7.529 acres; "30 single family residential lots, 3 park lots (P-lots)"; P-C zone; design guidelines "same as those approved for the previous Daybreak Village 12B subdivisions" (i.e., Plat 1 packet's adopted guidelines apply — same input derivation rules would hold: frontage 30' quoted, area 1500 derived, road 28' S-1).
+- Plat figure (Perigee Consulting, "Sheet 2 of 6", rendered from packet): lots 162–187 (areas 2,975–9,478 sqft) + park lots P-108 (10,041 sqft), P-109 (8,941 sqft), P-110; interior streets DREADNOUGHT LANE and BARTOL LANE; west boundary GRAY GHOST DRIVE; north boundary DOCKSIDER DRIVE; south abuts DAYBREAK VILLAGE 12B PLAT 1; north abuts "VP DAYBREAK DEVCO LLC 26-22-103-004". Location map shows the plat boundary (yellow polygon) immediately west of the Plat 1 parent parcel.
+
+**Geometry leg (FAILED — honest stop per the >5% gate rule).**
+- Geocoded "7120 West Docksider Drive, South Jordan UT" → 40.54714, -112.06021 (full-address match).
+- UGRC/SLCo Parcels_SaltLake FeatureServer (https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/Parcels_SaltLake/FeatureServer/0), ParcelYear 2026:
+  1. No parcel with a Docksider Drive address near 7.529 ac (93 Docksider-addressed parcels county-wide; the 7100-block ones are individual lots 0.22–0.54 ac plus two large remnants 1.57/4.60 ac — none is the parent).
+  2. Spatial sweep: all parcels 5–9 ac within 2 km of the site → 12 parcels; NONE at the documented location. The single parcel within 5% of 7.529 ac (26223000070000, 7.25 ac, -3.6%) is at 7028 W 11800 S, ~1 km south — wrong location, fails the location test.
+  3. Final plat appears UNRECORDED: the plat's interior streets (Dreadnought Ln, Bartol Ln) return ZERO parcels in UGRC. The pre-subdivision parent should therefore still be current — but no ~7.529-ac parcel exists at the site.
+  4. The nearest large parcel (26221520100000, 7123 W Lake Ave, 8.68 ac, +15.3% vs 7.529) has an irregular small shape inconsistent with the plat boundary and fails the 5% area gate.
+- Per the standing rule (>5% unexplained area gap = geometry wrong, stop), no child-union reconstruction was attempted: with the final plat unrecorded and no still-current parent, child membership is unprovable, and a forced union would be dishonest geometry.
+
+**Outcome:** Plat 3 stays not_scored. Scored set remains 2/17 (Tripp Lane + Daybreak V12B Plat 1), 0/2 within ±15%. The replication test is INCOMPLETE — the Plat 1 over-yield pattern is neither confirmed nor refuted. The next lane should NOT retry Plat 3 geometry without a new source (recorded final plat at SLCo Recorder, or a GRAMA'd parent parcel map); the document side is fully banked above.
+
+**Carry-forward lesson:** for Daybreak plats, "preliminary approval + no interior-street parcels in UGRC" means the final plat is unrecorded — but unlike Plat 1, the parent is not always still current. When the parent is missing AND the final plat is unrecorded, the plat is geometrically unscorable from open data; record the negative result and move on rather than forcing a child-union.

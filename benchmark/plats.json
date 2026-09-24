@@ -377,8 +377,10 @@
    "plat_id": "daybreak-village-12b-plat-3",
    "reason_not_scored": "Pre-qualified 2026-09-24 (GreenRush-10), not yet scored. 30 single-family lots + 3 park lots, P-C, 7.529 ac, vacant, ~7120 W Docksider Dr. Lot sizes 2,975-9,467 sqft avg 5,885. Design guidelines same as previous Village 12B subdivisions (see Plat 1 packet).",
    "staff_report_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e290d8f6b578423f9ab8c6b58c34d6ae/ITEM-Attachment-001-8827ff0b4f99463fbed00f32527460ca.pdf",
-   "staff_report_verified": "HTTP 200, 2026-09-24 (GreenRush-10)",
-   "zone": "P-C (Planned Community)"
+   "staff_report_verified": "HTTP 200 re-verified, 2026-09-24 (GreenRush-12), 990 KB",
+   "zone": "P-C (Planned Community)",
+   "status": "not_scored (2026-09-24, GreenRush-12): geometry leg failed",
+   "score_note": "NOT SCOREABLE \u2014 parent geometry unresolvable. No still-current ~7.529-ac parent in UGRC at the documented site (Generally 7120 W Docksider Dr; spatial sweep of all 5-9 ac parcels within 2 km found none at the location); final plat appears unrecorded (interior streets Dreadnought Ln / Bartol Ln have zero UGRC parcels); nearest area-match (26223000070000, 7.25 ac) is 1 km south at 7028 W 11800 S. Per the >5% gate rule, no child-union attempted (membership unprovable). Document side fully banked: staff report HTTP 200 re-verified 2026-09-24, 30 SF lots + 3 parks, 7.529 ac, P-C, approved 6-0 2024-12-10; guidelines shared with Plat 1. Replication test incomplete; do not retry without recorded plat or GRAMA'd parent map."
   },
   {
    "acreage": 12.731,

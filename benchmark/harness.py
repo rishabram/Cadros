@@ -107,6 +107,15 @@ def write_results(results):
                 f"| {r['plat_id']} | {r.get('approved_lots', '?')} | — | — | not scored: {r['reason']} | — |"
             )
     lines += [""]
+    # Hand-written research narrative lives in results_narrative.md so that
+    # regenerating this file never destroys it (fixed 2026-09-24 after a
+    # harness run wiped the narrative sections). Deterministic: file content
+    # only; no timestamps.
+    narrative_path = os.path.join(BASE, "results_narrative.md")
+    if os.path.exists(narrative_path):
+        with open(narrative_path) as f:
+            lines.append(f.read().rstrip("\n"))
+            lines.append("")
     with open(os.path.join(BASE, "results.md"), "w") as f:
         f.write("\n".join(lines))
     return payload

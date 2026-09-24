@@ -1,14 +1,3 @@
-# Approved-plat benchmark results
-
-Tolerance: +/-15%. Aim: >=70% of scored plats within tolerance.
-Scored plats: 0. Within tolerance: 0.
-
-| plat_id | approved | neron (top-ranked) | rel err | within 15% | zoning source |
-|---|---|---|---|---|---|
-| mill-subdivision | 4 | — | — | not scored: plat does not state the zone; South Salt Lake commercial district for Sec 24 T1S R1W not determined from zoning map; Title 17 CC standards found but district assignment unsourced | — |
-| village-at-the-boulders-ph3 | None | — | — | not scored: only the subdivision abstract fetched so far; full plat PDF + lot count + zoning pending | — |
-| tag-row-house | 3 | — | — | not scored: not scored: zoning.status set to unknown 2026-09-24 because min_frontage_ft and road_width_ft are unsourced for 2018 RMF-45 (the harness honesty contract requires all four dims for known). not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage — not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45. | — |
-
 ## GreenRush swing (2026-09-24, greenfield-only follow-up)
 
 10 new candidates researched (Herriman ×2, Riverton ×1, Saratoga Springs ×4, South Jordan ×3; plus revisits of Swaner/Mill/Village at the Boulders). **0 newly scoreable.** Scored set remains 0/16 researched; pass rate undefined.

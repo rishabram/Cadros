@@ -18,17 +18,11 @@
     {
       "approved_lots": 3,
       "plat_id": "tag-row-house",
-      "reason": "not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage \u2014 not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45.",
+      "reason": "not scored: zoning.status set to unknown 2026-09-24 because min_frontage_ft and road_width_ft are unsourced for 2018 RMF-45 (the harness honesty contract requires all four dims for known). not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage \u2014 not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45.",
       "status": "not_scored"
     }
   ],
   "scored_plats": 0,
   "tolerance": 0.15,
-  "within_tolerance": 0,
-  "greenrush_2026_09_24": {
-    "candidates_added": 10,
-    "candidates_total": 16,
-    "scored_new": 0,
-    "finding": "Firm corpus-gap: no free source co-locates parent polygon + approval + approval-date zoning + road_width_ft for any greenfield plat. Structural blockers: (1) parent polygon needs UGRC SGID parcel-union REST or fetchable full-M&B plat PDF; (2) road_width_ft needs a citable city engineering standard drawing. Per ZONING_POLICY both stay gaps, never fills."
-  }
+  "within_tolerance": 0
 }

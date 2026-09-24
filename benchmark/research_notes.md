@@ -312,3 +312,44 @@ returned). Priority order: (1) city engineering standard drawings, (2) Broadbent
 - With Herriman (RD-01B: 60' ROW → 32 ft / 53' ROW → 28 ft) and Riverton (local 54' ROW
   → 29 ft pavement), all three target cities now have citable local-street
   road_width_ft values. Remaining step is matching each plat's actual ROW.
+
+### H4. Hidden Pines final-approval + completion evidence — FOUND 2026-09-24 (zoning still gap)
+
+- **Final subdivision approval:** Riverton City Planning Commission minutes, meeting **June 27,
+  2019** (minutes approved August 8, 2019):
+  `https://www.utah.gov/pmn/files/529031.pdf`. Motion text (verbatim from extractable text):
+  "Commissioner Hansen moved to APPROVE Application #PLZ-19-1003 — Hidden Pines Subdivision,
+  to be located at 3814 West 13800 South, subject to [4 listed conditions]" — motion passed
+  unanimously. **42 lots** (agenda: "42-lot subdivision proposed near 3814 West 13800 South").
+- **Completion acceptance + bond release:** Riverton City Council work session item, Sept 21, 2021:
+  Warranty bond release for "Hidden Pines (7212)", 3814 W 13800 S, developer **Cazco Enterprises,
+  LLC**, Western Surety Company; improvements inspected and found complete to Riverton standards;
+  100% release approved ($103,673.07 release at that tranche; $1,187,851.73 total bond):
+  `https://legistarweb-production.s3.amazonaws.com/uploads/attachment/pdf/1063141/_IP__2021Sep21_IssuePaper_HiddenAcres_7212_.pdf`
+- **Geotechnical report (context only):** "Geotechnical Investigation, Hidden Pines Subdivision,"
+  property at **3854 West 13800 South**, March 4, 2019, for Lovell Development (Project 18187):
+  42 new single-family homes; site accessed from 13800 S and Deer Mountain Drive; bound by a vacant
+  field to the north, a park to the east (Hamilton Sports Park), 13800 South to the south,
+  existing homes to the west:
+  `https://www.rivertonutah.gov/departments/public-works/engineering/geotechnical-reports/hidden-pines-subdivision-geotechnical-report.pdf`
+  No zoning district in the report.
+- **Zoning: still UNSOURCED after minutes, geotech, and bond-record legs.** None of the three
+  sources names the approval-date zone district. The minutes say zoning "was described" but the
+  district is not in extractable text. Keep as explicit gap — do NOT infer from current
+  fabric or lot yield.
+- **road_width_ft candidate:** Riverton local = **29 ft pavement** (H2 above), conditional on
+  sourcing that Hidden Pines' internal streets are local (54' ROW). Street names/classification
+  and plat-specific ROW: still gaps.
+
+### H5. Broadbent PMN PDF 1015940.pdf — CONFIRMED DEAD 2026-09-24 (replacement source needed)
+
+- Direct fetch of `https://www.utah.gov/pmn/files/1015940.pdf` returns a **315-byte HTML 404**,
+  not a PDF. The PMN URL stored in `plats.json` is stale.
+- Public search did not recover a replacement Broadbent staff report, final-plat document, or
+  final-approval record. Herriman PrimeGov portal is publicly reachable at
+  `https://herriman.primegov.com/Public/Portal`, but no Broadbent result was extracted this turn.
+- UGRC SGID parcels queried around ~6400 W 13800 S found no obvious large unsubdivided parent
+  at the stated address (envelopes too wide; address-to-coordinate uncertainty unresolved).
+- **Standing gaps:** final approval, exact parent location/geometry, plat-specific ROW,
+  replacement plat document. The old claim "M&B in plat PDF" is downgraded to unsourced until
+  a live replacement document is fetched.

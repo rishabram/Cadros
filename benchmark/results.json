@@ -12,7 +12,7 @@
     {
       "approved_lots": null,
       "plat_id": "village-at-the-boulders-ph3",
-      "reason": "only the subdivision abstract fetched so far; full plat PDF + lot count + zoning pending",
+      "reason": "Parent geometry now reconstructable (8.125-ac union, see parent_polygon_source). Still not scored: (1) approval-date zoning district unsourced - 2023 amendment records show a multi-family label rendered 'R-20-43' (herriman.primegov.com agenda 4360; utah.gov/pmn/files/1048543.pdf) but that is 2023, not 2018 approval-date, and the label may be extraction-garbled; (2) road_width_ft unknown - abstract identifies a PRIVATE road at 14850 S Trap Rock Way, so Herriman's public local-street standards (60 ft ROW/32 ft asphalt, 53 ft ROW/28 ft asphalt) cannot be assigned; (3) exact 2018 approved lot count uncertain - labels VB57-VB70 suggest ~13-14 original lots (9 surviving + 4 replatted by 2021 AMD; VB64 unaccounted in abstract rows). Townhome phase, not a greenfield single-family yield test; harness honesty contract requires all four zoning dims.",
       "status": "not_scored"
     },
     {

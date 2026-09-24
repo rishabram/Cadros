@@ -353,3 +353,80 @@ returned). Priority order: (1) city engineering standard drawings, (2) Broadbent
 - **Standing gaps:** final approval, exact parent location/geometry, plat-specific ROW,
   replacement plat document. The old claim "M&B in plat PDF" is downgraded to unsourced until
   a live replacement document is fetched.
+
+## GreenRush-3 swing (2026-09-24 ~10:15–11:30 MDT) — UGRC child-parcel reconstruction + Hidden Pines deep leg
+
+### GR3-H1. Village at the Boulders Phase 3 — parent polygon RECONSTRUCTED (zoning/ROW/count still gaps)
+
+- **Recording (closed, official abstract):** `VILLAGE AT THE BOULDERS PHASE 3`, Entry `12826461`,
+  Plat Book/Page `2018P / 274`, recorded 2018-08-09 11:37 AM, dedication type subdivision, status completed.
+  Abstract: `http://docs.cottonwoodtitle.com/MDD/28.pdf`
+- **Parent:** `33083510770000` ("LOT F"). Re-verified ABSENT from 2026 UGRC fabric (subdivided, as expected).
+- **Child set (20 parcels, from abstract + live fabric):**
+  - Common area / private road: `33083510780000` (14850 S Trap Rock Way, 25,851.41 m²)
+  - 9 surviving lots: `33083510920000` VB57, `33083510910000` VB58, `33083510900000` VB59,
+    `33083510890000` VB60, `33083510850000` VB61, `33083510860000` VB62,
+    `33083510840000` VB65, `33083510790000` VB68, `33083510810000` VB70 (~610.9 m² each)
+  - 10 AMD units from `VILLAGE AT THE BOULDERS PHASE 3 AMD`, Entry `13678229`, `2021P` p143,
+    recorded 2021-06-01, which replatted 4 original lots (VB63, VB66, VB67, VB69 — confirmed absent from
+    fabric): `33083511010000`, `33083511020000`, `33083510990000`, `33083511000000`, `33083510950000`,
+    `33083510960000`, `33083510970000`, `33083510980000`, `33083510930000`, `33083510940000` (~152.7 m² each)
+  - Abstract says "Active Parcel Numbers Found: 11" but rows list 10; VB64 unaccounted — minor gap.
+- **Union:** deterministic shapely union of the 20 native-geometry polygons
+  (UGRC endpoint `https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/Parcels_SaltLake/FeatureServer/0`,
+  anonymous) → valid single Polygon, **32,876.9 m² = 8.125 acres**, exactly equals the attribute sum.
+  Saved: `samples/village_boulders_ph3_parent.geojson` (EPSG:4326). Built 2026-09-24 by GreenRush-3
+  (script, not model geometry).
+- **CRITICAL SERVICE GOTCHA (durability note):** the endpoint's `f=geojson` geometries are ~0.578x
+  the `Shape__Area` attribute — a systematic artifact across every parcel tested (single-family and
+  townhome alike), verified by geodesic cross-check and by native `f=json&outSR=102100` where the
+  common-area outer ring (33,487.8 m²) minus its 8 interior rings equals the attribute exactly
+  (25,851.4 m²). **Always use native f=json for union geometry; never f=geojson.**
+- **Still gaps:** approval-date zoning district (2023 amendment records show a label rendered `R-20-43`
+  at 14853 Trap Rock Way — 2023, not 2018; label may be extraction-garbled; NOT approval-date);
+  plat-specific/private road ROW (abstract confirms a PRIVATE road, so Herriman public local-street
+  standards cannot be assigned); exact 2018 approved lot count (labels VB57–VB70 suggest ~13–14 original:
+  9 surviving + 4 replatted; VB64 unaccounted).
+- **Verdict:** parent geometry now the strongest-reconstructed in the corpus, but the plat remains
+  scored:false — townhome phase, not a greenfield single-family yield test; harness honesty contract
+  requires all four zoning dims.
+
+### GR3-H2. Hidden Pines — amended plat found; zoning still unsourced; child union not provable
+
+- **Amended plat (NEW, official):** City Council minutes 2021-07-13 — the "Hidden Pines Amended Plat"
+  "combined 42 residential lots into 38 lots" (refund request by Hidden Pines Land, LLC):
+  `https://rivertoncity.granicus.com/DocumentViewer.php?file=rivertoncity_e0ed695287c2ca40ab718399f5451e2b.pdf&view=1`
+  - 100% warranty bond release for **Hidden Pines Amended (9395)** approved 2022-02-15,
+    developer JCraft Homes, 13800 South 3870 West:
+    `https://legistarweb-production.s3.amazonaws.com/uploads/attachment/pdf/1229556/2022Feb15_IP_Release_HiddenPines_9395_.pdf`
+  - (Original Hidden Pines (7212) bond release approved 2021-09-21, already in plats.json.)
+  - NOTE for UGRC work: the 2026 fabric reflects the 38-lot amended plat, not the original 42.
+- **UGRC child-fabric findings:** small-lot cluster sits NORTH of 13800 S on Deer Mountain Dr /
+  3825 W / 3870 W / 13715 S (recorder blocks `33051510`, `33051530`, `33051540`), all Private,
+  ParcelYear 2026, ~2,250–2,850 m². 59-parcel cluster clearly includes adjacent development(s);
+  a separate big-lot regime (Red Tail Dr / Yearling Dr / Deer Horn Dr, 0.86–1.23 ac) is older/other.
+  Cleanest 42-parcel hypothesis: `3305151017–1022` (6) + `3305153001–3030` (30) + `3305154001–4010` (10)
+  = 46, minus 4 tiny non-lot fragments (3025/3026/3028/3030) = exactly 42 parcels; union = 100,059 m²
+  = **24.72 acres**. The "~11–12 acre parent" premise in earlier notes is inconsistent with the fabric
+  (42 lots × ~2,250 m² need ≥23.4 ac before roads; 11.75 ac matches the Cove at Silver Sky candidate,
+  not Hidden Pines — possible premise mix-up, flagged not filled).
+- **Verdict:** membership cannot be proven from the open service (no SUBDIV_NAME field; no recorded-plat
+  entry/book/page found in the searchable corpus), so **no union file was created** and the candidate
+  is not reconstructable to benchmark standard. Needs the recorded plat (SLCo Recorder, entry ~2019–2020;
+  the open SLCo abstract portal did not surface it this turn).
+- **Zoning:** still UNSOURCED after a full new leg (June 18, 2019 sewer-easement issue paper
+  `https://rivertoncity.granicus.com/MetaViewer.php?view_id=1&clip_id=283&meta_id=18153` — says only
+  "under existing zoning", no district; PC staff-report packet not found via PMN/Granicus search).
+  Unconfirmed hypotheses ONLY: `R-3-SD` (third-party countyoffice snippet ties a nearby Riverton property
+  to "R-3-SD, single-family residential, 1/3 minimum lot sizes" — Hidden Pines lots ~0.33 ac fit) or `R-3`
+  (a 2022 PC agenda names "R-3 (Single Family Residential, 14,000-sf lots)"). **NOT citable — do not
+  promote to zoning.status=known.**
+- **ROW:** still unsourced plat-specifically. Internal streets include Deer Mountain Dr. Riverton local
+  standard (54' ROW / 29 ft pavement) stays conditional.
+
+### GR3 carry-forward lesson
+
+The UGRC anonymous parcel endpoint is a working, citable parent-polygon source for RECORDED plats
+(via child-union), but child-membership pinning needs a recorder abstract or the recorded plat itself;
+the open service has no subdivision-name attribute. And `f=geojson` geometries are systematically
+~0.578x the attribute area — native `f=json&outSR=102100` is the only trustworthy geometry path.

@@ -531,3 +531,26 @@ road_width_ft for any future Murray candidate (none in the set today).
 
 **Next highest-value document:** the staff report (or final plat) for PLNSUB2021-00740 — it would
 name parent parcel IDs, plat ROW widths, and lot layout in one shot.
+
+---
+
+## GreenRush-7 — Meadows of Murray (Project #20-009) — BLOCKED, frontage gap
+
+**Status: not_scored** — frontage is a genuine evidence gap, not a research failure.
+
+**Research completed 2026-09-24 by GreenRush-7:**
+
+- **Official packet:** Murray City Planning Commission, May 7, 2020 (https://murray.utah.gov/DocumentCenter/View/11088/050720-Planning-Commission-Packet?bidId=)
+- **Project:** Meadows of Murray, Project #20-009, 533/551/565/583/593/631 E Winchester St + 6363 S 525 E
+- **Approved:** 26-lot twinhome subdivision, 4.41 acres, 10 vacant parcels. Preliminary 2020-04-16, Final review 2020-05-07 (staff recommended approval).
+- **Zone:** R-N-B, Residential Neighborhood Business (approval-date).
+- **Min lot area:** 5,000 sqft per twinhome side, cited to §17.140.040 (staff report).
+- **Setbacks:** Front 25', Rear 25', Interior Common Side 0', Interior Side 8', Corner Side 20'.
+- **Street:** Fashion Creek Court, 571' public cul-de-sac. 25' pavement + 2.5' curb/gutter + 5.5' park strips + 4' sidewalks (both sides) = 49' corridor, matching Murray §16.16.180.
+- **Parent parcels:** 22-19-279-015, -016, -018, -024, -025, -027, -028, -021, -009, -010 (retired). 26 child parcels on Fashion Creek Ct identified in current UGRC fabric.
+
+**Blocking gap:** The approval-date R-N-B twinhome standards (Sec. 17.140.040 as amended March 17, 2020) state "specific setback and area requirements" — NO minimum lot width. The staff report section header reads "Lot Area, Width, Setbacks, and Height Standards" but lists no width value. Per ZONING_POLICY, min lot width may proxy for min_frontage_ft ONLY when the district's code states a width minimum. None exists. Frontage is UNKNOWN. The harness requires min_frontage_ft for scored plats (raises ValueError if missing). **Meadows cannot be scored.**
+
+**Pivot attempted:** Matthew Avenue 3-Lot Subdivision (Project #20-090, 6450 & 6468 S 1300 E, R-1-6, 3 lots, approved 2020-08-20). Parent parcels not locatable in current UGRC data — addresses 6450/6468 S 1300 E do not appear; subdivision may not have been recorded. Pivot failed.
+
+**Lesson:** Murray's remaining greenfield/detached subdivisions are scarce. Most recent approvals are infill, flag lots, or attached product (twinhome/townhome/PUD). The benchmark may need to look beyond Murray for the second scored plat, or accept attached-product plats with complete standards.

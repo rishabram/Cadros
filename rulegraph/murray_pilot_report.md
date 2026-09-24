@@ -233,3 +233,25 @@ Recorded in JSON as `districts.R-1-8.front/rear/side/corner_side_setback_ft` (25
 - `rulegraph/murray_pilot_report.md` (Pack-8: this Wave 5 section)
 
 Canonical `verified_rules.json` and MU overlays untouched. DRAFT/UNVERIFIED status preserved.
+
+## Wave 6 notes — Pack-10, 2026-09-24
+
+**Target — R-1-12 lot/setbacks/width/coverage from primary code + packet mining: STILL NULL (dated evidence of absence, strengthened).**
+
+Pack-10 was a retry of the packet-mining lead. It closed no values but produced two durable corrections:
+
+1. **Date reconciliation — the "2025-07-09 PC packet" does not exist.** Murray City Planning Commission meets 1st/3rd Thursdays; the July 2025 meetings were **July 3 and July 17** (verified three ways: the official PC archive page https://www.murray.utah.gov/779/Agendas-Attachment lists "July 17th, 2025 Agenda & Packet" and "July 3rd, 2025 Agenda & Packet" with no July 9; the 2025 annual meeting schedule notice https://www.murray.utah.gov/DocumentCenter/View/16111/1-2025-Annual-Meeting-Schedule-Notice?bidId= lists PC dates January 2/July 3, January 16/July 17; the July 3, 2025 minutes https://www.utah.gov/pmn/files/1306809.pdf adjourn to "the next scheduled meeting … July 17, 2025"). **July 9, 2025 was a Murray Parks and Recreation Advisory Board meeting date** (same schedule notice) — the task's date conflated the two bodies.
+2. **Pack-8 correction — its "7-9-25 PMN minutes" lead was misattributed.** The minutes at https://www.utah.gov/pmn/files/1296915.pdf ("Planning Commission Minutes 7-9-25", Chair Nazer, presenter Scarlet Bankhead, parcel 02-096-0048, rezone to R-1-6) are from a **different Utah city, not Murray City** — Murray's chair is Richards and its staff presenters are Smallwood/Rodgers. Its R-1-6/R-1-10/R-1-12 zone-comparison discussion therefore carries **no Murray numbers**, and Pack-8's recorded future lead ("the July 2025 PC packet — its rezone item compared R-1-6/R-1-10/R-1-12") is **withdrawn as misattributed**. Lesson: verify the municipality header on PMN documents before treating a zone comparison as Murray evidence.
+3. **July 3 / July 17, 2025 packet mining attempted, not completed.** The July 3 minutes snippets show no R-1-12 rezone/subdivision item (conditional use permits + in-home childcare text amendment only); the July 17 minutes were not text-recoverable via search. Neither packet PDF could be fetched this turn (browser page-fetch terminal; no search-indexed full-packet text found for either; DocumentCenter IDs for the July packets not located — June 5 packet is View/16772, so the July packets sit slightly above it).
+4. **amlegal re-sweep (~6 angles).** New: **§17.108.010 PURPOSE** is indexed (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12519, crawled ~30 days ago). Confirmed still indexed: §17.108.090 (…/0-0-0-12548), §17.108.100 (…/0-0-0-12572), §17.108.110 (…/0-0-0-12577). Still unindexed via every query variant: **§17.108.040** (area regulations), **§17.108.080** (yard requirements), **§17.108.130** (coverage — referenced by §17.108.090(H) as "the general coverage restriction described in section 17.108.130"). Structural note: R-M chapters number sections differently than R-1 chapters (17.116: .040 LOT AREA, .060 YARD REQUIREMENTS; 17.148: .040 AREA REGULATIONS) — do not port section numbers across chapter families.
+5. **2025 Murray R-1-12 rezone staff-report hunt (~6 search angles): 0 hits.** The only R-1-12-involved staff report in the corpus remains the 2021-03-04 packet (344 East 5600 South rezone TO R-1-6 — no R-1-12 dimensional quotes).
+
+**Remaining viable route (recorded, needs live browser):** fetch the July 3, 2025 and July 17, 2025 PC packet PDFs from Murray's DocumentCenter (archive page links) and text-mine for any R-1-12 subdivision/rezone item using the "The R-1-12 Zone requires the following" staff-report template; if absent, the remaining primary route is the live-browser amlegal render of §§17.108.040/.080/.130.
+
+## Files changed (Pack-10)
+
+- `rulegraph/murray_params_draft.json` (Pack-10: date reconciliation + Pack-8 misattribution correction + amlegal re-sweep appended to all four R-1-12 gap notes; provenance updated; JSON validates; values unchanged — all four still null)
+- `rulegraph/murray_title16_map.md` (Pack-10: 17.108 row updated — Pack-8 rezone lead withdrawn, corrected lead recorded)
+- `rulegraph/murray_pilot_report.md` (Pack-10: this Wave 6 section)
+
+Canonical `verified_rules.json` and MU overlays untouched. DRAFT/UNVERIFIED status preserved.

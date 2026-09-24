@@ -8,7 +8,7 @@ from typing import Dict, List
 from shapely.geometry import Polygon
 
 from . import compare as cmp_mod
-from . import dxf_export, finance, geometry, validation
+from . import dxf_export, dxf_fast, finance, geometry, validation
 from .schema import CheckResult, ProForma, Scheme
 
 _RG_STORE = os.path.join(
@@ -185,6 +185,7 @@ def run_pipeline_objects(
     out_dir: str,
     max_schemes: int = 10,
     building_program: Dict | None = None,
+    fast_dxf: bool = False,
 ) -> Dict:
     _validate_zoning(zoning)
     parcel_poly = geometry.to_polygon(boundary)
@@ -300,7 +301,10 @@ def run_pipeline_objects(
     dxf_paths = {}
     for s in ranked:
         p = os.path.join(schemes_dir, f"{s.scheme_id}.dxf")
-        dxf_export.export_scheme_dxf(s, boundary, p)
+        if fast_dxf:
+            dxf_fast.export_scheme_dxf_fast(s, boundary, p)
+        else:
+            dxf_export.export_scheme_dxf(s, boundary, p)
         # report stores the path relative to out_dir: absolute machine paths
         # in artifacts break portability and cross-run comparability.
         dxf_paths[s.scheme_id] = os.path.relpath(p, out_dir)
@@ -438,6 +442,7 @@ def run_pipeline(
     out_dir: str,
     max_schemes: int = 10,
     building_program: Dict | str | None = None,
+    fast_dxf: bool = False,
 ) -> Dict:
     parcel_id, boundary, props, zoning, finance_cfg = load_inputs(
         parcel_path, zoning_path, finance_path
@@ -448,4 +453,5 @@ def run_pipeline(
     return run_pipeline_objects(
         parcel_id, boundary, props, zoning, finance_cfg, out_dir, max_schemes,
         building_program=building_program,
+        fast_dxf=fast_dxf,
     )

@@ -138,3 +138,7 @@ coordinates.
 - Broadbent (Herriman) re-check: still no final approval. Riverton's recent docket is infill-scale.
 
 **Next unlock (concrete):** fetch the 3-20-24 Item 4.2 staff report (Herriman S3 bucket, URL in the 2024-03-20 PC agenda) or the 2024 recorded plat from the SLCo Recorder. Either names lot count + ROW + zone and unlocks the second scored plat. Cove at Silver Sky is the prime target for the next lane with working browser access.
+
+## GreenRush-9 (2026-09-24) — Cove document gate: failed, firmly blocked
+
+**Scored set remains 1/16 (Tripp Lane only).** The exact staff-report URL was recovered from the PMN agenda PDF (`.../3-20-24/Item+4.2++Staff+Report.pdf`) but the S3 bucket returns 403 AccessDenied on all objects — a policy lock, not a bad URL. No Wayback snapshot; the 2024-03-20 PC meeting predates Herriman's PrimeGov usage; no web mirror; no recorded-plat result in search. Pivot attempt (Hollys Pond Ph 2, S2024-102) also document-blocked — the official agenda's S3 links point to a nonexistent bucket. The March 2024 Herriman PC staff reports are unrecoverable through public channels; the remaining paths (recorder visit, GRAMA) need a human. Next lanes: stop retrying Cove recovery; gate on a *reachable* staff report or recorded plat (PrimeGov item attachments, 2024–2026 meetings) before any geometry work.

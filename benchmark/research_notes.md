@@ -569,3 +569,21 @@ name parent parcel IDs, plat ROW widths, and lot layout in one shot.
 - **Broadbent re-check:** targeted search for final approval found nothing — still stalled at preliminary (PMN 1015940.pdf dead). Riverton's recent approvals are small/infill (Bree Place 3-lot, lot-line adjustments) — not greenfield yield tests.
 
 **Carry-forward:** Cove at Silver Sky is the PRIME next-lane target. A lane with working browser access should: (a) fetch the 3-20-24 Item 4.2 staff report from the Herriman S3 bucket (URL in the 2024-03-20 agenda) — names lot count, ROW, and R-1-10 standards; (b) pull the recorded plat from the SLCo Recorder (2024 recording, "Cove at Silver Sky") — names the zone, lot count, and boundary. Either document unlocks scoring: geometry method proven, area reconciles, road standards banked.
+
+## GreenRush-9 — Cove at Silver Sky document fetch — DOCUMENT GATE FAILED (2026-09-24)
+
+**Status: not_scored — firmly document-blocked.** Scored set stays 1/16 (Tripp Lane only).
+
+**Fetch attempts executed (all genuine, no geometry forensics):**
+
+1. **Staff report, exact URL recovered.** PMN agenda PDF (https://www.utah.gov/pmn/files/1097511.pdf) downloaded; `pdftotext` exposed the true staff-report URL: `https://herrimancity-meeting-files-pc.s3.us-west-1.amazonaws.com/3-20-24/Item+4.2++Staff+Report.pdf` (double-plus, not the single-dash variant GR8 guessed). Direct fetch → **HTTP 403 / S3 AccessDenied**. Control probes: sibling Item 4.1 also 403; encoded-space URL variant 403. Verdict: bucket/object policy lock, not a URL-encoding problem.
+2. **Wayback:** CDX query + availability API → no archived snapshot of the staff report.
+3. **PrimeGov:** March 20, 2024 PC meeting predates Herriman's PrimeGov PC usage (PC CompiledDocuments start ~June 2024, e.g. /Public/CompiledDocument/4756). No PrimeGov copy of the 3-20-24 packet exists. March 13, 2024 Council meeting IS on PrimeGov (meetingTemplateId=1752) — wrong body, no Cove item.
+4. **Web search:** no mirror of the staff report; no recorded-plat result for "Cove at Silver Sky" / Silver Sky Dr / Harlow Ann Way with recorder/book/entry terms.
+5. **Pivot under the 10-min document gate — Hollys Pond Subdivision Phase 2** (Herriman S2024-102, 2 residential lots, 13357 S Rose Canyon Road, R-1-10, ±0.81 ac, Nov 6 2024 PC agenda Item 4.3, PrimeGov CompiledDocument/4892): its agenda staff-report links point to `herrimancitymeetingfilespc.s3.uswest-1.amazonaws.com` → **NoSuchBucket** (the printed URLs in the official agenda are broken for everyone, not just this lane); no indexed PrimeGov item page for S2024-102. Pivot blocked on documents too.
+
+**What this establishes:** The March 2024 Herriman PC staff reports are unrecoverable through every public channel tried (locked bucket, no archive, pre-PrimeGov migration, no mirror, no recorder index hit). The block is structural, not a research miss.
+
+**Remaining unblocked path (human or recorder visit):** the recorded plat at the SLCo Recorder's office (in-person/paid search) or a GRAMA request to Herriman for the S2023-113 file. Both need a human.
+
+**Next lane guidance:** stop spending lanes on Cove document recovery. For the second scored plat, prefer (a) 2024–2026 Herriman PC approvals whose staff reports live on PrimeGov item pages (pgwest.blob.core.windows.net attachments — verify the attachment link resolves before investing), or (b) Murray plats with staff reports already in hand. Confirm the document gate FIRST: reachable staff report or recorded plat naming lot count + zone params + ROW, then geometry.

@@ -28,27 +28,50 @@ aggregation (CSV/summary) is lost because it is written only at
 completion; completed per-parcel dirs survive intact and valid; the
 shipped pipeline has no checkpoint/resume.
 
-## Full run (10,000 parcels) — MEASURED
-- Wall clock total: FILL s (FILL min)
-- Parcels: 10,000 in manifest / FILL screened / FILL no_schemes / FILL errored
-- Scheme rows: FILL; error rows: FILL (list any)
-- Per-parcel pipeline seconds: min FILL / median FILL / p95 FILL / p99 FILL / max FILL / mean FILL
-- Peak RSS (getrusage): FILL MB; max sampled RSS: FILL MB
-- Disk: outputs/full = FILL (FILL per parcel); manifest 15.3 MB
-- RuleGraph rule outcomes: FILL
-- Vacuous-PASS schemes: FILL (not compliance findings)
-- Use-allowance verdicts: FILL
-- IO pattern: FILL files written (per parcel: inputs ×3–4, report.json,
-  comparison.csv, schemes/*.dxf + *.proforma.json); sequential per-parcel
-  writes, no random IO; aggregate CSV/summary written once at end.
+## Full run (10,000 parcels) — MEASURED (2026-09-24 ~16:08–16:42 UTC)
+- Wall clock total: **2009.9 s (33.5 min)** → **4.97 parcels/sec**
+- Parcels: 10,000 in manifest / 10,000 screened / 1,955 no_schemes / **0 errored**
+- no_schemes by diagnostic: 710 below_size_threshold, 1,245 no-conforming-lots
+  ("unexpected" = engine's honest diagnostic when road dedication leaves no
+  conforming lots; verified legitimate on the pilot, not a generator bug)
+- Scheme rows: 54,141; top-scheme lots total: 162,673
+- Profit: mean $2,083,195.93, median $1,378,070.25; margin mean 0.595, median 0.7139
+- Per-parcel pipeline seconds: min 0.003 / **median 0.164** / **p95 0.495** /
+  p99 0.676 / max 1.865 / mean 0.199
+- Peak RSS (getrusage): **196.2 MB**; max sampled RSS: 201.1 MB (401 samples)
+- RSS drift: 122 MB → 201 MB over the run (mean first half 142.6 MB, second
+  half 181.8 MB). Consistent with the screener's in-memory `rows` list:
+  56,096 dict rows × ~1.4 KB/row ≈ 79 MB observed drift. Inference, not
+  proof — but it means aggregate memory grows O(n) with parcels; at 100k
+  parcels the rows list alone would approach ~1 GB. Streaming CSV writes
+  would flatten this.
+- Disk: outputs/full = **2.5 GB** (~250 KB/parcel); manifest 15.3 MB
+- RuleGraph rule outcomes: PASS 2,866,215 / UNKNOWN 328,104 / FAIL 0 /
+  CONDITIONAL_PASS 0 / MANUAL_REVIEW 0
+- Vacuous-PASS schemes: 27,816 (PASS with zero applicable rules — not
+  compliance findings; district not covered by the store)
+- Use-allowance verdicts: 54,141 UNKNOWN (no building programs supplied —
+  never defaulted to allowed)
+- IO pattern: **158,287 files** written; per parcel: inputs ×3–4
+  (parcel.geojson, zoning.json, finance.json), report.json,
+  comparison.csv, schemes/*.dxf + *.proforma.json (up to 8 schemes).
+  Sequential per-parcel writes, no random IO; screening_results.csv
+  (12.3 MB) + summary.json written once at completion.
+- Error rows: zero. The screener never aborted; every parcel produced
+  either scheme rows, a diagnosed no_schemes row, or (none this run) an
+  error row.
 
 ## What this does and does not claim
-- DOES: the single-parcel pipeline sustains FILL parcels/sec on this VM
-  with peak RSS FILL MB and ~FILL disk per parcel; the screener never
-  aborted and every failure was captured as a loud error row (or zero).
+- DOES: the single-parcel pipeline sustains **~5 parcels/sec** on this VM
+  (median 0.164 s/parcel, p95 0.495 s) with peak RSS **196 MB** and ~250 KB
+  disk per parcel; the screener processed 10,000/10,000 parcels with zero
+  errors and zero aborts, every outcome captured as a loud row.
 - DOES NOT: statewide readiness, real-shape performance, GIS ingestion
   throughput, or multi-process scaling. A kill at this scale costs the
-  full run (no resume) — the dominant operational risk above 10k.
+  full run (no resume — see KILL_TEST.md), and aggregate memory grows
+  O(n) via the in-memory rows list: both are the dominant operational
+  risks above 10k and should be addressed (incremental CSV / --resume /
+  streaming writes) before any larger-scale claim.
 
 ## Artifacts
 - `stress/manifest_10k.json` (15.3 MB, deterministic)

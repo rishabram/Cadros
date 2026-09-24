@@ -193,6 +193,73 @@
     "source_gap": "P-C is a planned-community zone: dimensional control comes from the village-specific adopted Design Guidelines (in the packet), not the base city code -- this is the legitimate controlling source per the staff report. The guidelines define FIVE products (Townhouse / Green Court-Flag / Small / Standard / Large); the pipeline takes a single product's minimums, so the Small Lot product (the binding most-permissive detached product present in the plat) is used. Mixed-product yield effects are a known modeling limitation, recorded here explicitly.",
     "status": "known"
    }
+  },
+  {
+   "plat_id": "daybreak-v11b-plat2",
+   "name": "DAYBREAK VILLAGE 11B PLAT 2 (Project No. PLPP202500089)",
+   "city": "South Jordan",
+   "county": "Salt Lake",
+   "address": "Generally located on the west side of Bingham Rim Road between 11800 S and Meadow Grass Drive",
+   "applicant": "Perigee Consulting on behalf of LHM Real Estate",
+   "approved_lots": 91,
+   "approved_lots_source": "official staff report 2025-06-24 (HTTP 200, re-verified 2026-09-24): '91 residential lots (includes 59 single family detached and 32 townhomes), 5 park lots and associated public right-of-way'",
+   "approved_lots_note": "MIXED PRODUCT: 59 detached + 32 townhomes. Do NOT collapse to a single 91-lot figure for harness scoring \u2014 the harness counts every generated lot polygon as one lot and cannot represent townhome units.",
+   "staff_report_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-65f12a7285274899b5527a663c59e92b/ITEM-Attachment-001-b1f37ab9350d46f68a5d4d03862ab3a0.pdf",
+   "acreage": 12.731,
+   "acreage_source": "official staff report 2025-06-24: 'Acreage 12.731 Acres'",
+   "approval_vote": "6-0 unanimous preliminary subdivision approval, 2025-06-24 Planning Commission (Bishop motion, Gedge second)",
+   "approval_vote_source": "official minutes https://www.sjc.utah.gov/DocumentCenter/View/8242/06-24-2025-Planning-Commission-Meeting-Minutes (HTTP 200, re-verified 2026-09-24); corroborated by municode meeting page (V11B P2 PACKET.pdf listed)",
+   "scored": false,
+   "status": "not_scored",
+   "not_scored_reason": "GATE 2 (product) FAILED 2026-09-24: current harness is single-product only \u2014 benchmark/harness.py passes one zoning dict and compares the count of generated lot polygons to approved_lots; prototype/pipeline.py runs one geometry.plan_generation call per boundary with one zoning config. No townhome / product-mix representation exists anywhere in the harness/pipeline. Scoring 59 detached + 32 townhomes through the single-product harness would be a structurally invalid comparison. Per mission rule: did not force; pivoted to fresh single-family survey.",
+   "parent_parcel_id": null,
+   "parent_polygon": null,
+   "parent_polygon_source": null,
+   "zoning": {
+    "status": "unknown",
+    "district": "P-C",
+    "district_source": "official staff report 2025-06-24: 'Current Zone P-C (Planned Community)'",
+    "note": "District P-C is OFFICIALLY KNOWN, but dimensional inputs (min frontage / min depth / min lot area / road width) were NOT derived: the adopted design-guidelines attachment lives in the full meeting packet (V11B P2 PACKET.pdf, 2.82 MB, listed on the municode 06/24/2025 meeting page) and was not reached this wave; the staff-report ITEM attachment carries only the report + location map + plat figure. Status 'unknown' = harness inputs unavailable, not district unknown. Geometry leg never started (product gate failed first). A future lane can derive dims from the packet and, once product-mix support exists, score this plat."
+   },
+   "recorded": {
+    "book": null,
+    "page": null,
+    "entry": null,
+    "date": null,
+    "note": "preliminary approval only; final plat recording not checked"
+   }
+  },
+  {
+   "plat_id": "daybreak-v12b-plat4",
+   "name": "DAYBREAK VILLAGE 12B PLAT 4 (Project No. PLPP202500250)",
+   "city": "South Jordan",
+   "county": "Salt Lake",
+   "address": "Gray Ghost Drive (7190 W) between 11260 S and 11390 S",
+   "applicant": "LHM Real Estate",
+   "approved_lots": null,
+   "approved_lots_source": null,
+   "approved_lots_note": "Staff report NOT reached after bounded attempts (municode blob packet, sjc.utah.gov DocumentCenter React SPA, PMN search 404, web search). Chair Gedge's transcript remark of '50 homes' is NOT an official approved-lot-count figure \u2014 do not use as ground truth.",
+   "acreage": null,
+   "acreage_source": null,
+   "approval_vote": "3-0 unanimous preliminary subdivision approval, 2026-03-10 Planning Commission (Gedge motion, Hollist second; Harding and Catmull absent)",
+   "approval_vote_source": "two independent minutes copies: https://mccmeetings.blob.core.usgovcloudapi.net/sojordanut-pubu/MEET-Packet-d4336f4e286c42388d52cc2318ab3f4b.pdf and https://www.binghamcreekregionalpark.org/Archive.aspx?ADID=520 (true-and-correct copy, minutes approved 2026-04-14)",
+   "scored": false,
+   "status": "vote_confirmed_document_incomplete",
+   "not_scored_reason": "GATE 1 (vote) PASSED; document gate FAILED: no reachable staff report with lot count / acreage / zone after bounded attempts. Next lane: retry the 2026-03-10 PC packet staff-report attachment (V12B P4 PACKET.pdf) via the municode meeting page, or GRAMA the staff report from South Jordan.",
+   "parent_parcel_id": null,
+   "parent_polygon": null,
+   "parent_polygon_source": null,
+   "zoning": {
+    "status": "unknown",
+    "note": "staff report not reached; zone not confirmed from an official source"
+   },
+   "recorded": {
+    "book": null,
+    "page": null,
+    "entry": null,
+    "date": null,
+    "note": "preliminary approval only"
+   }
   }
  ],
  "research_candidates_not_scored": [

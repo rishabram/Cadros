@@ -489,3 +489,45 @@ Approval-date zoning for pre-2020 Riverton plats is the binding constraint and t
 corpus (PMN minutes + Legistar papers + open abstracts) does not carry it. Future Hidden-Pines-class
 leads should be triaged EARLY on "does a staff report or recorded plat exist in the free corpus?"
 before spending reconstruction effort — a 10-minute staff-report check gates the whole lane.
+
+---
+
+## GreenRush-5 triage (2026-09-24 ~10:25-11:05 MDT) — pivot off Hidden Pines; Swaner gated, not scoreable
+
+**Verdict: no candidate scoreable this turn. Scored set remains 0/16. Harness re-run: 0 scored, honest.**
+
+Swaner Subdivision (PLNSUB2021-00740) was the only greenfield candidate with approval + zone
+sourced, so it received the full gate. Three independent gaps found:
+
+1. **Staff-report PDF not found** after 4 targeted searches. Official record stands on: motion
+   sheet `http://www.slcdocs.com/Planning/Planning%20Commission/2022/03.%20March/00740M.pdf`,
+   PC minutes `http://www.slcdocs.com/Planning/Planning%20Commission/2022/03.%20March/PC03.23.2022minutes.pdf`
+   (read verbatim this turn), and the Utah PMN public notice.
+2. **Parent-parcel membership unprovable.** UGRC spatial query around geocoded 2691 N 2200 W
+   (40.82738, -111.9606; Parcels_SaltLake FeatureServer, anonymous) returned large private
+   parcels in the 2200W-3200W band. Closest size match: `08091000080000` (1,770,695 m2 =
+   437.6 ac, address "2940 N 3200 W") vs minutes' "~430 ac". But the notice address matches no
+   parcel address, the applicant's slide places the site "between 2200 West and 3200 West", and
+   the site may span multiple parcels. Recorded as hypothesis ONLY; no union built.
+3. **road_width_ft has no clean citable SLC number.** SLC Code 20.26.060
+   (`https://codelibrary.amlegal.com/codes/saltlakecityut/latest/saltlakecity_ut/0-0-0-99954`,
+   fetched verbatim) defers street cross-sections to the Transportation Division's Street and
+   Intersection Typologies Design Guide (neighborhood street: 53-66 ft ROW, 10 ft lanes; no
+   single pavement-width figure). Minutes road mentions are project-specific (resident: road
+   "25-30 feet"; staff: 36 ft additional asphalt on 2200 W), not standards.
+
+**New minutes facts banked** (PC03.23.2022minutes.pdf): unanimous preliminary-subdivision approval
+2022-03-23 (motion Bachman, second Scheer); zone BP confirmed in minutes; 20 lots; ~430 ac
+primarily vacant; developer Scannell Properties (Colby Anderson); new ROW: N-S roadway ~2900 W,
+E-W ROW at 2950 N, additional ROW dedicated along 2200 W + 3200 W; staff contact Daniel Echeverria.
+
+**Broadbent Business Park re-examined:** M-1 district / 8 lots / parent 15-17-300-029 / 2012-04-11
+PC approval all previously sourced, but the same SLC road-width gap applies, and it is a re-plat
+around existing buildings (not greenfield) — stays not_scored.
+
+**Side finding:** Murray City Code 16.16.180 codifies "minimum width 49 ft with asphalted width
+25 ft" (`https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269`) — citable
+road_width_ft for any future Murray candidate (none in the set today).
+
+**Next highest-value document:** the staff report (or final plat) for PLNSUB2021-00740 — it would
+name parent parcel IDs, plat ROW widths, and lot layout in one shot.

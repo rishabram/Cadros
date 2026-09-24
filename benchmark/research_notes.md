@@ -587,3 +587,60 @@ name parent parcel IDs, plat ROW widths, and lot layout in one shot.
 **Remaining unblocked path (human or recorder visit):** the recorded plat at the SLCo Recorder's office (in-person/paid search) or a GRAMA request to Herriman for the S2023-113 file. Both need a human.
 
 **Next lane guidance:** stop spending lanes on Cove document recovery. For the second scored plat, prefer (a) 2024–2026 Herriman PC approvals whose staff reports live on PrimeGov item pages (pgwest.blob.core.windows.net attachments — verify the attachment link resolves before investing), or (b) Murray plats with staff reports already in hand. Confirm the document gate FIRST: reachable staff report or recorded plat naming lot count + zone params + ROW, then geometry.
+
+## GreenRush-10 — Pre-qualified candidate pool (2026-09-24)
+
+**Mission:** document-availability pre-qualification ONLY (no geometry reconstruction, no parcel fetching). Survey Herriman, South Jordan, and Saratoga Springs 2024–2026 for approved plats where every candidate needs: (a) verified HTTP-200 official staff report, (b) lot count, (c) zone, (d) acreage.
+
+**Method:** every staff-report URL independently HTTP-checked (HEAD + GET) — no reconstructed or guessed URLs accepted. Report text extracted via `pdftotext`. Approval votes confirmed in official meeting minutes. Research completed 2026-09-24 by GreenRush-10.
+
+### TIER 1 — doc_ready (verified-reachable staff report + all four inputs)
+
+**1. Daybreak Village 12B Plat 1 — South Jordan, PLPP202400077**
+- Staff report packet (verified HTTP 200, 2026-09-24): https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e72fea9797d942dea406cf9a66df2c8f/ITEM-Attachment-001-db29936d323c4d84ac6cc6e58e7c07b1.pdf
+- 61 single-family residential lots (+ 5 park lots), 14.306 acres, P-C zone, vacant. Generally 7050 West 11350 South. Applicant: Daybreak Communities.
+- Lot sizes 2,671–10,867 sqft, avg 6,094. Density 4.2/ac gross, 7.1/ac net.
+- APPROVED 4-0, 2024-08-13 (South Jordan PC minutes, https://www.utah.gov/pmn/files/1160983.pdf).
+- **Jackpot:** the packet INCLUDES the adopted Design Guidelines/Development Standards — five product types (Townhouse / Green Court-Flag Lot / Small Lot / Standard Lot / Large Lot) with min frontages (15' / 30' / 30–70' / 55–100' / 65–120'), min depths (50' / 50' / 50' / 90' / 90'), max coverage (90% / 75% / 70% / 55% / 45%), full setback tables, materials, parking. These guidelines ARE the P-C zone's dimensional-parameter source for this village — the scoring lane does not need to chase the Daybreak MDA/CSP for params.
+- Caveat: guidelines list townhouse as a product type; verify product mix from the plat figure in the packet before scoring.
+
+**2. Daybreak Village 12B Plat 3 — South Jordan, PLPP202400186**
+- Staff report (verified HTTP 200, 2026-09-24): https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e290d8f6b578423f9ab8c6b58c34d6ae/ITEM-Attachment-001-8827ff0b4f99463fbed00f32527460ca.pdf
+- 30 single-family residential lots (+ 3 park lots), 7.529 acres, P-C zone, vacant. Generally 7120 West Docksider Drive. Applicant: Daybreak Communities.
+- Lot sizes 2,975–9,467 sqft, avg 5,885. Density 3.9/ac gross, 7.4/ac net.
+- APPROVED 6-0, 2024-12-10 (South Jordan PC minutes: motion Bevans, second Hollist, unanimous).
+- Report states design guidelines "same as those approved for the previous Daybreak Village 12B subdivisions" — i.e., the Plat 1 packet's guidelines apply.
+
+**3. Daybreak Village 11B Plat 2 — South Jordan, PLPP202500089**
+- Staff report (verified HTTP 200, 2026-09-24): https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-65f12a7285274899b5527a663c59e92b/ITEM-Attachment-001-b1f37ab9350d46f68a5d4d03862ab3a0.pdf
+- 91 residential lots (59 detached + 32 townhomes, + 5 park lots + ROW), 12.731 acres, P-C zone, vacant.
+- Staff recommended approval 2025-06-24; Planning Commission is final decision-maker. **Vote not yet confirmed** — check July 2025 South Jordan PC minutes before scoring.
+- Caveat: mixed detached/townhome product complicates single-product scoring; weakest Tier-1 on scoreability.
+
+### TIER 2 — approved + inputs confirmed, staff report unreachable (document-blocked, GRAMA path)
+
+**4. Homestead at Butterfield — Herriman, S2025-022**
+- APPROVED 2025-08-06 (Herriman PC minutes, https://www.utah.gov/pmn/files/1324807.pdf): 31 residential lots, 16.337 acres, A-1-10 (+ A-1-21 per minutes). Agenda: https://www.utah.gov/pmn/files/1303533.pdf.
+- Both staff-report URLs printed in the official agenda return 404 (herriman.gov/uploads migration casualty); no Wayback copy. The PMN packet is the agenda only — report NOT embedded.
+- Best detached-product candidate in the pool (standard A-1-10 zone). Unblock via GRAMA request to Herriman for file S2025-022.
+
+**5. Mardam Ranch Subdivision — Herriman, S2023-147**
+- 44 single-family lots, R-1-10 + A-1-10 zones, ±19.75 ac, ~12914 S 6100 West. Herriman PC minutes 2023-12-20 (https://www.utah.gov/pmn/files/1072645.pdf) confirm a phased-development amendment approval; original preliminary plat approval was earlier in 2023.
+- Original staff report lived on herriman.org/uploads — that domain's uploads are gone (404). Unblock via GRAMA or the recorded plat at the SLCo Recorder.
+
+### Surveyed and rejected
+- Daybreak Village 12B Plat 2 (PLPP202400120): 1-lot civic/commercial (church) — not residential.
+- Daybreak South Station Plat 5 (PLPP202500034): 2 civic/commercial lots — not residential.
+- Daybreak Village 7A Plat 3 Lot C-107 amendment (PLPLA202500176): 1 lot into 2 — trivial.
+- Saratoga Springs: no qualifying 2024–2026 approved residential plat with a reachable staff report. Leads checked: Fox Hollow N4 (Nov 13, 2025 agenda, D.R. Horton — not yet approved); Jacobs Branch Plat T (approved 2025-09-25 per third-party AI summary only; official staff report not located); Hidden Landing Phase 2 (rezone only, 66-lot concept, not a plat).
+- Murray: no new detached-greenfield candidates; recent docket is infill/attached (consistent with GR7).
+- Herriman S3 bucket (herrimancitymeetingfilespc): host now unreachable entirely (was 403 in GR9) — 2024 staff reports structurally unrecoverable. PrimeGov pgwest.blob attachments exist for 2026 meetings but indexed SAS tokens are expired; the doc listing needs the JS portal.
+
+### Scoreability ranking (for the scoring lane)
+1. V12B Plat 1 — params in hand, 61 lots, approved. **Score this one first.**
+2. V12B Plat 3 — params via Plat 1 guidelines, 30 lots, approved.
+3. V11B Plat 2 — confirm vote first; mixed product.
+4. Homestead at Butterfield — GRAMA the staff report (best detached candidate).
+5. Mardam Ranch — GRAMA the staff report.
+
+**P-C zone note:** all three Tier-1 candidates are P-C (Planned Community). Lot dimensions come from the adopted village design guidelines (in the Plat 1 packet), NOT the base city code. That is legitimate — the guidelines are the controlling dimensional source — but the scoring lane must cite them, not Title 17.

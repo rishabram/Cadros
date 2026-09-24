@@ -3,7 +3,7 @@
     "One entry per approved plat. Nothing here is invented: unsourced fields stay null,",
     "zoning.status is 'unknown' until a cited source names the approving zone AND its",
     "dimensional params. Only zoning.status=='known' entries with scored:true enter the",
-    "scored set. The ±15% / >=70% aims apply to the scored set only.",
+    "scored set. The \u00b115% / >=70% aims apply to the scored set only.",
     "Phase C (2026-09-24): 7 candidates researched by PlatScout; all recorded as not_scored",
     "with explicit reasons. Scored set remains empty: no candidate meets all of (parent",
     "polygon + approved count + 3 sourced zoning params + approval confirmed +",
@@ -16,8 +16,8 @@
     "(1) parent polygon needs UGRC SGID parcel-union REST or a fetchable full-M&B plat PDF;",
     "(2) road_width_ft needs a citable city engineering standard drawing (searchable text",
     "yields other cities' codes only; per ZONING_POLICY this stays a gap, never a fill).",
-    "UGRC swing (2026-09-24 ~02:21 MDT, ParcelScout): NOT ATTEMPTED ON MERITS — browser_search upstream unavailable (3 attempts, retry exhausted, terminal per instruction); browser_open terminal for the turn (upstream unavailable, retry exhausted; no exec/curl/invented-URL reproduction permitted); browser_open restricted to exact conversation URLs only and no UGRC SGID endpoint URL was ever tool-returned, so the REST query could not be constructed (URL construction prohibited). UGRC parcel-union leg and city-engineering-standard-drawings leg therefore unexecuted this turn; Broadbent PMN PDF retry (1015940.pdf) and Cove agenda fetch (1097511.pdf) both failed on the same outage. No scoring inputs changed; scored set remains 0. Recommended: retry the UGRC SGID parcel-polygon leg and the Herriman/Riverton standard-drawings leg in a future swing when browser tools are healthy.",
-    "UGRC swing RETRY (2026-09-24 ~02:30-02:45 MDT, UGRCScout): browser tools healthy this turn. Endpoint CONFIRMED via tool-returned GitHub commit diff (nache327/stack-land-acquisition@1680170): county-specific FeatureServers at https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/Parcels_SaltLake/FeatureServer/0; anonymous querying works (allowAnonymousToQuery=true, maxRecordCount 2000). KEY REFINEMENT: the open service is BASIC parcels only (HB113) — verified field list OBJECTID/FIPS/PARCEL_ID/PARCEL_ADD/PARCEL_CITY/PARCEL_ZIP/OWN_TYPE/RECORDER/ParcelsCur/Rec/Pub/ParcelYear/ParcelNotes/CoParcel_URL/ACCOUNT_NUM/Shape__Area/Shape__Length; NO SUBDIV_NAME and no LIR/tax-roll attributes (service description: those require county recorder contact). Consequence: open-SGID parcels CANNOT filter by subdivision name; parent retrieval needs a known PARCEL_ID (direct polygon) or a spatial/address-pattern query. Proven on live data: Village at the Boulders Ph3 parent 33083510770000 ABSENT from 2026 fabric (recorded 2018, subdivided — recorded plats need child-parcel union reconstruction, e.g. PARCEL_ID prefix '3308351%' returned the subdivided fabric). Broadbent (Herriman) recording check inconclusive: no large unsubdivided parcel at 6400 W 13800 S; only large parcel on 13800 S in Herriman is 33064080010000 at 4257 W 13800 S (16.8 ac, not the site). Broadbent PMN PDF retry (1015940.pdf) failed — browser_open went terminal for the turn; city engineering standard-drawings leg unexecuted. Scored set remains 0/16; no plat scored (all three nearest misses lack non-geometry inputs UGRC cannot supply: Cove preliminary-only with no lot count; Broadbent final approval unconfirmed; Hidden Pines zoning district unsourced). Corpus-gap finding REFINED: parent-polygon blocker is SOLVABLE via the UGRC method (known ID -> direct polygon; recorded plat -> child-union by ID prefix/address pattern); binding constraints are now approval-date zoning-district + road_width_ft.",
+    "UGRC swing (2026-09-24 ~02:21 MDT, ParcelScout): NOT ATTEMPTED ON MERITS \u2014 browser_search upstream unavailable (3 attempts, retry exhausted, terminal per instruction); browser_open terminal for the turn (upstream unavailable, retry exhausted; no exec/curl/invented-URL reproduction permitted); browser_open restricted to exact conversation URLs only and no UGRC SGID endpoint URL was ever tool-returned, so the REST query could not be constructed (URL construction prohibited). UGRC parcel-union leg and city-engineering-standard-drawings leg therefore unexecuted this turn; Broadbent PMN PDF retry (1015940.pdf) and Cove agenda fetch (1097511.pdf) both failed on the same outage. No scoring inputs changed; scored set remains 0. Recommended: retry the UGRC SGID parcel-polygon leg and the Herriman/Riverton standard-drawings leg in a future swing when browser tools are healthy.",
+    "UGRC swing RETRY (2026-09-24 ~02:30-02:45 MDT, UGRCScout): browser tools healthy this turn. Endpoint CONFIRMED via tool-returned GitHub commit diff (nache327/stack-land-acquisition@1680170): county-specific FeatureServers at https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/Parcels_SaltLake/FeatureServer/0; anonymous querying works (allowAnonymousToQuery=true, maxRecordCount 2000). KEY REFINEMENT: the open service is BASIC parcels only (HB113) \u2014 verified field list OBJECTID/FIPS/PARCEL_ID/PARCEL_ADD/PARCEL_CITY/PARCEL_ZIP/OWN_TYPE/RECORDER/ParcelsCur/Rec/Pub/ParcelYear/ParcelNotes/CoParcel_URL/ACCOUNT_NUM/Shape__Area/Shape__Length; NO SUBDIV_NAME and no LIR/tax-roll attributes (service description: those require county recorder contact). Consequence: open-SGID parcels CANNOT filter by subdivision name; parent retrieval needs a known PARCEL_ID (direct polygon) or a spatial/address-pattern query. Proven on live data: Village at the Boulders Ph3 parent 33083510770000 ABSENT from 2026 fabric (recorded 2018, subdivided \u2014 recorded plats need child-parcel union reconstruction, e.g. PARCEL_ID prefix '3308351%' returned the subdivided fabric). Broadbent (Herriman) recording check inconclusive: no large unsubdivided parcel at 6400 W 13800 S; only large parcel on 13800 S in Herriman is 33064080010000 at 4257 W 13800 S (16.8 ac, not the site). Broadbent PMN PDF retry (1015940.pdf) failed \u2014 browser_open went terminal for the turn; city engineering standard-drawings leg unexecuted. Scored set remains 0/16; no plat scored (all three nearest misses lack non-geometry inputs UGRC cannot supply: Cove preliminary-only with no lot count; Broadbent final approval unconfirmed; Hidden Pines zoning district unsourced). Corpus-gap finding REFINED: parent-polygon blocker is SOLVABLE via the UGRC method (known ID -> direct polygon; recorded plat -> child-union by ID prefix/address pattern); binding constraints are now approval-date zoning-district + road_width_ft.",
     "GreenRush-3 swing (2026-09-24 ~10:15-11:30 MDT): UGRC child-parcel reconstruction executed against confirmed endpoint https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/Parcels_SaltLake/FeatureServer/0 (anonymous). Village at the Boulders Ph3: parent 33083510770000 confirmed absent from 2026 fabric; 20-parcel child set recovered from recorder abstract (MDD/28.pdf) + live fabric; deterministic shapely union saved to samples/village_boulders_ph3_parent.geojson (valid Polygon, 32876.9 m2 = 8.125 ac). KEY GOTCHA: f=geojson output geometries are ~0.578x the Shape__Area attribute (systematic service artifact); native f=json with outSR=102100 must be used for union geometry. Ph3 remains scored:false (approval-date zoning unknown; private road ROW unknown; exact 2018 lot count ~13-14 unconfirmed; townhome phase not a greenfield yield test). Hidden Pines: 42-lot child-membership hypothesis found but not provable; amended plat (42->38 lots, 2021/2022) documented; zoning + ROW still unknown. Scored set remains 0.",
     "GreenRush-5 triage (2026-09-24 ~10:25-11:05 MDT): pivoted off Hidden Pines per GR4. Swaner (PLNSUB2021-00740) was the only greenfield candidate with approval+zone sourced, so it got the full gate. GATE RESULT: NOT SCOREABLE this turn, three independent gaps. (1) Staff-report PDF not found after 4 targeted searches (motion sheet 00740M.pdf + PC minutes PC03.23.2022minutes.pdf + public notice are the official record instead). (2) Parent-parcel membership UNPROVABLE: UGRC spatial query around geocoded 2691 N 2200 W (40.82738,-111.9606) found large private parcels in the 2200W-3200W band; closest size match is 08091000080000 (1,770,695 m2 = 437.6 ac, '2940 N 3200 W') vs minutes' '~430 ac'. Applicant slide per minutes: 'site between 2200 West and 3200 West' - but notice address 2691 N 2200 W does not match any parcel address, and the site may span multiple parcels. Hypothesis recorded ONLY as hypothesis; NO union built (GR4 honesty lesson). (3) road_width_ft for SLC has no clean citable number: SLC Code 20.26.060 defers cross-sections to the Transportation Division's Street and Intersection Typologies Design Guide (neighborhood street: 53-66 ft ROW, 10 ft lanes, no single pavement-width figure). Minutes give project-specific hints only (resident: road '25-30 feet'; staff: 36 ft additional asphalt on 2200 W) - not standards. New minutes facts banked in the Swaner entry. Broadbent Business Park re-examined: M-1/8 lots/parent 15-17-300-029/2012 approval all sourced, but same SLC road-width gap applies AND it is a re-plat around existing buildings (not greenfield) - stays not_scored. Scored set remains 0/16. NEXT: the staff report (or final plat) for PLNSUB2021-00740 is the single highest-value document - it would name parent parcel IDs, plat ROW widths, and lot layout in one shot."
   ],
@@ -93,7 +93,7 @@
         "district": "RMF-45",
         "min_lot_area_source": "Staff report 00723.pdf p.35: 'density of 3,000 square feet per unit' (Tier 3, approval-date)",
         "min_lot_area_sqft": 3000,
-        "reason": "not scored: zoning.status set to unknown 2026-09-24 because min_frontage_ft and road_width_ft are unsourced for 2018 RMF-45 (the harness honesty contract requires all four dims for known). not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage — not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45.",
+        "reason": "not scored: zoning.status set to unknown 2026-09-24 because min_frontage_ft and road_width_ft are unsourced for 2018 RMF-45 (the harness honesty contract requires all four dims for known). not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage \u2014 not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45.",
         "status": "unknown"
       }
     },
@@ -167,7 +167,7 @@
       "lot_count": 8,
       "name": "Broadbent Business Park (PLNSUB2011-00619)",
       "plat_id": "broadbent-business-park",
-      "reason_not_scored": "Parent M&B not in extracted text; preliminary plat figure (p.13) is scanned. Re-plat of 1975 development around 8 existing buildings — not a greenfield yield test. M-1 discrepancy: 2012 staff report says 20,000 sqft min vs verified M-1-01 10,000 sqft.",
+      "reason_not_scored": "Parent M&B not in extracted text; preliminary plat figure (p.13) is scanned. Re-plat of 1975 development around 8 existing buildings \u2014 not a greenfield yield test. M-1 discrepancy: 2012 staff report says 20,000 sqft min vs verified M-1-01 10,000 sqft.",
       "zone": "M-1 (discrepancy noted)"
     },
     {
@@ -175,7 +175,7 @@
       "lot_count": 20,
       "name": "Swaner Subdivision (PLNSUB2021-00740)",
       "plat_id": "swaner-subdivision",
-      "reason_not_scored": "No plat-containing PDF found; parent parcel ID and M&B unknown. Greenfield (430 ac, primarily vacant) — best prototype fit if geometry sourced. GreenRush revisit 2026-09-24: still no plat-containing PDF in the searchable corpus. GR5 (2026-09-24): full gate run. PC minutes PC03.23.2022minutes.pdf read verbatim: unanimous preliminary-subdivision approval 2022-03-23 (motion by Bachman, second Scheer); zone BP confirmed in minutes ('currently zoned Business Park (BP)'); 20 lots; '~430 ac, primarily vacant'; developer Scannell Properties (Colby Anderson); new ROW: N-S roadway ~2900 W, E-W ROW at 2950 N, additional ROW dedicated along 2200 W + 3200 W; site 'between 2200 West and 3200 West' (applicant slide). Staff report PDF still not found (only motion sheet 00740M.pdf). Parent-parcel hypothesis from UGRC spatial query: 08091000080000 (437.6 ac, '2940 N 3200 W') is the closest size match, but membership is NOT provable (notice address matches no parcel; site may span multiple parcels) - no union built. road_width_ft: SLC 20.26.060 (https://codelibrary.amlegal.com/codes/saltlakecityut/latest/saltlakecity_ut/0-0-0-99954) defers street cross-sections to the Typologies Design Guide (no single citable pavement width); minutes road-width mentions are project-specific, not standards. Three independent gaps -> not scoreable.",
+      "reason_not_scored": "No plat-containing PDF found; parent parcel ID and M&B unknown. Greenfield (430 ac, primarily vacant) \u2014 best prototype fit if geometry sourced. GreenRush revisit 2026-09-24: still no plat-containing PDF in the searchable corpus. GR5 (2026-09-24): full gate run. PC minutes PC03.23.2022minutes.pdf read verbatim: unanimous preliminary-subdivision approval 2022-03-23 (motion by Bachman, second Scheer); zone BP confirmed in minutes ('currently zoned Business Park (BP)'); 20 lots; '~430 ac, primarily vacant'; developer Scannell Properties (Colby Anderson); new ROW: N-S roadway ~2900 W, E-W ROW at 2950 N, additional ROW dedicated along 2200 W + 3200 W; site 'between 2200 West and 3200 West' (applicant slide). Staff report PDF still not found (only motion sheet 00740M.pdf). Parent-parcel hypothesis from UGRC spatial query: 08091000080000 (437.6 ac, '2940 N 3200 W') is the closest size match, but membership is NOT provable (notice address matches no parcel; site may span multiple parcels) - no union built. road_width_ft: SLC 20.26.060 (https://codelibrary.amlegal.com/codes/saltlakecityut/latest/saltlakecity_ut/0-0-0-99954) defers street cross-sections to the Typologies Design Guide (no single citable pavement width); minutes road-width mentions are project-specific, not standards. Three independent gaps -> not scoreable.",
       "zone": "BP (20,000/100 Tier 2)"
     },
     {
@@ -211,15 +211,15 @@
       "zone": "R-1/7,000"
     },
     {
-      "approval": "preliminary plat reviewed 2024-03-20 (Herriman PC agenda, File S2023-113); final plat administratively approved by Engineering Dept (no PC/Council action required per Herriman process); plat RECORDED and BUILT — MLS listings 2025-2026 show new-construction homes on Silver Sky Dr / Harlow Ann Way (e.g. 6158 W Silver Sky Dr #102, 12729 S Harlow Ann Way #101, 12778 S Harlow Ann Way #105)",
+      "approval": "preliminary plat reviewed 2024-03-20 (Herriman PC agenda, File S2023-113); final plat administratively approved by Engineering Dept (no PC/Council action required per Herriman process); plat RECORDED and BUILT \u2014 MLS listings 2025-2026 show new-construction homes on Silver Sky Dr / Harlow Ann Way (e.g. 6158 W Silver Sky Dr #102, 12729 S Harlow Ann Way #101, 12778 S Harlow Ann Way #105)",
       "city": "Herriman",
       "county": "Salt Lake",
       "lot_count": null,
       "name": "Cove at Silver Sky (Herriman S2023-113)",
       "plat_id": "cove-at-silver-sky",
       "plat_pdf": "https://www.utah.gov/pmn/files/1097511.pdf (agenda only, not the plat)",
-      "reason_not_scored": "GR8 2026-09-24: subdivision CONFIRMED BUILT (2025-2026 MLS new-construction listings, 'COVE AT SILVER SKY'). UGRC child-fabric leg executed: 34 current parcels with Silver Sky Dr / Harlow Ann Way addresses union to ~11.65 ac vs official 11.75 ac (0.9% diff) — suggestive but membership NOT provable (parcel-ID blocks differ: 263513010/26351260x/26342784x, likely multiple phases/recordings; no SUBDIV_NAME in open UGRC service; ParcelNotes uninformative). Per GR5 Swaner lesson, no union built to benchmark standard. Binding gaps: (1) APPROVED lot count — no official source (3-20-24 staff report PDF unreachable this turn: browser_open terminal; recorded plat entry number unknown; current 34 parcels != approved count); (2) plat ROW classification — RD-01B (60' ROW->32 ft) vs RD-01C (53' ROW->28 ft) unassigned without staff report/plat; (3) R-1-10 Tier-2 params (10,000 sqft / 80 ft via herriman.primegov.com attachment 898.pdf) still context-unconfirmed. NEXT LANE: fetch the 3-20-24 Item 4.2 staff report (https://herrimancitymeetingfilespc.s3.uswest-1.amazonaws.com/3-20-24/Item+4.2+-+Staff+Report.pdf) and/or the recorded plat from SLCo Recorder — either names lot count + ROW + zone.",
-      "zone": "R-1-10 (params Tier 2: 10,000 sqft / 80 ft via herriman.primegov.com attachment 898.pdf — context confirmation pending)"
+      "reason_not_scored": "GR8 2026-09-24: subdivision CONFIRMED BUILT (2025-2026 MLS new-construction listings, 'COVE AT SILVER SKY'). UGRC child-fabric leg executed: 34 current parcels with Silver Sky Dr / Harlow Ann Way addresses union to ~11.65 ac vs official 11.75 ac (0.9% diff) \u2014 suggestive but membership NOT provable (parcel-ID blocks differ: 263513010/26351260x/26342784x, likely multiple phases/recordings; no SUBDIV_NAME in open UGRC service; ParcelNotes uninformative). Per GR5 Swaner lesson, no union built to benchmark standard. Binding gaps: (1) APPROVED lot count \u2014 no official source (3-20-24 staff report PDF unreachable this turn: browser_open terminal; recorded plat entry number unknown; current 34 parcels != approved count); (2) plat ROW classification \u2014 RD-01B (60' ROW->32 ft) vs RD-01C (53' ROW->28 ft) unassigned without staff report/plat; (3) R-1-10 Tier-2 params (10,000 sqft / 80 ft via herriman.primegov.com attachment 898.pdf) still context-unconfirmed. NEXT LANE: fetch the 3-20-24 Item 4.2 staff report (https://herrimancitymeetingfilespc.s3.uswest-1.amazonaws.com/3-20-24/Item+4.2+-+Staff+Report.pdf) and/or the recorded plat from SLCo Recorder \u2014 either names lot count + ROW + zone.",
+      "zone": "R-1-10 (params Tier 2: 10,000 sqft / 80 ft via herriman.primegov.com attachment 898.pdf \u2014 context confirmation pending)"
     },
     {
       "approval": "preliminary plat application; final approval unknown",
@@ -240,7 +240,7 @@
       "name": "Hidden Pines (Riverton)",
       "plat_id": "hidden-pines-riverton",
       "plat_pdf": null,
-      "reason_not_scored": "Approval confirmed 2026-09-24 (PC 2019-06-27, PLZ-19-1003, 42 lots). AMENDED plat later reduced 42 -> 38 lots (City Council minutes 2021-07-13: 'Hidden Pines Amended Plat, which combined 42 residential lots into 38 lots'; warranty bond release for Hidden Pines Amended (9395) approved 2022-02-15, developer JCraft Homes, 13800 S 3870 W; original bond release for Hidden Pines (7212) approved 2021-09-21). Zoning district STILL UNSOURCED (minutes, 2019-03-04 geotech report, bond records name no district; unconfirmed hypotheses only: R-3-SD or R-3 - NOT citable). UGRC child-fabric reconstruction 2026-09-24: coherent small-lot cluster on Deer Mountain Dr / 3825 W / 3870 W / 13715 S (recorder blocks 33051510/33051530/33051540, 59 parcels incl. adjacent development); cleanest 42-parcel hypothesis (3305151017-1022 + 3305153001-3030 + 3305154001-4010 minus 4 tiny fragments) unions to 24.72 ac - but membership NOT provable from the open service (no SUBDIV_NAME field; no recorded-plat entry/book/page found in searchable corpus), so NOT reconstructed to benchmark standard. road_width_ft: Riverton official standard sourced 2026-09-24 (local: 54 ft ROW / 29 ft pavement; Standard Specifications and Plans Manual, 2021-09-29) -> 29 ft candidate conditional on Hidden Pines streets being local; internal street names include Deer Mountain Dr. Remains the best Riverton greenfield lead; scored set unchanged. GR4 (2026-09-24): final bounded hunt — June 27 2019 PC minutes re-opened (42 lots confirmed, no district named), no PLZ-19-1003 staff report found, no recorded plat in free corpus, no pre-2019 rezone ordinance, official zoning-map PDF fetch failed (current-era map anyway); approval-date zoning EXPLICITLY UNKNOWN. No union built.",
+      "reason_not_scored": "Approval confirmed 2026-09-24 (PC 2019-06-27, PLZ-19-1003, 42 lots). AMENDED plat later reduced 42 -> 38 lots (City Council minutes 2021-07-13: 'Hidden Pines Amended Plat, which combined 42 residential lots into 38 lots'; warranty bond release for Hidden Pines Amended (9395) approved 2022-02-15, developer JCraft Homes, 13800 S 3870 W; original bond release for Hidden Pines (7212) approved 2021-09-21). Zoning district STILL UNSOURCED (minutes, 2019-03-04 geotech report, bond records name no district; unconfirmed hypotheses only: R-3-SD or R-3 - NOT citable). UGRC child-fabric reconstruction 2026-09-24: coherent small-lot cluster on Deer Mountain Dr / 3825 W / 3870 W / 13715 S (recorder blocks 33051510/33051530/33051540, 59 parcels incl. adjacent development); cleanest 42-parcel hypothesis (3305151017-1022 + 3305153001-3030 + 3305154001-4010 minus 4 tiny fragments) unions to 24.72 ac - but membership NOT provable from the open service (no SUBDIV_NAME field; no recorded-plat entry/book/page found in searchable corpus), so NOT reconstructed to benchmark standard. road_width_ft: Riverton official standard sourced 2026-09-24 (local: 54 ft ROW / 29 ft pavement; Standard Specifications and Plans Manual, 2021-09-29) -> 29 ft candidate conditional on Hidden Pines streets being local; internal street names include Deer Mountain Dr. Remains the best Riverton greenfield lead; scored set unchanged. GR4 (2026-09-24): final bounded hunt \u2014 June 27 2019 PC minutes re-opened (42 lots confirmed, no district named), no PLZ-19-1003 staff report found, no recorded plat in free corpus, no pre-2019 rezone ordinance, official zoning-map PDF fetch failed (current-era map anyway); approval-date zoning EXPLICITLY UNKNOWN. No union built.",
       "zone": "unknown (minutes/geotech/bond record do not name the district; approval-date district required)"
     },
     {
@@ -284,7 +284,7 @@
       "name": "Hidden Landing Phase 2 (Saratoga Springs)",
       "plat_id": "hidden-landing-phase-2",
       "plat_pdf": null,
-      "reason_not_scored": "Rezone only; no plat approval. 66-lot concept plan at R-1-10 standards (~28.6 ac) — not an approved plat.",
+      "reason_not_scored": "Rezone only; no plat approval. 66-lot concept plan at R-1-10 standards (~28.6 ac) \u2014 not an approved plat.",
       "zone": "R-1-10 (proposed rezone from rural residential)"
     },
     {
@@ -317,8 +317,68 @@
       "name": "South Jordan 2-lot subdivision (PC staff report 2024-05-14)",
       "plat_id": "sojordan-2-lot-2024",
       "plat_pdf": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-35df69c46c7448778f5dc767b3f9f5e2/ITEM-Attachment-001-00900aa46f834b0094b54a4903c90efa.pdf",
-      "reason_not_scored": "Zone unknown; 2 lots / 59,483 SF (1.37 ac) — plat image with boundary calls embedded in staff report but not extracted; 2-lot size is not a greenfield yield test.",
+      "reason_not_scored": "Zone unknown; 2 lots / 59,483 SF (1.37 ac) \u2014 plat image with boundary calls embedded in staff report but not extracted; 2-lot size is not a greenfield yield test.",
       "zone": "unknown"
+    },
+    {
+      "plat_id": "daybreak-village-12b-plat-1",
+      "name": "Daybreak Village 12B Plat 1 (PLPP202400077)",
+      "doc_ready": true,
+      "approval": "2024-08-13 PC 4-0 (South Jordan)",
+      "lot_count": 61,
+      "zone": "P-C (Planned Community)",
+      "acreage": 14.306,
+      "staff_report_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e72fea9797d942dea406cf9a66df2c8f/ITEM-Attachment-001-db29936d323c4d84ac6cc6e58e7c07b1.pdf",
+      "staff_report_verified": "HTTP 200, 2026-09-24 (GreenRush-10)",
+      "reason_not_scored": "Pre-qualified 2026-09-24 (GreenRush-10), not yet scored. 61 single-family lots + 5 park lots, P-C, 14.306 ac, vacant, ~7050 W 11350 S. Lot sizes 2,671-10,867 sqft avg 6,094. Packet INCLUDES adopted Design Guidelines/Development Standards (5 product types with frontages/depths/coverage/setbacks) - the P-C dimensional source. Score first: confirm product mix from plat figure, then build parent polygon."
+    },
+    {
+      "plat_id": "daybreak-village-12b-plat-3",
+      "name": "Daybreak Village 12B Plat 3 (PLPP202400186)",
+      "doc_ready": true,
+      "approval": "2024-12-10 PC 6-0 (South Jordan; motion Bevans, second Hollist)",
+      "lot_count": 30,
+      "zone": "P-C (Planned Community)",
+      "acreage": 7.529,
+      "staff_report_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e290d8f6b578423f9ab8c6b58c34d6ae/ITEM-Attachment-001-8827ff0b4f99463fbed00f32527460ca.pdf",
+      "staff_report_verified": "HTTP 200, 2026-09-24 (GreenRush-10)",
+      "reason_not_scored": "Pre-qualified 2026-09-24 (GreenRush-10), not yet scored. 30 single-family lots + 3 park lots, P-C, 7.529 ac, vacant, ~7120 W Docksider Dr. Lot sizes 2,975-9,467 sqft avg 5,885. Design guidelines same as previous Village 12B subdivisions (see Plat 1 packet)."
+    },
+    {
+      "plat_id": "daybreak-village-11b-plat-2",
+      "name": "Daybreak Village 11B Plat 2 (PLPP202500089)",
+      "doc_ready": true,
+      "approval": "Staff recommended approval 2025-06-24; PC vote NOT yet confirmed (check July 2025 minutes)",
+      "lot_count": 91,
+      "zone": "P-C (Planned Community)",
+      "acreage": 12.731,
+      "staff_report_url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-65f12a7285274899b5527a663c59e92b/ITEM-Attachment-001-b1f37ab9350d46f68a5d4d03862ab3a0.pdf",
+      "staff_report_verified": "HTTP 200, 2026-09-24 (GreenRush-10)",
+      "reason_not_scored": "Pre-qualified 2026-09-24 (GreenRush-10), not yet scored. 91 lots (59 detached + 32 townhomes) + 5 park lots + ROW, P-C, 12.731 ac, vacant. Mixed product complicates single-product scoring; confirm approval vote before geometry work."
+    },
+    {
+      "plat_id": "homestead-at-butterfield",
+      "name": "Homestead at Butterfield (S2025-022)",
+      "doc_ready": false,
+      "approval": "2025-08-06 PC approved (Herriman; minutes https://www.utah.gov/pmn/files/1324807.pdf)",
+      "lot_count": 31,
+      "zone": "A-1-10 (+ A-1-21 per minutes)",
+      "acreage": 16.337,
+      "staff_report_url": null,
+      "staff_report_verified": "Both agenda-printed URLs 404 (herriman.gov/uploads migration); no Wayback copy; PMN packet is agenda-only. 2026-09-24 (GreenRush-10)",
+      "reason_not_scored": "Pre-qualified inputs only (GreenRush-10): 31 residential lots approved, A-1-10, 16.337 ac. Staff report unreachable - document-blocked. Best detached-product candidate; unblock via GRAMA request to Herriman for file S2025-022."
+    },
+    {
+      "plat_id": "mardam-ranch-subdivision",
+      "name": "Mardam Ranch Subdivision (S2023-147)",
+      "doc_ready": false,
+      "approval": "Phased-development amendment approved 2023-12-20 (Herriman PC minutes https://www.utah.gov/pmn/files/1072645.pdf); original preliminary plat approval earlier 2023",
+      "lot_count": 44,
+      "zone": "R-1-10 + A-1-10",
+      "acreage": 19.75,
+      "staff_report_url": null,
+      "staff_report_verified": "Original report on herriman.org/uploads - domain uploads gone (404). 2026-09-24 (GreenRush-10)",
+      "reason_not_scored": "Pre-qualified inputs only (GreenRush-10): 44 single-family lots, R-1-10/A-1-10, ~19.75 ac, ~12914 S 6100 W. Staff report unreachable - document-blocked. Unblock via GRAMA or SLCo Recorder recorded plat."
     }
   ]
 }

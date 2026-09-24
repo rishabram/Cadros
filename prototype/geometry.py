@@ -709,7 +709,176 @@ def plan_generation(
         diagnostic["verdict"] = "no_schemes__below_size_threshold"
     else:
         diagnostic["verdict"] = "no_schemes__unexpected"
+    # Lot-split family (DW-GEOM2): for small infill parcels where the
+    # street-based strategies yield nothing, try splitting the parent into
+    # N lots with no new streets. Each lot must meet min area and share
+    # sufficient boundary with the parent exterior (access proxy).
+    if not schemes:
+        split_schemes = plan_generation_split(
+            parcel_coords, zoning, parcel_id, max_schemes=max_schemes)
+        if split_schemes:
+            schemes = split_schemes
+            diagnostic["lot_split_used"] = True
+            diagnostic["lot_split_schemes_kept"] = len(schemes)
+            diagnostic["verdict"] = "schemes_found"
     return schemes, diagnostic
+
+
+def _mrr_axes(mrr: Polygon) -> Tuple[Tuple[float, float], Tuple[float, float]]:
+    """Return (long_axis_unit, short_axis_unit) for an MRR."""
+    coords = list(mrr.exterior.coords)[:4]
+    # Find the longest edge -> long axis direction.
+    best_len = -1.0
+    best_vec = (1.0, 0.0)
+    for i in range(4):
+        x1, y1 = coords[i]
+        x2, y2 = coords[(i + 1) % 4]
+        dx, dy = x2 - x1, y2 - y1
+        ln = (dx * dx + dy * dy) ** 0.5
+        if ln > best_len:
+            best_len = ln
+            best_vec = (dx / ln, dy / ln) if ln > 0 else (1.0, 0.0)
+    lx, ly = best_vec
+    # Short axis is perpendicular.
+    return (lx, ly), (-ly, lx)
+
+
+def _split_polygon_by_axis(poly: Polygon, axis: Tuple[float, float],
+                           n: int) -> List[Polygon]:
+    """Split a polygon into n strips perpendicular to axis (equal MRR slices).
+
+    Projects the MRR onto the axis, cuts at equal intervals, intersects each
+    slab with the polygon. Returns the non-empty intersections.
+    """
+    from shapely.geometry import box
+    mrr = poly.minimum_rotated_rectangle
+    ax, ay = axis
+    # Project MRR corners onto the axis.
+    projs = [x * ax + y * ay for x, y in mrr.exterior.coords]
+    lo, hi = min(projs), max(projs)
+    # Perpendicular direction.
+    px, py = -ay, ax
+    # Project onto perpendicular for the slab extent.
+    pprojs = [x * px + y * py for x, y in mrr.exterior.coords]
+    plo, phi = min(pprojs), max(pprojs)
+    # Add margin.
+    margin = (phi - plo) * 0.1 + 1.0
+    strips = []
+    for i in range(n):
+        a0 = lo + (hi - lo) * i / n
+        a1 = lo + (hi - lo) * (i + 1) / n
+        # Build a slab polygon: in (axis, perp) coordinates, then transform.
+        # Slab corners in axis-perp space: (a0, plo-margin), (a1, plo-margin),
+        # (a1, phi+margin), (a0, phi+margin).
+        # Convert to xy: x = a*ax + p*px, y = a*ay + p*py.
+        corners_ap = [(a0, plo - margin), (a1, plo - margin),
+                      (a1, phi + margin), (a0, phi + margin)]
+        corners_xy = [(a * ax + p * px, a * ay + p * py) for a, p in corners_ap]
+        slab = Polygon(corners_xy)
+        inter = poly.intersection(slab)
+        # Keep only polygonal parts.
+        if inter.is_empty:
+            continue
+        if inter.geom_type == "Polygon":
+            strips.append(inter)
+        elif inter.geom_type == "MultiPolygon":
+            # Keep the largest; small slivers are noise.
+            polys = sorted(inter.geoms, key=lambda g: g.area, reverse=True)
+            if polys and polys[0].area > 1.0:
+                strips.append(polys[0])
+    return strips
+
+
+def plan_generation_split(
+    parcel_coords: List[List[float]],
+    zoning: Dict,
+    parcel_id: str,
+    max_schemes: int = 8,
+) -> List[Scheme]:
+    """Lot-split scheme family (DW-GEOM2): no-new-street infill splits.
+
+    Partitions the parent into N lots (N=2..max) by slicing the MRR along
+    its long or short axis. Each lot must be a valid polygon, meet
+    min_lot_area, and share at least min_frontage_ft of boundary with the
+    parent exterior (street-access proxy; the parent is assumed to have
+    street frontage).
+
+    Returns schemes ranked by lot count (desc), then by minimum lot area
+    (desc, preferring balanced splits). No roads are generated (roads=[]).
+    """
+    from shapely.ops import unary_union
+    poly = to_polygon(parcel_coords)
+    if poly.is_empty or poly.area <= 0:
+        return []
+    min_area = float(zoning.get("min_lot_area_sqft", 0) or 0)
+    if min_area <= 0:
+        return []
+    min_front = zoning.get("min_frontage_ft")
+    min_front_f = float(min_front) if min_front else None
+
+    max_n = int(poly.area // min_area)
+    max_n = max(2, min(max_n, 8))  # infill scale; at least try 2
+    if max_n < 2:
+        return []
+
+    parent_boundary = poly.boundary
+    long_axis, short_axis = _mrr_axes(poly.minimum_rotated_rectangle)
+
+    candidates = []
+    for n in range(2, max_n + 1):
+        for axis_name, axis in (("long", long_axis), ("short", short_axis)):
+            strips = _split_polygon_by_axis(poly, axis, n)
+            if len(strips) != n:
+                continue
+            # Validate.
+            ok = True
+            lots = []
+            min_lot_area = float("inf")
+            for i, s in enumerate(strips):
+                if not s.is_valid:
+                    s = s.buffer(0)
+                if s.is_empty or s.area < min_area * 0.999:
+                    ok = False
+                    break
+                # Access proxy: shared boundary with parent exterior.
+                if min_front_f:
+                    shared = s.boundary.intersection(parent_boundary).length
+                    if shared < min_front_f * 0.999:
+                        ok = False
+                        break
+                min_lot_area = min(min_lot_area, s.area)
+                lots.append(Lot(
+                    lot_id=f"{parcel_id}-split-{axis_name}-{n}-{i+1}",
+                    polygon=[[round(float(x), 2), round(float(y), 2)]
+                             for x, y in s.exterior.coords],
+                    area_sqft=round(float(s.area), 1),
+                    frontage_ft=round(float(
+                        s.boundary.intersection(parent_boundary).length), 1)
+                    if min_front_f else 0.0,
+                    product_type="detached",
+                ))
+            if not ok:
+                continue
+            # No overlap (strips from a partition shouldn't overlap, but check).
+            union_area = unary_union(strips).area
+            if abs(union_area - sum(s.area for s in strips)) > 1.0:
+                continue
+            scheme_id = f"{parcel_id}-split-{axis_name}-{n}"
+            candidates.append(((-n, -min_lot_area), Scheme(
+                scheme_id=scheme_id,
+                parcel_id=parcel_id,
+                lots=lots,
+                roads=[],
+                fingerprint="",
+            )))
+
+    candidates.sort(key=lambda t: t[0])
+    schemes = [s for _, s in candidates[:max_schemes]]
+    # Assign deterministic fingerprints.
+    from .schema import fingerprint_geometry
+    for s in schemes:
+        s.fingerprint = fingerprint_geometry(s)
+    return schemes
 
 
 def _partition_parcel(parcel_poly: Polygon, fractions: List[float]) -> List[Polygon]:

@@ -127,6 +127,11 @@ def _validate_zoning(zoning: Dict) -> None:
     Attached-twinhome product: min_frontage_ft is optional (width-less
     frontage semantics — the code states no minimum lot width, and
     ZONING_POLICY forbids inventing a width proxy).
+
+    Lot-split mode (DW-GEOM2): road_width_ft=0 means "no new streets" —
+    the lot-split family partitions the parent without building roads.
+    The street-based generators require positive width and will yield
+    nothing; the lot-split fallback handles it.
     """
     required = ["min_lot_area_sqft", "road_width_ft"]
     if zoning.get("product_type") not in ("attached_twinhome", "attached_townhome"):
@@ -138,6 +143,9 @@ def _validate_zoning(zoning: Dict) -> None:
         )
     for k in required:
         v = float(zoning[k])
+        # road_width_ft=0 is the lot-split sentinel (no new streets).
+        if k == "road_width_ft" and v == 0:
+            continue
         if v <= 0:
             raise ValueError(
                 f"zoning config has non-positive {k}: {v} — refusing to subdivide"

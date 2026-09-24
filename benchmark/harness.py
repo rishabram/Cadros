@@ -144,7 +144,7 @@ def main():
         z = entry.get("zoning", {})
         if entry.get("scored") and z.get("status") == "known":
             required = ["min_lot_area_sqft", "road_width_ft"]
-            if z.get("product_type") != "attached_twinhome":
+            if z.get("product_type") not in ("attached_twinhome", "attached_townhome"):
                 required.append("min_frontage_ft")
             for k in required:
                 if k not in z:

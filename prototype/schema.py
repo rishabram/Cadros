@@ -26,6 +26,7 @@ class Lot(BaseModel):
     polygon: List[Coord]
     area_sqft: float
     frontage_ft: float
+    product_type: str = "detached"  # "detached" | "attached_twinhome" | "attached_townhome"
 
 
 class Road(BaseModel):

@@ -451,18 +451,31 @@ def _build_scheme_with_reason(
     return scheme, REASON_OK
 
 
+ATTACHED_PRODUCT_TYPES = ("attached_twinhome", "attached_townhome")
+
+
+def _is_attached(zoning: Dict) -> bool:
+    """True for product types with width-less frontage semantics."""
+    return zoning.get("product_type") in ATTACHED_PRODUCT_TYPES
+
+
 def _lot_modules(zoning: Dict, *, for_culdesac: bool = False) -> List[float]:
     """Lot-width modules for the tiling grid.
 
     Detached spine-road: the historic 2-module grid (min_frontage,
     1.25x) — unchanged to preserve goldens.
     Detached cul-de-sac: 3-module grid (adds 1.125x; the Tripp 10-lot key).
-    Attached twinhome: product unit widths — an explicit design search
-    (NOT a zoning claim; ZONING_POLICY forbids width proxies where the
-    code states no minimum). Typical twinhome unit widths.
+    Attached twinhome: product unit widths (30/35/40) — an explicit design
+      search (NOT a zoning claim; ZONING_POLICY forbids width proxies where
+      the code states no minimum). Typical twinhome unit widths.
+    Attached townhome: product unit widths (22/26/30) — narrower, as
+      townhomes are typically 20-30 ft wide. Same width-less semantics.
     """
-    if zoning.get("product_type") == "attached_twinhome":
+    pt = zoning.get("product_type")
+    if pt == "attached_twinhome":
         return [30.0, 35.0, 40.0]
+    if pt == "attached_townhome":
+        return [22.0, 26.0, 30.0]
     min_frontage = float(zoning["min_frontage_ft"])
     if for_culdesac:
         return [min_frontage, round(min_frontage * 1.125, 1),
@@ -472,7 +485,7 @@ def _lot_modules(zoning: Dict, *, for_culdesac: bool = False) -> List[float]:
 
 def _min_frontage_or_none(zoning: Dict) -> Optional[float]:
     """Width-less frontage semantics: returns None when the product type
-    does not carry a frontage minimum (attached_twinhome with no
+    does not carry a frontage minimum (attached product with no
     min_frontage_ft). Callers must skip the frontage filter but still
     measure and report frontage."""
     v = zoning.get("min_frontage_ft")
@@ -697,3 +710,162 @@ def plan_generation(
     else:
         diagnostic["verdict"] = "no_schemes__unexpected"
     return schemes, diagnostic
+
+
+def _partition_parcel(parcel_poly: Polygon, fractions: List[float]) -> List[Polygon]:
+    """Split a parcel into sub-parcels by area fraction.
+
+    Uses the minimum rotated rectangle to find the long axis, then cuts
+    perpendicular to it at cumulative-fraction positions. Deterministic.
+    For rectangles the sub-parcel areas match the fractions exactly; for
+    irregular parcels they are approximate (the caller allocates by the
+    approved program, not by exact geometry).
+    """
+    assert abs(sum(fractions) - 1.0) < 1e-6, f"fractions sum to {sum(fractions)}"
+    mrr = parcel_poly.minimum_rotated_rectangle
+    # Long axis: the MRR's longer edge direction.
+    coords = list(mrr.exterior.coords)
+    # Find the longest edge.
+    best = None
+    for i in range(4):
+        x1, y1 = coords[i]
+        x2, y2 = coords[(i + 1) % 4]
+        length = math.hypot(x2 - x1, y2 - y1)
+        if best is None or length > best[0]:
+            best = (length, math.atan2(y2 - y1, x2 - x1))
+    angle = best[1]
+    # Rotate so the long axis is horizontal; split the x-range.
+    centroid = parcel_poly.centroid
+    local = rotate(parcel_poly, -angle, origin=centroid, use_radians=True)
+    minx, _, maxx, _ = local.bounds
+    width = maxx - minx
+    sub_parcels = []
+    x0 = minx
+    for i, frac in enumerate(fractions):
+        x1 = minx + width * sum(fractions[: i + 1])
+        strip = box(x0, local.bounds[1] - 1, x1, local.bounds[3] + 1)
+        sub = local.intersection(strip)
+        # Rotate back to the parcel frame.
+        sub_world = rotate(sub, angle, origin=centroid, use_radians=True)
+        # Keep only polygonal parts.
+        if sub_world.is_empty:
+            sub_parcels.append(Polygon())
+        elif isinstance(sub_world, Polygon):
+            sub_parcels.append(sub_world)
+        else:  # MultiPolygon — take the largest piece.
+            sub_parcels.append(_largest_polygon(sub_world))
+        x0 = x1
+    return sub_parcels
+
+
+def plan_generation_mixed(
+    parcel_coords: List[List[float]],
+    product_specs: List[Dict],
+    parcel_id: str,
+    max_schemes: int = 5,
+) -> Tuple[List[Scheme], Dict]:
+    """Mixed-product scheme generation (DW-MIX1).
+
+    product_specs: list of dicts, each with:
+      - product_type: "detached" | "attached_twinhome" | "attached_townhome"
+      - zoning: dict (must include product_type; dimensional inputs per type)
+      - approved_units: int (approved count for this product; used for
+        area allocation and per-product scoring)
+      - area_fraction: float, optional (if absent, derived from
+        approved_units * min_lot_area, i.e., land allocated proportional
+        to the approved program)
+
+    The parcel is partitioned by area fraction; each sub-parcel runs the
+    single-product plan_generation with its product's zoning; the top
+    scheme per product is combined into mixed schemes with lots tagged
+    by product_type. Per-product counts are reported for scoring.
+
+    Returns (mixed_schemes, diagnostic). This is a proof-of-concept for
+    the Daybreak 11B Plat 2 class (59 detached + 32 townhomes); the plat
+    itself is unscored (no parent polygon, no P-C dims sourced).
+    """
+    from .schema import Scheme as SchemeModel
+
+    parcel_poly = to_polygon(parcel_coords)
+    # Derive area fractions from the approved program if not given.
+    total_program = 0.0
+    for spec in product_specs:
+        if "area_fraction" not in spec:
+            min_a = float(spec["zoning"]["min_lot_area_sqft"])
+            total_program += spec["approved_units"] * min_a
+    fractions = []
+    for spec in product_specs:
+        if "area_fraction" in spec:
+            fractions.append(float(spec["area_fraction"]))
+        else:
+            min_a = float(spec["zoning"]["min_lot_area_sqft"])
+            fractions.append(spec["approved_units"] * min_a / total_program)
+    # Normalize (in case explicit fractions don't sum to 1).
+    s = sum(fractions)
+    fractions = [f / s for f in fractions]
+
+    sub_parcels = _partition_parcel(parcel_poly, fractions)
+    diagnostic: Dict = {
+        "strategy": "mixed_product",
+        "products": [],
+        "area_fractions": [round(f, 4) for f in fractions],
+    }
+    # Generate per product on its sub-parcel.
+    product_schemes = []
+    for spec, sub_poly in zip(product_specs, sub_parcels):
+        pt = spec["product_type"]
+        zoning = dict(spec["zoning"])
+        zoning["product_type"] = pt
+        sub_coords = [list(c) for c in sub_poly.exterior.coords] if not sub_poly.is_empty else []
+        if not sub_coords:
+            schemes, diag = [], {"verdict": "no_schemes__empty_subparcel"}
+        else:
+            schemes, diag = plan_generation(
+                sub_coords, zoning, f"{parcel_id}-{pt}", max_schemes=max_schemes
+            )
+        # Tag lots with the product type.
+        for sch in schemes:
+            for lot in sch.lots:
+                lot.product_type = pt
+        product_schemes.append(schemes)
+        diagnostic["products"].append({
+            "product_type": pt,
+            "approved_units": spec["approved_units"],
+            "sub_parcel_area_sqft": round(float(sub_poly.area), 1) if not sub_poly.is_empty else 0.0,
+            "schemes_found": len(schemes),
+            "top_lots": len(schemes[0].lots) if schemes else 0,
+        })
+    # Combine the top scheme per product into mixed schemes.
+    # For the PoC, take the top-1 per product; the mixed scheme's lots are
+    # the union, tagged by product_type.
+    mixed = []
+    # Use the top scheme from each product (index 0). If any product has
+    # no schemes, the mixed result is empty for that combination.
+    tops = [ps[0] if ps else None for ps in product_schemes]
+    if all(t is not None for t in tops):
+        all_lots = []
+        all_roads = []
+        for sch in tops:
+            all_lots.extend(sch.lots)
+            all_roads.extend(sch.roads)
+        mixed_scheme = SchemeModel(
+            scheme_id=f"{parcel_id}-mixed-00",
+            parcel_id=parcel_id,
+            lots=all_lots,
+            roads=all_roads,
+            params={
+                "strategy": "mixed_product",
+                "products": [s["product_type"] for s in product_specs],
+                "area_fractions": [round(f, 4) for f in fractions],
+            },
+            provenance=[{"step": "plan_generation_mixed", "inputs": "synthetic"}],
+        )
+        mixed_scheme.fingerprint = fingerprint_geometry(mixed_scheme)
+        mixed.append(mixed_scheme)
+    diagnostic["mixed_schemes"] = len(mixed)
+    if mixed:
+        counts: Dict[str, int] = {}
+        for lot in mixed[0].lots:
+            counts[lot.product_type] = counts.get(lot.product_type, 0) + 1
+        diagnostic["per_product_counts"] = counts
+    return mixed, diagnostic

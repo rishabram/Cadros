@@ -129,7 +129,7 @@ def _validate_zoning(zoning: Dict) -> None:
     ZONING_POLICY forbids inventing a width proxy).
     """
     required = ["min_lot_area_sqft", "road_width_ft"]
-    if zoning.get("product_type") != "attached_twinhome":
+    if zoning.get("product_type") not in ("attached_twinhome", "attached_townhome"):
         required.append("min_frontage_ft")
     missing = [k for k in required if k not in zoning]
     if missing:

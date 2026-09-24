@@ -229,7 +229,33 @@
         "entry": null,
         "date": null,
         "note": "preliminary approval only; final plat recording not checked"
-      }
+      },
+      "product_mix": [
+        {
+          "product_type": "detached",
+          "approved_units": 59,
+          "zoning": {
+            "product_type": "detached",
+            "min_lot_area_sqft": 6000,
+            "min_frontage_ft": 60,
+            "road_width_ft": 49,
+            "_synthetic": true,
+            "_note": "P-C dims unsourced; 6000/60/49 are placeholders for representation design, NOT sourced inputs. Do not score on these."
+          }
+        },
+        {
+          "product_type": "attached_townhome",
+          "approved_units": 32,
+          "zoning": {
+            "product_type": "attached_townhome",
+            "min_lot_area_sqft": 3000,
+            "road_width_ft": 49,
+            "_synthetic": true,
+            "_note": "P-C dims unsourced; 3000 sqft is a placeholder. Width-less (no min_frontage_ft)."
+          }
+        }
+      ],
+      "product_mix_note": "DW-MIX1 2026-09-24: mixed-product representation designed and proven on synthetic inputs (prototype/test_mixed_product.py; 24 detached + 18 townhome on synthetic 12.731-ac parcel \u2014 the count gap vs 59+32 is due to synthetic dims, not a scoring attempt). Plat stays UNSCORED: parent polygon null, P-C dims unsourced. When parent + dims are sourced, wire product_mix into harness scoring (per-product counts)."
     },
     {
       "plat_id": "daybreak-v12b-plat4",

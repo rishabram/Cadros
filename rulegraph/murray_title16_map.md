@@ -52,7 +52,7 @@ Chapter list from the official Title 17 TOC
 | 17.96 | R-1-6 — Single-Family Medium Density Residential | **EXTRACTED (secondary):** min lot 6,000 sq ft; max height 30 ft; front 20' / rear 25' / side 5' / corner 20' — 2021-05-06 PC packet Figure 3 (official city document, not code text); accessory-height §17.96.090(G) quoted verbatim from packet ordinance exhibit (Pack-6). Coverage/width not located. |
 | 17.100 | R-1-8 — Single-Family Low Density Residential | **PARTIAL (secondary):** min lot 8,000 sq ft; max main-dwelling height 35 ft — 2021-03-04 PC staff packet (official city document, not code text); accessory-height §17.100.090(G) quoted verbatim from 2021-05-06 packet exhibit (Pack-6). Setbacks/width/coverage still null. |
 | 17.104 | R-1-10 — Single-Family Low Density Residential | **PARTIAL (secondary):** min lot 10,000 sq ft — 2025-07-09 PC minutes (official); accessory-height §17.104.090(G) quoted verbatim from 2021-05-06 packet exhibit (Pack-6). Setbacks/height/width/coverage still null. |
-| 17.108 | R-1-12 — Single-Family Low Density Residential | not extracted — null with dated Pack-6 attempts (3 angles, 0 sources); accessory-height §17.108.090(G) quoted verbatim from 2021-05-06 packet exhibit. |
+| 17.108 | R-1-12 — Single-Family Low Density Residential | **PARTIAL (primary, Pack-7):** max main-dwelling height **35 ft** (§17.108.110: "No building shall be erected to a height greater than thirty five feet (35')"; dwelling 1–2.5 stories); yard exceptions **§17.108.100 current law** — June 2025 roof/canopy amendments (Project 25-056) ADOPTED via **Ord. 25-30 § 2** (PC recommended 6-0 on 2025-06-05); accessory structures flat **20' max** peak, one-story (§17.108.090(G), Ord. 21-19 — resolves Pack-6 adoption caveat). Min lot / base setbacks (§17.108.080) / width / coverage (§17.108.130) still null. Sources: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12577 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12572 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12548 |
 | 17.112 | R-2-10 — Medium Density Residential | not extracted — null with gap reasons |
 | 17.116 | R-M-10 — Multiple-Family Low Density Residential | **EXTRACTED (primary):** lot area — SF 8,000 sq ft, duplex 10,000 sq ft, >2 units 7 u/acre, bonus to 10 u/acre via ch 17.132 (§17.116.040); yards — front 25', side 8' each / 20' combined, corner-side 20', rear 25', accessory 1' rear (≥6' behind main, ≥10' to adjacent dwelling, ≤25% of rear yard) (§17.116.060); **height 35 ft** (§17.116.080, Pack-5). Coverage/width not located. Sources: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12679 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12697 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12712 |
 | 17.120 | R-M-15 — Multiple-Family Medium Density Residential | **EXTRACTED (primary):** lot area — SF 8,000 sq ft, duplex 10,000 sq ft, >2 units 12 u/acre, bonus to 15 u/acre via ch 17.132 (§17.120.040); yards — front 25', side 8' each / 20' combined, corner-side 20', rear 25', accessory rules (§17.120.060, Pack-5); **height 40 ft** (§17.120.080, Pack-5, supersedes staff-packet secondary); **lot coverage 40%** (§17.120.100, Pack-5). Width not located. Sources: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12769 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12774 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789 |
@@ -82,10 +82,19 @@ not ch 17.72), 17.171 CC-FBC, 17.172 enforcement, 17.173 B-P, 17.174 P-O.
    amlegal's section-index endpoint, is needed to enumerate chapter sections.
 2. Individual **section** pages are indexed by search engines (that's how
    §§17.116.040/17.116.060/17.120.040 were found) — but only sporadically.
-   R-1 chapter sections (17.96/17.100/17.104/17.108) were not indexed despite
-   10+ targeted queries. A systematic crawl is the reliable next step.
-3. **Amendment check:** the 2025-06-05 PC packet shows amendments under
-   consideration across residential chapters 17.92–17.128 (non-enclosed roof
-   structures extending into setbacks). Adoption status unconfirmed — re-check
-   setback text against post-2025 code before treating any yard values as
-   current.
+   Pack-7 found that chapter **17.108** sections ARE indexed after all:
+   §17.108.090 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12548),
+   §17.108.100 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12572),
+   §17.108.110 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12577).
+   Cross-references inside fetched sections are the best discovery tool:
+   §17.108.090(A) names §17.108.080 as the yard-requirements section;
+   §17.108.090(C)(6)/(H) name §17.108.130 as the coverage section.
+   Chapters 17.96/17.100/17.104/17.112 section text remains unindexed —
+   try distinctive-phrase queries against those chapters next.
+3. **Amendment check — RESOLVED (Pack-7, 2026-09-24):** the 2025-06-05 PC
+   packet's residential yard-exception amendments (Project 25-056) were
+   ADOPTED as **Ordinance 25-30** — verified in current primary text of
+   §17.108.100 and §17.120.070, both carrying "(Ord. 25-30 § 2)" history.
+   The ordinance amended yard-EXCEPTION sections only (chapters
+   17.92–17.128); base yard numbers are unchanged. All prior
+   "adoption unconfirmed" caveats on this item are superseded.

@@ -1,5 +1,5 @@
 {
- "status": "DRAFT / UNVERIFIED — machine-draft extraction by Pack-4 (pilot), Pack-5 (Wave 2), Pack-6 (Wave 3), 2026-09-24. Not human-verified. Not part of the canonical rule store. Do not use for evaluation without verification. Pack-6 closed: R-1-6 full dimensional set (6,000 SF lot, 30' height, 20'/25'/5'/20' setbacks) from the 2021-05-06 PC packet; R-1-10 min lot 10,000 SF from 2025-07-09 PC minutes; verbatim accessory-structure height quotes for all R-1/R-M chapters (17.96/17.100/17.104/17.108 .090(G), 17.112.090(F), 17.116/17.120/17.124/17.128 .060(I)). Remaining: R-1 primary code text (all chapters), R-1-8/R-1-12 min-lot primary, R-1-10/R-1-12 setbacks/height, R-1-6/R-1-8/R-M-10/R-M-20/R-M-25 coverage, all width/frontage.",
+ "status": "DRAFT / UNVERIFIED — machine-draft extraction by Pack-4 (pilot), Pack-5 (Wave 2), Pack-6 (Wave 3), Pack-7 (Wave 4), 2026-09-24. Not human-verified. Not part of the canonical rule store. Do not use for evaluation without verification. Pack-7 closed: (1) June 2025 Residential Yard Exceptions packet recovered (Project 25-056) and ADOPTION CONFIRMED via Ordinance 25-30 — current primary §17.108.100 (R-1-12) and §17.120.070 (R-M-15) carry the new roof/canopy exception text with '(Ord. 25-30 § 2)' history; PC recommended 6-0 on 2025-06-05; (2) R-1-12 main-dwelling max height 35 ft from primary §17.108.110; (3) flat-20' accessory-structure height confirmed as current law for §17.108.090(G) and §17.120.060(I) via Ord. 21-19 (resolves Pack-6 'adoption unconfirmed' caveat for those sections). Remaining: R-1-12 min lot, base setbacks (§17.108.080), width/frontage, coverage (§17.108.130); R-1-8/R-1-10 setbacks/height primary; R-1-6/R-1-8 width/frontage/coverage; R-M width/frontage and R-M-10/R-M-20/R-M-25 coverage.",
  "access_date": "2026-09-24",
  "overlay_id": "murray_pilot_draft_2026-09-24",
  "params_source_tag": "pack6_wave3_extraction_draft",
@@ -93,7 +93,7 @@
     "source": "17.96.090(G) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
     "source_tier": "secondary_official_document",
     "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "amendment_caveat": "Pack-7 update (2026-09-24): the Project 21-040 flat-20' proposal WAS adopted as Ord. 21-19 — verified in current primary text of §17.108.090(G) and §17.120.060(I), which now read flat 20' with '(Ord. 21-19: ...)' history. This parallel section (17.96.090(G)) was not individually re-fetched in Pack-7; the same 2021 ordinance presumably amended it, but verify against current code before treating flat 20' as law for this chapter.",
     "access_date": "2026-09-24"
    }
   },
@@ -109,7 +109,7 @@
    "side_setback_ft": null,
    "corner_side_setback_ft": null,
    "rear_setback_ft": null,
-   "setbacks_gap": "Yard-requirements section not located for chapter 17.100 as of 2026-09-24 (Pack-6); 2021-05-06 packet table covers A-1/R-1-6/R-M-15 only. 2025 amendment check pending (see amendment caveat).",
+   "setbacks_gap": "Yard-requirements section not located for chapter 17.100 as of 2026-09-24 (Pack-7); 2021-05-06 packet table covers A-1/R-1-6/R-M-15 only. The June 2025 yard-exception amendments were ADOPTED via Ord. 25-30 but amended yard EXCEPTIONS only, not base yards (see R-1-12 yard_exceptions record).",
    "max_height_ft": 35,
    "max_height_source": "https://www.murray.utah.gov/DocumentCenter/View/11743/030421-Planning-Commission-Packet?bidId=",
    "max_height_source_tier": "secondary_official_document",
@@ -122,7 +122,7 @@
     "source": "17.100.090(G) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
     "source_tier": "secondary_official_document",
     "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "amendment_caveat": "Pack-7 update (2026-09-24): the Project 21-040 flat-20' proposal WAS adopted as Ord. 21-19 — verified in current primary text of §17.108.090(G) and §17.120.060(I), which now read flat 20' with '(Ord. 21-19: ...)' history. This parallel section (17.100.090(G)) was not individually re-fetched in Pack-7; the same 2021 ordinance presumably amended it, but verify against current code before treating flat 20' as law for this chapter.",
     "access_date": "2026-09-24"
    }
   },
@@ -135,7 +135,7 @@
    "side_setback_ft": null,
    "corner_side_setback_ft": null,
    "rear_setback_ft": null,
-   "setbacks_gap": "Yard-requirements section not located for chapter 17.104 as of 2026-09-24 (Pack-6). 2025 amendment check pending.",
+   "setbacks_gap": "Yard-requirements section not located for chapter 17.104 as of 2026-09-24 (Pack-7). The June 2025 yard-exception amendments were ADOPTED via Ord. 25-30 but amended yard EXCEPTIONS only, not base yards (see R-1-12 yard_exceptions record).",
    "max_height_ft": null,
    "height_gap": "Height section not located for chapter 17.104 as of 2026-09-24 (Pack-6); no staff-packet quote found for R-1-10 main-dwelling height.",
    "max_lot_coverage_pct": null,
@@ -149,32 +149,46 @@
     "source": "17.104.090(G) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
     "source_tier": "secondary_official_document",
     "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "amendment_caveat": "Pack-7 update (2026-09-24): the Project 21-040 flat-20' proposal WAS adopted as Ord. 21-19 — verified in current primary text of §17.108.090(G) and §17.120.060(I), which now read flat 20' with '(Ord. 21-19: ...)' history. This parallel section (17.104.090(G)) was not individually re-fetched in Pack-7; the same 2021 ordinance presumably amended it, but verify against current code before treating flat 20' as law for this chapter.",
     "access_date": "2026-09-24"
    }
   },
   "R-1-12": {
    "code_chapter": "17.108",
    "min_lot_area_sqft": null,
-   "min_lot_area_gap": "No primary or official-secondary source located for R-1-12 minimum lot size as of 2026-09-24 (Pack-6). Angles attempted: amlegal indexed search + CDX (Pack-5), web search for R-1-12 staff reports/ordinances (Pack-6, 0 hits), 2021-05-06 packet (covers R-1-6 only). Name-correspondence hypothesis (12,000 sq ft) is NOT recorded as a value.",
+   "min_lot_area_gap": "No primary or official-secondary source located for R-1-12 minimum lot size as of 2026-09-24 (Pack-7). Angles attempted: amlegal indexed search + CDX (Pack-5), web search for R-1-12 staff reports/ordinances (Pack-6, 0 hits), 2021-05-06 packet (covers R-1-6 only), Pack-7 amlegal section sweeps. Controlling lot-area section text not fetched. Name-correspondence hypothesis (12,000 sq ft) is NOT recorded as a value.",
    "min_lot_width_ft": null,
    "min_lot_width_gap": "No numeric lot-width/frontage standard located for R-1-12 as of 2026-09-24 (Pack-6). Controlling section not fetched.",
    "front_setback_ft": null,
    "side_setback_ft": null,
    "corner_side_setback_ft": null,
    "rear_setback_ft": null,
-   "setbacks_gap": "Yard-requirements section not located for chapter 17.108 as of 2026-09-24 (Pack-6). 2025 amendment check pending.",
-   "max_height_ft": null,
-   "height_gap": "Height section not located for chapter 17.108 as of 2026-09-24 (Pack-6); no staff-packet quote found for R-1-12 main-dwelling height.",
+   "setbacks_gap": "Base yard-requirements section (§17.108.080 — section number confirmed via §17.108.090(A) reference to 'the minimum front yard setback described in section 17.108.080') text not fetched as of 2026-09-24 (Pack-7). The June 2025 yard-exception amendments (Ord. 25-30) amended §17.108.100 only — they did NOT change base yard numbers. Do not use yard-exception encroachment allowances as base setbacks.",
+   "max_height_ft": 35,
+   "max_height_source": "§17.108.110 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12577",
+   "max_height_source_tier": "primary_code_text",
+   "max_height_note": "Primary §17.108.110 (fetched 2026-09-24, Pack-7): 'No building shall be erected to a height greater than thirty five feet (35')'; dwelling at least one story and no more than 2.5 stories; specified nonoccupancy structures (chimneys, flagpoles, church steeples, similar) excluded; public/quasi-public buildings may exceed the limit by conditional-use permit.",
    "max_lot_coverage_pct": null,
-   "coverage_gap": "No lot-coverage standard located for chapter 17.108 as of 2026-09-24 (Pack-6); chapter not fully read — not yet an evidenced absence.",
+   "coverage_gap": "No lot-coverage standard located for chapter 17.108 as of 2026-09-24 (Pack-7). §17.108.130 is the coverage section (referenced by §17.108.090(C)(6) and (H) as 'the general coverage restriction described in section 17.108.130') but its text was not fetched. Chapter not fully read — not yet an evidenced absence.",
+   "yard_exceptions": {
+    "section": "17.108.100",
+    "status": "ADOPTED — current law",
+    "adopting_ordinance": "Ord. 25-30 § 2",
+    "legislative_history": "June 5, 2025 Planning Commission packet (Project 25-056; staff-report cover shows 25-055 — discrepancy preserved) proposed the amendments https://www.murray.utah.gov/DocumentCenter/View/16772/060525-Planning-Commission-Packet?bidId ; Planning Commission recommended approval 6-0 on 2025-06-05 https://www.utah.gov/pmn/files/1295135.pdf ; Committee of the Whole reviewed the proposed ordinance 2025-08-05 https://www.utah.gov/pmn/files/1317619.pdf ; adopted as Ordinance 25-30 (council vote date not captured; ordinance number and current-code history verified in primary code).",
+    "verbatim_current_text_A": "A. The following structures may project into a minimum front or rear yard not more than four feet (4'), and into a minimum side yard not more than two and one-half feet (21/2'): 1. Cornices, eaves, sills, buttresses or other similar architectural features; 2. Fireplace structures and bays; 3. Stairways, balconies, door stoops, fire escapes, awnings, skylights and planting boxes or masonry planters not exceeding twenty four inches (24') in height.",
+    "verbatim_current_text_B": "B. Any permanent roof or canopy attached to the main building which covers a use customarily recognized as an open, outdoor use, such as a patio, patio deck, hot tub, etc., and any uncovered deck attached to the main dwelling may extend into the rear yard no further than one-half the required rear yard setback distances, and into a front yard not more than seven (7) feet, if the following criteria are met: 1. The roof or canopy is not more than one (1) story in height. 2. The roof or canopy is no longer than one-half (1/2) the width of the main dwelling on which it is located. 3. The roof or canopy is entirely open on three (3) sides except for supporting columns and customary architectural features. 4. The columns supporting the roof or canopy are constructed on individual pad footings or similar design, and not on a continuous footing wall that could be used for future expansion of living space. 5. In no instance may the additions encroach to within less than twenty (20) feet of a front or street side yard property line, or to within less than ten (10) feet of a rear property line. (Ord. 25-30 § 2: Ord. 07-30 § 2)",
+    "scope_note": "The same ordinance amended the yard-exception sections of all residential chapters (17.92, 17.96, 17.100, 17.104, 17.108, 17.112, 17.116, 17.120, 17.124, 17.128) per the 2025-06-05 PC motion; verified in current primary text for §17.108.100 (R-1-12) and §17.120.070 (R-M-15, https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789). These are yard EXCEPTIONS (encroachment allowances), not base yard requirements.",
+    "source": "§17.108.100 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12572",
+    "source_tier": "primary_code_text",
+    "access_date": "2026-09-24"
+   },
    "accessory_structure_height": {
     "section": "17.108.090(G)",
-    "verbatim_quote": "An accessory structure may consist only of a one-story building and may not exceed sixteen feet (16') to the peak of the roof if the primary residential dwelling is less than twenty feet (20') in height. If the primary residential dwelling is greater than twenty feet (20') in height, an accessory structure is allowed at a height of twenty feet (20') to the peak of the roof.",
-    "source": "17.108.090(G) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
-    "source_tier": "secondary_official_document",
-    "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "current_verbatim_quote": "An accessory structure may consist only of a one-story building and may not exceed twenty feet (20') to the peak of the roof.",
+    "current_source": "§17.108.090 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12548 (fetched 2026-09-24, Pack-7)",
+    "current_source_tier": "primary_code_text",
+    "adoption_note": "Current text carries ordinance history (Ord. 21-19: Ord. 19-38 § 2: Ord. 14-10: Ord. 07-30 § 2); Ord. 21-19 (2021) is the most recent amendment, consistent with adoption of the Project 21-040 flat-20' proposal from the 2021-05-06 PC packet. Pack-6's 'adoption unconfirmed' caveat is RESOLVED for §17.108.090(G): flat 20' is current law.",
+    "superseded_tiered_quote": "[SUPERSEDED pre-Ord. 21-19 text, quoted in 2021-05-06 PC packet Project 21-040 exhibit https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId= ] 'An accessory structure may consist only of a one-story building and may not exceed sixteen feet (16') to the peak of the roof if the primary residential dwelling is less than twenty feet (20') in height. If the primary residential dwelling is greater than twenty feet (20') in height, an accessory structure is allowed at a height of twenty feet (20') to the peak of the roof.'",
     "access_date": "2026-09-24"
    }
   },
@@ -199,7 +213,7 @@
     "source": "17.112.090(F) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
     "source_tier": "secondary_official_document",
     "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "amendment_caveat": "Pack-7 update (2026-09-24): the Project 21-040 flat-20' proposal WAS adopted as Ord. 21-19 — verified in current primary text of §17.108.090(G) and §17.120.060(I), which now read flat 20' with '(Ord. 21-19: ...)' history. This parallel section (17.112.090(F)) was not individually re-fetched in Pack-7; the same 2021 ordinance presumably amended it, but verify against current code before treating flat 20' as law for this chapter.",
     "access_date": "2026-09-24"
    }
   },
@@ -225,7 +239,7 @@
     "driveway_note": "Side yard used for access to a detached garage/carport for one dwelling: unobstructed 12 ft paved driveway; for more than one dwelling: unobstructed 25 ft wide driveway.",
     "source": "§17.116.060 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12697",
     "source_tier": "primary_code_text",
-    "amendment_caveat": "A June 2025 Planning Commission packet (https://www.murray.utah.gov/DocumentCenter/View/16772/060525-Planning-Commission-Packet?bidId) shows amendments under consideration across residential chapters 17.92–17.128 regarding non-enclosed roof structures extending into setbacks. Adoption status not confirmed during pilot — re-check setback text against post-2025 code before treating as current."
+    "amendment_caveat": "June 2025 yard-exception amendments ADOPTED via Ordinance 25-30 (Pack-7, 2026-09-24): verified in current primary text of §17.120.070 (R-M-15) with '(Ord. 25-30 § 2)' history; the same ordinance amended the yard-exception sections of all residential chapters (17.92–17.128) per the 2025-06-05 PC motion. It amended yard EXCEPTIONS only — base yard numbers in this section are unchanged (pattern verified: no Ord. 25-30 in §17.120.060 history)."
    },
    "max_height_ft": 35,
    "max_height_source": "§17.116.080 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12712",
@@ -241,7 +255,7 @@
     "source": "17.116.060(I) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
     "source_tier": "secondary_official_document",
     "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "amendment_caveat": "Pack-7 update (2026-09-24): the Project 21-040 flat-20' proposal WAS adopted as Ord. 21-19 — verified in current primary text of §17.108.090(G) and §17.120.060(I), which now read flat 20' with '(Ord. 21-19: ...)' history. This parallel section (17.116.060(I)) was not individually re-fetched in Pack-7; the same 2021 ordinance presumably amended it, but verify against current code before treating flat 20' as law for this chapter.",
     "access_date": "2026-09-24"
    }
   },
@@ -268,7 +282,7 @@
     "source": "§17.120.060 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12774",
     "source_tier": "primary_code_text",
     "access_date": "2026-09-24",
-    "amendment_caveat": "June 2025 proposed setback amendments (chapters 17.92–17.128) remain unconfirmed/unadopted as of 2026-09-24; §17.120.060 history shows no 2025 setback amendment. Re-check against post-2025 code before treating as current."
+    "amendment_caveat": "June 2025 yard-exception amendments ADOPTED via Ordinance 25-30 (Pack-7, 2026-09-24): verified in current primary text of §17.120.070 with '(Ord. 25-30 § 2)' history. Base yard numbers in §17.120.060 are unchanged (its history shows no Ord. 25-30: (Ord. 21-19: Ord. 19-38 § 2: Ord. 07-30 § 2))."
    },
    "max_height_ft": 40,
    "max_height_source": "§17.120.080 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789",
@@ -282,11 +296,11 @@
    "min_lot_width_gap": "No numeric lot-width/frontage standard located for chapter 17.120 as of 2026-09-24 (Pack-6); width/frontage section not surfaced.",
    "accessory_structure_height": {
     "section": "17.120.060(I)",
-    "verbatim_quote": "An accessory structure may consist only of a one-story building and may not exceed sixteen feet (16') to the peak of the roof if the primary residential dwelling is less than twenty feet (20') in height. If the primary residential dwelling is greater than twenty feet (20') in height, an accessory structure is allowed at a height of twenty feet (20') to the peak of the roof.",
-    "source": "17.120.060(I) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
-    "source_tier": "secondary_official_document",
-    "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "current_verbatim_quote": "An accessory structure may consist only of a one-story building and may not exceed twenty feet (20') to the peak of the roof.",
+    "current_source": "§17.120.060 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789 (fetched 2026-09-24, Pack-7)",
+    "current_source_tier": "primary_code_text",
+    "adoption_note": "Current text carries ordinance history (Ord. 21-19: Ord. 19-38 § 2: Ord. 07-30 § 2); Ord. 21-19 (2021) is the most recent amendment, consistent with adoption of the Project 21-040 flat-20' proposal from the 2021-05-06 PC packet. Pack-6's 'adoption unconfirmed' caveat is RESOLVED for §17.120.060(I): flat 20' is current law.",
+    "superseded_tiered_quote": "[SUPERSEDED pre-Ord. 21-19 text, quoted in 2021-05-06 PC packet Project 21-040 exhibit https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId= ] 'An accessory structure may consist only of a one-story building and may not exceed sixteen feet (16') to the peak of the roof if the primary residential dwelling is less than twenty feet (20') in height. If the primary residential dwelling is greater than twenty feet (20') in height, an accessory structure is allowed at a height of twenty feet (20') to the peak of the roof.'",
     "access_date": "2026-09-24"
    }
   },
@@ -314,7 +328,7 @@
     "source": "§17.124.060 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12851",
     "source_tier": "primary_code_text",
     "access_date": "2026-09-24",
-    "amendment_caveat": "June 2025 proposed setback amendments (chapters 17.92–17.128) remain unconfirmed/unadopted as of 2026-09-24. Re-check against post-2025 code before treating as current."
+    "amendment_caveat": "June 2025 yard-exception amendments ADOPTED via Ordinance 25-30 (Pack-7, 2026-09-24): verified in current primary text of §17.120.070 with '(Ord. 25-30 § 2)' history; the same ordinance amended the yard-exception sections of all residential chapters per the 2025-06-05 PC motion. It amended yard EXCEPTIONS only — base yard numbers in this section are unchanged."
    },
    "max_height_ft": 40,
    "max_height_source": "§17.124.080 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12866",
@@ -330,7 +344,7 @@
     "source": "17.124.060(I) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
     "source_tier": "secondary_official_document",
     "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "amendment_caveat": "Pack-7 update (2026-09-24): the Project 21-040 flat-20' proposal WAS adopted as Ord. 21-19 — verified in current primary text of §17.108.090(G) and §17.120.060(I), which now read flat 20' with '(Ord. 21-19: ...)' history. This parallel section (17.124.060(I)) was not individually re-fetched in Pack-7; the same 2021 ordinance presumably amended it, but verify against current code before treating flat 20' as law for this chapter.",
     "access_date": "2026-09-24"
    }
   },
@@ -358,7 +372,7 @@
     "source": "§17.128.060 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12928",
     "source_tier": "primary_code_text",
     "access_date": "2026-09-24",
-    "amendment_caveat": "June 2025 proposed setback amendments (chapters 17.92–17.128) remain unconfirmed/unadopted as of 2026-09-24. Re-check against post-2025 code before treating as current."
+    "amendment_caveat": "June 2025 yard-exception amendments ADOPTED via Ordinance 25-30 (Pack-7, 2026-09-24): verified in current primary text of §17.120.070 with '(Ord. 25-30 § 2)' history; the same ordinance amended the yard-exception sections of all residential chapters per the 2025-06-05 PC motion. It amended yard EXCEPTIONS only — base yard numbers in this section are unchanged."
    },
    "max_height_ft": 40,
    "max_height_source": "§17.128.080 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12943",
@@ -374,7 +388,7 @@
     "source": "17.128.060(I) as quoted in 2021-05-06 Planning Commission packet (Project 21-040) https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=",
     "source_tier": "secondary_official_document",
     "source_note": "Verbatim quote of code section text in the packet's ordinance exhibit; not a direct code-library fetch.",
-    "amendment_caveat": "Quoted verbatim from the proposed-ordinance exhibit in the 2021-05-06 Planning Commission staff packet (Project 21-040, accessory-structure height text amendment). The packet proposed replacing this text with a flat 20-foot maximum; adoption status of that amendment was NOT confirmed during Pack-6 — do not treat the 20' proposal as current law. Tier is official-city-document quoting code text, not a direct code-library fetch.",
+    "amendment_caveat": "Pack-7 update (2026-09-24): the Project 21-040 flat-20' proposal WAS adopted as Ord. 21-19 — verified in current primary text of §17.108.090(G) and §17.120.060(I), which now read flat 20' with '(Ord. 21-19: ...)' history. This parallel section (17.128.060(I)) was not individually re-fetched in Pack-7; the same 2021 ordinance presumably amended it, but verify against current code before treating flat 20' as law for this chapter.",
     "access_date": "2026-09-24"
    }
   }
@@ -438,5 +452,5 @@
   "overlays_and_mixed_use": "chapters 17.146 MCMU, 17.162 CMU, 17.164 VMU, 17.168 TOD, 17.170 MCCD, 17.171 CC-FBC not extracted (MCCD Table D parking captured as context only)",
   "review_procedures_definitions": "not extracted"
  },
- "extraction_provenance": "Extracted 2026-09-24 by Pack-4 (pilot wave) and Pack-5 (Wave 2). Pack-4 sources: (1) American Legal Murray UT Title 16 HTML — §16.16.180 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269 ; §16.16.090 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9186 ; ch-16.16 index https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9123 . (2) American Legal Murray UT Title 17 HTML — §17.116.040 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12679 ; §17.116.060 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12697 ; §17.120.040 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12769 ; Title 17 chapter TOC https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9589 ; R-1-8 chapter node https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12345 . (3) Murray City 2021-03-04 Planning Commission packet https://www.murray.utah.gov/DocumentCenter/View/11743/030421-Planning-Commission-Packet?bidId= — SECONDARY SOURCE: R-1-8 8,000 sq ft min lot + 35 ft max height; R-M-15 40 ft max height (now superseded by primary §17.120.080). (4) 2025-06-05 Planning Commission packet https://www.murray.utah.gov/DocumentCenter/View/16772/060525-Planning-Commission-Packet?bidId — amendments under consideration across residential chapters 17.92–17.128; adoption status unconfirmed. Pack-5 (2026-09-24) primary additions: §17.116.080 (R-M-10 height 35 ft) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12712 ; §17.120.060 (R-M-15 yards) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12774 ; §17.120.080/.100 (R-M-15 height 40 ft, coverage 40%) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789 ; §17.124.040 (R-M-20 lot/density) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12846 ; §17.124.060 (R-M-20 yards) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12851 ; §17.124.080 (R-M-20 height 40 ft) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12866 ; §17.128.040 (R-M-25 lot/density) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12923 ; §17.128.060 (R-M-25 yards) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12928 ; §17.128.080 (R-M-25 height 40 ft) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12943 ; §17.72.100 (residential parking) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-11412 ; §17.132.050 (density bonus criteria, full table) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12993 . Pack-5 did NOT locate primary R-1 (17.92/17.96/17.100/17.104/17.108/17.112) section text via indexed search; R-1-8 lot/height remain secondary. R-M-10 coverage (.100) page rendered empty; R-M width/frontage sections not surfaced. Pack-6 (2026-09-24) new sources (no amlegal re-sweep; Cloudflare blocks direct curl, Wayback offline, browser_open terminal on the 060525 packet): (1) 2021-05-06 Planning Commission packet https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId= — Figure 3 comparison table (A-1 vs R-1-6 vs R-M-15: R-1-6 = 6,000 ft2 lots, 30' height, front 20', rear 25', side 5', corner 20') and Project 21-040 ordinance exhibit quoting accessory-height subsections verbatim for chapters 17.92/17.96/17.100/17.104/17.108 (.090(G)), 17.112 (.090(F)), 17.116/17.120/17.124/17.128 (.060(I)). (2) 2021-03-04 Planning Commission packet (R-1-6 6,000 SF + 30' height corroboration). (3) 2025-07-09 Planning Commission minutes https://www.utah.gov/pmn/files/1296915.pdf (R-1-10 = 10,000 SF minimum lots). Dead ends recorded: June 2025 setback packet (View/16772) unfetchable this turn; R-1-12 no source after 3 angles; R-M width/frontage and R-M-10 coverage still unsourced; R-1 primary code text still not indexed anywhere in the free corpus."
+ "extraction_provenance": "Extracted 2026-09-24 by Pack-4 (pilot wave) and Pack-5 (Wave 2). Pack-4 sources: (1) American Legal Murray UT Title 16 HTML — §16.16.180 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269 ; §16.16.090 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9186 ; ch-16.16 index https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9123 . (2) American Legal Murray UT Title 17 HTML — §17.116.040 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12679 ; §17.116.060 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12697 ; §17.120.040 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12769 ; Title 17 chapter TOC https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9589 ; R-1-8 chapter node https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12345 . (3) Murray City 2021-03-04 Planning Commission packet https://www.murray.utah.gov/DocumentCenter/View/11743/030421-Planning-Commission-Packet?bidId= — SECONDARY SOURCE: R-1-8 8,000 sq ft min lot + 35 ft max height; R-M-15 40 ft max height (now superseded by primary §17.120.080). (4) 2025-06-05 Planning Commission packet https://www.murray.utah.gov/DocumentCenter/View/16772/060525-Planning-Commission-Packet?bidId — amendments under consideration across residential chapters 17.92–17.128; adoption status unconfirmed. Pack-5 (2026-09-24) primary additions: §17.116.080 (R-M-10 height 35 ft) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12712 ; §17.120.060 (R-M-15 yards) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12774 ; §17.120.080/.100 (R-M-15 height 40 ft, coverage 40%) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789 ; §17.124.040 (R-M-20 lot/density) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12846 ; §17.124.060 (R-M-20 yards) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12851 ; §17.124.080 (R-M-20 height 40 ft) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12866 ; §17.128.040 (R-M-25 lot/density) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12923 ; §17.128.060 (R-M-25 yards) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12928 ; §17.128.080 (R-M-25 height 40 ft) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12943 ; §17.72.100 (residential parking) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-11412 ; §17.132.050 (density bonus criteria, full table) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12993 . Pack-5 did NOT locate primary R-1 (17.92/17.96/17.100/17.104/17.108/17.112) section text via indexed search; R-1-8 lot/height remain secondary. R-M-10 coverage (.100) page rendered empty; R-M width/frontage sections not surfaced. Pack-6 (2026-09-24) new sources (no amlegal re-sweep; Cloudflare blocks direct curl, Wayback offline, browser_open terminal on the 060525 packet): (1) 2021-05-06 Planning Commission packet https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId= — Figure 3 comparison table (A-1 vs R-1-6 vs R-M-15: R-1-6 = 6,000 ft2 lots, 30' height, front 20', rear 25', side 5', corner 20') and Project 21-040 ordinance exhibit quoting accessory-height subsections verbatim for chapters 17.92/17.96/17.100/17.104/17.108 (.090(G)), 17.112 (.090(F)), 17.116/17.120/17.124/17.128 (.060(I)). (2) 2021-03-04 Planning Commission packet (R-1-6 6,000 SF + 30' height corroboration). (3) 2025-07-09 Planning Commission minutes https://www.utah.gov/pmn/files/1296915.pdf (R-1-10 = 10,000 SF minimum lots). Dead ends recorded: June 2025 setback packet (View/16772) unfetchable this turn; R-1-12 no source after 3 angles; R-M width/frontage and R-M-10 coverage still unsourced; R-1 primary code text still not indexed anywhere in the free corpus. Pack-7 (2026-09-24, Wave 4): (1) June 2025 Residential Yard Exceptions packet recovered — https://www.murray.utah.gov/DocumentCenter/View/16772/060525-Planning-Commission-Packet?bidId (Project 25-056 on agenda, staff-report cover shows 25-055; discrepancy preserved). Proposed roof/canopy exception: rear encroachment up to half the required rear setback, front encroachment up to 7 ft, one story max, no longer than half the dwelling width, open on three sides, columns on individual pads, never closer than 20 ft to front/street-side line or 10 ft to rear line. (2) ADOPTION CONFIRMED: current primary code §17.108.100 (R-1-12, https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12572) and §17.120.070 (R-M-15, https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789) both carry the new exception text with '(Ord. 25-30 § 2)' history. PC recommended approval 6-0 on 2025-06-05 (minutes https://www.utah.gov/pmn/files/1295135.pdf); Committee of the Whole reviewed the proposed ordinance 2025-08-05 (minutes https://www.utah.gov/pmn/files/1317619.pdf). Same ordinance amended the yard-exception sections of all residential chapters (17.92–17.128); base yard numbers unchanged. (3) R-1-12 max height 35 ft from primary §17.108.110 https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12577 ('No building shall be erected to a height greater than thirty five feet (35')'; dwelling 1–2.5 stories). (4) Flat-20' accessory-structure height confirmed as current law in §17.108.090(G) https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12548 and §17.120.060(I), both with '(Ord. 21-19: ...)' history — resolves Pack-6 'adoption unconfirmed' caveat for those sections (Project 21-040 adopted as Ord. 21-19). (5) New section numbers discovered: §17.108.080 = YARD REQUIREMENTS (referenced by §17.108.090(A)), §17.108.130 = coverage (referenced by §17.108.090(C)(6),(H)); text of both still unfetched. R-1-12 min lot, base setbacks, width/frontage remain null after these angles."
 }

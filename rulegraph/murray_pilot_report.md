@@ -146,8 +146,9 @@ residential parking, and the density-bonus chapter. All values below are
 **R-1 primary — NOT found:**
 - Indexed search did not surface primary §17.96/17.100/17.104/17.108/17.112 section text. R-1-8 lot (8,000) and height (35') remain **secondary_official_document** (2021 PC packet). Gap explicitly dated 2026-09-24. amlegal chapter pages render sections client-side; a JS-capable crawl is the recommended next step.
 
-**Amendment watch (unchanged):**
-- June 2025 proposed setback amendments (chapters 17.92–17.128) remain **unconfirmed/unadopted** as of 2026-09-24. Current §17.116.060/§17.120.060 histories show no 2025 setback amendment. Do not treat proposed text as adopted.
+**Amendment watch — RESOLVED (Pack-7, 2026-09-24):**
+- June 2025 residential yard-exception amendments (Project 25-056) **ADOPTED via Ordinance 25-30** — verified in current primary text of §17.108.100 (R-1-12) and §17.120.070 (R-M-15), both with "(Ord. 25-30 § 2)" history. PC recommended approval 6-0 on 2025-06-05; Committee of the Whole reviewed the proposed ordinance 2025-08-05.
+- The ordinance amended yard-EXCEPTION sections only (chapters 17.92–17.128); base yard numbers are unchanged. All prior "adoption unconfirmed" caveats on this item are superseded.
 
 ## Files changed
 
@@ -170,3 +171,32 @@ New retrieval paths (amlegal codelibrary declared exhausted after Pack-5; Cloudf
 4. Dead ends (dated): R-1-12 — no primary or official-secondary source after 3 angles (amlegal/CDX, web search, 2021 packets); name-correspondence hypothesis (12,000 SF) deliberately NOT recorded as a value. June 2025 setback packet (View/16772) unfetchable this turn — retry in a future wave. R-1 primary code text remains unindexed in the free corpus; R-M width/frontage and R-M-10 coverage still unsourced.
 
 Net: R-1-6 is now the best-documented R-1 district (lot/height/setbacks/accessory all sourced, secondary tier). R-1-8 keeps secondary lot/height + verbatim accessory quote. R-1-10 has min lot only. R-1-12 fully null with dated attempts.
+
+## Wave 4 notes — Pack-7, 2026-09-24
+
+**Target A — June 2025 Residential Yard Exceptions packet: RECOVERED, ADOPTION CONFIRMED.**
+
+1. The previously unfetchable official packet now opens: **June 5, 2025 Planning Commission packet** — https://www.murray.utah.gov/DocumentCenter/View/16772/060525-Planning-Commission-Packet?bidId — item "Residential Yard Exceptions Amendments" (agenda: Project **25-056**; staff-report cover shows **25-055** — discrepancy preserved, not silently corrected).
+2. Proposed language (packet): permanent roof/canopy over open outdoor uses (patio, deck, hot tub, etc.) and uncovered decks may extend into the rear yard no farther than **half the required rear setback**, and into the front yard **no more than 7 feet**, subject to: ≤1 story; ≤half the main dwelling's width; open on three sides except supports/features; columns on individual pads (no continuous footing wall); never closer than **20 ft** to a front/street-side line or **10 ft** to a rear line. Applied across A-1, R-1-6/8/10/12, R-2-10, R-M-10/15/20/25.
+3. Legislative trail: PC recommended approval **6-0** on 2025-06-05 (minutes: https://www.utah.gov/pmn/files/1295135.pdf); Committee of the Whole reviewed the proposed ordinance 2025-08-05 (minutes: https://www.utah.gov/pmn/files/1317619.pdf); **adopted as Ordinance 25-30** (council vote date not captured).
+4. Adoption proof (primary): current amlegal text of **§17.108.100** (R-1-12, https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12572) and **§17.120.070** (R-M-15, https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789) both carry the new exception text verbatim with **"(Ord. 25-30 § 2)"** history. The ordinance amended yard-EXCEPTION sections only — base yard numbers unchanged (no Ord. 25-30 in §17.120.060 history). All prior "adoption unconfirmed" caveats on this item are superseded. Recorded in JSON as `districts.R-1-12.yard_exceptions` (status: ADOPTED — current law, primary tier).
+
+**Target B — R-1-12 dimensional rules from primary code: height CLOSED.**
+
+5. **§17.108.110** (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12577): "No building shall be erected to a height greater than thirty five feet (35')"; dwelling ≥1 story and ≤2.5 stories; nonoccupancy structures excluded; public/quasi-public may exceed by CUP. Recorded as `max_height_ft: 35`, primary tier.
+
+**Bonus — Pack-6 caveat resolved:**
+
+6. The Project 21-040 flat-20' accessory-structure proposal (2021-05-06 packet) WAS adopted as **Ord. 21-19**: current primary text of **§17.108.090(G)** (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12548) and **§17.120.060(I)** reads flat "twenty feet (20') to the peak of the roof", one-story, with "(Ord. 21-19: ...)" history. Pack-6's "adoption unconfirmed" caveat is RESOLVED for those two sections (superseded tiered quote preserved in JSON); parallel sections (17.96/17.100/17.104 .090(G), 17.112 .090(F), 17.116/17.124/17.128 .060(I)) carry a softened caveat — same 2021 ordinance presumably applies, but section pages not individually re-fetched.
+
+**Still null for R-1-12 (dated 2026-09-24):** min lot area, base setbacks, lot width/frontage, lot coverage. New section numbers discovered via cross-references: **§17.108.080 = YARD REQUIREMENTS** (named by §17.108.090(A)), **§17.108.130 = coverage** (named by §17.108.090(C)(6)/(H)) — text of both unfetched. Recommended next angle: distinctive-phrase search against 17.108.080/17.108.130, or a JS-capable crawl of the amlegal chapter page.
+
+**Method lesson:** cross-references inside fetched sections are the best section-discovery tool (this is how .080/.100/.110/.130 were located). Distinctive-phrase queries ("entirely open on three", "YARDS TO BE UNOBSTRUCTED") beat bare section-number queries, which drown in wrong-city results.
+
+## Files changed (Pack-7)
+
+- `rulegraph/murray_params_draft.json` (Pack-7: R-1-12 height 35' primary; R-1-12 yard_exceptions adopted/Ord. 25-30 primary; R-1-12 + R-M-15 accessory flat-20' primary/Ord. 21-19; all yard amendment_caveats updated to adopted; R-1-8/R-1-10 gap notes updated; status + provenance updated; JSON validates)
+- `rulegraph/murray_title16_map.md` (Pack-7: 17.108 row rewritten; research notes updated — 17.108 sections ARE indexed; amendment check resolved)
+- `rulegraph/murray_pilot_report.md` (Pack-7: this Wave 4 section; amendment-watch resolved)
+
+Canonical `verified_rules.json` and MU overlays untouched. DRAFT/UNVERIFIED status preserved.

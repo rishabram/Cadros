@@ -430,3 +430,62 @@ The UGRC anonymous parcel endpoint is a working, citable parent-polygon source f
 (via child-union), but child-membership pinning needs a recorder abstract or the recorded plat itself;
 the open service has no subdivision-name attribute. And `f=geojson` geometries are systematically
 ~0.578x the attribute area — native `f=json&outSR=102100` is the only trustworthy geometry path.
+
+## GreenRush-4 final hunt (2026-09-24 ~10:20–10:50 MDT) — Hidden Pines approval-date zoning: STILL UNSOURCED, legs exhausted
+
+Objective: name Hidden Pines' (PLZ-19-1003, 42 lots, approved 2019-06-27, 3814/3854 W 13800 S) zoning
+district at approval date from an official citable source. Result: NOT FOUND. Zoning stays explicitly
+UNKNOWN / null in plats.json. No speculative geometry was created; harness not run.
+
+### Official legs worked
+1. **June 27, 2019 PC minutes re-opened** (`https://www.utah.gov/pmn/files/529031.pdf`): motion text
+   confirms final subdivision approval of "Application #PLZ-19-1003 — Hidden Pines Subdivision",
+   "42 residential lots", with the Deer Mountain Drive public-road connection discussed and city
+   engineering review complete except minor redlines. The staff summary describes "zoning in the area"
+   but names NO district in the extracted Hidden Pines section. Minutes were approved at the
+   2019-08-08 PC meeting (per that meeting's published agenda packet).
+2. **PLZ-19-1003 staff-report packet:** searched PMN/Granicus/Legistar and web — no staff report or
+   agenda packet with the application number surfaced. Riverton's pre-2019 Granicus archive is not
+   indexed by application number in the searchable surface.
+3. **Recorded plat / recorder abstract:** searched for a Hidden Pines recorded plat entry/book/page
+   (SLCo abstract, title-document surfaces, web). No free searchable hit. The amended plat (42→38,
+   2021) and the original (2019) both remain unsourced as plat documents.
+4. **Rezone history:** no pre-June-2019 rezone ordinance tying the parcel to a district was found in
+   the searchable ordinance corpus.
+5. **Official zoning map PDF** (`https://www.rivertonutah.gov/departments/planning/documents/rivertonzoningmap.pdf`,
+   linked from the city maps page `http://www.rivertonutah.gov/planning/maps.php`): page fetch failed
+   terminally this turn (browser-service fetch error, not retried). Even when readable, this is a
+   current-era map and cannot prove the 2019 approval-date district without dated or paired
+   no-change ordinance history. Left as a recoverable lead, NOT evidence.
+6. **2022-03-01 PC final subdivision mention** (hemofilia mirror of Granicus): item "final subdivision,
+   Hidden Pines, 42-lot, Brett Lovell" — refers back to the 2019 approval; names no district.
+   (The mirror domain is low-quality; the original sits behind rivertoncity.granicus.com.)
+
+### Context facts established this turn (none name the district)
+- Stormwater reimbursement Resolution 20-13 (City Council 2020-02-18): Hidden Pines at ~3870 W 13800 S,
+  developer Cazco Enterprises, $27,759.30 over-built storm drainage reimbursed.
+  `https://legistarweb-production.s3.amazonaws.com/uploads/attachment/pdf/532081/IP_Resolution_20-13_Stormwater_Agreement.pdf`
+- Original bond-release issue paper is filed under a misnamed filename
+  (`..._IP__2021Sep21_IssuePaper_HiddenAcres_7212_.pdf`) but the CONTENT is Hidden Pines (7212),
+  3814 W 13800 S, Cazco Enterprises, $103,673.07 — filename quirk, no content impact.
+- Geotechnical report on the city site is project #18187, CLIENT "Lovell Development" (Brett Lovell's
+  entity) — "PROJECT NAME Hidden Pines Subdivision". Context only.
+- The `R-3-SD` hypothesis seen in a 2022 council item ("R-3-SD, single-family residential, 1/3 minimum
+  lot sizes") belongs to a DIFFERENT property (13040 S Redwood Rd, Riverton Ranch development
+  agreement) — it is NOT Hidden Pines evidence. Hypotheses remain R-3-SD or R-3, both unconfirmed,
+  neither promoted.
+
+### Verdict
+- `zoning.district` for Hidden Pines: **explicit UNKNOWN**. All bounded official legs are exhausted;
+  the next credible step would need the recorded plat (recorder's office, in-person/fee) or the
+  Granicus video/packet archive for the 2019-06-27 meeting — beyond the free bounded-hunt scope.
+- UGRC union: not built (membership still unpinned; GR3 verdict stands — no recorded-plat entry, no
+  subdivision name in the open service).
+- Internal-street ROW: still plat-unspecific (Riverton local 54'/29' stays conditional).
+- Plat stays in `research_candidates_not_scored` with zoning null. Scored set unchanged at 0/16.
+
+### GR4 carry-forward lesson
+Approval-date zoning for pre-2020 Riverton plats is the binding constraint and the searchable
+corpus (PMN minutes + Legistar papers + open abstracts) does not carry it. Future Hidden-Pines-class
+leads should be triaged EARLY on "does a staff report or recorded plat exist in the free corpus?"
+before spending reconstruction effort — a 10-minute staff-report check gates the whole lane.

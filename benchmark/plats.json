@@ -260,6 +260,42 @@
     "date": null,
     "note": "preliminary approval only"
    }
+  },
+  {
+   "plat_id": "taylorsville-fields-sub",
+   "name": "FIELDS SUBDIVISION (File #4S22/SUB-000226-2022)",
+   "city": "Taylorsville",
+   "county": "Salt Lake",
+   "address": "4768 S 1175 W, Taylorsville",
+   "applicant": "Nancy Fields",
+   "approved_lots": 2,
+   "approved_lots_source": "Taylorsville PC staff report File #4S22/SUB-000226-2022, 2022-06-07 (benchmark/evidence/taylorsville-fields-sub/staff_report.pdf): 'a two (2) lot subdivision'; Lot 1: 21,139 sqft (existing SF home, retained); Lot 2: 10,263 sqft (proposed)",
+   "acreage": 0.72,
+   "acreage_source": "staff report: 0.72 ac; UGRC child-union 0.7216 ac (0.22%)",
+   "parent_parcel_id": "21111020270000",
+   "parent_polygon": "samples/taylorsville_fields_parent.geojson",
+   "parent_polygon_source": "Deterministic shapely union of the two recorded child parcels (21111020370000 + 21111020380000) from UGRC/SLCo Parcels_SaltLake FeatureServer (both still current, ParcelYear 2026; union is a single valid Polygon, no hull needed). Reprojected to pipeline-native local feet (azimuthal equidistant about centroid, meters -> US survey feet, bbox-minimum origin). Union 31,434.3 sqft = 0.7216 ac vs official 0.72 ac (0.22%); child lot sizes match the approved dims at 0.00%. Built 2026-09-24 by GreenRush-14 (benchmark/evidence/taylorsville-fields-sub/build_fields_parent.py, script, not model geometry).",
+   "recorded": {
+    "status": "recorded",
+    "note": "Final plat RECORDED (genealogy-confirmed): parent 21111020270000 retired from UGRC ParcelYear 2026; both children present with exact approved dimensions. A plat cannot record in Salt Lake County without city approval signatures. Preliminary: staff recommended approval 2022-06-07; PC meeting 2022-06-14 (vote minutes unrecovered after 2 searches; recorded plat supersedes as approval evidence).",
+    "project": "4S22/SUB-000226-2022"
+   },
+   "scored": false,
+   "zoning": {
+    "status": "known",
+    "district": "R-1-10",
+    "district_source": "Staff report File #4S22/SUB-000226-2022, 2022-06-07: Taylorsville R-1-10 (rezoned R-1-15 -> R-1-10 by PC 6/13/17, CC 7/5/17). General Plan: Low Density Residential.",
+    "min_lot_area_sqft": 10000,
+    "min_lot_area_source": "Staff report quoting code (approval-date, source-precedence 3); cross-check: rulegraph/taylorsville_params_draft.json districts.R-1-10.min_lot_area_sqft = 10000 (Taylorsville LDC Sec. 13.04.020) \u2014 pack and benchmark agree.",
+    "min_frontage_ft": 80,
+    "min_frontage_source": "Staff report quoting code: 'Min lot width: 80 ft' (approval-date). Used as frontage proxy per benchmark policy (no separate frontage minimum stated; Tripp Lane precedent). Note: rulegraph/taylorsville_params_draft.json has an evidenced absence of a numeric R-1 lot-width standard (min_lot_width_ft null) \u2014 pack gap; benchmark used approval-record sourcing.",
+    "road_width_ft": 50,
+    "road_width_source": "rulegraph/taylorsville_params_draft.json street_widths_13_21_100.row_widths_ft.local = 50 ft ROW (Taylorsville LDC Sec. 13.21.100). Per benchmark precedent (Murray: code street-minimum used as pipeline street corridor). Fields is a 2-lot infill split with no new dedicated street; the harness requires road_width_ft regardless.",
+    "source": "Staff report 2022-06-07 (https://www.utah.gov/pmn/files/859213.pdf, retrieved 2026-09-24); UGRC Parcels_SaltLake FeatureServer (queried 2026-09-24); rulegraph/taylorsville_params_draft.json (DRAFT/UNVERIFIED). Per-dimension citations above.",
+    "source_gap": "June 14, 2022 PC vote minutes not recovered after two searches; recorded final plat supersedes as approval evidence. Setbacks (25/5/16/15 ft) quoted in staff report; existing-home-retained condition (Lot 1) is not representable in the single-product harness \u2014 recorded as an inputs note."
+   },
+   "status": "not_scored",
+   "not_scored_reason": "GATE (generator form coverage) FAILED 2026-09-24: prototype pipeline strategy is spine_road+culdesac only; it has no scheme family for a no-new-street lot split. On the reconstructed parent (31,434 sqft = 0.72 ac, valid single Polygon), 96 candidates evaluated, ZERO schemes generated \u2014 top blocking reasons: parcel_too_small_for_config (42), no_conforming_lots (46), below_min_lots_threshold (8); fallback (min_lots=2) also kept 0. Approved form is a conforming 2-lot infill split (Lot 1 21,139 sqft with existing SF home retained; Lot 2 10,263 sqft; no new dedicated street) that the generator cannot attempt. Scoring top=0 vs approved 2 would be a structurally invalid comparison (TAG Row House / Daybreak 11B Plat 2 precedent: do not force). Diagnostic saved at benchmark/runs/taylorsville-fields-sub/report.json (status=no_schemes_generated). Generator form-coverage gap is the carry-forward: NERON has no no-new-street split family and no retained-structure input. Vote-gate PASSED (recorded plat), parent-gate PASSED (0.22%), inputs-gate PASSED (all four dims cited). Re-score only when the pipeline can attempt no-new-street lot splits."
   }
  ],
  "research_candidates_not_scored": [
@@ -484,6 +520,20 @@
    "staff_report_url": null,
    "staff_report_verified": "Original report on herriman.org/uploads - domain uploads gone (404). 2026-09-24 (GreenRush-10)",
    "zone": "R-1-10 + A-1-10"
+  },
+  {
+   "plat_id": "taylorsville-garden-flag-lot",
+   "name": "Taylorsville Garden Flag Lot Development (File #1S25/SUB-000494-2024)",
+   "city": "Taylorsville",
+   "county": "Salt Lake",
+   "address": "1881; 1883; 1901; 1903 W. 4655 S., Taylorsville",
+   "applicant": "Jake Larsen, Desert Peak Builders",
+   "approval": "Preliminary subdivision approved 5-0, Taylorsville PC 2025-05-13 (minutes PMN 1294055.pdf); extension requested 2026-05-06; NO final plat recorded (two negative signals: extension memo + both parents still current)",
+   "lot_count": 4,
+   "zone": "Taylorsville Mixed-Use (MU)",
+   "reason_not_scored": "GATE (inputs) FAILED 2026-09-24: min_lot_area_sqft and min_frontage_ft are unsourceable for Taylorsville MU single-family. The approval-date staff report's MU standards (LDC Sec. 13.23.260(G)(2)) are setback/design-based (front setbacks 12-20 ft; side/rear setbacks PC-determined, staff recommends 8 ft N/S) with NO minimum lot area or frontage quoted \u2014 verified by full-text grep of the packet PDF (1430381.pdf: zero 'minimum lot'/'frontage'/'lot width'/'lot area' hits). rulegraph/taylorsville_params_draft.json has NO MU district entry and an evidenced absence for the main Sec. 13.23 dimensional table after bounded Pack-1/2/3 searches. Per ZONING_POLICY, no value is assigned and no proxy invented; harness honesty contract requires all four dims. GATE (product) ALSO FAILED: harness is single-product only \u2014 2 retained duplex lots + 2 new SF flag lots (private-lane stems, Sec. 13.21.220) cannot be represented (Daybreak 11B Plat 2 precedent: do not force). Vote-gate and parent-gate both PASSED (preliminary approval admissible per Daybreak 12B Plat 1 precedent; both parents still current, area reconciliation exact). Scoreable only if MU SF dimensional minimums surface from a citable source AND flag-lot/product-mix harness support exists.",
+   "packet": "benchmark/evidence/taylorsville-1s25-sub-000494-2024/",
+   "packet_complete": true
   }
  ]
 }

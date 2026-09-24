@@ -1,0 +1,409 @@
+{
+  "parcel_id": "21111020270000",
+  "status": "no_schemes_generated",
+  "scheme_generation": {
+    "strategy": "spine_road",
+    "candidates_evaluated": 24,
+    "size_threshold_ratio": 2.0,
+    "area_min_lot_ratio": 3.14,
+    "primary_min_lots": 4,
+    "primary_schemes_kept": 0,
+    "primary_blocking_reasons": {
+      "below_min_lots_threshold": 3,
+      "no_conforming_lots": 15,
+      "parcel_too_small_for_config": 6
+    },
+    "fallback_used": true,
+    "fallback_min_lots": 2,
+    "fallback_schemes_kept": 0,
+    "fallback_blocking_reasons": {
+      "below_min_lots_threshold": 3,
+      "no_conforming_lots": 15,
+      "parcel_too_small_for_config": 6
+    },
+    "top_blocking_reason": "no_conforming_lots",
+    "verdict": "no_schemes__unexpected"
+  },
+  "parcel_area_sqft": 31434.3,
+  "parcel_area_acres": 0.72,
+  "crs": "local-feet",
+  "zoning": {
+    "status": "known",
+    "district": "R-1-10",
+    "district_source": "Staff report File #4S22/SUB-000226-2022, 2022-06-07: Taylorsville R-1-10 (rezoned R-1-15 -> R-1-10 by PC 6/13/17, CC 7/5/17). General Plan: Low Density Residential.",
+    "min_lot_area_sqft": 10000,
+    "min_lot_area_source": "Staff report quoting code (approval-date, source-precedence 3); cross-check: rulegraph/taylorsville_params_draft.json districts.R-1-10.min_lot_area_sqft = 10000 (Taylorsville LDC Sec. 13.04.020) \u2014 pack and benchmark agree.",
+    "min_frontage_ft": 80,
+    "min_frontage_source": "Staff report quoting code: 'Min lot width: 80 ft' (approval-date). Used as frontage proxy per benchmark policy (no separate frontage minimum stated; Tripp Lane precedent). Note: rulegraph/taylorsville_params_draft.json has an evidenced absence of a numeric R-1 lot-width standard (min_lot_width_ft null) \u2014 pack gap; benchmark used approval-record sourcing.",
+    "road_width_ft": 50,
+    "road_width_source": "rulegraph/taylorsville_params_draft.json street_widths_13_21_100.row_widths_ft.local = 50 ft ROW (Taylorsville LDC Sec. 13.21.100). Per benchmark precedent (Murray: code street-minimum used as pipeline street corridor). Fields is a 2-lot infill split with no new dedicated street; the harness requires road_width_ft regardless.",
+    "source": "Staff report 2022-06-07 (https://www.utah.gov/pmn/files/859213.pdf, retrieved 2026-09-24); UGRC Parcels_SaltLake FeatureServer (queried 2026-09-24); rulegraph/taylorsville_params_draft.json (DRAFT/UNVERIFIED). Per-dimension citations above.",
+    "source_gap": "June 14, 2022 PC vote minutes not recovered after two searches; recorded final plat supersedes as approval evidence. Setbacks (25/5/16/15 ft) quoted in staff report; existing-home-retained condition (Lot 1) is not representable in the single-product harness \u2014 recorded as an inputs note."
+  },
+  "finance_assumptions": {
+    "contingency_pct": 0.1,
+    "road_cost_per_lf": 500,
+    "sale_price_per_lot": 95000,
+    "soft_costs_fixed": 120000,
+    "source": "Placeholder assumptions for demo pro forma. Override per project; MarketGraph (\u00a74) will supply these from market evidence."
+  },
+  "rules": [
+    {
+      "rule_id": "R-1",
+      "description": "Minimum lot area",
+      "operator": ">=",
+      "value": 10000.0,
+      "unit": "sqft",
+      "source": "Staff report 2022-06-07 (https://www.utah.gov/pmn/files/859213.pdf, retrieved 2026-09-24); UGRC Parcels_SaltLake FeatureServer (queried 2026-09-24); rulegraph/taylorsville_params_draft.json (DRAFT/UNVERIFIED). Per-dimension citations above."
+    },
+    {
+      "rule_id": "R-2",
+      "description": "Minimum lot frontage along road",
+      "operator": ">=",
+      "value": 80.0,
+      "unit": "ft",
+      "source": "Staff report 2022-06-07 (https://www.utah.gov/pmn/files/859213.pdf, retrieved 2026-09-24); UGRC Parcels_SaltLake FeatureServer (queried 2026-09-24); rulegraph/taylorsville_params_draft.json (DRAFT/UNVERIFIED). Per-dimension citations above."
+    },
+    {
+      "rule_id": "R-3",
+      "description": "Lots contained within parcel boundary",
+      "operator": "within",
+      "value": 0.0,
+      "unit": "",
+      "source": "topology check (build plan \u00a77)"
+    },
+    {
+      "rule_id": "R-4",
+      "description": "No overlapping lots",
+      "operator": "==",
+      "value": 0.0,
+      "unit": "sqft overlap",
+      "source": "topology check (build plan \u00a77)"
+    },
+    {
+      "rule_id": "R-5",
+      "description": "Road connects to parcel boundary",
+      "operator": "touches",
+      "value": 2.0,
+      "unit": "boundary connections",
+      "source": "topology check (build plan \u00a77)"
+    },
+    {
+      "rule_id": "R-6",
+      "description": "Yield sanity: lots <= parcel_area / min_lot_area",
+      "operator": "<=",
+      "value": 3.143432477828911,
+      "unit": "lots",
+      "source": "derived from R-1"
+    }
+  ],
+  "schemes": [],
+  "ranked_order": [],
+  "rulegraph": {
+    "store": "rulegraph/verified_rules.json",
+    "store_fingerprint": "9cc91ac71f5f1de221b9609291ce264ca33d6c6ba9b98f7e7f898778fd0cfd1c",
+    "rules_evaluated": 59,
+    "program_supplied": false,
+    "scheme_verdicts": {
+      "PASS": 0,
+      "FAIL": 0,
+      "UNKNOWN": 0
+    },
+    "gaps": [
+      {
+        "attribute": "lot_abuts_sf_tf_residential",
+        "needed_from": "neighbor-zone GIS overlay (abutment analysis)"
+      },
+      {
+        "attribute": "landscape_buffer_provided",
+        "needed_from": "building program / site plan"
+      },
+      {
+        "attribute": "building_form",
+        "needed_from": "building program"
+      },
+      {
+        "attribute": "stories",
+        "needed_from": "building program (story-by-story uses)"
+      },
+      {
+        "attribute": "height_ft",
+        "needed_from": "building program (proposed building height)"
+      },
+      {
+        "attribute": "design_review_completed",
+        "needed_from": "entitlement tracker"
+      },
+      {
+        "attribute": "in_height_bonus_area",
+        "needed_from": "parcel geolocation vs MU-11 bonus-area polygons"
+      },
+      {
+        "attribute": "open_space_ground_pct",
+        "needed_from": "site plan"
+      },
+      {
+        "attribute": "enhanced_active_use_100_pct",
+        "needed_from": "site plan / use program"
+      },
+      {
+        "attribute": "midblock_walkway_ft",
+        "needed_from": "site plan"
+      },
+      {
+        "attribute": "front_setback_ft",
+        "needed_from": "building footprints + parcel boundary"
+      },
+      {
+        "attribute": "front_street",
+        "needed_from": "street centerline names at parcel frontage"
+      },
+      {
+        "attribute": "front_street_within_listed_segment",
+        "needed_from": "street segment data (1700/2100 South, West Temple to I-15)"
+      },
+      {
+        "attribute": "corner_side_setback_ft",
+        "needed_from": "building footprints + parcel boundary"
+      },
+      {
+        "attribute": "corner_street",
+        "needed_from": "street centerline names at parcel corner frontage"
+      },
+      {
+        "attribute": "corner_street_within_listed_segment",
+        "needed_from": "street segment data (1700/2100 South, West Temple to I-15)"
+      },
+      {
+        "attribute": "interior_side_setback_ft",
+        "needed_from": "building footprints + parcel boundary"
+      },
+      {
+        "attribute": "interior_abuts_listed_zone",
+        "needed_from": "neighbor-zone GIS overlay (abutment analysis)"
+      },
+      {
+        "attribute": "abuts_zones_side",
+        "needed_from": "building program (abutment survey) or neighbor-zone GIS overlay: zone codes abutting the interior side"
+      },
+      {
+        "attribute": "rear_setback_ft",
+        "needed_from": "building footprints + parcel boundary"
+      },
+      {
+        "attribute": "rear_abuts_listed_zone",
+        "needed_from": "neighbor-zone GIS overlay (abutment analysis)"
+      },
+      {
+        "attribute": "abuts_zones_rear",
+        "needed_from": "building program (abutment survey) or neighbor-zone GIS overlay: zone codes abutting the rear"
+      },
+      {
+        "attribute": "is_corner_lot",
+        "needed_from": "parcel boundary + street centerline intersections (corner detection)"
+      },
+      {
+        "attribute": "building_forms",
+        "needed_from": "building program (list of building forms proposed on the lot)"
+      },
+      {
+        "attribute": "ground_floor_use",
+        "needed_from": "building program (ground-floor occupancy: 'residential' or 'non-residential')"
+      },
+      {
+        "attribute": "proposed_use_is_public_school",
+        "needed_from": "building program (proposed use)"
+      },
+      {
+        "attribute": "proposed_use_pl_civic_listed",
+        "needed_from": "building program (proposed use vs the PL-02 civic list)"
+      },
+      {
+        "attribute": "has_recreation_equipment",
+        "needed_from": "site plan / building program"
+      },
+      {
+        "attribute": "recreation_equipment_height_ft",
+        "needed_from": "site plan / building program"
+      },
+      {
+        "attribute": "is_distillation_column_structure",
+        "needed_from": "building program (structure type)"
+      },
+      {
+        "attribute": "faa_max_elevation_ft",
+        "needed_from": "FAA approach-surface data for the parcel"
+      },
+      {
+        "attribute": "in_m1_height_exception_zone",
+        "needed_from": "parcel geolocation vs airport/I-80 polygons"
+      },
+      {
+        "attribute": "is_slc_public_utilities_structure",
+        "needed_from": "building program (applicant/owner)"
+      }
+    ],
+    "context_provenance": {
+      "district": {
+        "state": "known",
+        "detail": "zoning config 'district'"
+      },
+      "lot_abuts_sf_tf_residential": {
+        "state": "unknown",
+        "detail": "neighbor-zone GIS overlay (abutment analysis)"
+      },
+      "landscape_buffer_provided": {
+        "state": "unknown",
+        "detail": "building program / site plan"
+      },
+      "building_form": {
+        "state": "unknown",
+        "detail": "building program"
+      },
+      "stories": {
+        "state": "unknown",
+        "detail": "building program (story-by-story uses)"
+      },
+      "height_ft": {
+        "state": "unknown",
+        "detail": "building program (proposed building height)"
+      },
+      "design_review_completed": {
+        "state": "unknown",
+        "detail": "entitlement tracker"
+      },
+      "in_height_bonus_area": {
+        "state": "unknown",
+        "detail": "parcel geolocation vs MU-11 bonus-area polygons"
+      },
+      "open_space_ground_pct": {
+        "state": "unknown",
+        "detail": "site plan"
+      },
+      "enhanced_active_use_100_pct": {
+        "state": "unknown",
+        "detail": "site plan / use program"
+      },
+      "midblock_walkway_ft": {
+        "state": "unknown",
+        "detail": "site plan"
+      },
+      "front_setback_ft": {
+        "state": "unknown",
+        "detail": "building footprints + parcel boundary"
+      },
+      "front_street": {
+        "state": "unknown",
+        "detail": "street centerline names at parcel frontage"
+      },
+      "front_street_within_listed_segment": {
+        "state": "unknown",
+        "detail": "street segment data (1700/2100 South, West Temple to I-15)"
+      },
+      "corner_side_setback_ft": {
+        "state": "unknown",
+        "detail": "building footprints + parcel boundary"
+      },
+      "corner_street": {
+        "state": "unknown",
+        "detail": "street centerline names at parcel corner frontage"
+      },
+      "corner_street_within_listed_segment": {
+        "state": "unknown",
+        "detail": "street segment data (1700/2100 South, West Temple to I-15)"
+      },
+      "interior_side_setback_ft": {
+        "state": "unknown",
+        "detail": "building footprints + parcel boundary"
+      },
+      "interior_abuts_listed_zone": {
+        "state": "unknown",
+        "detail": "neighbor-zone GIS overlay (abutment analysis)"
+      },
+      "abuts_zones_side": {
+        "state": "unknown",
+        "detail": "building program (abutment survey) or neighbor-zone GIS overlay: zone codes abutting the interior side"
+      },
+      "rear_setback_ft": {
+        "state": "unknown",
+        "detail": "building footprints + parcel boundary"
+      },
+      "rear_abuts_listed_zone": {
+        "state": "unknown",
+        "detail": "neighbor-zone GIS overlay (abutment analysis)"
+      },
+      "abuts_zones_rear": {
+        "state": "unknown",
+        "detail": "building program (abutment survey) or neighbor-zone GIS overlay: zone codes abutting the rear"
+      },
+      "is_corner_lot": {
+        "state": "unknown",
+        "detail": "parcel boundary + street centerline intersections (corner detection)"
+      },
+      "building_forms": {
+        "state": "unknown",
+        "detail": "building program (list of building forms proposed on the lot)"
+      },
+      "ground_floor_use": {
+        "state": "unknown",
+        "detail": "building program (ground-floor occupancy: 'residential' or 'non-residential')"
+      },
+      "proposed_use_is_public_school": {
+        "state": "unknown",
+        "detail": "building program (proposed use)"
+      },
+      "proposed_use_pl_civic_listed": {
+        "state": "unknown",
+        "detail": "building program (proposed use vs the PL-02 civic list)"
+      },
+      "has_recreation_equipment": {
+        "state": "unknown",
+        "detail": "site plan / building program"
+      },
+      "recreation_equipment_height_ft": {
+        "state": "unknown",
+        "detail": "site plan / building program"
+      },
+      "is_distillation_column_structure": {
+        "state": "unknown",
+        "detail": "building program (structure type)"
+      },
+      "faa_max_elevation_ft": {
+        "state": "unknown",
+        "detail": "FAA approach-surface data for the parcel"
+      },
+      "in_m1_height_exception_zone": {
+        "state": "unknown",
+        "detail": "parcel geolocation vs airport/I-80 polygons"
+      },
+      "is_slc_public_utilities_structure": {
+        "state": "unknown",
+        "detail": "building program (applicant/owner)"
+      },
+      "scheme_lots": {
+        "state": "known",
+        "detail": "subdivision geometry: per-scheme lot polygons"
+      }
+    },
+    "note": "'clean' reflects geometric validation only. RuleGraph verdicts are reported separately with a per-scheme applicable-rule count ('rulegraph_applicable_rules'). A scheme is compliance-confirmed only when its rulegraph verdict is PASS with at least one applicable verified rule. A PASS with zero applicable rules means no verified rule in the store covered the parcel's district \u2014 that is 'no applicable verified rules', not a compliance finding."
+  },
+  "use_allowance": {
+    "pack": "neron-zoning/21A33_candidates_M1_OS_PL.md + caddy_drop/verified_uses_mu.json",
+    "pack_fingerprint": "02a78aa4a9adeb5b243b3393a76494ecb636aa29f48cc2e9db9fc807214425b3",
+    "pack_fingerprints": {
+      "m1_os_pl": "5a3a06db51f04b7cefafe57ae9339b44ebdec6e4a3f7404d67687faec4fbc90e",
+      "mu": "bf741fd283b46ee39b937e5a5ff8c04fb5d9b3a3fb7a4a577bb4e3f8eb58bd6c"
+    },
+    "rows_parsed": 513,
+    "program_supplied": false,
+    "proposed_uses_present": false,
+    "scheme_verdicts": {
+      "PASS": 0,
+      "CONDITIONAL_PASS": 0,
+      "FAIL": 0,
+      "UNKNOWN": 0,
+      "MANUAL_REVIEW": 0
+    },
+    "note": "Use-allowance verdicts are machine-evaluated against the human-verified \u00a721A.33 use-table packs: 191 M-1/OS/PL rows (human verdicts by Rohan, 2026-09-23) + 322 MU-5/MU-6/MU-11 rows (batch-verified by Rohan, 2026-09-23; the machine evaluates, never verifies). UNKNOWN never means allowed \u2014 it means the use could not be confirmed (no proposed uses supplied, no use rows for the district, no matching verified row, or an ambiguous row such as M1-U-28). MANUAL_REVIEW means a qualifying-provision footnote whose text was not retrieved needs a human read. FAIL rows are blank-cell code facts (the \u00a721A.33 legend: blank = not permitted)."
+  }
+}

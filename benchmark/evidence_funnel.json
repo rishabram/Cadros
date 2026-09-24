@@ -1,187 +1,191 @@
 {
-  "candidates": [
-    {
-      "approved_lots": 12,
-      "evidence_level": "L2",
-      "id": "tripp-lane-murray",
-      "jurisdiction": "Murray",
-      "name": "Tripp Lane",
-      "neron_top": 9,
-      "note": "GEOMETRY miss (envelope 6-9 vs 12 approved). Parent 2.787ac vs 2.78 official.",
-      "packet_complete": true,
-      "scored_at": "2026-09-24",
-      "stage": "SCORED"
-    },
-    {
-      "approved_lots": 61,
-      "evidence_level": "L2",
-      "id": "daybreak-12b-plat1",
-      "jurisdiction": "South Jordan",
-      "name": "Daybreak Village 12B Plat 1",
-      "neron_top": 76,
-      "note": "RANKING miss (59/60/62 existed; max-yield chose 76). Parent 14.253ac vs 14.306 official. Preliminary approval.",
-      "packet_complete": true,
-      "scored_at": "2026-09-24",
-      "stage": "SCORED"
-    },
-    {
-      "id": "taylorsville-1s25-sub-000494-2024",
-      "name": "Taylorsville Garden Flag Lot Development",
-      "jurisdiction": "Taylorsville",
-      "file_number": "1S25-SUB-000494-2024",
-      "reported_lots": 4,
-      "reported_acres": 0.979,
-      "applicant": "Jake Larsen, Desert Peak Builders",
-      "stage": "DISCOVERED",
-      "discovered_at": "2026-09-24T11:30:00-06:00",
-      "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (staff report link not included in doc post; full row in Drive SPK_BENCHMARK_AND_REVIEWERS.md, Drive not connected)",
-      "evidence_level": "L1",
-      "packet_complete": true,
-      "note": "PRIORITY 1 COMPLETE. Full 11-field packet assembled. Preliminary approval 5-0 on 2026-05-13; final plat unrecorded (extension memo + parents still current).",
-      "address": "1881; 1883; 1901; 1903 W. 4655 S., Taylorsville, UT",
-      "approval": "preliminary, PC unanimous (5-0), 2026-05-13",
-      "approval_evidence": "May 13, 2025 PC minutes (PMN 1294055.pdf); extension memo May 6, 2026",
-      "final_plat_recorded": false,
-      "parent_parcels": [
-        "21033800140000",
-        "21033800130000"
-      ],
-      "parent_status": "both still current, UGRC ParcelYear 2026; geodesic 22515.6/20133.0 sqft vs 22215/20037 official (1.35%/0.48%); total 0.979 ac exact",
-      "zoning": "Taylorsville Mixed-Use (MU); LDC 13.23.260(G)(2) SF standards; 13.21.220 flag lots",
-      "product_types": [
-        "residential infill",
-        "2 existing duplex lots retained",
-        "2 new SF flag lots"
-      ],
-      "packet_dir": "benchmark/evidence/taylorsville-1s25-sub-000494-2024/",
-      "packet_assembled_at": "2026-09-24T12:15:00-06:00",
-      "awaiting": "GreenRush triage (TRIAGED gate) then blind score",
-      "scoreability_flags": [
-        "infill flag-lot, not greenfield",
-        "two-parcel parent needs union for harness",
-        "MU dims setback/design-based: min lot area + frontage need citable source or recorded gap"
-      ]
-    },
-    {
-      "id": "taylorsville-fields-plat",
-      "name": "Fields Subdivision",
-      "jurisdiction": "Taylorsville",
-      "file_number": "4S22/SUB-000226-2022",
-      "reported_lots": 2,
-      "stage": "DISCOVERED",
-      "discovered_at": "2026-09-24T11:30:00-06:00",
-      "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (staff report link not included in doc post)",
-      "evidence_level": "L1",
-      "packet_complete": true,
-      "note": "PRIORITY 2 COMPLETE. Full 11-field packet. CLEANEST parent reconstruction in benchmark: exact 0.00% child-dim match. Final plat recorded = closed case.",
-      "address": "4768 S 1175 W, Taylorsville, UT",
-      "applicant": "Nancy Fields",
-      "approval": "FINAL PLAT RECORDED (genealogy-confirmed); preliminary staff-recommended 2022-06-07, PC meeting 2022-06-14",
-      "approval_evidence": "Parent 21111020270000 retired; children 21111020370000/21111020380000 match approved dims exactly. June 14, 2022 vote minutes not recovered (2 attempts).",
-      "final_plat_recorded": true,
-      "parent_parcels": [
-        "21111020270000 (retired)"
-      ],
-      "parent_reconstruction": "child union: 21111020370000 (21139.2 sqft) + 21111020380000 (10263.0 sqft), adjacent; union 31402.3 sqft = 0.721 ac vs 0.72 official",
-      "parent_status": "RECONSTRUCTED via child union; exact 0.00% match on both child lot sizes",
-      "zoning": "Taylorsville R-1-10 (rezoned from R-1-15 in 2017); LDC 13.20/13.21/13.30",
-      "harness_inputs_quoted": {
-        "min_lot_area_sqft": 10000,
-        "min_frontage_ft": 80,
-        "front_yard_ft": 25,
-        "side_yard_ft": 5,
-        "side_combined_ft": 16,
-        "rear_yard_ft": 15
-      },
-      "product_types": [
-        "residential infill",
-        "1 existing SF home retained",
-        "1 new SF lot"
-      ],
-      "packet_dir": "benchmark/evidence/taylorsville-fields-sub/",
-      "packet_assembled_at": "2026-09-24T12:20:00-06:00",
-      "awaiting": "GreenRush triage (TRIAGED gate) then blind score",
-      "scoreability_flags": [
-        "infill 2-lot split, not greenfield",
-        "road_width_ft needs citable Taylorsville local standard",
-        "June 14 2022 vote minutes unrecovered (recorded plat supersedes)"
-      ]
-    },
-    {
-      "id": "herriman-oaklie-estates",
-      "name": "Oaklie Estates",
-      "jurisdiction": "Herriman",
-      "address": "5355 W Herriman Main St",
-      "reported_lots": 3,
-      "stage": "DISCOVERED",
-      "discovered_at": "2026-09-24T11:30:00-06:00",
-      "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (agenda PDF link not included in doc post)",
-      "evidence_level": "L0",
-      "packet_complete": false,
-      "note": "Gaps: source URL, file number, acreage, approval date, recorded plat, parent geometry."
-    },
-    {
-      "id": "riverton-josh-meidell",
-      "name": "Josh Meidell Subdivision",
-      "jurisdiction": "Riverton",
-      "address": "13400 South",
-      "reported_lots": 2,
-      "stage": "DISCOVERED",
-      "discovered_at": "2026-09-24T11:30:00-06:00",
-      "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (minutes PDF link not included in doc post)",
-      "evidence_level": "L0",
-      "packet_complete": false,
-      "note": "25-ft private lane. Gaps: source URL, file number, acreage, approval date, recorded plat, parent geometry."
-    },
-    {
-      "id": "american-fork-425n900e",
-      "name": "425 N 900 E Subdivision",
-      "jurisdiction": "American Fork",
-      "address": "425 N 900 E",
-      "reported_lots": 2,
-      "zone": "R1-9000",
-      "stage": "DISCOVERED",
-      "discovered_at": "2026-09-24T11:30:00-06:00",
-      "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (DRC minutes PDF link not included in doc post)",
-      "evidence_level": "L0",
-      "packet_complete": false,
-      "note": "Gaps: source URL, file number, acreage, approval date, recorded plat, parent geometry."
-    },
-    {
-      "id": "north-ogden-white-rock-ph3",
-      "name": "White Rock Phase 3",
-      "jurisdiction": "North Ogden",
-      "zone": "HP-2",
-      "reported_lots": 7,
-      "stage": "DISCOVERED",
-      "discovered_at": "2026-09-24T11:30:00-06:00",
-      "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (agenda PDF link not included in doc post)",
-      "evidence_level": "L0",
-      "packet_complete": false,
-      "note": "Gaps: source URL, file number, address, acreage, approval date, recorded plat, parent geometry."
-    }
-  ],
-  "kpi": "median_hours_discovered_to_scoreable",
-  "kpi_note": "Overseer directive 2026-09-24: if this number is high, the bottleneck is evidence assembly, not search volume.",
-  "near_term_target": "2 -> 5 scored plats, >=1 new untouched holdout, 1 practicing PE/PLS structured review",
-  "packet_spec": [
-    "official project identity/file number",
-    "approval evidence",
-    "final/recorded plat",
-    "approved lot/unit count",
-    "historical parent parcel geometry as it existed pre-development",
-    "zoning/rule context at the relevant time",
-    "product type(s)",
-    "raw source files",
-    "source URLs + retrieval dates",
-    "hash/version metadata",
-    "untouched NERON run"
-  ],
-  "stages": [
-    "DISCOVERED",
-    "TRIAGED",
-    "SCOREABLE",
-    "SCORED",
-    "UNSCORABLE"
-  ]
+ "candidates": [
+  {
+   "approved_lots": 12,
+   "evidence_level": "L2",
+   "id": "tripp-lane-murray",
+   "jurisdiction": "Murray",
+   "name": "Tripp Lane",
+   "neron_top": 9,
+   "note": "GEOMETRY miss (envelope 6-9 vs 12 approved). Parent 2.787ac vs 2.78 official.",
+   "packet_complete": true,
+   "scored_at": "2026-09-24",
+   "stage": "SCORED"
+  },
+  {
+   "approved_lots": 61,
+   "evidence_level": "L2",
+   "id": "daybreak-12b-plat1",
+   "jurisdiction": "South Jordan",
+   "name": "Daybreak Village 12B Plat 1",
+   "neron_top": 76,
+   "note": "RANKING miss (59/60/62 existed; max-yield chose 76). Parent 14.253ac vs 14.306 official. Preliminary approval.",
+   "packet_complete": true,
+   "scored_at": "2026-09-24",
+   "stage": "SCORED"
+  },
+  {
+   "id": "taylorsville-1s25-sub-000494-2024",
+   "name": "Taylorsville Garden Flag Lot Development",
+   "jurisdiction": "Taylorsville",
+   "file_number": "1S25-SUB-000494-2024",
+   "reported_lots": 4,
+   "reported_acres": 0.979,
+   "applicant": "Jake Larsen, Desert Peak Builders",
+   "stage": "TRIAGED",
+   "discovered_at": "2026-09-24T11:30:00-06:00",
+   "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (staff report link not included in doc post; full row in Drive SPK_BENCHMARK_AND_REVIEWERS.md, Drive not connected)",
+   "evidence_level": "L1",
+   "packet_complete": true,
+   "note": "PRIORITY 1 COMPLETE. Full 11-field packet assembled. Preliminary approval 5-0 on 2026-05-13; final plat unrecorded (extension memo + parents still current).",
+   "address": "1881; 1883; 1901; 1903 W. 4655 S., Taylorsville, UT",
+   "approval": "preliminary, PC unanimous (5-0), 2026-05-13",
+   "approval_evidence": "May 13, 2025 PC minutes (PMN 1294055.pdf); extension memo May 6, 2026",
+   "final_plat_recorded": false,
+   "parent_parcels": [
+    "21033800140000",
+    "21033800130000"
+   ],
+   "parent_status": "both still current, UGRC ParcelYear 2026; geodesic 22515.6/20133.0 sqft vs 22215/20037 official (1.35%/0.48%); total 0.979 ac exact",
+   "zoning": "Taylorsville Mixed-Use (MU); LDC 13.23.260(G)(2) SF standards; 13.21.220 flag lots",
+   "product_types": [
+    "residential infill",
+    "2 existing duplex lots retained",
+    "2 new SF flag lots"
+   ],
+   "packet_dir": "benchmark/evidence/taylorsville-1s25-sub-000494-2024/",
+   "packet_assembled_at": "2026-09-24T12:15:00-06:00",
+   "awaiting": null,
+   "scoreability_flags": [
+    "infill flag-lot, not greenfield",
+    "two-parcel parent needs union for harness",
+    "MU dims setback/design-based: min lot area + frontage need citable source or recorded gap"
+   ],
+   "gate_outcome": "TRIAGED 2026-09-24 (GreenRush-14). Vote-gate PASS (preliminary 5-0, 2025-05-13; admissible per Daybreak 12B Plat 1 precedent). Parent-gate PASS (both parents still current; area reconciliation exact). INPUTS-GATE FAILED: min_lot_area_sqft and min_frontage_ft unsourceable for Taylorsville MU single-family \u2014 staff report Sec. 13.23.260(G)(2) is setback/design-based with no dimensional minimums (full-text grep of packet PDF: zero hits); draft pack has no MU dimensional table (evidenced absence). PRODUCT-GATE FAILED: harness single-product only; 2 retained duplex lots + 2 new SF flag lots not representable. NOT scored; needs MU SF dimensional minimums from a citable source AND flag-lot/product-mix harness support.",
+   "stage_detail": "TRIAGED -> UNSCORABLE (inputs + product gates)"
+  },
+  {
+   "id": "taylorsville-fields-plat",
+   "name": "Fields Subdivision",
+   "jurisdiction": "Taylorsville",
+   "file_number": "4S22/SUB-000226-2022",
+   "reported_lots": 2,
+   "stage": "TRIAGED",
+   "discovered_at": "2026-09-24T11:30:00-06:00",
+   "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (staff report link not included in doc post)",
+   "evidence_level": "L1",
+   "packet_complete": true,
+   "note": "PRIORITY 2 COMPLETE. Full 11-field packet. CLEANEST parent reconstruction in benchmark: exact 0.00% child-dim match. Final plat recorded = closed case.",
+   "address": "4768 S 1175 W, Taylorsville, UT",
+   "applicant": "Nancy Fields",
+   "approval": "FINAL PLAT RECORDED (genealogy-confirmed); preliminary staff-recommended 2022-06-07, PC meeting 2022-06-14",
+   "approval_evidence": "Parent 21111020270000 retired; children 21111020370000/21111020380000 match approved dims exactly. June 14, 2022 vote minutes not recovered (2 attempts).",
+   "final_plat_recorded": true,
+   "parent_parcels": [
+    "21111020270000 (retired)"
+   ],
+   "parent_reconstruction": "child union: 21111020370000 (21139.2 sqft) + 21111020380000 (10263.0 sqft), adjacent; union 31402.3 sqft = 0.721 ac vs 0.72 official",
+   "parent_status": "RECONSTRUCTED via child union; exact 0.00% match on both child lot sizes",
+   "zoning": "Taylorsville R-1-10 (rezoned from R-1-15 in 2017); LDC 13.20/13.21/13.30",
+   "harness_inputs_quoted": {
+    "min_lot_area_sqft": 10000,
+    "min_frontage_ft": 80,
+    "front_yard_ft": 25,
+    "side_yard_ft": 5,
+    "side_combined_ft": 16,
+    "rear_yard_ft": 15
+   },
+   "product_types": [
+    "residential infill",
+    "1 existing SF home retained",
+    "1 new SF lot"
+   ],
+   "packet_dir": "benchmark/evidence/taylorsville-fields-sub/",
+   "packet_assembled_at": "2026-09-24T12:20:00-06:00",
+   "awaiting": null,
+   "scoreability_flags": [
+    "infill 2-lot split, not greenfield",
+    "road_width_ft needs citable Taylorsville local standard",
+    "June 14 2022 vote minutes unrecovered (recorded plat supersedes)"
+   ],
+   "gate_outcome": "TRIAGED 2026-09-24 (GreenRush-14). Vote-gate PASS (final plat recorded; June 2022 minutes superseded). Parent-gate PASS (child-union 0.7216 ac vs 0.72 official, 0.22%; exact 0.00% child-dim match). Inputs-gate PASS (min_lot_area 10000 sqft / min_frontage 80 ft from approval-date staff report; road_width 50 ft Taylorsville Sec. 13.21.100 local ROW; consistency check: 0 mismatches). GENERATOR-GATE FAILED: prototype spine_road+culdesac-only generator produced 0 schemes (24 candidates on clean tree, 96 with D-Wade's in-flight culdesac work \u2014 all rejected; top reason no_conforming_lots). Approved form is a conforming 2-lot no-new-street infill split with a retained home \u2014 no scheme family exists. NOT scored (do-not-force precedent); re-score only when the pipeline can attempt no-new-street splits. Diagnostic: benchmark/runs/taylorsville-fields-sub/report.json. Stage: UNSCORABLE on generator form coverage, not on evidence.",
+   "stage_detail": "TRIAGED -> UNSCORABLE (generator form-coverage gap)"
+  },
+  {
+   "id": "herriman-oaklie-estates",
+   "name": "Oaklie Estates",
+   "jurisdiction": "Herriman",
+   "address": "5355 W Herriman Main St",
+   "reported_lots": 3,
+   "stage": "DISCOVERED",
+   "discovered_at": "2026-09-24T11:30:00-06:00",
+   "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (agenda PDF link not included in doc post)",
+   "evidence_level": "L0",
+   "packet_complete": false,
+   "note": "Gaps: source URL, file number, acreage, approval date, recorded plat, parent geometry."
+  },
+  {
+   "id": "riverton-josh-meidell",
+   "name": "Josh Meidell Subdivision",
+   "jurisdiction": "Riverton",
+   "address": "13400 South",
+   "reported_lots": 2,
+   "stage": "DISCOVERED",
+   "discovered_at": "2026-09-24T11:30:00-06:00",
+   "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (minutes PDF link not included in doc post)",
+   "evidence_level": "L0",
+   "packet_complete": false,
+   "note": "25-ft private lane. Gaps: source URL, file number, acreage, approval date, recorded plat, parent geometry."
+  },
+  {
+   "id": "american-fork-425n900e",
+   "name": "425 N 900 E Subdivision",
+   "jurisdiction": "American Fork",
+   "address": "425 N 900 E",
+   "reported_lots": 2,
+   "zone": "R1-9000",
+   "stage": "DISCOVERED",
+   "discovered_at": "2026-09-24T11:30:00-06:00",
+   "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (DRC minutes PDF link not included in doc post)",
+   "evidence_level": "L0",
+   "packet_complete": false,
+   "note": "Gaps: source URL, file number, acreage, approval date, recorded plat, parent geometry."
+  },
+  {
+   "id": "north-ogden-white-rock-ph3",
+   "name": "White Rock Phase 3",
+   "jurisdiction": "North Ogden",
+   "zone": "HP-2",
+   "reported_lots": 7,
+   "stage": "DISCOVERED",
+   "discovered_at": "2026-09-24T11:30:00-06:00",
+   "discovery_source": "Spark SPK-1 harvest, shared doc 2026-09-24 11:30 MDT (agenda PDF link not included in doc post)",
+   "evidence_level": "L0",
+   "packet_complete": false,
+   "note": "Gaps: source URL, file number, address, acreage, approval date, recorded plat, parent geometry."
+  }
+ ],
+ "kpi": "median_hours_discovered_to_scoreable",
+ "kpi_note": "Overseer directive 2026-09-24: if this number is high, the bottleneck is evidence assembly, not search volume.",
+ "near_term_target": "2 -> 5 scored plats, >=1 new untouched holdout, 1 practicing PE/PLS structured review",
+ "packet_spec": [
+  "official project identity/file number",
+  "approval evidence",
+  "final/recorded plat",
+  "approved lot/unit count",
+  "historical parent parcel geometry as it existed pre-development",
+  "zoning/rule context at the relevant time",
+  "product type(s)",
+  "raw source files",
+  "source URLs + retrieval dates",
+  "hash/version metadata",
+  "untouched NERON run"
+ ],
+ "stages": [
+  "DISCOVERED",
+  "TRIAGED",
+  "SCOREABLE",
+  "SCORED",
+  "UNSCORABLE"
+ ]
 }

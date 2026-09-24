@@ -6,11 +6,15 @@ Run with the project venv python (imports prototype.pipeline -> shapely).
 """
 import json
 import os
+import sys
 import unittest
 
 import harness
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+SCRATCH = os.path.dirname(BASE)
+sys.path.insert(0, os.path.join(SCRATCH, "scripts"))
+import check_benchmark_inputs  # noqa: E402
 
 
 class TestPlatsHonesty(unittest.TestCase):
@@ -29,6 +33,32 @@ class TestPlatsHonesty(unittest.TestCase):
         for p in harness.load_plats():
             if p["zoning"]["status"] == "unknown":
                 self.assertFalse(p.get("scored"), p["plat_id"])
+
+
+class TestInputConsistency(unittest.TestCase):
+    def test_no_cross_lane_drift(self):
+        # RISHAB ACCURACY DIRECTIVE 2026-09-24: benchmark harness inputs must
+        # match rule-pack draft values every run. Warnings/skips are allowed
+        # (pack gaps, missing packs); contradictory values are not.
+        mismatches, warnings, skips = check_benchmark_inputs.check_all()
+        self.assertEqual(mismatches, [],
+                         f"cross-lane drift: {mismatches}")
+
+    def test_checker_detects_synthetic_drift(self):
+        # the checker must actually catch drift, not just pass vacuously
+        import copy
+        pack_path = os.path.join(SCRATCH, "rulegraph",
+                                 "murray_params_draft.json")
+        with open(pack_path) as f:
+            pack = json.load(f)
+        doctored = copy.deepcopy(pack)
+        doctored["districts"]["R-1-6"]["min_lot_area_sqft"] = 5000
+        plats = harness.load_plats()
+        tripp = next(p for p in plats
+                     if p["plat_id"] == "tripp-lane-subdivision")
+        mismatches, _ = check_benchmark_inputs.check_murray(tripp, doctored)
+        self.assertEqual(len(mismatches), 1)
+        self.assertIn("DRIFT", mismatches[0])
 
 
 class TestToleranceMath(unittest.TestCase):

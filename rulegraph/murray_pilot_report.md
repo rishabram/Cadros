@@ -156,3 +156,17 @@ residential parking, and the density-bonus chapter. All values below are
 - `rulegraph/murray_pilot_report.md` (Pack-5: this Wave 2 section)
 
 Canonical `verified_rules.json` and MU overlays untouched.
+
+## Wave 3 notes — Pack-6, 2026-09-24 (no amlegal re-sweep)
+
+New retrieval paths (amlegal codelibrary declared exhausted after Pack-5; Cloudflare blocks direct curl, Wayback Machine offline, browser_open terminal on the 060525 packet URL this turn):
+
+1. **2021-05-06 Planning Commission packet** (https://www.murray.utah.gov/DocumentCenter/View/11824/050621-Planning-Commission-Packet?bidId=):
+   - Figure 3 comparison table (A-1 vs R-1-6 vs R-M-15) yields the full R-1-6 dimensional set: 6,000 ft2 min lot, 30' max height, front yard 20', rear yard 25', side yard 5' (per side; no combined figure stated), corner yard 20'. Tier: secondary_official_document.
+   - The same table corroborates Pack-5's R-M-15 primary values (front 25', rear 25', side 8' / 20' combined, corner 20', height up to 40', parking 2.5/unit) — consistent, no conflict.
+   - Project 21-040 ordinance exhibit quotes the accessory-structure height subsections VERBATIM for all residential chapters: 17.92.090(G), 17.96.090(G), 17.100.090(G), 17.104.090(G), 17.108.090(G), 17.112.090(F), 17.116.060(I), 17.120.060(I), 17.124.060(I), 17.128.060(I). Text: one-story, 16' max peak if dwelling <20', else 20' max peak. Recorded as official-city-document-quoting-code with an adoption-status caveat: the packet proposed replacing this with a flat 20' maximum — adoption NOT confirmed.
+2. **2021-03-04 Planning Commission packet** corroborates R-1-6: 6,000 SF min lot, 30' max main-dwelling height.
+3. **2025-07-09 Planning Commission minutes** (https://www.utah.gov/pmn/files/1296915.pdf): "the existing R-1-10 zoning nearby with 10,000 square foot minimum lots" — R-1-10 min lot recorded as 10,000 SF (secondary_official_document). Primary §17.104 text still not located.
+4. Dead ends (dated): R-1-12 — no primary or official-secondary source after 3 angles (amlegal/CDX, web search, 2021 packets); name-correspondence hypothesis (12,000 SF) deliberately NOT recorded as a value. June 2025 setback packet (View/16772) unfetchable this turn — retry in a future wave. R-1 primary code text remains unindexed in the free corpus; R-M width/frontage and R-M-10 coverage still unsourced.
+
+Net: R-1-6 is now the best-documented R-1 district (lot/height/setbacks/accessory all sourced, secondary tier). R-1-8 keeps secondary lot/height + verbatim accessory quote. R-1-10 has min lot only. R-1-12 fully null with dated attempts.

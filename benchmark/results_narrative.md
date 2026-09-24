@@ -127,3 +127,14 @@ coordinates.
 **Result.** 24 candidates evaluated, 8 schemes kept; top scheme: N–S spine road (the real orientation), 75-ft module, 9 conforming lots. The real plat fit 12 — human design used the cul-de-sac bulb and adapted widths, which the pipeline's rigid grid cannot replicate. Sensitivity check: road_width 25 ft → 11 lots (inside tolerance), but 25 ft is the pavement, not the dedicated corridor, so 49 ft stands; the input was chosen on principle, not tuned to the score.
 
 **Reading.** The benchmark now has a real, scored, failing comparison. The product under-yields on narrow cul-de-sac sites with human-optimized lot arrangements — a genuine product gap to close, not a data problem. Next: add more scored plats (target ~10) before drawing conclusions about the tolerance target.
+
+## GreenRush-8 (2026-09-24) — Cove at Silver Sky: confirmed built, document-blocked
+
+**Scored set remains 1/16 (Tripp Lane only).** GreenRush-8 expanded beyond Murray per the GR7 carry-forward. Best lead was Cove at Silver Sky (Herriman S2023-113, R-1-10, 11.75 ac @ ~12754 S 6200 W):
+
+- **Confirmed built:** 2025–2026 MLS new-construction listings name "COVE AT SILVER SKY" (Silver Sky Dr / Harlow Ann Way, lots 0.21–0.25 ac). The final plat was administratively approved by Herriman Engineering (no PC/Council action — per Herriman process) and recorded ~2024.
+- **Geometry leg executed:** 34 current child parcels union to ~11.65 ac vs the official 11.75 ac (0.9% diff) — but parcel-ID blocks differ across clusters (multiple phases/recordings likely) and the open UGRC service carries no subdivision names, so membership is NOT provable to benchmark standard. No parent GeoJSON built (GR5 Swaner lesson).
+- **Binding gaps (document, not research):** approved lot count has no official source (the 3-20-24 staff report PDF was unreachable — browser outage this turn); plat ROW unassigned between Herriman RD-01B (32 ft) and RD-01C (28 ft); R-1-10 Tier-2 params await context confirmation.
+- Broadbent (Herriman) re-check: still no final approval. Riverton's recent docket is infill-scale.
+
+**Next unlock (concrete):** fetch the 3-20-24 Item 4.2 staff report (Herriman S3 bucket, URL in the 2024-03-20 PC agenda) or the 2024 recorded plat from the SLCo Recorder. Either names lot count + ROW + zone and unlocks the second scored plat. Cove at Silver Sky is the prime target for the next lane with working browser access.

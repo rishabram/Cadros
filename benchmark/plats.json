@@ -211,14 +211,14 @@
       "zone": "R-1/7,000"
     },
     {
-      "approval": "preliminary only (Herriman PC agenda 2024-06-05, utah.gov PMN 1097511.pdf); final approval unsourced",
+      "approval": "preliminary plat reviewed 2024-03-20 (Herriman PC agenda, File S2023-113); final plat administratively approved by Engineering Dept (no PC/Council action required per Herriman process); plat RECORDED and BUILT \u2014 MLS listings 2025-2026 show new-construction homes on Silver Sky Dr / Harlow Ann Way (e.g. 6158 W Silver Sky Dr #102, 12729 S Harlow Ann Way #101, 12778 S Harlow Ann Way #105)",
       "city": "Herriman",
       "county": "Salt Lake",
       "lot_count": null,
       "name": "Cove at Silver Sky (Herriman S2023-113)",
       "plat_id": "cove-at-silver-sky",
       "plat_pdf": "https://www.utah.gov/pmn/files/1097511.pdf (agenda only, not the plat)",
-      "reason_not_scored": "Preliminary subdivision only (Herriman PC agenda 2024-06-05, PMN 1097511.pdf); final approval and approved lot count unsourced. Parent polygon unknown. road_width_ft: Herriman official standard sourced 2026-09-24 (RD-01B 60' ROW -> 32 ft asphalt; RD-01C 53' ROW -> 28 ft asphalt) but plat ROW unsourced, so no value assigned. ~11.75 ac at ~12754 S 6200 West. R-1-10 Tier-2 params sourced.",
+      "reason_not_scored": "GR8 2026-09-24: subdivision CONFIRMED BUILT (2025-2026 MLS new-construction listings, 'COVE AT SILVER SKY'). UGRC child-fabric leg executed: 34 current parcels with Silver Sky Dr / Harlow Ann Way addresses union to ~11.65 ac vs official 11.75 ac (0.9% diff) \u2014 suggestive but membership NOT provable (parcel-ID blocks differ: 263513010/26351260x/26342784x, likely multiple phases/recordings; no SUBDIV_NAME in open UGRC service; ParcelNotes uninformative). Per GR5 Swaner lesson, no union built to benchmark standard. Binding gaps: (1) APPROVED lot count \u2014 no official source (3-20-24 staff report PDF unreachable this turn: browser_open terminal; recorded plat entry number unknown; current 34 parcels != approved count); (2) plat ROW classification \u2014 RD-01B (60' ROW->32 ft) vs RD-01C (53' ROW->28 ft) unassigned without staff report/plat; (3) R-1-10 Tier-2 params (10,000 sqft / 80 ft via herriman.primegov.com attachment 898.pdf) still context-unconfirmed. NEXT LANE: fetch the 3-20-24 Item 4.2 staff report (https://herrimancitymeetingfilespc.s3.uswest-1.amazonaws.com/3-20-24/Item+4.2+-+Staff+Report.pdf) and/or the recorded plat from SLCo Recorder \u2014 either names lot count + ROW + zone.",
       "zone": "R-1-10 (params Tier 2: 10,000 sqft / 80 ft via herriman.primegov.com attachment 898.pdf \u2014 context confirmation pending)"
     },
     {

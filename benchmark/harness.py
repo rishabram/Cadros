@@ -143,7 +143,10 @@ def main():
     for entry in load_plats():
         z = entry.get("zoning", {})
         if entry.get("scored") and z.get("status") == "known":
-            for k in ("min_lot_area_sqft", "min_frontage_ft", "road_width_ft"):
+            required = ["min_lot_area_sqft", "road_width_ft"]
+            if z.get("product_type") != "attached_twinhome":
+                required.append("min_frontage_ft")
+            for k in required:
                 if k not in z:
                     raise ValueError(
                         f"plat {entry['plat_id']}: scored but zoning missing {k} — refusing"

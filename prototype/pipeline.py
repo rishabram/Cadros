@@ -123,8 +123,14 @@ def _validate_zoning(zoning: Dict) -> None:
 
     A missing or negative min_lot_area_sqft would otherwise surface as a raw
     KeyError — or worse, silently admit every lot (negative threshold).
+
+    Attached-twinhome product: min_frontage_ft is optional (width-less
+    frontage semantics — the code states no minimum lot width, and
+    ZONING_POLICY forbids inventing a width proxy).
     """
-    required = ("min_lot_area_sqft", "min_frontage_ft", "road_width_ft")
+    required = ["min_lot_area_sqft", "road_width_ft"]
+    if zoning.get("product_type") != "attached_twinhome":
+        required.append("min_frontage_ft")
     missing = [k for k in required if k not in zoning]
     if missing:
         raise ValueError(

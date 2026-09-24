@@ -23,6 +23,17 @@ Strategy (scaffold v0, two subdivision classes):
        connection sector is excluded.
     4. Same area/frontage filters; rotate back to the parcel frame.
 
+Product types:
+  detached (default): min_frontage_ft is required; lot modules derive from
+    it; the frontage filter gates every lot.
+  attached_twinhome: min_frontage_ft is OPTIONAL (width-less frontage
+    semantics — R-N-B §17.140.040 states area + setbacks but no minimum lot
+    width, and ZONING_POLICY forbids inventing a width proxy). Lot modules
+    are product unit widths (an explicit design search, not a zoning claim);
+    the frontage filter is disabled, but frontage is still measured and
+    reported per lot. Each strip is one twinhome unit (5,000 sqft); adjacent
+    strips share the 0' common-wall boundary implicitly.
+
 Varying (angle, road offset, lot module width) yields materially different
 schemes: different lot counts, road lengths, and orientations.
 """
@@ -134,7 +145,7 @@ def _build_culdesac_scheme_with_reason(
     as _build_scheme_with_reason.
     """
     min_area = float(zoning["min_lot_area_sqft"])
-    min_frontage = float(zoning["min_frontage_ft"])
+    min_frontage = _min_frontage_or_none(zoning)  # None = width-less (attached)
     road_width = float(zoning["road_width_ft"])
     tol = 0.98  # allow 2% numerical slack on area/frontage
 
@@ -162,7 +173,7 @@ def _build_culdesac_scheme_with_reason(
         """Validate, repair, and record one lot. Returns the final local
         polygon, or None if the lot was rejected."""
         nonlocal lot_idx
-        if lot_poly.area < min_area * tol or frontage < min_frontage * tol:
+        if lot_poly.area < min_area * tol or not _frontage_ok(frontage, min_frontage, tol):
             return None
         # Guard against boolean-op slivers: repair validity before rotating.
         # buffer(0) collapses self-touches; the area change is negligible
@@ -350,7 +361,7 @@ def _build_scheme_with_reason(
     diagnose silent no-schemes results.
     """
     min_area = float(zoning["min_lot_area_sqft"])
-    min_frontage = float(zoning["min_frontage_ft"])
+    min_frontage = _min_frontage_or_none(zoning)  # None = width-less (attached)
     road_width = float(zoning["road_width_ft"])
     tol = 0.98  # allow 2% numerical slack on area/frontage
 
@@ -391,7 +402,7 @@ def _build_scheme_with_reason(
             if lot_poly is None:
                 continue
             frontage = _frontage_along_road(lot_poly, edge_line)
-            if lot_poly.area < min_area * tol or frontage < min_frontage * tol:
+            if lot_poly.area < min_area * tol or not _frontage_ok(frontage, min_frontage, tol):
                 continue
             # rotate back to parcel frame
             world = rotate(lot_poly, angle_deg, origin=centroid, use_radians=False)
@@ -440,18 +451,55 @@ def _build_scheme_with_reason(
     return scheme, REASON_OK
 
 
+def _lot_modules(zoning: Dict, *, for_culdesac: bool = False) -> List[float]:
+    """Lot-width modules for the tiling grid.
+
+    Detached spine-road: the historic 2-module grid (min_frontage,
+    1.25x) — unchanged to preserve goldens.
+    Detached cul-de-sac: 3-module grid (adds 1.125x; the Tripp 10-lot key).
+    Attached twinhome: product unit widths — an explicit design search
+    (NOT a zoning claim; ZONING_POLICY forbids width proxies where the
+    code states no minimum). Typical twinhome unit widths.
+    """
+    if zoning.get("product_type") == "attached_twinhome":
+        return [30.0, 35.0, 40.0]
+    min_frontage = float(zoning["min_frontage_ft"])
+    if for_culdesac:
+        return [min_frontage, round(min_frontage * 1.125, 1),
+                round(min_frontage * 1.25, 1)]
+    return [min_frontage, round(min_frontage * 1.25, 1)]
+
+
+def _min_frontage_or_none(zoning: Dict) -> Optional[float]:
+    """Width-less frontage semantics: returns None when the product type
+    does not carry a frontage minimum (attached_twinhome with no
+    min_frontage_ft). Callers must skip the frontage filter but still
+    measure and report frontage."""
+    v = zoning.get("min_frontage_ft")
+    return float(v) if v is not None else None
+
+
+def _frontage_ok(frontage: float, min_frontage: Optional[float], tol: float) -> bool:
+    """Width-less frontage gate: when min_frontage is None (attached product
+    with no code-stated width minimum), every measured frontage passes —
+    frontage is reported, not gated."""
+    if min_frontage is None:
+        return True
+    return frontage >= min_frontage * tol
+
+
 def candidate_params(zoning: Dict) -> List[Dict]:
     """Seed parameter grid — the 'search' in constrained design-space search.
 
     Two strategies: the historic spine-road grid (unchanged, 24 configs) and
     the cul-de-sac grid (stem + bulb; addresses narrow-parcel under-yield).
     Every config carries a "strategy" key; the builder dispatches on it.
+    Attached-twinhome zoning swaps the module basis to product unit widths.
     """
-    min_frontage = float(zoning["min_frontage_ft"])
     grid = []
     for angle in (0.0, 30.0, 60.0, 90.0):
         for offset in (0.35, 0.5, 0.65):
-            for module in (min_frontage, round(min_frontage * 1.25, 1)):
+            for module in _lot_modules(zoning):
                 grid.append(
                     {"strategy": "spine_road", "angle_deg": angle,
                      "road_offset_frac": offset, "lot_module_ft": module}
@@ -459,12 +507,12 @@ def candidate_params(zoning: Dict) -> List[Dict]:
     for angle in (0.0, 90.0):
         for stem_offset in (0.35, 0.45, 0.55, 0.65):
             for bulb_frac in (0.7, 0.8, 0.9):
-                for mult in (1.0, 1.125, 1.25):
+                for module in _lot_modules(zoning, for_culdesac=True):
                     grid.append(
                         {"strategy": "culdesac", "angle_deg": angle,
                          "stem_offset_frac": stem_offset, "bulb_frac": bulb_frac,
                          "bulb_radius_ft": CULDESAC_BULB_RADIUS_FT,
-                         "lot_module_ft": round(min_frontage * mult, 1)}
+                         "lot_module_ft": module}
                     )
     return grid
 

@@ -35,6 +35,29 @@ contract Phase C plat research follows.
   city engineering design standards with citation. If unsourceable, the plat
   is not scored.
 
+## Attached-product mode (2026-09-24, DW-PROD1)
+
+Some districts state a minimum lot AREA and setbacks but NO minimum lot
+width (e.g., Murray R-N-B twinhome §17.140.040: 5,000 sqft + setbacks, no
+width). For these, the width-proxy mapping above does NOT apply — there is
+no code-stated width to stand in. Inventing one would be a fabrication.
+
+Instead, plats with `"product_type": "attached_twinhome"` run in
+**width-less frontage semantics**:
+- `min_frontage_ft` is OPTIONAL (absent = no frontage minimum).
+- Lot modules are **product unit widths** (30/35/40 ft) — an explicit design
+  search dimension, NOT a zoning claim. They appear in scheme params as
+  `lot_module_ft` alongside the product_type label.
+- The frontage filter is DISABLED; frontage is still measured and reported
+  per lot (honest output, not a hidden default).
+- The area filter still gates every lot (98% numerical tolerance).
+- Each strip is one twinhome unit; adjacent strips share the 0' common-wall
+  boundary implicitly. The benchmark counts UNITS (26 for Meadows).
+
+This is not a width proxy: no one claims the zoning requires any width.
+The product widths are labeled as what they are — a search over plausible
+unit designs — and the full envelope is reported, not just the best fit.
+
 ## Known gaps (2026-09-24)
 
 - No verified frontage or road-width rules in the store for any district.

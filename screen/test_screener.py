@@ -300,6 +300,54 @@ class ScreenerTest(unittest.TestCase):
         self.assertIn("fromfile", {r["parcel_id"] for r in rows})
         self.assertEqual(summary["parcels_errored"], 0)
 
+    def test_checkpoint_resume_after_kill(self):
+        """Kill mid-run (KeyboardInterrupt) -> checkpoint survives -> resume
+        completes. Proves the 10k SIGTERM scenario (DW-CHECK1)."""
+        import prototype.pipeline as pipeline_mod
+        real_run = pipeline_mod.run_pipeline
+        calls = []
+
+        def flaky_run(*a, **kw):
+            calls.append(1)
+            if len(calls) == 3:
+                raise KeyboardInterrupt("simulated SIGTERM")
+            return real_run(*a, **kw)
+
+        pipeline_mod.run_pipeline = flaky_run
+        try:
+            mp = self._manifest([
+                self._parcel_entry("p1"),
+                self._parcel_entry("p2"),
+                self._parcel_entry("p3"),
+            ])
+            out = os.path.join(self.tmp.name, "out_kill")
+            # First run: dies on the 3rd parcel.
+            with self.assertRaises(KeyboardInterrupt):
+                screen_manifest(mp, out_root=out, checkpoint_interval=1)
+            # Checkpoint must exist with 2 completed.
+            cp_path = os.path.join(out, "checkpoint.json")
+            self.assertTrue(os.path.exists(cp_path), "checkpoint missing after kill")
+            with open(cp_path) as f:
+                cp = json.load(f)
+            self.assertEqual(sorted(cp["completed_parcel_ids"]), ["p1", "p2"])
+            # No final CSV yet (run didn't finish).
+            self.assertFalse(os.path.exists(
+                os.path.join(out, "screening_results.csv")))
+        finally:
+            pipeline_mod.run_pipeline = real_run
+
+        # Resume: should skip p1/p2, run p3, write outputs, delete checkpoint.
+        out = os.path.join(self.tmp.name, "out_kill")
+        rows, summary = screen_manifest(mp, out_root=out, checkpoint_interval=1)
+        parcel_ids = {r["parcel_id"] for r in rows}
+        self.assertEqual(parcel_ids, {"p1", "p2", "p3"})
+        self.assertTrue(os.path.exists(
+            os.path.join(out, "screening_results.csv")))
+        self.assertFalse(os.path.exists(
+            os.path.join(out, "checkpoint.json")),
+            "checkpoint not deleted after successful resume")
+        self.assertEqual(summary["parcels_screened"], 3)
+
 
 if __name__ == "__main__":
     unittest.main()

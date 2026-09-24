@@ -26,6 +26,7 @@ import json
 import os
 import statistics
 import sys
+import time
 import traceback
 from collections import Counter
 from typing import Any, Dict, List, Tuple
@@ -63,6 +64,7 @@ VERDICTS = ("PASS", "CONDITIONAL_PASS", "FAIL", "UNKNOWN", "MANUAL_REVIEW")
 
 SUMMARY_FILENAME = "summary.json"
 CSV_FILENAME = "screening_results.csv"
+CHECKPOINT_FILENAME = "checkpoint.json"
 
 
 def fmt(v: Any, nd: int) -> str:
@@ -159,12 +161,21 @@ def _blank_row(parcel_id: str, zone_label: str, district: str,
 
 def screen_manifest(manifest_path: str, out_root: str | None = None,
                     max_schemes: int | None = None,
-                    repo_root: str | None = None) -> Tuple[List[Dict], Dict]:
+                    repo_root: str | None = None,
+                    checkpoint_interval: int = 10,
+                    resume: bool = True) -> Tuple[List[Dict], Dict]:
     """Run every parcel in a manifest; write CSV + summary; return (rows, summary).
 
     A parcel-level exception is captured as an ``error`` row and the screen
     continues. ``repo_root`` locates the pipeline package (defaults to the
     neron-scratch tree containing this ``screen/`` directory).
+
+    Checkpoint/resume (DW-CHECK1): after every ``checkpoint_interval``
+    parcels, the accumulated state is written to
+    ``out_root/checkpoint.json``. If the process is killed (SIGTERM/SIGINT),
+    the checkpoint survives. On restart with ``resume=True`` (default), the
+    checkpoint is loaded and completed parcels are skipped. The checkpoint
+    is deleted on successful completion.
     """
     from prototype.pipeline import run_pipeline
 
@@ -182,15 +193,49 @@ def screen_manifest(manifest_path: str, out_root: str | None = None,
     if max_schemes is None:
         max_schemes = int(manifest.get("max_schemes", 8))
 
+    checkpoint_path = os.path.join(out_root, CHECKPOINT_FILENAME)
+
+    def _write_checkpoint(completed_ids, rows, errors, noscheme_diags,
+                          top_lots):
+        _write_json(checkpoint_path, {
+            "manifest_path": manifest_path,
+            "completed_parcel_ids": sorted(completed_ids),
+            "rows": rows,
+            "errors": errors,
+            "noscheme_diagnostics": noscheme_diags,
+            "top_scheme_lots": top_lots,
+            "updated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+        })
+
+    def _load_checkpoint():
+        with open(checkpoint_path) as f:
+            return json.load(f)
+
     rows: List[Dict] = []
     errors: List[Dict] = []
-    top_scheme_lots = 0
-    # Tally of scheme-generation diagnostic verdicts for no_schemes parcels,
-    # so a bare "no_schemes" count is always accompanied by *why*.
     noscheme_diagnostics: Dict[str, int] = {}
+    top_scheme_lots = 0
+    completed_ids = set()
+    if resume and os.path.exists(checkpoint_path):
+        try:
+            cp = _load_checkpoint()
+            # Only resume if the checkpoint is for this manifest.
+            if os.path.abspath(cp.get("manifest_path", "")) == manifest_path:
+                completed_ids = set(cp.get("completed_parcel_ids", []))
+                rows = cp.get("rows", [])
+                errors = cp.get("errors", [])
+                noscheme_diagnostics = cp.get("noscheme_diagnostics", {})
+                top_scheme_lots = cp.get("top_scheme_lots", 0)
+                print(f"Resuming from checkpoint: {len(completed_ids)} "
+                      f"parcels already done, {len(entries) - len(completed_ids)} "
+                      f"remaining.")
+        except Exception as e:
+            print(f"Checkpoint load failed ({e}); starting fresh.")
 
     for entry in entries:
         parcel_id = entry.get("parcel_id") or "unknown"
+        if parcel_id in completed_ids:
+            continue
         pdir = os.path.join(out_root, parcel_id)
         inputs_dir = os.path.join(pdir, "inputs")
         os.makedirs(inputs_dir, exist_ok=True)
@@ -243,6 +288,17 @@ def screen_manifest(manifest_path: str, out_root: str | None = None,
                                    "error", error=msg))
             errors.append({"parcel_id": parcel_id, "error": msg,
                            "traceback": traceback.format_exc(limit=5)})
+        # Mark completed and checkpoint periodically. A SIGTERM/SIGINT
+        # between checkpoints loses at most checkpoint_interval parcels;
+        # the checkpoint file itself is the resume point.
+        completed_ids.add(parcel_id)
+        if len(completed_ids) % checkpoint_interval == 0:
+            _write_checkpoint(completed_ids, rows, errors,
+                              noscheme_diagnostics, top_scheme_lots)
+
+    # Final checkpoint before writing outputs (covers the tail).
+    _write_checkpoint(completed_ids, rows, errors,
+                      noscheme_diagnostics, top_scheme_lots)
 
     csv_path = os.path.join(out_root, CSV_FILENAME)
     with open(csv_path, "w", newline="") as f:
@@ -316,6 +372,11 @@ def screen_manifest(manifest_path: str, out_root: str | None = None,
     }
     _write_json(os.path.join(out_root, SUMMARY_FILENAME), summary)
     print(_format_summary(summary))
+    # Successful completion: the checkpoint is no longer needed.
+    try:
+        os.remove(checkpoint_path)
+    except OSError:
+        pass
     return rows, summary
 
 

@@ -1,8 +1,8 @@
 # Murray City Code — Title 16 (Subdivision) + Title 17 Residential Zoning Chapter Map
 
 **Source:** American Legal code library, Murray UT (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/)
-**Mapped by:** Pack-4 (pilot), 2026-09-24
-**Status:** pilot / draft — chapter coverage notes derive from the code's own TOC and pilot extractions only.
+**Mapped by:** Pack-4 (pilot) + Pack-5 (Wave 2), 2026-09-24
+**Status:** draft — chapter coverage notes derive from the code's own TOC and pilot extractions only. Pack-5 closed R-M-10 height, R-M-15 yards/height/coverage, R-M-20 lot/yards/height, R-M-25 lot/yards/height, 17.72 parking, and 17.132 density-bonus from primary code text.
 
 ## Critical structural note: Title 16 vs Title 17
 
@@ -54,14 +54,14 @@ Chapter list from the official Title 17 TOC
 | 17.104 | R-1-10 — Single-Family Low Density Residential | not extracted — null with gap reasons |
 | 17.108 | R-1-12 — Single-Family Low Density Residential | not extracted — null with gap reasons |
 | 17.112 | R-2-10 — Medium Density Residential | not extracted — null with gap reasons |
-| 17.116 | R-M-10 — Multiple-Family Low Density Residential | **EXTRACTED (primary):** lot area — SF 8,000 sq ft, duplex 10,000 sq ft, >2 units 7 u/acre, bonus to 10 u/acre via ch 17.132 (§17.116.040); yards — front 25', side 8' each / 20' combined, corner-side 20', rear 25', accessory 1' rear (≥6' behind main, ≥10' to adjacent dwelling, ≤25% of rear yard) (§17.116.060). Height/coverage/width not located. Sources: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12679 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12697 |
-| 17.120 | R-M-15 — Multiple-Family Medium Density Residential | **EXTRACTED (primary):** lot area — SF 8,000 sq ft, duplex 10,000 sq ft, >2 units 12 u/acre, bonus to 15 u/acre via ch 17.132 (§17.120.040). **Height 40 ft — secondary** (staff packet). Yards/coverage/width not located. Source: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12769 |
-| 17.124 | R-M-20 — Multiple-Family High Density Residential | not extracted — null with gap reasons |
-| 17.128 | R-M-25 — Multiple-Family High Density Residential | not extracted — null with gap reasons |
-| 17.132 | Incentive Density Bonus | referenced by §§17.116.040/17.120.040 — not extracted |
+| 17.116 | R-M-10 — Multiple-Family Low Density Residential | **EXTRACTED (primary):** lot area — SF 8,000 sq ft, duplex 10,000 sq ft, >2 units 7 u/acre, bonus to 10 u/acre via ch 17.132 (§17.116.040); yards — front 25', side 8' each / 20' combined, corner-side 20', rear 25', accessory 1' rear (≥6' behind main, ≥10' to adjacent dwelling, ≤25% of rear yard) (§17.116.060); **height 35 ft** (§17.116.080, Pack-5). Coverage/width not located. Sources: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12679 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12697 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12712 |
+| 17.120 | R-M-15 — Multiple-Family Medium Density Residential | **EXTRACTED (primary):** lot area — SF 8,000 sq ft, duplex 10,000 sq ft, >2 units 12 u/acre, bonus to 15 u/acre via ch 17.132 (§17.120.040); yards — front 25', side 8' each / 20' combined, corner-side 20', rear 25', accessory rules (§17.120.060, Pack-5); **height 40 ft** (§17.120.080, Pack-5, supersedes staff-packet secondary); **lot coverage 40%** (§17.120.100, Pack-5). Width not located. Sources: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12769 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12774 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12789 |
+| 17.124 | R-M-20 — Multiple-Family High Density Residential | **EXTRACTED (primary, Pack-5):** lot area — SF 8,000 sq ft, duplex 10,000 sq ft, >2 units 17 u/acre, bonus to 20 u/acre via ch 17.132 (§17.124.040); yards — front 25', side 8' each / 20' combined, corner-side 20', rear 25', accessory rules (§17.124.060); **height 40 ft** (§17.124.080). Coverage/width not located. Sources: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12846 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12851 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12866 |
+| 17.128 | R-M-25 — Multiple-Family High Density Residential | **EXTRACTED (primary, Pack-5):** lot area — SF 8,000 sq ft, duplex 10,000 sq ft, >2 units 22 u/acre, bonus to 25 u/acre via ch 17.132 (§17.128.040); yards — front 25', side 8' each / 20' combined, corner-side 20', rear 25', accessory rules (§17.128.060); **height 40 ft** (§17.128.080). Coverage/width not located. Sources: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12923 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12928 , https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12943 |
+| 17.132 | Incentive Density Bonus | **EXTRACTED (primary, Pack-5):** §17.132.050 full criteria table — 1/2/3 u/acre bonus tiers with affordable housing (20% @ 80%/60%/60% AMI for 25/25/50 years), urban design (50%/75%/100% perimeter height limits), landscaping (30%/35%/40%), structure design, parking, and building materials requirements. Source: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-12993 |
 | 17.136 | R-M-H — Residential Mobile Home | not extracted |
 | 17.140 | R-N-B — Residential Neighborhood Business | not extracted |
-| 17.72 | Parking (referenced; §17.72.040 ADA, §17.72.070) | **not extracted** — residential parking ratios remain null |
+| 17.72 | Parking | **EXTRACTED (primary, Pack-5):** §17.72.100 — single-family 2 spaces/unit; multifamily 2.5 spaces/unit (2 designated stalls + 0.5 pooled visitor; ≥1 covered stall/unit). Source: https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-11412 |
 
 Related chapters observed but out of pilot scope: 17.12 (topic line "kitchens in
 single-family residential dwellings"), 17.80 (low power radio towers —

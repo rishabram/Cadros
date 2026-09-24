@@ -98,3 +98,17 @@ not ch 17.72), 17.171 CC-FBC, 17.172 enforcement, 17.173 B-P, 17.174 P-O.
    The ordinance amended yard-EXCEPTION sections only (chapters
    17.92–17.128); base yard numbers are unchanged. All prior
    "adoption unconfirmed" caveats on this item are superseded.
+
+4. **Pack-11 (2026-09-24, Wave 7) — packet-route status.** Murray's PC archive
+   page (https://www.murray.utah.gov/779/Agendas-Attachment) renders per-meeting
+   packet links; 2025 packets are now SharePoint-hosted
+   (murraycitycorp.sharepoint.com) — the July 17, 2025 packet could not be
+   fetched through the text-extraction path (browser_open terminal on the
+   SharePoint link). A second Murray web domain is live:
+   ut-murraycity3.civicplus.com (DocumentCenter View/15876, /17291) — no
+   R-1-12 packet hits there either. The staff-report template "Lot Area,
+   Width, Setbacks, and Height Standards" is confirmed live in the 060525
+   packet but only for MCMU (49th Street Galleria) — no R-1-12 subdivision
+   item located in any indexed packet. Remaining primary routes unchanged:
+   live-browser amlegal render of §§17.108.040/.080/.130, or human fetch of
+   the July 17, 2025 packet PDF.

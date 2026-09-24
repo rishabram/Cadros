@@ -255,3 +255,33 @@ Pack-10 was a retry of the packet-mining lead. It closed no values but produced 
 - `rulegraph/murray_pilot_report.md` (Pack-10: this Wave 6 section)
 
 Canonical `verified_rules.json` and MU overlays untouched. DRAFT/UNVERIFIED status preserved.
+
+## Wave 7 notes — Pack-11 (Murray-W7), 2026-09-24
+
+**Target — R-1-12 min lot area / base setbacks / width-frontage / coverage via subdivision-packet mining: STILL NULL (dated evidence of absence, further strengthened).**
+
+Wave 7 ran the stated future lead to exhaustion: locate a Murray subdivision or flag-lot packet quoting the staff-report template ("Setbacks, Height, Lot Width — The R-1-12 Zone requires the following" / "Lot Area, Width, Setbacks, and Height Standards") for R-1-12. **11 search angles, 0 Murray R-1-12 dimensional values:**
+
+1. Verbatim template phrase + Murray — 0 hits.
+2. Template heading + "R-1-12" + Murray — 0 hits (only Murray County energy zoning, Murray KY, Murray Village).
+3. amlegal sweeps for §§17.108.040/.080/.130 — still unindexed; §17.108.090 confirmed fetchable and text-verified (references .080 as yard-requirements, .130 as general coverage).
+4. 2024 subdivision PC packets — template confirmed live (060525 packet, 49th Street Galleria) but only for MCMU; no R-1-12 subdivision item in any indexed packet.
+5. site:murray.utah.gov "R-1-12" — general-plan/training docs only, no numbers.
+6. Flag-lot angle — sole PMN hit was South Jordan Ordinance 2025-07 (wrong city, discarded per letterhead rule).
+7. Variance / hearing-officer angle — no R-1-12 numbers.
+8. Parallel-chapter .080 sections (17.96/17.100/17.104) — none indexed.
+9. New civicplus domain ut-murraycity3.civicplus.com — no R-1-12 packet hits.
+10. Rezone-to-R-1-12 staff reports — 0 Murray hits (one PMN hit used a non-Murray R-1-5/R-1-9/R-1-14 subzone scheme, discarded).
+11. Direct archive-page route — Murray PC archive page renders packet links and 2025 packets are SharePoint-hosted (murraycitycorp.sharepoint.com); the July 17, 2025 packet fetch failed at the text-extraction layer (browser_open terminal on SharePoint).
+
+**Wrong-city discards this wave:** South Jordan, Mill Creek, McMinnville OR, Murray KY, Ephraim, Murray Village, Salt Lake City, Murray County. The Pack-8 letterhead lesson held — every PMN/DocumentCenter hit was municipality-checked before use.
+
+**No values recorded; all four R-1-12 dimensionals remain null** with dated gap notes (machine-draft, DRAFT/UNVERIFIED). Remaining viable routes: a JS-capable live-browser render of amlegal §§17.108.040/.080/.130, or a human fetch of the July 17, 2025 PC packet PDF from Murray's DocumentCenter/SharePoint. Recommendation: do not run another search-only wave without one of those two routes — the free indexed corpus is exhausted for this item.
+
+## Files changed (Pack-11)
+
+- `rulegraph/murray_params_draft.json` (Pack-11: Wave 7 dated evidence-of-absence appended to all four R-1-12 gap notes; provenance updated; JSON validates; values unchanged — all four still null)
+- `rulegraph/murray_title16_map.md` (Pack-11: packet-route status — SharePoint hosting, civicplus domain, template confirmed live for MCMU only)
+- `rulegraph/murray_pilot_report.md` (Pack-11: this Wave 7 section)
+
+Canonical `verified_rules.json` and MU overlays untouched. DRAFT/UNVERIFIED status preserved.

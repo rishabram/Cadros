@@ -1,0 +1,76 @@
+{
+  "_note": "SYNTHETIC fixture for screener testing. NOT a real parcel, NOT real zoning.",
+  "max_schemes": 8,
+  "parcels": [
+    {
+      "finance_config": "../synthetic_parcels/syn-m1-001.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-m1-001.geojson",
+      "parcel_id": "syn-m1-001",
+      "zoning_config": "../synthetic_parcels/syn-m1-001.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-m1-002.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-m1-002.geojson",
+      "parcel_id": "syn-m1-002",
+      "zoning_config": "../synthetic_parcels/syn-m1-002.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-m1-003.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-m1-003.geojson",
+      "parcel_id": "syn-m1-003",
+      "zoning_config": "../synthetic_parcels/syn-m1-003.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-os-001.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-os-001.geojson",
+      "parcel_id": "syn-os-001",
+      "zoning_config": "../synthetic_parcels/syn-os-001.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-os-002.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-os-002.geojson",
+      "parcel_id": "syn-os-002",
+      "zoning_config": "../synthetic_parcels/syn-os-002.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-pl-001.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-pl-001.geojson",
+      "parcel_id": "syn-pl-001",
+      "zoning_config": "../synthetic_parcels/syn-pl-001.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-pl-002.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-pl-002.geojson",
+      "parcel_id": "syn-pl-002",
+      "zoning_config": "../synthetic_parcels/syn-pl-002.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-mu11-001.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-mu11-001.geojson",
+      "parcel_id": "syn-mu11-001",
+      "program": "../synthetic_parcels/syn-mu11-001.program.json",
+      "zoning_config": "../synthetic_parcels/syn-mu11-001.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-mu11-002.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-mu11-002.geojson",
+      "parcel_id": "syn-mu11-002",
+      "program": "../synthetic_parcels/syn-mu11-002.program.json",
+      "zoning_config": "../synthetic_parcels/syn-mu11-002.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-mu11-003.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-mu11-003.geojson",
+      "parcel_id": "syn-mu11-003",
+      "program": "../synthetic_parcels/syn-mu11-003.program.json",
+      "zoning_config": "../synthetic_parcels/syn-mu11-003.zoning.json"
+    },
+    {
+      "finance_config": "../synthetic_parcels/syn-tiny-001.finance.json",
+      "parcel_geojson": "../synthetic_parcels/syn-tiny-001.geojson",
+      "parcel_id": "syn-tiny-001",
+      "zoning_config": "../synthetic_parcels/syn-tiny-001.zoning.json"
+    }
+  ],
+  "screen_name": "synthetic-v1"
+}

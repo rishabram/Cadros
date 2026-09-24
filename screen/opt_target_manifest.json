@@ -1,0 +1,1579 @@
+{
+ "_note": "First mass screen on real Salt Lake County parcels with real district assignments. Dimensional minimums are PROVISIONAL (labeled per parcel) except MU-11 no-minimum (verified MU-11-11). RuleGraph: 8 human-verified rules execute; all else UNKNOWN, never defaulted.",
+ "max_schemes": 8,
+ "parcels": [
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08214000240000.geojson",
+   "parcel_id": "08214000240000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "RMF-30"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08223810760000.geojson",
+   "parcel_id": "08223810760000",
+   "zoning_config": {
+    "district": "RMF-30",
+    "min_frontage_ft": 50,
+    "min_lot_area_sqft": 5000,
+    "road_width_ft": 55,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). multifamily illustrative; provisional",
+    "zone_label": "Low Density Multifamily Residential (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08224510040000.geojson",
+   "parcel_id": "08224510040000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08224510050000.geojson",
+   "parcel_id": "08224510050000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08224760020000.geojson",
+   "parcel_id": "08224760020000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08233510010000.geojson",
+   "parcel_id": "08233510010000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08233510030000.geojson",
+   "parcel_id": "08233510030000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08233510040000.geojson",
+   "parcel_id": "08233510040000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "M-2"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08234570150000.geojson",
+   "parcel_id": "08234570150000",
+   "zoning_config": {
+    "district": "M-2",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Heavy Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "M-2"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08234780240000.geojson",
+   "parcel_id": "08234780240000",
+   "zoning_config": {
+    "district": "M-2",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Heavy Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "M-2"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08235010060000.geojson",
+   "parcel_id": "08235010060000",
+   "zoning_config": {
+    "district": "M-2",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Heavy Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "M-2"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08235030120000.geojson",
+   "parcel_id": "08235030120000",
+   "zoning_config": {
+    "district": "M-2",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Heavy Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08243000080000.geojson",
+   "parcel_id": "08243000080000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "EI"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08243000200000.geojson",
+   "parcel_id": "08243000200000",
+   "zoning_config": {
+    "district": "EI",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). extractive industrial illustrative; provisional",
+    "zone_label": "Extractive Industry (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "EI"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08243000210000.geojson",
+   "parcel_id": "08243000210000",
+   "zoning_config": {
+    "district": "EI",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). extractive industrial illustrative; provisional",
+    "zone_label": "Extractive Industry (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08243000220000.geojson",
+   "parcel_id": "08243000220000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08243000230000.geojson",
+   "parcel_id": "08243000230000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08243000240000.geojson",
+   "parcel_id": "08243000240000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08244000050000.geojson",
+   "parcel_id": "08244000050000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08244000060000.geojson",
+   "parcel_id": "08244000060000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251010080000.geojson",
+   "parcel_id": "08251010080000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251020050000.geojson",
+   "parcel_id": "08251020050000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251260110000.geojson",
+   "parcel_id": "08251260110000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251260200000.geojson",
+   "parcel_id": "08251260200000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251260210000.geojson",
+   "parcel_id": "08251260210000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251260240000.geojson",
+   "parcel_id": "08251260240000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251260250000.geojson",
+   "parcel_id": "08251260250000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251260270000.geojson",
+   "parcel_id": "08251260270000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "M-2"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251510020000.geojson",
+   "parcel_id": "08251510020000",
+   "zoning_config": {
+    "district": "M-2",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Heavy Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251760190000.geojson",
+   "parcel_id": "08251760190000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251760200000.geojson",
+   "parcel_id": "08251760200000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "MU-5",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Derived: lot-share math on ~$500k\u2013$600k attached product; MU-5/MU-6 split is judgment, not a measured spread",
+     "warnings": [],
+     "zone_label": "MU-5"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=MU-5, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251770050000.geojson",
+   "parcel_id": "08251770050000",
+   "zoning_config": {
+    "district": "MU-5",
+    "min_frontage_ft": 50,
+    "min_lot_area_sqft": 5000,
+    "road_width_ft": 55,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative mixed-use; provisional",
+    "zone_label": "Mixed Use 5 (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "MU-5",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Derived: lot-share math on ~$500k\u2013$600k attached product; MU-5/MU-6 split is judgment, not a measured spread",
+     "warnings": [],
+     "zone_label": "MU-5"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=MU-5, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08251770080000.geojson",
+   "parcel_id": "08251770080000",
+   "zoning_config": {
+    "district": "MU-5",
+    "min_frontage_ft": 50,
+    "min_lot_area_sqft": 5000,
+    "road_width_ft": 55,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative mixed-use; provisional",
+    "zone_label": "Mixed Use 5 (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08252000010000.geojson",
+   "parcel_id": "08252000010000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08252000020000.geojson",
+   "parcel_id": "08252000020000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08252000051001.geojson",
+   "parcel_id": "08252000051001",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "EI"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08252000080000.geojson",
+   "parcel_id": "08252000080000",
+   "zoning_config": {
+    "district": "EI",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). extractive industrial illustrative; provisional",
+    "zone_label": "Extractive Industry (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08252000100000.geojson",
+   "parcel_id": "08252000100000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "FR-2"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08252780010000.geojson",
+   "parcel_id": "08252780010000",
+   "zoning_config": {
+    "district": "FR-2",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 43560,
+    "road_width_ft": 50,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). foothill; 1ac illustrative; provisional",
+    "zone_label": "FR-2/21780 Foothills Estates Residential (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "M-2"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253260180000.geojson",
+   "parcel_id": "08253260180000",
+   "zoning_config": {
+    "district": "M-2",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Heavy Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253260190000.geojson",
+   "parcel_id": "08253260190000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253260200000.geojson",
+   "parcel_id": "08253260200000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253280010000.geojson",
+   "parcel_id": "08253280010000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253280030000.geojson",
+   "parcel_id": "08253280030000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "DEFAULT",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": true,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+     "warnings": [],
+     "zone_label": "BP"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=DEFAULT, DEFAULT fallback, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253290060000.geojson",
+   "parcel_id": "08253290060000",
+   "zoning_config": {
+    "district": "BP",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). business park illustrative; provisional",
+    "zone_label": "Business Park (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "MU-11",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Derived: lot-share math (20\u201325% of ~$550k\u2013$700k attached/townhome product) + SLC central-city premium; no SLC finished-lot comp pulled",
+     "warnings": [],
+     "zone_label": "MU-11"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 150000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=MU-11, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253290080000.geojson",
+   "parcel_id": "08253290080000",
+   "zoning_config": {
+    "district": "MU-11",
+    "min_frontage_ft": 50,
+    "min_lot_area_sqft": 5000,
+    "road_width_ft": 55,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). verified: no minimum lot area/width (MU-11-11); 50/5000 is an illustrative geometry floor, provisional",
+    "zone_label": "Mixed Use 11 (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "MU-5",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Derived: lot-share math on ~$500k\u2013$600k attached product; MU-5/MU-6 split is judgment, not a measured spread",
+     "warnings": [],
+     "zone_label": "MU-5"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=MU-5, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253300130000.geojson",
+   "parcel_id": "08253300130000",
+   "zoning_config": {
+    "district": "MU-5",
+    "min_frontage_ft": 50,
+    "min_lot_area_sqft": 5000,
+    "road_width_ft": 55,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative mixed-use; provisional",
+    "zone_label": "Mixed Use 5 (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253510430000.geojson",
+   "parcel_id": "08253510430000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253510440000.geojson",
+   "parcel_id": "08253510440000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253760270000.geojson",
+   "parcel_id": "08253760270000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "MU-5",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Derived: lot-share math on ~$500k\u2013$600k attached product; MU-5/MU-6 split is judgment, not a measured spread",
+     "warnings": [],
+     "zone_label": "MU-5"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=MU-5, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253760300000.geojson",
+   "parcel_id": "08253760300000",
+   "zoning_config": {
+    "district": "MU-5",
+    "min_frontage_ft": 50,
+    "min_lot_area_sqft": 5000,
+    "road_width_ft": 55,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative mixed-use; provisional",
+    "zone_label": "Mixed Use 5 (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "M-1",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Interpolated from regional industrial land benchmarks (~$350k\u2013$600k/acre finished); NO Salt Lake City finished-industrial-lot comp located",
+     "warnings": [],
+     "zone_label": "M-1"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 450000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=M-1, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253760610000.geojson",
+   "parcel_id": "08253760610000",
+   "zoning_config": {
+    "district": "M-1",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative industrial; provisional",
+    "zone_label": "Light Manufacturing (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "MU-5",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Derived: lot-share math on ~$500k\u2013$600k attached product; MU-5/MU-6 split is judgment, not a measured spread",
+     "warnings": [],
+     "zone_label": "MU-5"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 135000.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=MU-5, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08253770150000.geojson",
+   "parcel_id": "08253770150000",
+   "zoning_config": {
+    "district": "MU-5",
+    "min_frontage_ft": 50,
+    "min_lot_area_sqft": 5000,
+    "road_width_ft": 55,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). illustrative mixed-use; provisional",
+    "zone_label": "Mixed Use 5 (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08254030010000.geojson",
+   "parcel_id": "08254030010000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  },
+  {
+   "finance_config": {
+    "contingency_pct": 0.1,
+    "economics": {
+     "district_matched": "OS",
+     "economics_file": "(in-memory)",
+     "fallback_to_default": false,
+     "revenue_confidence": "assumption",
+     "revenue_source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+     "warnings": [
+      "district OS is not privately subdividable; lot revenue set to 0 by the economics model"
+     ],
+     "zone_label": "OS"
+    },
+    "road_cost_per_lf": 525.0,
+    "sale_price_per_lot": 0.0,
+    "soft_costs_fixed": 150000.0,
+    "source": "derived from (in-memory) (district=OS, economics build 2026-09-23); per-value sources inside the economics file"
+   },
+   "parcel_geojson": "real_parcels/parcel_08254040010000.geojson",
+   "parcel_id": "08254040010000",
+   "zoning_config": {
+    "district": "OS",
+    "min_frontage_ft": 100,
+    "min_lot_area_sqft": 20000,
+    "road_width_ft": 60,
+    "source": "PROVISIONAL dimensional assumptions for mass-screen v1. District assignment is real (spatial join, see screen/real_parcels/SOURCES.md). open space; provisional \u2014 subdivision unlikely, expect no_schemes",
+    "zone_label": "Open Space (real AGRC/SLC parcel; dimensionals PROVISIONAL except as verified)"
+   }
+  }
+ ],
+ "screen_name": "real-slco-v2-opt-target"
+}

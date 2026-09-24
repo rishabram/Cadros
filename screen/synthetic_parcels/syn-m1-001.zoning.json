@@ -1,0 +1,8 @@
+{
+  "district": "M-1",
+  "min_frontage_ft": 100,
+  "min_lot_area_sqft": 20000,
+  "road_width_ft": 60,
+  "source": "SYNTHETIC fixture for screener testing. NOT a real parcel, NOT real zoning. Illustrative industrial minimums.",
+  "zone_label": "M-1 Light Manufacturing (SYNTHETIC)"
+}

@@ -1,0 +1,8 @@
+{
+  "district": "MU-11",
+  "min_frontage_ft": 50,
+  "min_lot_area_sqft": 5000,
+  "road_width_ft": 55,
+  "source": "SYNTHETIC fixture for screener testing. NOT a real parcel, NOT real zoning. Illustrative mixed-use minimums.",
+  "zone_label": "MU-11 Mixed Use (SYNTHETIC)"
+}

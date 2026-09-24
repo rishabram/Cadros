@@ -1,0 +1,24 @@
+{
+  "distributions": {
+    "demo": {
+      "rulegraph": {
+        "FAIL": 8
+      },
+      "use_allowance": {
+        "UNKNOWN": 8
+      }
+    },
+    "jefferson": {
+      "rulegraph": {
+        "UNKNOWN": 2
+      },
+      "use_allowance": {
+        "UNKNOWN": 2
+      }
+    }
+  },
+  "pin_history": [
+    "2026-09-24: demo/rulegraph UNKNOWN 8 -> FAIL 8. Intended: Caddy extraction v2 (rulegraph/caddy_params_v2.json) made MU-11-01..04 executable; the demo baseline runs inputs/demo_program.json (MU-11, row_house, rear setback 8 ft), which honestly FAILs MU-11-04's 10 ft rear-yard minimum. MU-11-01/02/03 PASS on the same program. Geometry and economics byte-identical (baseline check PASS)."
+  ],
+  "pinned_on": "2026-09-24"
+}

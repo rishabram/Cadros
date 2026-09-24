@@ -1,0 +1,171 @@
+{
+ "engine_semantics": "Applied in-memory at RuleGraph.load time. verified_rules.json is never modified; canonical rule ids, human_verification records, and the store fingerprint (9cc91ac7...) are untouched. Evaluation results carry params_source=caddy_extraction_v1 in their reason.",
+ "extraction_provenance": "Machine-extracted by Caddy's extraction worker (2026-09-24) from the Rohan-verified rule quotes in rulegraph/verified_rules.json; cross-checked against the canonical store by the LeBron sync worker 2026-09-24 02:12 MDT (no discrepancies). HUMAN VERIFICATION COVERS THE RULE QUOTES, NOT THIS PARAM EXTRACTION. Gaps recorded by the extraction stay gaps (UNKNOWN) \u2014 never zeros or defaults.",
+ "not_executable": {
+  "M-1-06": "qualitative (Chapter 21A.48 landscape conformance); no numeric parameter in quote -> no evaluator, stays UNKNOWN",
+  "OS-05": "qualitative (Chapter 21A.48 landscaped yards); no numeric parameter in quote -> no evaluator, stays UNKNOWN"
+ },
+ "overlay_id": "caddy_extraction_v1_2026-09-24",
+ "rules": {
+  "M-1-01": {
+   "evaluator": "min_lot_area_width",
+   "params": {
+    "existing_conforming_date": "1995-04-12",
+    "existing_conforming_note": "Lots legally existing as of 1995-04-12 are legal conforming lots even below the minima (21A.28.020.C.3). Per-lot existing status is not in the pipeline context: a below-minimum lot with unknown existing status yields UNKNOWN, never FAIL.",
+    "min_area_sqft": 10000,
+    "min_width_ft": 80
+   }
+  },
+  "M-1-03": {
+   "evaluator": "m1_abutment_setback",
+   "params": {
+    "height_threshold_ft": 30,
+    "landscape_buffer_depth_ft": null,
+    "landscape_buffer_gap": "the setback is measured beyond the 21A.48.080 landscape buffer whose numeric depth is not stated in the stored quote; with height above 30 ft and abutment confirmed, the required total setback cannot be computed -> UNKNOWN",
+    "rate_ft_per_ft": 1.0,
+    "trigger_districts": [
+     "AG-2",
+     "AG-5"
+    ]
+   }
+  },
+  "M-1-04": {
+   "evaluator": "m1_max_height",
+   "params": {
+    "base_max_ft": 65,
+    "distillation_column_max_ft": 120,
+    "distillation_note": "emission-free distillation column structures necessary for manufacture processing: up to the most restrictive FAA-imposed minimal approach surface elevation, or 120 ft maximum, whichever is less"
+   }
+  },
+  "M-1-05": {
+   "evaluator": "m1_height_exception_zone",
+   "params": {
+    "base_max_ft": 65,
+    "exception_condition": "subject to the design review standards and procedures of chapter 21A.59",
+    "exception_max_ft": 85,
+    "exception_zone": "west of Salt Lake City International Airport and north of I-80"
+   }
+  },
+  "OS-02": {
+   "evaluator": "os_max_height_tiered",
+   "params": {
+    "inflate_rate_ft_per_ft": 1.0,
+    "inflate_threshold_gt4ac_ft": 35,
+    "inflate_threshold_le4ac_ft": 20,
+    "max_design_review_ft": 60,
+    "max_gt4ac_ft": 45,
+    "max_le4ac_ft": 35,
+    "public_utilities_exemption": "building/structure heights for the Salt Lake City Public Utilities Department not specifically exempt in 21A.02.050 are exempt from the district height restrictions",
+    "tier_acres": 4
+   }
+  },
+  "OS-03": {
+   "evaluator": "os_rec_equipment_height",
+   "params": {
+    "applies_to": "recreation equipment when needed due to the nature of the equipment or for the use to operate safely (e.g. fences surrounding golf course driving ranges); separate from building height",
+    "max_ft": 80
+   }
+  },
+  "OS-04": {
+   "evaluator": "os_min_yards_tiered",
+   "params": {
+    "corner_side_ft": 10,
+    "front_ft": 10,
+    "interior_side_gt4ac_ft": 15,
+    "interior_side_le4ac_ft": 10,
+    "rear_gt4ac_ft": 15,
+    "rear_le4ac_ft": 10,
+    "tier_acres": 4,
+    "yard_inflation_from_os02": {
+     "gt4ac": {
+      "rate_ft_per_ft": 1.0,
+      "threshold_ft": 35
+     },
+     "le4ac": {
+      "rate_ft_per_ft": 1.0,
+      "threshold_ft": 20
+     },
+     "note": "per 21A.32.100.D via OS-02: for each foot of height over the tier threshold, each required yard and landscaped yard increases one foot; consumed jointly per the extraction notes"
+    }
+   }
+  },
+  "PL-01": {
+   "evaluator": "pl_min_lot_area_width",
+   "params": {
+    "other_uses": {
+     "min_area_sqft": 20000,
+     "min_width_ft": 75
+    },
+    "public_school": {
+     "min_area_acres": 5,
+     "min_width_ft": 150
+    },
+    "use_note": "row selection requires the proposed use; unknown use -> UNKNOWN, never the more permissive row"
+   }
+  },
+  "PL-02": {
+   "evaluator": "pl_max_height",
+   "params": {
+    "abutting_greater_height_gap": "where abutting a district allowing greater height, the abutting district's standard applies; that numeric value is not stated in the quote and must be looked up per adjacent district -> UNKNOWN when the exception could apply",
+    "civic_listed_max_ft": 75,
+    "civic_listed_uses": [
+     "local government facilities",
+     "prison or jail",
+     "government offices",
+     "arenas",
+     "stadiums",
+     "fairgrounds and exhibition halls"
+    ],
+    "k12_public_max_ft": 125,
+    "other_uses_max_ft": 35
+   }
+  },
+  "PL-03": {
+   "evaluator": "pl_min_yards",
+   "params": {
+    "abutment_note": "interior/rear yards branch on whether the abutting district is residential/manufacturing vs other; unmapped zone codes -> UNKNOWN",
+    "k12_public": {
+     "corner_side_ft": 30,
+     "front_ft": 30,
+     "interior_side_other_ft": 30,
+     "interior_side_res_mfg_ft": 50,
+     "perimeter_note": "on multi-parcel school sites setbacks apply to the site perimeter and to property lines shared with a different owner",
+     "rear_other_ft": 30,
+     "rear_res_mfg_ft": 50
+    },
+    "manufacturing_zone_prefixes": [
+     "M-"
+    ],
+    "other_uses": {
+     "corner_side_ft": 30,
+     "front_ft": 30,
+     "interior_side_ft": 20,
+     "rear_ft": 30
+    },
+    "residential_zone_prefixes": [
+     "R-",
+     "RMF",
+     "SR-",
+     "FR-"
+    ],
+    "zone_prefix_note": "residential/manufacturing by prefix (M- with hyphen, so MU-* never matches manufacturing); 'other' only for explicitly listed known SLC districts; anything else -> UNKNOWN, never guessed.",
+    "other_districts": [
+     "MU-5",
+     "MU-6",
+     "MU-11",
+     "OS",
+     "PL",
+     "BP",
+     "EI",
+     "AG-2",
+     "AG-5",
+     "CN",
+     "CB"
+    ]
+   }
+  }
+ },
+ "source_files": [
+  "caddy_drop/m1_os_pl_params.json"
+ ]
+}

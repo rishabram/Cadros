@@ -1,0 +1,35 @@
+{
+  "geometry": {
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1600,
+          0
+        ],
+        [
+          1600,
+          1300
+        ],
+        [
+          0,
+          1300
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ],
+    "type": "Polygon"
+  },
+  "properties": {
+    "crs": "local-feet",
+    "parcel_id": "syn-m1-003",
+    "source": "SYNTHETIC fixture for screener testing. NOT a real parcel, NOT real zoning."
+  },
+  "type": "Feature"
+}

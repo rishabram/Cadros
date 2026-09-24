@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "check": "fingerprint:rule_store",
+      "detail": "9cc91ac71f5f\u2026 == pin",
+      "status": "PASS"
+    },
+    {
+      "check": "fingerprint:use_m1_os_pl",
+      "detail": "5a3a06db51f0\u2026 == pin",
+      "status": "PASS"
+    },
+    {
+      "check": "fingerprint:use_mu",
+      "detail": "bf741fd283b4\u2026 == pin",
+      "status": "PASS"
+    },
+    {
+      "check": "fingerprint:use_combined",
+      "detail": "02a78aa4a9ad\u2026 == pin",
+      "status": "PASS"
+    },
+    {
+      "check": "goldens:real_failures==0",
+      "detail": "52 checks: 37 passed, 6 by design, 9 n/a",
+      "status": "PASS"
+    },
+    {
+      "check": "baseline:demo",
+      "detail": "lots=11 profit=$634,700.00 margin=0.6074",
+      "status": "PASS"
+    },
+    {
+      "check": "baseline:jefferson",
+      "detail": "lots=4 profit=$602,392.32 margin=0.8140",
+      "status": "PASS"
+    }
+  ],
+  "findings": [],
+  "fingerprints": {
+    "rule_store": "9cc91ac71f5f1de221b9609291ce264ca33d6c6ba9b98f7e7f898778fd0cfd1c",
+    "use_combined": "02a78aa4a9adeb5b243b3393a76494ecb636aa29f48cc2e9db9fc807214425b3",
+    "use_m1_os_pl": "5a3a06db51f04b7cefafe57ae9339b44ebdec6e4a3f7404d67687faec4fbc90e",
+    "use_mu": "bf741fd283b46ee39b937e5a5ff8c04fb5d9b3a3fb7a4a577bb4e3f8eb58bd6c"
+  },
+  "mode": "full",
+  "real_failures": 0,
+  "run_evals": {
+    "by_design": 6,
+    "checks": 52,
+    "n_a": 9,
+    "passed": 37,
+    "real_failures": 0
+  },
+  "verdict": "PASS",
+  "verdicts_observed": {
+    "demo": {
+      "rulegraph": {
+        "UNKNOWN": 8
+      },
+      "use_allowance": {
+        "UNKNOWN": 8
+      }
+    },
+    "jefferson": {
+      "rulegraph": {
+        "UNKNOWN": 2
+      },
+      "use_allowance": {
+        "UNKNOWN": 2
+      }
+    }
+  }
+}

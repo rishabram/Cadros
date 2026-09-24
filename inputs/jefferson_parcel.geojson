@@ -1,0 +1,46 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "1046 S Jefferson (PROVISIONAL)",
+        "address": "1032 S Jefferson, Salt Lake City, UT (per plan title block)",
+        "source": "1046 S Jefferson Concept Plans.pdf, p.1 (C-101 SITE LAYOUT)",
+        "reliability": "PROVISIONAL - derived from PDF linework, NOT a survey. Do not use for engineering.",
+        "crs": "Local planar feet: x=east, y=north, origin at SW corner",
+        "scale_ft_per_pt": 0.1388888888888889,
+        "derivation": "E-W 146.22' from labeled boundary dims (S89d45'37.65\"E / N89d45'37.65\"W). N-S 126.39' from outer dash-dot linework extent (drawn x 349->1259). Labeled 49.99' N-S dims conflict with depicted 4-plex buildings (which need ~101.5' N-S); they likely describe original parcel segments, not the consolidated site. Boundary corners approximate to ~2-3 ft.",
+        "area_sqft": 18480.6,
+        "area_acres": 0.424
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              146.22,
+              0
+            ],
+            [
+              146.22,
+              126.3888888888889
+            ],
+            [
+              0,
+              126.3888888888889
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

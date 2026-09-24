@@ -1,0 +1,35 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "tag-row-house-parent",
+    "crs": "local-feet",
+    "note": "TAG Row House PUD, 613 E 100 S, SLC \u2014 parent boundary from staff report 00723.pdf plat text M&B"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.143,
+          165.05
+        ],
+        [
+          62.387,
+          165.095
+        ],
+        [
+          62.53,
+          0.045
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    ]
+  }
+}

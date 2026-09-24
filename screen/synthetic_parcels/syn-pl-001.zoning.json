@@ -1,0 +1,8 @@
+{
+  "district": "PL",
+  "min_frontage_ft": 150,
+  "min_lot_area_sqft": 217800,
+  "road_width_ft": 55,
+  "source": "SYNTHETIC fixture for screener testing. NOT a real parcel, NOT real zoning. Illustrative 5-acre public-lands minimums.",
+  "zone_label": "PL Public Lands (SYNTHETIC)"
+}

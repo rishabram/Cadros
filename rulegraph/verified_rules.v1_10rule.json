@@ -1,0 +1,338 @@
+{
+  "edition": "2026 S-21 (live, codelibrary.amlegal.com)",
+  "rules": [
+    {
+      "caveats": [],
+      "claim": "When a lot in the PL Public Lands District abuts a lot in a single-family or two-family residential district, landscape buffers per Chapter 21A.48 are required.",
+      "district": "PL",
+      "evaluator": "pl_landscape_buffer",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rishab",
+        "verified_on": "2026-09-23"
+      },
+      "params": {},
+      "requires": [
+        "lot_abuts_sf_tf_residential",
+        "landscape_buffer_provided"
+      ],
+      "rule_id": "PL-04",
+      "section": "21A.32.070",
+      "source_quote": "G. Landscape Buffers: When a lot in the PL Public Lands District abuts a lot in a single-family or two-family residential district, landscape buffers, in accordance with the requirements of Chapter 21A.48, shall be required.",
+      "status": "VERIFIED",
+      "title": "Landscape buffer abutting single/two-family residential"
+    },
+    {
+      "caveats": [],
+      "claim": "Row house: residential on all stories; live/work units permitted on the ground level only.",
+      "district": "MU-11",
+      "evaluator": "mu11_uses_per_story",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rishab",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "allowed_ground_uses": [
+          "residential",
+          "live_work"
+        ],
+        "allowed_non_ground_uses": [
+          "residential"
+        ],
+        "applies_to_forms": [
+          "row_house"
+        ]
+      },
+      "requires": [
+        "building_form",
+        "stories"
+      ],
+      "rule_id": "MU-11-05",
+      "section": "21A.25.070",
+      "source_quote": "Uses Per Story | Residential on all stories; live/work units permitted on the ground level. (Table C.1, 21A.25.070)",
+      "status": "VERIFIED",
+      "title": "Row house uses per story"
+    },
+    {
+      "caveats": [],
+      "claim": "Maximum 125 feet. Buildings in excess of 85 feet require design review per Chapter 21A.59.",
+      "district": "MU-11",
+      "evaluator": "mu11_max_height",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rishab",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "bonus": {
+          "base_max_ft": 125,
+          "bonus_max_ft": 150,
+          "open_space_min_pct": 10,
+          "walkway_min_ft": 20
+        },
+        "design_review_threshold_ft": 85,
+        "max_ft": 125
+      },
+      "requires": [
+        "height_ft",
+        "design_review_completed",
+        "in_height_bonus_area",
+        "open_space_ground_pct",
+        "enhanced_active_use_100_pct",
+        "midblock_walkway_ft"
+      ],
+      "rule_id": "MU-11-06",
+      "section": "21A.25.070",
+      "source_quote": "Height | Maximum: 125 feet. Design Review: Buildings in excess of 85 feet require design review in accordance with Chapter 21A.59. (Table C.2, 21A.25.070)",
+      "status": "VERIFIED",
+      "title": "Maximum height; design review threshold"
+    },
+    {
+      "caveats": [
+        "Bonus-area membership (in_height_bonus_area) must be determined geometrically against the two bounded areas; v1 takes it as a supplied fact."
+      ],
+      "claim": "Up to 150 ft in two bounded areas via Chapter 21A.59 design review, subject to >=10% ground-level open space with outdoor active space AND (100% enhanced active use per 21A.37.050.A.2 OR a midblock walkway >=20 ft wide).",
+      "district": "MU-11",
+      "evaluator": "mu11_additional_height",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rishab",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "base_max_ft": 125,
+        "bonus_max_ft": 150,
+        "open_space_min_pct": 10,
+        "walkway_min_ft": 20
+      },
+      "requires": [
+        "height_ft",
+        "in_height_bonus_area",
+        "design_review_completed",
+        "open_space_ground_pct",
+        "enhanced_active_use_100_pct",
+        "midblock_walkway_ft"
+      ],
+      "rule_id": "MU-11-07",
+      "section": "21A.25.070",
+      "source_quote": "Additional Height | Properties bounded by (1) 400 South to the I-15 West Temple Off-ramp and 300 West to I-15, or (2) McClelland Street along the eastern boundary of Fairmont Park to 1300 East and 2100 South to I-80, may be allowed up to 150 feet in height through the design review process of Chapter 21A.59, subject to: 1. At least 10% of the lot shall be open space area at the ground level with an outdoor active space... 2. The development includes at least one of: 100% enhanced active use within the required ground floor use area or a midblock walkway at least 20 feet wide. (Table C.2, 21A.25.070)",
+      "status": "VERIFIED",
+      "title": "Additional height to 150 ft in bonus areas"
+    },
+    {
+      "caveats": [
+        "1700 South and 2100 South minima apply only on the West Temple to I-15 segments; v1 requires the segment flag (front_street_within_listed_segment) and returns UNKNOWN when the street is segment-limited but the segment is unknown and the setback is below 10 ft."
+      ],
+      "claim": "Minimum: none, except 5 ft on North Temple and 10 ft on 300 West, 400 South, 1700 South (West Temple to I-15), 2100 South (West Temple to I-15). Maximum: 20 ft.",
+      "district": "MU-11",
+      "evaluator": "mu11_street_setback",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rishab",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "max_ft": 20,
+        "min_10_streets": [
+          "300 West",
+          "400 South"
+        ],
+        "min_10_streets_segment_limited": [
+          "1700 South",
+          "2100 South"
+        ],
+        "min_5_streets": [
+          "North Temple"
+        ]
+      },
+      "requires": [
+        "front_setback_ft",
+        "front_street",
+        "front_street_within_listed_segment",
+        "corner_side_setback_ft",
+        "corner_street",
+        "corner_street_within_listed_segment"
+      ],
+      "rule_id": "MU-11-08",
+      "section": "21A.25.070",
+      "source_quote": "Front and Corner Side Yard Setback | Minimum: None, except as listed below: 1. 5 feet on North Temple. 2. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15. Maximum: 20 feet. (Table C.2, 21A.25.070)",
+      "status": "VERIFIED",
+      "title": "Front and corner side yard setbacks"
+    },
+    {
+      "caveats": [],
+      "claim": "Minimum: none. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 ft.",
+      "district": "MU-11",
+      "evaluator": "mu11_abutment_setback",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rishab",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "abut_min_ft": 10,
+        "abuts_attr": "interior_abuts_listed_zone",
+        "default_min_ft": 0,
+        "listed_zones": [
+          "R-1",
+          "R-2",
+          "FR",
+          "SR",
+          "FB-UN1",
+          "RMF-30",
+          "RMF-35",
+          "MU-2",
+          "MU-3"
+        ],
+        "setback_attr": "interior_side_setback_ft",
+        "yard": "interior_side",
+        "yard_label": "interior side"
+      },
+      "requires": [
+        "interior_side_setback_ft",
+        "interior_abuts_listed_zone"
+      ],
+      "rule_id": "MU-11-09",
+      "section": "21A.25.070",
+      "source_quote": "Interior Side Yard | Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 feet. (Table C.2, 21A.25.070)",
+      "status": "VERIFIED",
+      "title": "Interior side yard setback"
+    },
+    {
+      "caveats": [],
+      "claim": "Minimum: none. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 ft.",
+      "district": "MU-11",
+      "evaluator": "mu11_abutment_setback",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rishab",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "abut_min_ft": 20,
+        "abuts_attr": "rear_abuts_listed_zone",
+        "default_min_ft": 0,
+        "listed_zones": [
+          "R-1",
+          "R-2",
+          "FR",
+          "SR",
+          "FB-UN1",
+          "RMF-30",
+          "RMF-35",
+          "MU-2",
+          "MU-3"
+        ],
+        "setback_attr": "rear_setback_ft",
+        "yard": "rear",
+        "yard_label": "rear"
+      },
+      "requires": [
+        "rear_setback_ft",
+        "rear_abuts_listed_zone"
+      ],
+      "rule_id": "MU-11-10",
+      "section": "21A.25.070",
+      "source_quote": "Rear Yard | Minimum: None. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet. (Table C.2, 21A.25.070)",
+      "status": "VERIFIED",
+      "title": "Rear yard setback"
+    },
+    {
+      "broadened_by_sweep": {
+        "broadened_on": "2026-09-23",
+        "swept_by": "Caddy (Rohan's side) -- human-verified code-wide sweep",
+        "recorded_by": "Rishab's Muse",
+        "sweep_quote": "SWEEP RESULT — code-wide absence sweep complete: no minimum lot area or lot width applies to MU-5, MU-6, or MU-11 anywhere in Title 21A (2026 S-21). Checked §21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. MU-5-16, MU-6-16, MU-11-11 now read 'no minimum' without qualification. Note: MU-2/MU-3 (not our districts) have a maximum lot width cap of 110 ft — irrelevant here."
+      },
+      "caveats": [
+        "Superseded history: a 2012 Planning Commission draft's 50-ft/30-ft width floor never entered current law (superseded by the Ord. 73-23, 2023 Title 20 rewrite); it must not be reintroduced from stale sources."
+      ],
+      "claim": "No minimum lot area or minimum lot width applies to the MU-11 Mixed Use 11 District anywhere in Title 21A (2026 S-21). No minimum is stated in 21A.25.070 (MU-11 district standards) or 21A.25.010 (MU general provisions), and Title 20 (Subdivisions) imposes no independent minimum: 20.26.090.C expressly requires only compliance with the minimum lot size and lot width 'required within the applicable zoning district or overlay district in Title 21A,' which for MU-11 is none.",
+      "district": "MU-11",
+      "evaluator": "no_district_minimum",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rishab",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "district_label": "the MU-11 Mixed Use 11 District"
+      },
+      "requires": [],
+      "rule_id": "MU-11-11",
+      "section": "21A.25.070",
+      "source_quote": "Absence confirmed by code-wide human-verified sweep of Title 21A (2026 S-21): no minimum lot area or lot width applies to MU-11 anywhere in Title 21A. Checked 21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. Verbatim sweep statement (Caddy, 2026-09-23 22:43 MDT): \"SWEEP RESULT — code-wide absence sweep complete: no minimum lot area or lot width applies to MU-5, MU-6, or MU-11 anywhere in Title 21A (2026 S-21). Checked §21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. MU-5-16, MU-6-16, MU-11-11 now read 'no minimum' without qualification. Note: MU-2/MU-3 (not our districts) have a maximum lot width cap of 110 ft — irrelevant here.\"",
+      "status": "VERIFIED",
+      "title": "No minimum lot area or width, MU-11 (Title 21A code-wide sweep)"
+    },
+    {
+      "broadened_by_sweep": {
+        "broadened_on": "2026-09-23",
+        "swept_by": "Caddy (Rohan's side) -- human-verified code-wide sweep",
+        "recorded_by": "Rishab's Muse",
+        "sweep_quote": "SWEEP RESULT — code-wide absence sweep complete: no minimum lot area or lot width applies to MU-5, MU-6, or MU-11 anywhere in Title 21A (2026 S-21). Checked §21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. MU-5-16, MU-6-16, MU-11-11 now read 'no minimum' without qualification. Note: MU-2/MU-3 (not our districts) have a maximum lot width cap of 110 ft — irrelevant here."
+      },
+      "caveats": [
+        "Superseded history: a 2012 Planning Commission draft's 50-ft/30-ft width floor never entered current law (superseded by the Ord. 73-23, 2023 Title 20 rewrite); it must not be reintroduced from stale sources."
+      ],
+      "claim": "No minimum lot area or minimum lot width applies to the MU-5 Mixed Use 5 District anywhere in Title 21A (2026 S-21). No minimum is stated in the MU district standards or 21A.25.010 (MU general provisions), and Title 20 (Subdivisions) imposes no independent minimum: 20.26.090.C expressly requires only compliance with the minimum lot size and lot width 'required within the applicable zoning district or overlay district in Title 21A,' which for MU-5 is none.",
+      "district": "MU-5",
+      "evaluator": "no_district_minimum",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rohan",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "district_label": "the MU-5 Mixed Use 5 District"
+      },
+      "requires": [],
+      "rule_id": "MU-5-16",
+      "section": "21A.25.010",
+      "source_quote": "Absence confirmed by code-wide human-verified sweep of Title 21A (2026 S-21): no minimum lot area or lot width applies to MU-5 anywhere in Title 21A. Checked 21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. Verbatim sweep statement (Caddy, 2026-09-23 22:43 MDT): \"SWEEP RESULT — code-wide absence sweep complete: no minimum lot area or lot width applies to MU-5, MU-6, or MU-11 anywhere in Title 21A (2026 S-21). Checked §21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. MU-5-16, MU-6-16, MU-11-11 now read 'no minimum' without qualification. Note: MU-2/MU-3 (not our districts) have a maximum lot width cap of 110 ft — irrelevant here.\"",
+      "status": "VERIFIED",
+      "title": "No minimum lot area or width, MU-5 (Title 21A code-wide sweep)"
+    },
+    {
+      "broadened_by_sweep": {
+        "broadened_on": "2026-09-23",
+        "swept_by": "Caddy (Rohan's side) -- human-verified code-wide sweep",
+        "recorded_by": "Rishab's Muse",
+        "sweep_quote": "SWEEP RESULT — code-wide absence sweep complete: no minimum lot area or lot width applies to MU-5, MU-6, or MU-11 anywhere in Title 21A (2026 S-21). Checked §21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. MU-5-16, MU-6-16, MU-11-11 now read 'no minimum' without qualification. Note: MU-2/MU-3 (not our districts) have a maximum lot width cap of 110 ft — irrelevant here."
+      },
+      "caveats": [
+        "Superseded history: a 2012 Planning Commission draft's 50-ft/30-ft width floor never entered current law (superseded by the Ord. 73-23, 2023 Title 20 rewrite); it must not be reintroduced from stale sources."
+      ],
+      "claim": "No minimum lot area or minimum lot width applies to the MU-6 Mixed Use 6 District anywhere in Title 21A (2026 S-21). No minimum is stated in the MU district standards or 21A.25.010 (MU general provisions), and Title 20 (Subdivisions) imposes no independent minimum: 20.26.090.C expressly requires only compliance with the minimum lot size and lot width 'required within the applicable zoning district or overlay district in Title 21A,' which for MU-6 is none.",
+      "district": "MU-6",
+      "evaluator": "no_district_minimum",
+      "human_verification": {
+        "result": "VERIFIED",
+        "source_edition": "2026 S-21 live",
+        "verified_by": "Rohan",
+        "verified_on": "2026-09-23"
+      },
+      "params": {
+        "district_label": "the MU-6 Mixed Use 6 District"
+      },
+      "requires": [],
+      "rule_id": "MU-6-16",
+      "section": "21A.25.010",
+      "source_quote": "Absence confirmed by code-wide human-verified sweep of Title 21A (2026 S-21): no minimum lot area or lot width applies to MU-6 anywhere in Title 21A. Checked 21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. Verbatim sweep statement (Caddy, 2026-09-23 22:43 MDT): \"SWEEP RESULT — code-wide absence sweep complete: no minimum lot area or lot width applies to MU-5, MU-6, or MU-11 anywhere in Title 21A (2026 S-21). Checked §21A.25.010 in full plus exact-phrase search of all of Title 21A; Title 20 defers to the district, which states none. MU-5-16, MU-6-16, MU-11-11 now read 'no minimum' without qualification. Note: MU-2/MU-3 (not our districts) have a maximum lot width cap of 110 ft — irrelevant here.\"",
+      "status": "VERIFIED",
+      "title": "No minimum lot area or width, MU-6 (Title 21A code-wide sweep)"
+    }
+  ],
+  "store": "neron.verified_rules",
+  "version": 1
+}

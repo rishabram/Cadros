@@ -1,0 +1,8 @@
+{
+  "_note": "PROVISIONAL - placeholder economics for pipeline demo only. NOT market verified.",
+  "sale_price_per_lot": 185000,
+  "road_cost_per_lf": 260,
+  "soft_costs_fixed": 90000,
+  "contingency_pct": 0.12,
+  "source": "Provisional demo assumptions for 1046 S Jefferson pipeline test. Replace with MarketGraph evidence."
+}

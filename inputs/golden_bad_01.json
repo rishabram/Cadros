@@ -1,0 +1,447 @@
+{
+ "bad_cases": [
+  {
+   "case_id": "negative_lot_area",
+   "must_fail": [
+    "R-1"
+   ],
+   "note": "Corrupted record: lot area is negative. R-1 (min lot area) must flag it; all other checks must still pass so the failure is pinned to one rule.",
+   "scheme": {
+    "lots": [
+     {
+      "area_sqft": -1000.0,
+      "frontage_ft": 70.0,
+      "lot_id": "bad-neg-area-L00",
+      "polygon": [
+       [
+        10,
+        10
+       ],
+       [
+        100,
+        10
+       ],
+       [
+        100,
+        110
+       ],
+       [
+        10,
+        110
+       ]
+      ]
+     }
+    ],
+    "params": {},
+    "parcel_id": "bad-utah-001",
+    "roads": [
+     {
+      "centerline": [
+       [
+        -50,
+        100
+       ],
+       [
+        250,
+        100
+       ]
+      ],
+      "length_ft": 300.0,
+      "road_id": "bad-neg-area-R0",
+      "width_ft": 55
+     }
+    ],
+    "scheme_id": "bad-neg-area"
+   }
+  },
+  {
+   "case_id": "subminimum_lot_area",
+   "must_fail": [
+    "R-1"
+   ],
+   "note": "Lot of 4,900 sqft against an 8,000 sqft minimum (the generator would have filtered this; the fixture bypasses the generator). R-1 must flag it.",
+   "scheme": {
+    "lots": [
+     {
+      "area_sqft": 4900.0,
+      "frontage_ft": 70.0,
+      "lot_id": "bad-tiny-area-L00",
+      "polygon": [
+       [
+        10,
+        10
+       ],
+       [
+        80,
+        10
+       ],
+       [
+        80,
+        80
+       ],
+       [
+        10,
+        80
+       ]
+      ]
+     }
+    ],
+    "params": {},
+    "parcel_id": "bad-utah-001",
+    "roads": [
+     {
+      "centerline": [
+       [
+        -50,
+        100
+       ],
+       [
+        250,
+        100
+       ]
+      ],
+      "length_ft": 300.0,
+      "road_id": "bad-tiny-area-R0",
+      "width_ft": 55
+     }
+    ],
+    "scheme_id": "bad-tiny-area"
+   }
+  },
+  {
+   "case_id": "overlapping_lots",
+   "must_fail": [
+    "R-4"
+   ],
+   "note": "Two lots share ~5,000 sqft. R-4 (no overlapping lots) must flag it.",
+   "scheme": {
+    "lots": [
+     {
+      "area_sqft": 10000.0,
+      "frontage_ft": 70.0,
+      "lot_id": "bad-overlap-L00",
+      "polygon": [
+       [
+        10,
+        10
+       ],
+       [
+        110,
+        10
+       ],
+       [
+        110,
+        110
+       ],
+       [
+        10,
+        110
+       ]
+      ]
+     },
+     {
+      "area_sqft": 10000.0,
+      "frontage_ft": 70.0,
+      "lot_id": "bad-overlap-L01",
+      "polygon": [
+       [
+        60,
+        10
+       ],
+       [
+        160,
+        10
+       ],
+       [
+        160,
+        110
+       ],
+       [
+        60,
+        110
+       ]
+      ]
+     }
+    ],
+    "params": {},
+    "parcel_id": "bad-utah-001",
+    "roads": [
+     {
+      "centerline": [
+       [
+        -50,
+        100
+       ],
+       [
+        250,
+        100
+       ]
+      ],
+      "length_ft": 300.0,
+      "road_id": "bad-overlap-R0",
+      "width_ft": 55
+     }
+    ],
+    "scheme_id": "bad-overlap"
+   }
+  },
+  {
+   "case_id": "lot_outside_parcel",
+   "must_fail": [
+    "R-3"
+   ],
+   "note": "Lot polygon sits entirely outside the parcel boundary. R-3 (containment) must flag it.",
+   "scheme": {
+    "lots": [
+     {
+      "area_sqft": 10000.0,
+      "frontage_ft": 70.0,
+      "lot_id": "bad-outside-L00",
+      "polygon": [
+       [
+        300,
+        300
+       ],
+       [
+        400,
+        300
+       ],
+       [
+        400,
+        400
+       ],
+       [
+        300,
+        400
+       ]
+      ]
+     }
+    ],
+    "params": {},
+    "parcel_id": "bad-utah-001",
+    "roads": [
+     {
+      "centerline": [
+       [
+        -50,
+        100
+       ],
+       [
+        250,
+        100
+       ]
+      ],
+      "length_ft": 300.0,
+      "road_id": "bad-outside-R0",
+      "width_ft": 55
+     }
+    ],
+    "scheme_id": "bad-outside"
+   }
+  },
+  {
+   "case_id": "self_intersecting_lot",
+   "must_fail": [
+    "R-3"
+   ],
+   "note": "Bowtie (self-intersecting) lot polygon straddling the parcel edge. R-3 (containment) must flag it; this is the self-intersecting-polygon bad-input case.",
+   "scheme": {
+    "lots": [
+     {
+      "area_sqft": 9000.0,
+      "frontage_ft": 70.0,
+      "lot_id": "bad-bowtie-L00",
+      "polygon": [
+       [
+        0,
+        0
+       ],
+       [
+        250,
+        0
+       ],
+       [
+        0,
+        250
+       ],
+       [
+        250,
+        250
+       ]
+      ]
+     }
+    ],
+    "params": {},
+    "parcel_id": "bad-utah-001",
+    "roads": [
+     {
+      "centerline": [
+       [
+        -50,
+        100
+       ],
+       [
+        250,
+        100
+       ]
+      ],
+      "length_ft": 300.0,
+      "road_id": "bad-bowtie-R0",
+      "width_ft": 55
+     }
+    ],
+    "scheme_id": "bad-bowtie"
+   }
+  },
+  {
+   "case_id": "disconnected_road",
+   "must_fail": [
+    "R-5"
+   ],
+   "note": "Road centerline lies entirely outside the parcel, so the road band never touches the parcel boundary. R-5 (road connects to boundary) must flag it.",
+   "scheme": {
+    "lots": [
+     {
+      "area_sqft": 10000.0,
+      "frontage_ft": 70.0,
+      "lot_id": "bad-road-L00",
+      "polygon": [
+       [
+        10,
+        10
+       ],
+       [
+        110,
+        10
+       ],
+       [
+        110,
+        110
+       ],
+       [
+        10,
+        110
+       ]
+      ]
+     }
+    ],
+    "params": {},
+    "parcel_id": "bad-utah-001",
+    "roads": [
+     {
+      "centerline": [
+       [
+        500,
+        100
+       ],
+       [
+        700,
+        100
+       ]
+      ],
+      "length_ft": 200.0,
+      "road_id": "bad-road-R0",
+      "width_ft": 55
+     }
+    ],
+    "scheme_id": "bad-road"
+   }
+  }
+ ],
+ "finance": {
+  "contingency_pct": 0.1,
+  "road_cost_per_lf": 500,
+  "sale_price_per_lot": 95000,
+  "soft_costs_fixed": 120000,
+  "source": "demo assumptions"
+ },
+ "good_cases": [
+  {
+   "case_id": "clean_control",
+   "note": "CONTROL: a valid lot + connected road. Every check must PASS \u2014 this pins the harness so 'everything fails' would be a real failure, not a vacuous one.",
+   "scheme": {
+    "lots": [
+     {
+      "area_sqft": 10000.0,
+      "frontage_ft": 70.0,
+      "lot_id": "good-control-L00",
+      "polygon": [
+       [
+        10,
+        10
+       ],
+       [
+        110,
+        10
+       ],
+       [
+        110,
+        110
+       ],
+       [
+        10,
+        110
+       ]
+      ]
+     }
+    ],
+    "params": {},
+    "parcel_id": "bad-utah-001",
+    "roads": [
+     {
+      "centerline": [
+       [
+        -50,
+        100
+       ],
+       [
+        250,
+        100
+       ]
+      ],
+      "length_ft": 300.0,
+      "road_id": "good-control-R0",
+      "width_ft": 55
+     }
+    ],
+    "scheme_id": "good-control"
+   }
+  }
+ ],
+ "meta": {
+  "bad_fixture": true,
+  "max_schemes": 8,
+  "name": "golden_bad_01",
+  "note": "ADVERSARIAL fixture: hand-built schemes with known-invalid geometry that the deterministic validator MUST reject. Every row in the 'bad_cases' section is designed so the named rule check FAILS. In run_evals.py these rows therefore print as FAIL \u2014 that is the assertion succeeding, not a regression. Do NOT 'fix' these schemes, their expected verdicts, or the harness exit code: a FAIL here proves the validator actually catches bad input (closing the tautological-validation concern)."
+ },
+ "parcel": {
+  "boundary": [
+   [
+    0,
+    0
+   ],
+   [
+    200,
+    0
+   ],
+   [
+    200,
+    200
+   ],
+   [
+    0,
+    200
+   ]
+  ],
+  "crs": "local-feet",
+  "parcel_id": "bad-utah-001",
+  "source": "synthetic adversarial"
+ },
+ "zoning": {
+  "min_frontage_ft": 70,
+  "min_lot_area_sqft": 8000,
+  "road_width_ft": 55,
+  "source": "synthetic adversarial params",
+  "zone_label": "R-1-8 (synthetic adversarial)"
+ }
+}

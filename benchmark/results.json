@@ -1,0 +1,71 @@
+{
+  "aim": ">=70% of scored plats within +/-15% (base: 10 plats; stretch: 20)",
+  "aim_met": false,
+  "pass_rate": 0.0,
+  "results": [
+    {
+      "approved_lots": 4,
+      "plat_id": "mill-subdivision",
+      "reason": "plat does not state the zone; South Salt Lake commercial district for Sec 24 T1S R1W not determined from zoning map; Title 17 CC standards found but district assignment unsourced",
+      "status": "not_scored"
+    },
+    {
+      "approved_lots": null,
+      "plat_id": "village-at-the-boulders-ph3",
+      "reason": "Parent geometry now reconstructable (8.125-ac union, see parent_polygon_source). Still not scored: (1) approval-date zoning district unsourced - 2023 amendment records show a multi-family label rendered 'R-20-43' (herriman.primegov.com agenda 4360; utah.gov/pmn/files/1048543.pdf) but that is 2023, not 2018 approval-date, and the label may be extraction-garbled; (2) road_width_ft unknown - abstract identifies a PRIVATE road at 14850 S Trap Rock Way, so Herriman's public local-street standards (60 ft ROW/32 ft asphalt, 53 ft ROW/28 ft asphalt) cannot be assigned; (3) exact 2018 approved lot count uncertain - labels VB57-VB70 suggest ~13-14 original lots (9 surviving + 4 replatted by 2021 AMD; VB64 unaccounted in abstract rows). Townhome phase, not a greenfield single-family yield test; harness honesty contract requires all four zoning dims.",
+      "status": "not_scored"
+    },
+    {
+      "approved_lots": 3,
+      "plat_id": "tag-row-house",
+      "reason": "not scored: zoning.status set to unknown 2026-09-24 because min_frontage_ft and road_width_ft are unsourced for 2018 RMF-45 (the harness honesty contract requires all four dims for known). not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage \u2014 not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45.",
+      "status": "not_scored"
+    },
+    {
+      "approved_lots": 12,
+      "neron_top_ranked_lots": 9,
+      "plat_id": "tripp-lane-subdivision",
+      "relative_error": 0.25,
+      "schemes": [
+        {
+          "lots": 9,
+          "scheme_id": "scheme_00"
+        },
+        {
+          "lots": 8,
+          "scheme_id": "scheme_01"
+        },
+        {
+          "lots": 7,
+          "scheme_id": "scheme_02"
+        },
+        {
+          "lots": 7,
+          "scheme_id": "scheme_03"
+        },
+        {
+          "lots": 6,
+          "scheme_id": "scheme_05"
+        },
+        {
+          "lots": 6,
+          "scheme_id": "scheme_06"
+        },
+        {
+          "lots": 7,
+          "scheme_id": "scheme_04"
+        },
+        {
+          "lots": 6,
+          "scheme_id": "scheme_07"
+        }
+      ],
+      "status": "scored",
+      "within_15pct": false,
+      "zoning_source": "Murray PC minutes 2022-11-17 (preliminary 5-1; https://www.murray.utah.gov/Archive/ViewFile/Item/7396) and 2023-04-06 (final 6-0; https://www.utah.gov/pmn/files/991087.pdf), both accessed 2026-09-24; Murray Code Sec. 16.16.180 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269, accessed 2026-09-24). Per-dimension citations in min_lot_area_source / min_frontage_source / road_width_source."
+    }
+  ],
+  "scored_plats": 1,
+  "tolerance": 0.15,
+  "within_tolerance": 0
+}

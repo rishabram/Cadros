@@ -1,0 +1,8 @@
+{
+  "district": "OS",
+  "min_frontage_ft": 200,
+  "min_lot_area_sqft": 435600,
+  "road_width_ft": 55,
+  "source": "SYNTHETIC fixture for screener testing. NOT a real parcel, NOT real zoning. Illustrative 10-acre open-space minimums.",
+  "zone_label": "OS Open Space (SYNTHETIC)"
+}

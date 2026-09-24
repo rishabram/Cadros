@@ -1,0 +1,492 @@
+{
+ "package": "PACKAGE 2 \u2014 M-1 / OS / PL executable numeric params",
+ "extracted_from": "verified_rules.json (Salt Lake City Title 21A, 59 human-verified rules)",
+ "source_verification_state": "read-only extraction; does not alter verdicts",
+ "rules": [
+  {
+   "rule_id": "M-1-01",
+   "rule_name": "Minimum lot area and width",
+   "district": "M-1",
+   "code_section": "21A.28.020.C",
+   "applies_to": "All lots in M-1; lots legally existing as of April 12, 1995 are treated as conforming.",
+   "params": [
+    {
+     "name": "min_lot_area",
+     "value": 10000,
+     "unit": "square feet",
+     "condition": "All lots in M-1",
+     "rule_id": "M-1-01",
+     "quote": "1. Minimum Lot Area: Ten thousand (10,000) square feet. 2. Minimum Lot Width: Eighty feet (80'). 3. Existing Lots: Lots legally existing as of April 12, 1995, shall be considered legal conforming lots."
+    },
+    {
+     "name": "min_lot_width",
+     "value": 80,
+     "unit": "feet",
+     "condition": "All lots in M-1",
+     "rule_id": "M-1-01",
+     "quote": "1. Minimum Lot Area: Ten thousand (10,000) square feet. 2. Minimum Lot Width: Eighty feet (80'). 3. Existing Lots: Lots legally existing as of April 12, 1995, shall be considered legal conforming lots."
+    },
+    {
+     "name": "existing_lot_conforming_date",
+     "value": "1995-04-12",
+     "unit": "date",
+     "condition": "Lots legally existing as of April 12, 1995 shall be considered legal conforming lots",
+     "rule_id": "M-1-01",
+     "quote": "1. Minimum Lot Area: Ten thousand (10,000) square feet. 2. Minimum Lot Width: Eighty feet (80'). 3. Existing Lots: Lots legally existing as of April 12, 1995, shall be considered legal conforming lots."
+    }
+   ]
+  },
+  {
+   "rule_id": "M-1-03",
+   "rule_name": "Additional setback abutting AG-2/AG-5",
+   "district": "M-1",
+   "code_section": "21A.28.020.D.6",
+   "applies_to": "M-1 buildings or portions of buildings abutting AG-2 or AG-5 and exceeding 30 feet in height.",
+   "params": [
+    {
+     "name": "additional_setback_rate_per_height",
+     "value": 1.0,
+     "unit": "feet of setback per foot of building height",
+     "condition": "Applies only to buildings or portions of buildings abutting a lot in the AG-2 or AG-5 zoning district; measured from the required landscape buffer as required in 21A.48.080",
+     "rule_id": "M-1-03",
+     "quote": "Additional Setback When Abutting AG-2 And AG-5 Districts: When abutting a lot in the AG-2 or AG-5 Zoning District, buildings or portions of buildings, shall be set back one foot (1') beyond the required landscape buffer as required in section 21A.48.080 of this title for every one foot (1') of building height above thirty feet (30')."
+    },
+    {
+     "name": "height_threshold_for_additional_setback",
+     "value": 30,
+     "unit": "feet",
+     "condition": "Additional setback accrues only on height above 30 feet (1 foot of setback for every 1 foot of building height above 30 feet)",
+     "rule_id": "M-1-03",
+     "quote": "Additional Setback When Abutting AG-2 And AG-5 Districts: When abutting a lot in the AG-2 or AG-5 Zoning District, buildings or portions of buildings, shall be set back one foot (1') beyond the required landscape buffer as required in section 21A.48.080 of this title for every one foot (1') of building height above thirty feet (30')."
+    }
+   ]
+  },
+  {
+   "rule_id": "M-1-04",
+   "rule_name": "Maximum building height (base)",
+   "district": "M-1",
+   "code_section": "21A.28.020.F",
+   "applies_to": "Buildings in M-1, subject to the listed structure, location, overlay, and FAA exceptions.",
+   "params": [
+    {
+     "name": "max_building_height_base",
+     "value": 65,
+     "unit": "feet",
+     "condition": "Base maximum; exceptions apply",
+     "rule_id": "M-1-04",
+     "quote": "No building shall exceed sixty five feet (65') except that emission free distillation column structures, necessary for manufacture processing purposes, shall be permitted up to the most restrictive Federal Aviation Administration imposed minimal approach surface elevations, or one hundred twenty feet (120') maximum, whichever is less."
+    },
+    {
+     "name": "exception_distillation_column_height_max",
+     "value": 120,
+     "unit": "feet",
+     "condition": "Emission-free distillation column structures necessary for manufacture processing purposes permitted up to the most restrictive FAA-imposed minimal approach surface elevations, or 120 feet maximum, whichever is less",
+     "rule_id": "M-1-04",
+     "quote": "No building shall exceed sixty five feet (65') except that emission free distillation column structures, necessary for manufacture processing purposes, shall be permitted up to the most restrictive Federal Aviation Administration imposed minimal approach surface elevations, or one hundred twenty feet (120') maximum, whichever is less."
+    }
+   ]
+  },
+  {
+   "rule_id": "M-1-05",
+   "rule_name": "Height exception: west of airport / north of I-80",
+   "district": "M-1",
+   "code_section": "21A.28.020.F.2",
+   "applies_to": "M-1 buildings west of Salt Lake City International Airport and north of I-80.",
+   "params": [
+    {
+     "name": "max_building_height_exception_zone",
+     "value": 85,
+     "unit": "feet",
+     "condition": "M-1 buildings west of Salt Lake City International Airport and north of I-80; conditional on design review standards and procedures of chapter 21A.59",
+     "rule_id": "M-1-05",
+     "quote": "West of the Salt Lake City International Airport and north of Interstate 80 (I-80): Buildings may exceed sixty-five feet (65') in height subject to the design review standards and procedures of chapter 21A.59 of this title. In no case shall any building exceed eighty-five feet (85')."
+    }
+   ]
+  },
+  {
+   "rule_id": "M-1-06",
+   "rule_name": "Landscape yard requirements",
+   "district": "M-1",
+   "code_section": "21A.28.020.E",
+   "applies_to": "Required front and corner side yards in M-1; buffer requirement applies where an M-1 lot abuts a residential district.",
+   "params": [
+    {
+     "name": "landscape_yard_requirement",
+     "value": null,
+     "unit": null,
+     "condition": "All required front and corner side yards maintained as landscape yards in conformance with Chapter 21A.48; all lots abutting a lot in a residential district conform to landscape buffer yard requirements of Chapter 21A.48. Qualitative \u2014 no numeric value in quote.",
+     "rule_id": "M-1-06",
+     "quote": "Front And Corner Side Yards: All required front and corner side yards shall be maintained as landscape yards in conformance with the requirements of chapter 21A.48 of this title. Landscape Buffer Yards: All lots abutting a lot in a residential district shall conform to the landscape buffer yard requirements of chapter 21A.48 of this title."
+    }
+   ]
+  },
+  {
+   "rule_id": "OS-02",
+   "rule_name": "Maximum building height (tiered by lot size)",
+   "district": "OS",
+   "code_section": "21A.32.100.D",
+   "applies_to": "Buildings in OS; standards branch by lot area, height, design review, and the public-utilities critical-infrastructure exemption.",
+   "params": [
+    {
+     "name": "lot_size_tier_threshold",
+     "value": 4,
+     "unit": "acres",
+     "condition": "Boundary between the two height tiers: lots 4 acres or less vs lots greater than 4 acres",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    },
+    {
+     "name": "max_building_height_le4ac",
+     "value": 35,
+     "unit": "feet",
+     "condition": "Lots four acres or less",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    },
+    {
+     "name": "yard_inflation_threshold_le4ac",
+     "value": 20,
+     "unit": "feet",
+     "condition": "Lots four acres or less: for each foot of height in excess of 20 feet, each required yard and landscaped yard increased 1 foot",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    },
+    {
+     "name": "yard_inflation_rate_le4ac",
+     "value": 1.0,
+     "unit": "feet of yard per foot of height",
+     "condition": "Above the 20-foot threshold on lots four acres or less",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    },
+    {
+     "name": "max_building_height_gt4ac",
+     "value": 45,
+     "unit": "feet",
+     "condition": "Lots greater than four acres (may be permitted)",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    },
+    {
+     "name": "yard_inflation_threshold_gt4ac",
+     "value": 35,
+     "unit": "feet",
+     "condition": "Lots greater than four acres: for each foot of height over 35 feet, each required yard and landscaped yard increased 1 foot",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    },
+    {
+     "name": "yard_inflation_rate_gt4ac",
+     "value": 1.0,
+     "unit": "feet of yard per foot of height",
+     "condition": "Above the 35-foot threshold on lots greater than four acres",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    },
+    {
+     "name": "max_building_height_design_review",
+     "value": 60,
+     "unit": "feet",
+     "condition": "Heights in excess of 45 feet up to 60 feet may be approved through the design review process; for each foot of height over 35 feet, each required yard and landscaped yard increased 1 foot",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    },
+    {
+     "name": "public_utilities_critical_infrastructure_exemption",
+     "value": true,
+     "unit": "boolean",
+     "condition": "Heights for buildings or structures for the Salt Lake City Public Utilities Department not specifically exempt in 21A.02.050 are exempt from the OS height restrictions provided the director of the public utilities department deems the building or structure critical infrastructure necessary to provide specific utility needs to the public",
+     "rule_id": "OS-02",
+     "quote": "Lots four (4) acres or less: Building height shall be limited to thirty five (35) feet; provided that for each foot of height in excess of twenty (20) feet, each required yard and landscaped yard shall be increased one foot. Lots greater than four (4) acres: Building heights in excess of thirty five (35) feet but not more than forty five (45) feet may be permitted provided, that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one foot. Building heights in excess of forty five (45) feet up to sixty (60) feet may be approved through the design review process and that for each foot of height over thirty five (35) feet, each required yard and landscaped yard shall be increased one (1) foot. Heights for buildings or structures for the Salt Lake City Public Utilities Department that are not specifically exempt in section 21A.02.050 of this title, are exempt from the height restrictions in this zoning district provided the building or structure is deemed by the director of the public utilities department as critical infrastructure necessary to provide specific utility needs to the public."
+    }
+   ]
+  },
+  {
+   "rule_id": "OS-03",
+   "rule_name": "Maximum recreation equipment height",
+   "district": "OS",
+   "code_section": "21A.32.100.D.3",
+   "applies_to": "Recreation equipment in OS when the height is needed for the equipment or for safe operation.",
+   "params": [
+    {
+     "name": "max_recreation_equipment_height",
+     "value": 80,
+     "unit": "feet",
+     "condition": "Recreation equipment when needed due to the nature of the equipment or for the use to operate safely (e.g., fences surrounding golf course driving ranges); separate from building height",
+     "rule_id": "OS-03",
+     "quote": "Recreation equipment heights are permitted to a height not to exceed eighty (80) feet when needed due to the nature of the equipment or for the use to operate safely, such as fences surrounding golf course driving ranges."
+    }
+   ]
+  },
+  {
+   "rule_id": "OS-04",
+   "rule_name": "Minimum yard requirements",
+   "district": "OS",
+   "code_section": "21A.32.100.E",
+   "applies_to": "OS lots; base yards branch at four acres and increase with building height as specified in 21A.32.100.D.",
+   "params": [
+    {
+     "name": "front_yard_min",
+     "value": 10,
+     "unit": "feet",
+     "condition": "All OS lots (both size tiers)",
+     "rule_id": "OS-04",
+     "quote": "1. Lots Four Acres Or Less: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Ten feet (10'). d. Rear Yard: Ten feet (10'). 2. Lots Greater Than Four Acres: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Fifteen feet (15'). d. Rear Yard: Fifteen feet (15')."
+    },
+    {
+     "name": "corner_side_yard_min",
+     "value": 10,
+     "unit": "feet",
+     "condition": "All OS lots (both size tiers)",
+     "rule_id": "OS-04",
+     "quote": "1. Lots Four Acres Or Less: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Ten feet (10'). d. Rear Yard: Ten feet (10'). 2. Lots Greater Than Four Acres: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Fifteen feet (15'). d. Rear Yard: Fifteen feet (15')."
+    },
+    {
+     "name": "interior_side_yard_min_le4ac",
+     "value": 10,
+     "unit": "feet",
+     "condition": "Lots four acres or less",
+     "rule_id": "OS-04",
+     "quote": "1. Lots Four Acres Or Less: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Ten feet (10'). d. Rear Yard: Ten feet (10'). 2. Lots Greater Than Four Acres: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Fifteen feet (15'). d. Rear Yard: Fifteen feet (15')."
+    },
+    {
+     "name": "rear_yard_min_le4ac",
+     "value": 10,
+     "unit": "feet",
+     "condition": "Lots four acres or less",
+     "rule_id": "OS-04",
+     "quote": "1. Lots Four Acres Or Less: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Ten feet (10'). d. Rear Yard: Ten feet (10'). 2. Lots Greater Than Four Acres: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Fifteen feet (15'). d. Rear Yard: Fifteen feet (15')."
+    },
+    {
+     "name": "interior_side_yard_min_gt4ac",
+     "value": 15,
+     "unit": "feet",
+     "condition": "Lots greater than four acres",
+     "rule_id": "OS-04",
+     "quote": "1. Lots Four Acres Or Less: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Ten feet (10'). d. Rear Yard: Ten feet (10'). 2. Lots Greater Than Four Acres: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Fifteen feet (15'). d. Rear Yard: Fifteen feet (15')."
+    },
+    {
+     "name": "rear_yard_min_gt4ac",
+     "value": 15,
+     "unit": "feet",
+     "condition": "Lots greater than four acres",
+     "rule_id": "OS-04",
+     "quote": "1. Lots Four Acres Or Less: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Ten feet (10'). d. Rear Yard: Ten feet (10'). 2. Lots Greater Than Four Acres: a. Front Yard: Ten feet (10'). b. Corner Side Yard: Ten feet (10'). c. Interior Side Yard: Fifteen feet (15'). d. Rear Yard: Fifteen feet (15')."
+    }
+   ]
+  },
+  {
+   "rule_id": "OS-05",
+   "rule_name": "Landscape yard requirements",
+   "district": "OS",
+   "code_section": "21A.32.100.F",
+   "applies_to": "All required yards in OS, excluding authorized accessory buildings and structures.",
+   "params": [
+    {
+     "name": "landscape_yard_requirement",
+     "value": null,
+     "unit": null,
+     "condition": "All required yards maintained as landscaped yards excluding authorized accessory buildings and structures, per Chapter 21A.48. Qualitative \u2014 no numeric value in quote.",
+     "rule_id": "OS-05",
+     "quote": "All required yards shall be maintained as landscaped yards excluding authorized accessory buildings and structures in conformance with the requirements of chapter 21A.48, 'Landscaping And Buffers', of this title."
+    }
+   ]
+  },
+  {
+   "rule_id": "PL-01",
+   "rule_name": "Minimum lot area and width",
+   "district": "PL",
+   "code_section": "21A.32.070.C",
+   "applies_to": "Public schools versus other permitted uses in PL.",
+   "params": [
+    {
+     "name": "public_schools_min_lot_area",
+     "value": 5,
+     "unit": "acres",
+     "condition": "Public schools",
+     "rule_id": "PL-01",
+     "quote": "Land Use Minimum Lot Area Minimum Lot Width | Public schools | 5 acres | 150 feet | | Other permitted uses | 20,000 square feet | 75 feet |"
+    },
+    {
+     "name": "public_schools_min_lot_width",
+     "value": 150,
+     "unit": "feet",
+     "condition": "Public schools",
+     "rule_id": "PL-01",
+     "quote": "Land Use Minimum Lot Area Minimum Lot Width | Public schools | 5 acres | 150 feet | | Other permitted uses | 20,000 square feet | 75 feet |"
+    },
+    {
+     "name": "other_uses_min_lot_area",
+     "value": 20000,
+     "unit": "square feet",
+     "condition": "Other permitted uses",
+     "rule_id": "PL-01",
+     "quote": "Land Use Minimum Lot Area Minimum Lot Width | Public schools | 5 acres | 150 feet | | Other permitted uses | 20,000 square feet | 75 feet |"
+    },
+    {
+     "name": "other_uses_min_lot_width",
+     "value": 75,
+     "unit": "feet",
+     "condition": "Other permitted uses",
+     "rule_id": "PL-01",
+     "quote": "Land Use Minimum Lot Area Minimum Lot Width | Public schools | 5 acres | 150 feet | | Other permitted uses | 20,000 square feet | 75 feet |"
+    }
+   ]
+  },
+  {
+   "rule_id": "PL-02",
+   "rule_name": "Maximum building height",
+   "district": "PL",
+   "code_section": "21A.32.070.D",
+   "applies_to": "Buildings in PL; height branches among listed government/civic/entertainment uses, K-12 public schools, and other uses.",
+   "params": [
+    {
+     "name": "max_building_height_civic_listed",
+     "value": 75,
+     "unit": "feet",
+     "condition": "Local government facilities, prison or jail, government offices, arenas, stadiums, fairgrounds and exhibition halls; provided that where abutting a zoning district allowing greater height, the height standard of the abutting district shall apply",
+     "rule_id": "PL-02",
+     "quote": "1. Local government facilities, prison or jail, government offices, arenas, stadiums, fairgrounds and exhibition halls: 75 feet; provided, that where abutting a zoning district allowing greater height, the height standard of the abutting district shall apply. 2. Schools, K-12 Public: 125 feet. 3. Other uses: 35 feet."
+    },
+    {
+     "name": "max_building_height_k12_public_schools",
+     "value": 125,
+     "unit": "feet",
+     "condition": "Schools, K-12 Public",
+     "rule_id": "PL-02",
+     "quote": "1. Local government facilities, prison or jail, government offices, arenas, stadiums, fairgrounds and exhibition halls: 75 feet; provided, that where abutting a zoning district allowing greater height, the height standard of the abutting district shall apply. 2. Schools, K-12 Public: 125 feet. 3. Other uses: 35 feet."
+    },
+    {
+     "name": "max_building_height_other_uses",
+     "value": 35,
+     "unit": "feet",
+     "condition": "Other uses",
+     "rule_id": "PL-02",
+     "quote": "1. Local government facilities, prison or jail, government offices, arenas, stadiums, fairgrounds and exhibition halls: 75 feet; provided, that where abutting a zoning district allowing greater height, the height standard of the abutting district shall apply. 2. Schools, K-12 Public: 125 feet. 3. Other uses: 35 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "PL-03",
+   "rule_name": "Minimum yard requirements",
+   "district": "PL",
+   "code_section": "21A.32.070.E",
+   "applies_to": "K-12 public schools, with school side and rear yards branching on adjacent zoning; separate standards apply to other uses.",
+   "params": [
+    {
+     "name": "k12_front_yard_min",
+     "value": 30,
+     "unit": "feet",
+     "condition": "Schools, K-12 Public; setbacks apply to site perimeter and to property lines shared between the school district and a different property owner when the school site includes multiple parcels",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "k12_corner_side_yard_min",
+     "value": 30,
+     "unit": "feet",
+     "condition": "Schools, K-12 Public (same multi-parcel perimeter rule)",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "k12_interior_side_yard_min_res_mfg",
+     "value": 50,
+     "unit": "feet",
+     "condition": "Schools, K-12 Public: buildings next to a residential or manufacturing zoning district",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "k12_interior_side_yard_min_other",
+     "value": 30,
+     "unit": "feet",
+     "condition": "Schools, K-12 Public: buildings next to any other zoning district",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "k12_rear_yard_min_res_mfg",
+     "value": 50,
+     "unit": "feet",
+     "condition": "Schools, K-12 Public: buildings next to a residential or manufacturing zoning district",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "k12_rear_yard_min_other",
+     "value": 30,
+     "unit": "feet",
+     "condition": "Schools, K-12 Public: buildings next to any other zoning district",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "other_front_yard_min",
+     "value": 30,
+     "unit": "feet",
+     "condition": "Other Uses",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "other_corner_side_yard_min",
+     "value": 30,
+     "unit": "feet",
+     "condition": "Other Uses",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "other_interior_side_yard_min",
+     "value": 20,
+     "unit": "feet",
+     "condition": "Other Uses",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    },
+    {
+     "name": "other_rear_yard_min",
+     "value": 30,
+     "unit": "feet",
+     "condition": "Other Uses",
+     "rule_id": "PL-03",
+     "quote": "Schools, K-12 Public: when a site for a public school includes multiple parcels or lots, setbacks shall apply to the perimeter of the site and to property lines shared between the school district and a different property owner. Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Rear Yard: Buildings next to a residential or manufacturing zoning district: 50 feet. Buildings next to any other zoning district: 30 feet. Other Uses: Front Yard: 30 feet. Corner Side Yard: 30 feet. Interior Side Yard: 20 feet. Rear Yard: 30 feet."
+    }
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "rule_id": "M-1-03",
+   "name": "landscape_buffer_depth",
+   "detail": "gap: the setback is measured \"beyond the required landscape buffer as required in section 21A.48.080\"; the actual buffer depth (numeric) is not stated in the stored quote"
+  },
+  {
+   "rule_id": "M-1-04",
+   "name": "other_location_overlay_FAA_exceptions",
+   "detail": "gap: applies_to says the rule is \"subject to the listed structure, location, overlay, and FAA exceptions\" but the stored quote only states the distillation-column exception; other location/overlay/FAA exceptions are not captured in the quote"
+  },
+  {
+   "rule_id": "M-1-06",
+   "name": "numeric_parameter",
+   "detail": "gap: rule is qualitative; no machine-readable numeric parameter is stated in the quote"
+  },
+  {
+   "rule_id": "OS-04",
+   "name": "yard_inflation_numeric",
+   "detail": "gap: OS-04 base yards increase with building height per 21A.32.100.D (see OS-02); that inflation is not restated in the OS-04 quote \u2014 consume OS-02 params jointly"
+  },
+  {
+   "rule_id": "OS-05",
+   "name": "numeric_parameter",
+   "detail": "gap: rule is qualitative; no machine-readable numeric parameter is stated in the quote"
+  },
+  {
+   "rule_id": "PL-02",
+   "name": "abutting_district_greater_height_value",
+   "detail": "gap: for the listed civic uses, when abutting a district allowing greater height, the abutting district's standard applies \u2014 that numeric value is not stated in the PL-02 quote and must be looked up per adjacent district"
+  }
+ ],
+ "notes": "All values are transcribed from the verbatim stored quotes (values and quotes stored together in verified_rules.json); units preserved as stated. M-1-01 min lot area 10,000 sqft / 80 ft width reflects the current codified text (Ord. 47A25, 2025); older 20,000 sqft figures in legacy documents are superseded per the stored ambiguity_note. OS-02/OS-04 must be consumed jointly: OS-04 base yards branch at 4 acres and OS-02 yard-inflation applies whenever height exceeds the tier thresholds. PL-01/PL-02/PL-03 all branch on use (public schools vs listed civic/entertainment uses vs other permitted uses); a screener must resolve the use before applying params. M-1-06 and OS-05 are qualitative (Chapter 21A.48 landscaping conformance) with no machine-readable numeric parameter \u2014 recorded as gaps, not zeros. M-1-02 (M-1 base yard minimums: front 15, corner side 15, interior none, rear none) and PL-04 (landscape buffer) were outside the requested rule list and are not in this package."
+}

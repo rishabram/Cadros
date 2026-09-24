@@ -1,0 +1,1423 @@
+{
+ "package": "PACKAGE 1 \u2014 MU height/yard scoping facts",
+ "extracted_from": "verified_rules.json (Salt Lake City Title 21A, 59 human-verified rules)",
+ "source_verification_state": "see per-rule data; extraction is read-only and does not alter verdicts",
+ "scope_note": "Covers every MU-5, MU-6, MU-11 height rule and yard/setback rule in the verified set (37 rules). Uses-per-story rules (MU-5-09, MU-6-09, MU-11-05), lot area/width rules (MU-5-16, MU-6-16, MU-11-11), and MU-OPENSPACE-01 are NOT height/yard rules and were excluded from this package. MU-5-15 / MU-6-15 (building form separation, 6 ft) are yard-like separation rules and are included.",
+ "rules": [
+  {
+   "rule_id": "MU-5-01",
+   "rule_name": "Maximum building height",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.1)",
+   "applies_to": "Urban house / two-family dwelling / cottage development",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Urban house / two-family dwelling / cottage development",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-01",
+     "quote": "Height Maximum: 40 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-01",
+     "quote": "Height Maximum: 40 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-01",
+     "quote": "Height Maximum: 40 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-02",
+   "rule_name": "Minimum front and corner side yard",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.1)",
+   "applies_to": "Urban house / two-family dwelling / cottage development",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Urban house / two-family dwelling / cottage development",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-02",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-02",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-02",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-03",
+   "rule_name": "Minimum interior side yard",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.1)",
+   "applies_to": "Urban house / two-family dwelling / cottage development",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Urban house / two-family dwelling / cottage development",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-04",
+   "rule_name": "Minimum rear yard",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.1)",
+   "applies_to": "Urban house / two-family dwelling / cottage development",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Urban house / two-family dwelling / cottage development",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone the minimum is 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone the minimum is 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "base value applies generally; 20-foot conditional value applies when the rear yard abuts R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 (quote: \"When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 zone along the rear lot line, the minimum is 20 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-5-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone the minimum is 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-05",
+   "rule_name": "Maximum building height",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.2)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-05",
+     "quote": "Height Maximum: 45 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-05",
+     "quote": "Height Maximum: 45 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-05",
+     "quote": "Height Maximum: 45 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-06",
+   "rule_name": "Front and corner side yard range",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.2)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-06",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet. Maximum: 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-06",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet. Maximum: 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-06",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet. Maximum: 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-07",
+   "rule_name": "Minimum interior side yard",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.2)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-07",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-07",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-07",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-08",
+   "rule_name": "Minimum rear yard",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.2)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-08",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-08",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "base value applies generally; 20-foot conditional value applies when the rear yard abuts R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 (quote: \"When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 zone along the rear lot line, the minimum is 20 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-5-08",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-10",
+   "rule_name": "Maximum building height",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.3)",
+   "applies_to": "Multifamily residential / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily residential / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-10",
+     "quote": "Height Maximum: 55 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-10",
+     "quote": "Height Maximum: 55 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-10",
+     "quote": "Height Maximum: 55 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-11",
+   "rule_name": "Front and corner side yard range (residential ground floor)",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.3)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use, ground floor occupied by residential uses",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use, ground floor occupied by residential uses",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-11",
+     "quote": "Front and Corner Side Yard 1. Ground Floor Occupied by Residential Uses: a. Minimum: 10 feet. b. Maximum: 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "ground floor occupied by residential uses (verbatim from quote: \"Ground Floor Occupied by Residential Uses\")",
+     "grounding": "quote",
+     "rule_id": "MU-5-11",
+     "quote": "Front and Corner Side Yard 1. Ground Floor Occupied by Residential Uses: a. Minimum: 10 feet. b. Maximum: 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-11",
+     "quote": "Front and Corner Side Yard 1. Ground Floor Occupied by Residential Uses: a. Minimum: 10 feet. b. Maximum: 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-12",
+   "rule_name": "Front and corner side yard range (non-residential ground floor)",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.3)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use, ground floor occupied by non-residential uses",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use, ground floor occupied by non-residential uses",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-12",
+     "quote": "2. Ground Floor Occupied by Non-Residential Uses: a. Minimum: None, except 5 feet on North Temple and 10 feet on 400 South. b. Maximum: 10 feet, except 15 feet on North Temple and 20 feet on 400 South."
+    },
+    {
+     "name": "uses",
+     "value": "ground floor occupied by non-residential uses (verbatim from quote: \"Ground Floor Occupied by Non-Residential Uses\")",
+     "grounding": "quote",
+     "rule_id": "MU-5-12",
+     "quote": "2. Ground Floor Occupied by Non-Residential Uses: a. Minimum: None, except 5 feet on North Temple and 10 feet on 400 South. b. Maximum: 10 feet, except 15 feet on North Temple and 20 feet on 400 South."
+    },
+    {
+     "name": "location_applicability",
+     "value": "street-specific exceptions on North Temple and 400 South (verbatim from quote: \"except 5 feet on North Temple and 10 feet on 400 South\" / \"except 15 feet on North Temple and 20 feet on 400 South\")",
+     "grounding": "quote",
+     "rule_id": "MU-5-12",
+     "quote": "2. Ground Floor Occupied by Non-Residential Uses: a. Minimum: None, except 5 feet on North Temple and 10 feet on 400 South. b. Maximum: 10 feet, except 15 feet on North Temple and 20 feet on 400 South."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-13",
+   "rule_name": "Minimum interior side yard",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.3)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-13",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone, the minimum is 10 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-13",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone, the minimum is 10 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "conditional on adjacent zoning: 10 feet when the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 zone (quote: \"When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 zone, the minimum is 10 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-5-13",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone, the minimum is 10 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-14",
+   "rule_name": "Minimum rear yard",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.3)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-14",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-14",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "base value applies generally; 20-foot conditional value applies when the rear yard abuts R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 (quote: \"When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 zone along the rear lot line, the minimum is 20 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-5-14",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-5-15",
+   "rule_name": "Building form separation",
+   "district": "MU-5",
+   "code_section": "21A.25.040 (Table 21A.25.040.C.1)",
+   "applies_to": "Multiple building forms on a single lot",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multiple building forms on a single lot",
+     "grounding": "applies_to",
+     "rule_id": "MU-5-15",
+     "quote": "When multiple building forms are located on a single lot, each building form must be separated by at least 6 feet, measured from exterior walls."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-15",
+     "quote": "When multiple building forms are located on a single lot, each building form must be separated by at least 6 feet, measured from exterior walls."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-5-15",
+     "quote": "When multiple building forms are located on a single lot, each building form must be separated by at least 6 feet, measured from exterior walls."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-01",
+   "rule_name": "Maximum building height",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.1)",
+   "applies_to": "Urban house / two-family dwelling / cottage development",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Urban house / two-family dwelling / cottage development",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-01",
+     "quote": "Height Maximum: 40 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-01",
+     "quote": "Height Maximum: 40 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-01",
+     "quote": "Height Maximum: 40 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-02",
+   "rule_name": "Minimum front and corner side yard",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.1)",
+   "applies_to": "Urban house / two-family dwelling / cottage development",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Urban house / two-family dwelling / cottage development",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-02",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-02",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-02",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-03",
+   "rule_name": "Minimum interior side yard",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.1)",
+   "applies_to": "Urban house / two-family dwelling / cottage development",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Urban house / two-family dwelling / cottage development",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-04",
+   "rule_name": "Minimum rear yard",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.1)",
+   "applies_to": "Urban house / two-family dwelling / cottage development",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Urban house / two-family dwelling / cottage development",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "base value applies generally; 20-foot conditional value applies when the rear yard abuts R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 (quote: \"When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 zone along the rear lot line, the minimum is 20 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-6-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-05",
+   "rule_name": "Maximum building height",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.2)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-05",
+     "quote": "Height Maximum: 45 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-05",
+     "quote": "Height Maximum: 45 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-05",
+     "quote": "Height Maximum: 45 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-06",
+   "rule_name": "Front and corner side yard range",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.2)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-06",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet. Maximum: 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-06",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet. Maximum: 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-06",
+     "quote": "Front and Corner Side Yard Minimum: 10 feet. Maximum: 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-07",
+   "rule_name": "Minimum interior side yard",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.2)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-07",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-07",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-07",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-08",
+   "rule_name": "Minimum rear yard",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.2)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-08",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-08",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "base value applies generally; 20-foot conditional value applies when the rear yard abuts R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 (quote: \"When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, MU-3 zone along the rear lot line, the minimum is 20 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-6-08",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-10",
+   "rule_name": "Maximum building height",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.3)",
+   "applies_to": "Multifamily residential / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily residential / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-10",
+     "quote": "Height Maximum: 65 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-10",
+     "quote": "Height Maximum: 65 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-10",
+     "quote": "Height Maximum: 65 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-11",
+   "rule_name": "Front and corner side yard range (residential ground floor)",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.3)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use, ground floor occupied by residential uses",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use, ground floor occupied by residential uses",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-11",
+     "quote": "Front and Corner Side Yard 1. Ground Floor Occupied by Residential Uses: a. Minimum: 10 feet. b. Maximum: 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "ground floor occupied by residential uses (verbatim from quote: \"Ground Floor Occupied by Residential Uses\")",
+     "grounding": "quote",
+     "rule_id": "MU-6-11",
+     "quote": "Front and Corner Side Yard 1. Ground Floor Occupied by Residential Uses: a. Minimum: 10 feet. b. Maximum: 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-11",
+     "quote": "Front and Corner Side Yard 1. Ground Floor Occupied by Residential Uses: a. Minimum: 10 feet. b. Maximum: 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-12",
+   "rule_name": "Front and corner side yard range (non-residential ground floor)",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.3)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use, ground floor occupied by non-residential uses",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use, ground floor occupied by non-residential uses",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-12",
+     "quote": "2. Ground floor Occupied by Non-Residential Uses: a. Minimum: None, except 5 feet on North Temple and 10 feet on 400 South. b. Maximum: 10 feet, except 15 feet on North Temple and 20 feet on 400 South."
+    },
+    {
+     "name": "uses",
+     "value": "ground floor occupied by non-residential uses (verbatim from quote: \"Ground floor Occupied by Non-Residential Uses\")",
+     "grounding": "quote",
+     "rule_id": "MU-6-12",
+     "quote": "2. Ground floor Occupied by Non-Residential Uses: a. Minimum: None, except 5 feet on North Temple and 10 feet on 400 South. b. Maximum: 10 feet, except 15 feet on North Temple and 20 feet on 400 South."
+    },
+    {
+     "name": "location_applicability",
+     "value": "street-specific exceptions on North Temple and 400 South (verbatim from quote: \"except 5 feet on North Temple and 10 feet on 400 South\" / \"except 15 feet on North Temple and 20 feet on 400 South\")",
+     "grounding": "quote",
+     "rule_id": "MU-6-12",
+     "quote": "2. Ground floor Occupied by Non-Residential Uses: a. Minimum: None, except 5 feet on North Temple and 10 feet on 400 South. b. Maximum: 10 feet, except 15 feet on North Temple and 20 feet on 400 South."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-13",
+   "rule_name": "Minimum interior side yard",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.3)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-13",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-13",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "conditional on adjacent zoning: 10 feet when the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, MU-3 zone (quote: \"When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, MU-3 zone, the minimum is 10 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-6-13",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-14",
+   "rule_name": "Minimum rear yard",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.3)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-14",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-14",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "base value applies generally; 20-foot conditional value applies when the rear yard abuts R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, MU-3 (quote: \"When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, MU-3 zone along the rear lot line, the minimum is 20 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-6-14",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-6-15",
+   "rule_name": "Building form separation",
+   "district": "MU-6",
+   "code_section": "21A.25.050 (Table 21A.25.050.C.1)",
+   "applies_to": "Multiple building forms on a single lot",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multiple building forms on a single lot",
+     "grounding": "applies_to",
+     "rule_id": "MU-6-15",
+     "quote": "When multiple building forms are located on a single lot, each building form must be separated by at least 6 feet, measured from exterior walls."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-15",
+     "quote": "When multiple building forms are located on a single lot, each building form must be separated by at least 6 feet, measured from exterior walls."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-6-15",
+     "quote": "When multiple building forms are located on a single lot, each building form must be separated by at least 6 feet, measured from exterior walls."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-01",
+   "rule_name": "Maximum building height",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.1)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-01",
+     "quote": "Height Maximum: 45 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-01",
+     "quote": "Height Maximum: 45 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-01",
+     "quote": "Height Maximum: 45 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-02",
+   "rule_name": "Front and corner side yard range",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.1)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-02",
+     "quote": "Front and Corner Side Yard Minimum: 5 feet, except as listed below. 1. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15 Maximum: 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-02",
+     "quote": "Front and Corner Side Yard Minimum: 5 feet, except as listed below. 1. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15 Maximum: 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "10-foot minimum applies on: 300 West; 400 South; 1700 South, from West Temple to I-15; 2100 South, from West Temple to I-15. 5-foot minimum applies elsewhere (quote: \"Minimum: 5 feet, except as listed below. 1. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15\")",
+     "grounding": "quote",
+     "rule_id": "MU-11-02",
+     "quote": "Front and Corner Side Yard Minimum: 5 feet, except as listed below. 1. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15 Maximum: 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-03",
+   "rule_name": "Minimum interior side yard",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.1)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-03",
+     "quote": "Interior Side Yard Minimum: 4 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-04",
+   "rule_name": "Minimum rear yard",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.1)",
+   "applies_to": "Row house",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Row house",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-04",
+     "quote": "Rear Yard Minimum: 10 feet. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-06",
+   "rule_name": "Maximum building height",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.2)",
+   "applies_to": "Multifamily residential / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily residential / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-06",
+     "quote": "Height Maximum: 125 feet. Design Review: Buildings in excess of 85 feet require design review in accordance with Chapter 21A.59."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-06",
+     "quote": "Height Maximum: 125 feet. Design Review: Buildings in excess of 85 feet require design review in accordance with Chapter 21A.59."
+    },
+    {
+     "name": "location_applicability",
+     "value": "gap: the stored quote states no location or street-context applicability",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-06",
+     "quote": "Height Maximum: 125 feet. Design Review: Buildings in excess of 85 feet require design review in accordance with Chapter 21A.59."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-07",
+   "rule_name": "Additional height (conditional, design review)",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.2, Additional Height)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use, qualifying areas and conditions",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use, qualifying areas and conditions",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-07",
+     "quote": "Properties located in the areas bounded by (1) 400 South to the I-15 West Temple Offramp and 300 West to I-15 or (2) McClelland Street and extending along the eastern boundary of Fairmont Park to 1300 East and 2100 South to I-80, may be allowed up to 150 feet in height through the design review process of Chapter 21A.59, subject to the following: 1. At least 10% of the lot shall be open space area at the ground level with an outdoor active space, such as midblock walkways with a public access easement, plazas, outdoor dining area, outdoor recreation area, or similar. The applicant may expand the park strip to accommodate a portion or all of the 10% open space area; and 2. The development includes at least one of the following uses: 100% enhanced active use (as defined and regulated in Subsection 21A.37.050.A.2) within the required ground floor use area or a midblock walkway at least 20 feet wide."
+    },
+    {
+     "name": "uses",
+     "value": "conditional on one of: 100% enhanced active use within the required ground floor use area, or a midblock walkway at least 20 feet wide (quote: \"The development includes at least one of the following uses: 100% enhanced active use (as defined and regulated in Subsection 21A.37.050.A.2) within the required ground floor use area or a midblock walkway at least 20 feet wide\")",
+     "grounding": "quote",
+     "rule_id": "MU-11-07",
+     "quote": "Properties located in the areas bounded by (1) 400 South to the I-15 West Temple Offramp and 300 West to I-15 or (2) McClelland Street and extending along the eastern boundary of Fairmont Park to 1300 East and 2100 South to I-80, may be allowed up to 150 feet in height through the design review process of Chapter 21A.59, subject to the following: 1. At least 10% of the lot shall be open space area at the ground level with an outdoor active space, such as midblock walkways with a public access easement, plazas, outdoor dining area, outdoor recreation area, or similar. The applicant may expand the park strip to accommodate a portion or all of the 10% open space area; and 2. The development includes at least one of the following uses: 100% enhanced active use (as defined and regulated in Subsection 21A.37.050.A.2) within the required ground floor use area or a midblock walkway at least 20 feet wide."
+    },
+    {
+     "name": "location_applicability",
+     "value": "only on properties in areas bounded by (1) 400 South to the I-15 West Temple Offramp and 300 West to I-15, or (2) McClelland Street and extending along the eastern boundary of Fairmont Park to 1300 East and 2100 South to I-80; plus at least 10% of the lot as ground-level open space with an outdoor active space (verbatim quote)",
+     "grounding": "quote",
+     "rule_id": "MU-11-07",
+     "quote": "Properties located in the areas bounded by (1) 400 South to the I-15 West Temple Offramp and 300 West to I-15 or (2) McClelland Street and extending along the eastern boundary of Fairmont Park to 1300 East and 2100 South to I-80, may be allowed up to 150 feet in height through the design review process of Chapter 21A.59, subject to the following: 1. At least 10% of the lot shall be open space area at the ground level with an outdoor active space, such as midblock walkways with a public access easement, plazas, outdoor dining area, outdoor recreation area, or similar. The applicant may expand the park strip to accommodate a portion or all of the 10% open space area; and 2. The development includes at least one of the following uses: 100% enhanced active use (as defined and regulated in Subsection 21A.37.050.A.2) within the required ground floor use area or a midblock walkway at least 20 feet wide."
+    },
+    {
+     "name": "procedural_condition",
+     "value": "through the design review process of Chapter 21A.59 (quote: \"may be allowed up to 150 feet in height through the design review process of Chapter 21A.59\")",
+     "grounding": "quote",
+     "rule_id": "MU-11-07",
+     "quote": "Properties located in the areas bounded by (1) 400 South to the I-15 West Temple Offramp and 300 West to I-15 or (2) McClelland Street and extending along the eastern boundary of Fairmont Park to 1300 East and 2100 South to I-80, may be allowed up to 150 feet in height through the design review process of Chapter 21A.59, subject to the following: 1. At least 10% of the lot shall be open space area at the ground level with an outdoor active space, such as midblock walkways with a public access easement, plazas, outdoor dining area, outdoor recreation area, or similar. The applicant may expand the park strip to accommodate a portion or all of the 10% open space area; and 2. The development includes at least one of the following uses: 100% enhanced active use (as defined and regulated in Subsection 21A.37.050.A.2) within the required ground floor use area or a midblock walkway at least 20 feet wide."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-08",
+   "rule_name": "Front and corner side yard range",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.2)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-08",
+     "quote": "Front and Corner Side Yard Setback Minimum: None, except as listed below: 1. 5 feet on North Temple. 2. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15 Maximum: 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-08",
+     "quote": "Front and Corner Side Yard Setback Minimum: None, except as listed below: 1. 5 feet on North Temple. 2. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15 Maximum: 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "minimum none except: 5 feet on North Temple; 10 feet on 300 West, 400 South, 1700 South (West Temple to I-15), 2100 South (West Temple to I-15) (quote: \"Minimum: None, except as listed below: 1. 5 feet on North Temple. 2. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15\")",
+     "grounding": "quote",
+     "rule_id": "MU-11-08",
+     "quote": "Front and Corner Side Yard Setback Minimum: None, except as listed below: 1. 5 feet on North Temple. 2. 10 feet, on the following streets: a. 300 West b. 400 South c. 1700 South, from West Temple to I-15 d. 2100 South, from West Temple to I-15 Maximum: 20 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-09",
+   "rule_name": "Minimum interior side yard",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.2)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-09",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-09",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "conditional on adjacent zoning: 10 feet when the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone (quote: \"When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-11-09",
+     "quote": "Interior Side Yard Minimum: None. When the interior side yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone, the minimum is 10 feet."
+    }
+   ]
+  },
+  {
+   "rule_id": "MU-11-10",
+   "rule_name": "Minimum rear yard",
+   "district": "MU-11",
+   "code_section": "21A.25.070 (Table 21A.25.070.C.2)",
+   "applies_to": "Multifamily / storefront / vertical mixed-use",
+   "facts": [
+    {
+     "name": "building_forms",
+     "value": "Multifamily / storefront / vertical mixed-use",
+     "grounding": "applies_to",
+     "rule_id": "MU-11-10",
+     "quote": "Rear Yard Minimum: None. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "uses",
+     "value": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses",
+     "grounding": "gap-in-source",
+     "rule_id": "MU-11-10",
+     "quote": "Rear Yard Minimum: None. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    },
+    {
+     "name": "location_applicability",
+     "value": "conditional on adjacent zoning: 20 feet when the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line (quote: \"When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet\"); no street-context condition stated",
+     "grounding": "quote",
+     "rule_id": "MU-11-10",
+     "quote": "Rear Yard Minimum: None. When the rear yard abuts an R-1, R-2, FR, SR, FB-UN1, RMF-30, RMF-35, MU-2, or MU-3 zone along the rear lot line, the minimum is 20 feet."
+    }
+   ]
+  }
+ ],
+ "gaps": [
+  {
+   "rule_id": "MU-5-01",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-01",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-5-02",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-02",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-5-03",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-03",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-5-05",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-05",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-5-06",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-06",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-5-07",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-07",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-5-10",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-10",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-5-15",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-15",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-01",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-01",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-02",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-02",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-03",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-03",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-05",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-05",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-06",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-06",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-07",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-07",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-10",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-10",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-15",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-15",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-11-01",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-11-01",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-11-03",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-11-03",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-11-04",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-11-04",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-11-06",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-11-06",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-5-11",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-6-11",
+   "name": "location_applicability",
+   "detail": "gap: the stored quote states no location or street-context applicability"
+  },
+  {
+   "rule_id": "MU-11-02",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-11-08",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-11-09",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-11-10",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-04",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-08",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-14",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-04",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-08",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-14",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-5-13",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-6-13",
+   "name": "uses",
+   "detail": "gap: the stored quote states no use applicability beyond the building form in applies_to; it does not name specific uses"
+  },
+  {
+   "rule_id": "MU-11 (set)",
+   "name": "building_form: urban house / two-family dwelling / cottage development",
+   "detail": "gap: the verified MU-11 rule set contains NO height or yard rules scoped to the urban house / two-family dwelling / cottage development form (MU-11-01..04 apply to row house per applies_to); what the MU-11 height/yard standards are for that form is not stated in the verified set"
+  },
+  {
+   "rule_id": "MU-11 (set)",
+   "name": "building_form terminology: townhouse",
+   "detail": "gap: verified rules name forms \"row house\", \"urban house\", \"two-family dwelling\", \"cottage development\", \"multifamily residential\", \"storefront\", \"vertical mixed-use\"; the term \"townhouse\" never appears, and no mapping of synonyms to code terms is stored"
+  },
+  {
+   "rule_id": "MU-5/MU-6/MU-11 (set)",
+   "name": "form-name mapping: apartment",
+   "detail": "gap: \"multifamily residential\" is the stored form term; whether \"apartment\" maps to it is not stated"
+  },
+  {
+   "rule_id": "MU-11 (set)",
+   "name": "mixed horizontal uses scoping",
+   "detail": "gap: MU-11-11 (minimum lot area / width) and MU-11-05 (uses per story) were excluded from this height/yard extraction per scope; open-space scoping (MU-OPENSPACE-01) also excluded"
+  },
+  {
+   "rule_id": "MU-5-06/MU-5-11/MU-6-06/MU-6-11 (10-20 ft range)",
+   "name": "how the 10-20 ft front/corner range is applied",
+   "detail": "the stored ambiguity_note for MU-5-06 states the maximum front setback functions as a build-to-line control (front must sit between 10 and 20 ft); no verbatim code quote of that build-to-line mechanics is stored \u2014 the quote itself gives only the numbers"
+  }
+ ],
+ "notes": "All building-form scoping is grounded in the verbatim applies_to field of each rule; the numeric values come from the verbatim stored quotes. The verified set tiers MU-5 and MU-6 into three building-form groups: (1) urban house / two-family dwelling / cottage development, (2) row house, (3) multifamily residential / storefront / vertical mixed-use; MU-11 has only two tiers in the set (row house; multifamily / storefront / vertical mixed-use) \u2014 no urban-house-form MU-11 height/yard rules are stored. Only four rules state use applicability in the quote (MU-5-11, MU-5-12, MU-6-11, MU-6-12 \u2014 ground floor residential vs non-residential occupancy) and only MU-5-12, MU-6-12, MU-11-02, MU-11-07, MU-11-08 state street/location applicability; the rest are silent and recorded as gaps rather than inferred. The MU-5 and MU-6 sets are structurally identical except: MU-6-10 max height is 65 ft vs MU-5-10 55 ft; MU-6-13/MU-6-14 abutting lists include RMF-35 while MU-5-13/MU-5-14 do not. MU-11-04 rear-yard minimum was human-verified at 10 feet (legislative strike-through on the 5 resolved by Rohan, 2026-09-23)."
+}

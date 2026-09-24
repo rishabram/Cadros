@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+venv/
+.venv/
+
+# Generated run outputs (reproducible from code + inputs)
+screen/outputs/
+stress/outputs/
+outputs/
+*.log
+
+# Local scratch
+/tmp/
+.DS_Store

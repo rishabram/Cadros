@@ -1,0 +1,83 @@
+# Approved-plat benchmark results
+
+Tolerance: +/-15%. Aim: >=70% of scored plats within tolerance.
+Scored plats: 0. Within tolerance: 0.
+
+| plat_id | approved | neron (top-ranked) | rel err | within 15% | zoning source |
+|---|---|---|---|---|---|
+| mill-subdivision | 4 | — | — | not scored: plat does not state the zone; South Salt Lake commercial district for Sec 24 T1S R1W not determined from zoning map; Title 17 CC standards found but district assignment unsourced | — |
+| village-at-the-boulders-ph3 | None | — | — | not scored: only the subdivision abstract fetched so far; full plat PDF + lot count + zoning pending | — |
+| tag-row-house | 3 | — | — | not scored: not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage — not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45. | — |
+
+## GreenRush swing (2026-09-24, greenfield-only follow-up)
+
+10 new candidates researched (Herriman ×2, Riverton ×1, Saratoga Springs ×4, South Jordan ×3; plus revisits of Swaner/Mill/Village at the Boulders). **0 newly scoreable.** Scored set remains 0/16 researched; pass rate undefined.
+
+**Firm corpus-gap finding.** No free source co-locates all five required inputs (parent polygon, approved lot count, approval confirmed, approval-date zoning, road_width_ft) for any greenfield plat. Two structural blockers, both policy-hardened as gaps (never fills):
+1. **Parent polygon** — needs either UGRC SGID parcel-union REST (not attempted: browser fetch terminal this turn, exec web access prohibited by standing rules) or a fetchable plat PDF with full metes-and-bounds text (only Mill has one, and it is non-greenfield commercial).
+2. **road_width_ft** — needs a citable city engineering standard drawing. Searchable text yields only other cities' codes (e.g., River Heights Title 11 Ch 7: 66' collector / 50' local; SLC staff reports referencing a 50' public-street baseline). No Herriman/Riverton/South Jordan/SLC local-street standard found in citable form.
+
+Nearest misses: Cove at Silver Sky (Herriman R-1-10, Tier-2 params sourced, but preliminary-only with no lot count/geometry); Broadbent Subdivision (Herriman, 22 lots, M&B in plat PDF but PDF not fetchable); Hidden Pines (Riverton, 42 lots final-approved, zoning + geometry unsourced). Recommended next unlock: UGRC SGID parcel polygons for parent reconstruction + official engineering standard drawings for road width. Full candidate records in `plats.json` (`research_candidates_not_scored`).
+
+## UGRC swing (2026-09-24 ~02:21 MDT, ParcelScout) — unexecuted: tool outage
+
+The swing targeted the two named unlocks for the three nearest misses (Cove at Silver
+Sky, Broadbent Subdivision, Hidden Pines): (1) UGRC SGID parcel-union REST for parent
+polygons, (2) citable Herriman/Riverton/South Jordan engineering standard drawings for
+road_width_ft, plus a retry of the Broadbent PMN PDF fetch (1015940.pdf).
+
+**Not attempted on merits.** Both browser tools were terminally unavailable this turn:
+`browser_search` upstream unavailable after 3 attempts (retry exhausted; instructed not
+to call again), and `browser_open` upstream unavailable after 3 attempts (retry
+exhausted; no exec/curl/invented-endpoint reproduction permitted). `browser_open` is
+additionally restricted to exact conversation URLs, and no UGRC SGID endpoint URL was
+ever tool-returned, so the REST query URL could not be constructed (URL construction
+prohibited). The Broadbent PDF retry and the Cove agenda fetch failed on the same
+outage. Zero scoring inputs changed; scored set remains 0/16.
+
+**Recommendation:** retry the UGRC SGID parcel-polygon leg (query parent parcel IDs /
+point-in-polygon at the three nearest-miss locations; confirm final recording via the
+current parcel fabric) and the city standard-drawings leg in a future swing when browser
+tools are healthy. The two unlocks stand as named in the corpus-gap finding.
+
+## UGRC swing RETRY (2026-09-24 ~02:30–02:45 MDT, UGRCScout) — endpoint confirmed, scored set 0/16
+
+Browser tools were healthy this turn. The UGRC SGID parcel-polygon leg was executed
+against live data.
+
+**Endpoint confirmed (tool-returned).** Via the GitHub commit diff
+nache327/stack-land-acquisition@1680170 (opened verbatim from search results):
+county-specific FeatureServers —
+`https://services1.arcgis.com/99lidPhWCzftIe9K/arcgis/rest/services/Parcels_SaltLake/FeatureServer/0`.
+Anonymous querying works (`allowAnonymousToQuery: true`, `maxRecordCount: 2000`).
+
+**Key refinement — BASIC parcels only.** The open service is the HB113 basic-parcel
+layer. Verified field list: OBJECTID, FIPS, PARCEL_ID, PARCEL_ADD, PARCEL_CITY,
+PARCEL_ZIP, OWN_TYPE, RECORDER, ParcelsCur/Rec/Pub, ParcelYear, ParcelNotes,
+CoParcel_URL, ACCOUNT_NUM, Shape__Area, Shape__Length. There is NO SUBDIV_NAME and
+no LIR/tax-roll attributes (the service description states those require county
+recorder contact). Consequence: open-SGID parcels **cannot** filter by subdivision
+name; parent retrieval needs a known PARCEL_ID (direct polygon) or a
+spatial/address-pattern query.
+
+**Proven on live data.**
+- Village at the Boulders Phase 3 parent `33083510770000`: ABSENT from the 2026
+  fabric (query `PARCEL_ID LIKE '3308351%'` returned the subdivided neighborhood
+  fabric instead). Consistent with its 2018 recording — recorded plats need
+  child-parcel union reconstruction, not parent lookup.
+- Broadbent (Herriman) recording check: inconclusive. No large unsubdivided
+  parcel at ~6400 W 13800 S; the only large parcel on 13800 S in Herriman is
+  `33064080010000` at 4257 W 13800 S (68,021 sqm / ~16.8 ac — not the Broadbent
+  site). Address-format uncertainty remains; not resolved.
+
+**Not executed.** Broadbent PMN PDF retry (`1015940.pdf`) failed — `browser_open`
+went terminal for the turn (developer instruction: no further calls). The city
+engineering standard-drawings leg (road_width_ft) is unexecuted.
+
+**Outcome.** Scored set remains 0/16; no plat scored — all three nearest misses
+lack non-geometry inputs UGRC cannot supply (Cove: preliminary-only, no lot
+count; Broadbent: final approval unconfirmed; Hidden Pines: zoning district
+unsourced). **Corpus-gap finding refined:** the parent-polygon blocker is SOLVABLE
+via the UGRC method (known parcel ID → direct polygon; recorded plat → child
+union by ID prefix/address pattern). The binding constraints are now
+approval-date zoning district + `road_width_ft` for every candidate.

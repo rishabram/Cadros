@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "error": 0,
+    "no_schemes": 445,
+    "scheme": 55
+  },
+  "out_dir": "/home/hatch/workspace/neron-scratch/screen/outputs/real_slco_v3/evidence_reports",
+  "reports": 500,
+  "rule_store_fingerprint": "9cc91ac71f5f1de221b9609291ce264ca33d6c6ba9b98f7e7f898778fd0cfd1c",
+  "screen_dir": "/home/hatch/workspace/neron-scratch/screen/outputs/real_slco_v3",
+  "store": "/home/hatch/workspace/neron-scratch/rulegraph/verified_rules.json"
+}

@@ -1,0 +1,1 @@
+{"min_frontage_ft":70,"min_lot_area_sqft":8000,"road_width_ft":55,"source":"Synthetic demo params modeled on typical Utah suburban single-family zoning (e.g. R-1-8). Replace with RuleGraph jurisdiction retrieval per build plan §3.","zone_label":"R-1-8 (synthetic demo)"}

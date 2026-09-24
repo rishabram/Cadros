@@ -1,0 +1,7 @@
+{
+  "contingency_pct": 0.12,
+  "road_cost_per_lf": 650,
+  "sale_price_per_lot": 180000,
+  "soft_costs_fixed": 200000,
+  "source": "SYNTHETIC fixture for screener testing. NOT a real parcel, NOT real zoning. Placeholder industrial pro forma."
+}

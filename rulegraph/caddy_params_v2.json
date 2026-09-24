@@ -1,0 +1,616 @@
+{
+ "engine_semantics": "Applied in-memory at RuleGraph.load time alongside caddy_params_v1. verified_rules.json is never modified; canonical rule ids, human_verification records, and the store fingerprint are untouched. Evaluation results carry params_source=caddy_extraction_v2 in their reason. applies_to_forms encodes Package 3's applies_to scoping machine-readably: urban_house/two_family_dwelling/cottage_development, row_house, multifamily_residential/storefront/vertical_mixed_use. A rule whose building form is unknown yields UNKNOWN; a rule evaluated against a different form yields PASS with an explicit not-applicable reason. ground_floor_use is a pipeline-supplied attribute ('residential' or 'non-residential'), never classified from use names by the engine. Package-3 qualitative 'None' base minima are encoded as min 0 with an explicit gap note \u2014 no minimum, never a fabricated number.",
+ "extraction_provenance": "Machine-extracted by Caddy (Package 3, delivered 2026-09-24): 37 MU rules, 99 numeric params, 10 explicit gaps. Sync-validated by the LeBron sync worker 2026-09-24 03:31 MDT against rulegraph/verified_rules.json (all 99 param quotes are substrings of the stored quotes; zero discrepancies). LeBron-side evaluator mapping built 2026-09-24: 32 rules executable; the 10 Package-3 gaps stay gaps (UNKNOWN) \u2014 never zeros or defaults. HUMAN VERIFICATION COVERS THE RULE QUOTES, NOT THIS PARAM EXTRACTION.",
+ "not_executable": {
+  "MU-5-09": "uses-per-story rule ('Uses Per Story Residential on all stories; live/work units permitted on ground level') \u2014 use-allowance semantics, not a dimensional threshold; outside this numeric overlay's scope",
+  "MU-6-09": "uses-per-story rule ('Uses Per Story Residential on all stories; live/work units permitted on ground level') \u2014 use-allowance semantics, not a dimensional threshold; outside this numeric overlay's scope",
+  "MU-OPENSPACE-01": "'minimum of ten percent (10%) of the lot area shall be provided as open space area' \u2014 needs qualifying open-space geometry from the site plan (not in the pipeline context) -> no evaluator"
+ },
+ "overlay_id": "caddy_extraction_v2_2026-09-24",
+ "params_source_tag": "caddy_extraction_v2",
+ "rules": {
+  "MU-11-01": {
+   "evaluator": "mu_max_height",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "max_ft": 45
+   }
+  },
+  "MU-11-02": {
+   "evaluator": "mu_street_yard",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "base_min_ft": 5,
+    "max_ft": 20,
+    "min_10_streets": [
+     "300 West",
+     "400 South"
+    ],
+    "min_10_streets_segment_limited": [
+     "1700 South",
+     "2100 South"
+    ]
+   }
+  },
+  "MU-11-03": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 4,
+      "listed_zones": [],
+      "setback_attr": "interior_side_setback_ft",
+      "yard_label": "interior side"
+     }
+    ]
+   }
+  },
+  "MU-11-04": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 20,
+      "abuts_attr": "rear_abuts_listed_zone",
+      "base_min_ft": 10,
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "rear_setback_ft",
+      "yard_label": "rear"
+     }
+    ]
+   }
+  },
+  "MU-5-01": {
+   "evaluator": "mu_max_height",
+   "params": {
+    "applies_to_forms": [
+     "urban_house",
+     "two_family_dwelling",
+     "cottage_development"
+    ],
+    "max_ft": 40
+   }
+  },
+  "MU-5-02": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "urban_house",
+     "two_family_dwelling",
+     "cottage_development"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 10,
+      "listed_zones": [],
+      "setback_attr": "front_setback_ft",
+      "yard_label": "front"
+     },
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 10,
+      "listed_zones": [],
+      "setback_attr": "corner_side_setback_ft",
+      "yard_label": "corner side"
+     }
+    ]
+   }
+  },
+  "MU-5-03": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "urban_house",
+     "two_family_dwelling",
+     "cottage_development"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 4,
+      "listed_zones": [],
+      "setback_attr": "interior_side_setback_ft",
+      "yard_label": "interior side"
+     }
+    ]
+   }
+  },
+  "MU-5-04": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "urban_house",
+     "two_family_dwelling",
+     "cottage_development"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 20,
+      "abuts_attr": "rear_abuts_listed_zone",
+      "base_min_ft": 10,
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "rear_setback_ft",
+      "yard_label": "rear"
+     }
+    ]
+   }
+  },
+  "MU-5-05": {
+   "evaluator": "mu_max_height",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "max_ft": 45
+   }
+  },
+  "MU-5-06": {
+   "evaluator": "mu_yard_range",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "max_ft": 20,
+    "min_ft": 10
+   }
+  },
+  "MU-5-07": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 4,
+      "listed_zones": [],
+      "setback_attr": "interior_side_setback_ft",
+      "yard_label": "interior side"
+     }
+    ]
+   }
+  },
+  "MU-5-08": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 20,
+      "abuts_attr": "rear_abuts_listed_zone",
+      "base_min_ft": 10,
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "rear_setback_ft",
+      "yard_label": "rear"
+     }
+    ]
+   }
+  },
+  "MU-5-10": {
+   "evaluator": "mu_max_height",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "max_ft": 55
+   }
+  },
+  "MU-5-11": {
+   "evaluator": "mu_yard_range",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "max_ft": 20,
+    "min_ft": 10,
+    "required_ground_floor_use": "residential"
+   }
+  },
+  "MU-5-12": {
+   "evaluator": "mu_street_yard_minmax",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "default_max_ft": 10,
+    "default_min_ft": 0,
+    "default_min_gap_note": "qualitative 'None' minimum on non-listed streets; evaluator treats as no minimum",
+    "required_ground_floor_use": "non-residential",
+    "street_max_ft": {
+     "400 South": 20,
+     "North Temple": 15
+    },
+    "street_min_ft": {
+     "400 South": 10,
+     "North Temple": 5
+    }
+   }
+  },
+  "MU-5-13": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 10,
+      "abuts_attr": "interior_abuts_listed_zone",
+      "base_min_ft": 0,
+      "base_min_gap_note": "qualitative 'None' minimum; evaluator treats as no minimum",
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "interior_side_setback_ft",
+      "yard_label": "interior side"
+     }
+    ]
+   }
+  },
+  "MU-5-14": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 20,
+      "abuts_attr": "rear_abuts_listed_zone",
+      "base_min_ft": 10,
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "rear_setback_ft",
+      "yard_label": "rear"
+     }
+    ]
+   }
+  },
+  "MU-5-15": {
+   "evaluator": "mu_building_form_separation",
+   "params": {
+    "min_separation_ft": 6
+   }
+  },
+  "MU-6-01": {
+   "evaluator": "mu_max_height",
+   "params": {
+    "applies_to_forms": [
+     "urban_house",
+     "two_family_dwelling",
+     "cottage_development"
+    ],
+    "max_ft": 40
+   }
+  },
+  "MU-6-02": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "urban_house",
+     "two_family_dwelling",
+     "cottage_development"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 10,
+      "listed_zones": [],
+      "setback_attr": "front_setback_ft",
+      "yard_label": "front"
+     },
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 10,
+      "listed_zones": [],
+      "setback_attr": "corner_side_setback_ft",
+      "yard_label": "corner side"
+     }
+    ]
+   }
+  },
+  "MU-6-03": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "urban_house",
+     "two_family_dwelling",
+     "cottage_development"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 4,
+      "listed_zones": [],
+      "setback_attr": "interior_side_setback_ft",
+      "yard_label": "interior side"
+     }
+    ]
+   }
+  },
+  "MU-6-04": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "urban_house",
+     "two_family_dwelling",
+     "cottage_development"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 20,
+      "abuts_attr": "rear_abuts_listed_zone",
+      "base_min_ft": 10,
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "rear_setback_ft",
+      "yard_label": "rear"
+     }
+    ]
+   }
+  },
+  "MU-6-05": {
+   "evaluator": "mu_max_height",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "max_ft": 45
+   }
+  },
+  "MU-6-06": {
+   "evaluator": "mu_yard_range",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "max_ft": 20,
+    "min_ft": 10
+   }
+  },
+  "MU-6-07": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": null,
+      "abuts_attr": null,
+      "base_min_ft": 4,
+      "listed_zones": [],
+      "setback_attr": "interior_side_setback_ft",
+      "yard_label": "interior side"
+     }
+    ]
+   }
+  },
+  "MU-6-08": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "row_house"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 20,
+      "abuts_attr": "rear_abuts_listed_zone",
+      "base_min_ft": 10,
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "rear_setback_ft",
+      "yard_label": "rear"
+     }
+    ]
+   }
+  },
+  "MU-6-10": {
+   "evaluator": "mu_max_height",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "max_ft": 65
+   }
+  },
+  "MU-6-11": {
+   "evaluator": "mu_yard_range",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "max_ft": 20,
+    "min_ft": 10,
+    "required_ground_floor_use": "residential"
+   }
+  },
+  "MU-6-12": {
+   "evaluator": "mu_street_yard_minmax",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "default_max_ft": 10,
+    "default_min_ft": 0,
+    "default_min_gap_note": "qualitative 'None' minimum on non-listed streets; evaluator treats as no minimum",
+    "required_ground_floor_use": "non-residential",
+    "street_max_ft": {
+     "400 South": 20,
+     "North Temple": 15
+    },
+    "street_min_ft": {
+     "400 South": 10,
+     "North Temple": 5
+    }
+   }
+  },
+  "MU-6-13": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 10,
+      "abuts_attr": "interior_abuts_listed_zone",
+      "base_min_ft": 0,
+      "base_min_gap_note": "qualitative 'None' minimum; evaluator treats as no minimum",
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "RMF-35",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "interior_side_setback_ft",
+      "yard_label": "interior side"
+     }
+    ]
+   }
+  },
+  "MU-6-14": {
+   "evaluator": "mu_yard_min_abutment",
+   "params": {
+    "applies_to_forms": [
+     "multifamily_residential",
+     "storefront",
+     "vertical_mixed_use"
+    ],
+    "yards": [
+     {
+      "abut_min_ft": 20,
+      "abuts_attr": "rear_abuts_listed_zone",
+      "base_min_ft": 10,
+      "listed_zones": [
+       "R-1",
+       "R-2",
+       "FR",
+       "SR",
+       "FB-UN1",
+       "RMF-30",
+       "RMF-35",
+       "MU-2",
+       "MU-3"
+      ],
+      "setback_attr": "rear_setback_ft",
+      "yard_label": "rear"
+     }
+    ]
+   }
+  },
+  "MU-6-15": {
+   "evaluator": "mu_building_form_separation",
+   "params": {
+    "min_separation_ft": 6
+   }
+  }
+ },
+ "source_files": [
+  "goals/rohan-merges-rishab-s-8-verified-rules/hidden_files/caddy_drops/mu_numeric_params.json"
+ ]
+}

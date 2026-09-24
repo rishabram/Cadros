@@ -1,0 +1,40 @@
+{
+  "_note": "SYNTHETIC fixture for screener testing. NOT a real parcel, NOT real zoning. Hypothetical building program, values illustrative.",
+  "abuts_zones_rear": [],
+  "abuts_zones_side": [],
+  "building_form": "row_house",
+  "corner_side_setback_ft": 6,
+  "corner_street": "500 East",
+  "corner_street_within_listed_segment": false,
+  "design_review_completed": true,
+  "district": "MU-11",
+  "enhanced_active_use_100_pct": false,
+  "front_setback_ft": 12,
+  "front_street": "400 South",
+  "front_street_within_listed_segment": false,
+  "height_ft": 38,
+  "in_height_bonus_area": false,
+  "interior_abuts_listed_zone": false,
+  "interior_side_setback_ft": 4,
+  "is_corner_lot": true,
+  "landscape_buffer_provided": true,
+  "lot_abuts_sf_tf_residential": false,
+  "midblock_walkway_ft": 0,
+  "open_space_ground_pct": 15,
+  "rear_abuts_listed_zone": false,
+  "rear_setback_ft": 8,
+  "stories": [
+    {
+      "level": 0,
+      "use": "live_work"
+    },
+    {
+      "level": 1,
+      "use": "residential"
+    },
+    {
+      "level": 2,
+      "use": "residential"
+    }
+  ]
+}

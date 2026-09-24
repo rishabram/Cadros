@@ -1,0 +1,247 @@
+{
+  "_meta": {
+    "confidence_definitions": {
+      "assumption": "No publication anchor. Engineering judgment, interpolation, or industry-norm reasoning. Never disguised as a sourced fact.",
+      "sourced": "Figure is anchored to a named publication (report, survey, schedule, or dataset). The publication was NOT live-retrieved on the build date; treat as a starting point pending verification.",
+      "sourced-from-listings": "Figure is anchored to named brokerage LISTINGS (asking prices), retrieved via Caddy's live browser on the date given. NOT closed comps and NOT human-verified. Agent-agreed under Rohan's agent-to-agent directive; human verdict required before production use."
+    },
+    "created": "2026-09-23",
+    "currency": "USD",
+    "geography": "Salt Lake County, Utah; emphasis Salt Lake City (East Bench / central city)",
+    "mapping": {
+      "cli": "run.py --economics <path>  (default: inputs/economics_slco_2026.json if the flag is given without a path is NOT supported \u2014 the flag requires a path)",
+      "district_matching": "zone_label from the zoning config is uppercased and scanned for district tokens (MU-11, MU-5, MU-6, M-1, OS, PL, ...). Longest/most-specific token wins. No match -> DEFAULT entry, flagged in provenance. Matching is logged, never silent.",
+      "module": "prototype/economics.py :: finance_config_from_economics(econ, zone_label)",
+      "precedence": "--economics replaces the --finance input entirely for that run (derived finance JSON is written to <out>/derived_finance.json for auditability). Without --economics, behavior is byte-identical to before (inputs/finance.json placeholders).",
+      "rules": [
+        "sale_price_per_lot  <- districts[<matched_district>].finished_lot_revenue.value (midpoint of documented range). OS/PL map to 0 with an explicit CLI warning (not privately subdividable).",
+        "road_cost_per_lf   <- road_cost_per_lf.value",
+        "soft_costs_fixed   <- soft_costs.fixed_planning_value.value (planning placeholder; pct_of_hard_costs is carried for MarketGraph v2, which should compute soft costs dynamically from hard costs)",
+        "contingency_pct    <- contingency_pct.value",
+        "source             <- provenance string naming this file, the matched district (or DEFAULT fallback), and the economics build date; also embedded in report.json finance_assumptions via finance.run_proforma"
+      ]
+    },
+    "purpose": "Replace the placeholder finance assumptions in inputs/finance.json with documented, per-district market-grounded figures. Every numeric figure is a tagged object {value, [range], unit, source, date, confidence, notes}.",
+    "research_status": "WEB RESEARCH BLOCKED AT BUILD TIME. browser_search failed 2026-09-23 (upstream credential expired); no live web retrieval was performed. Figures below are compiled from named published references and engineering judgment known prior to 2026-09-23. NO figure in this file was live-verified on its build date. ALL figures require live verification (county assessor, MLS summaries, homebuilder reports, city fee schedules, current bid tabs) before production use. This file is a documented starting point, not market evidence.",
+    "title": "NERON economics grounding \u2014 Salt Lake County / Salt Lake City, 2026 (MarketGraph seed)",
+    "verification_backlog": [
+      "Salt Lake County Assessor: 2025\u20132026 residential land valuations ($/acre) by area \u2014 verify land_value_per_acre figures",
+      "MLS / brokerage summaries: finished single-family lot sales, Salt Lake City East Bench vs valley floor, 2025\u20132026 \u2014 verify districts.*.finished_lot_revenue",
+      "Homebuilder reports (e.g. Ivory Homes / Gardner Institute housing reports): finished-lot cost benchmarks \u2014 verify market_context",
+      "Salt Lake City Public Utilities / Community & Neighborhoods: 2026 development + impact fee schedules \u2014 verify soft_costs",
+      "UDOT / SLC Engineering bid tabs or RSMeans 2025\u20132026: subdivision street full-improvement $/lf \u2014 verify road_cost_per_lf",
+      "SLC industrial brokerage (e.g. CBRE/Colliers SLC industrial reports): finished industrial land $/acre \u2014 fill M-1 data gap [2026-09-24 update: listing sample exists \u2014 LandSearch/commercialsearch SLC industrial listings via Caddy (avg ~$1.01\u20131.37M/acre, listings not comps, agent-agreed not human-verified). land_value_per_acre.industrial ($475k assumption) left unchanged pending human verdict.]"
+    ]
+  },
+  "contingency_pct": {
+    "confidence": "assumption",
+    "date": "2026-09-23",
+    "notes": "Consistent with the prior placeholder (0.10); now documented instead of bare.",
+    "range": [
+      0.05,
+      0.15
+    ],
+    "source": "Land-development pro-forma practice: 10% planning-stage norm (5% entitled, up to 15% raw land)",
+    "unit": "fraction of (infra + soft) costs",
+    "value": 0.1
+  },
+  "districts": {
+    "DEFAULT": {
+      "finished_lot_revenue": {
+        "confidence": "assumption",
+        "date": "2026-09-23",
+        "notes": "Used only when zone_label matches no known district; match is flagged in provenance.",
+        "range": [
+          110000,
+          160000
+        ],
+        "source": "Valley-average Wasatch Front finished SFR lot; judgment, no comp pulled",
+        "unit": "USD per finished lot",
+        "value": 135000
+      },
+      "label": "Fallback for unmatched zone labels (e.g. synthetic demo zones)"
+    },
+    "M-1": {
+      "finished_lot_revenue": {
+        "confidence": "sourced-from-listings",
+        "date": "2026-09-24",
+        "notes": "Agreed triple (agent-to-agent settlement, Rohan's directive, Caddy 2026-09-24 00:43 MDT \u2014 negotiation closed, NOT human-verified): (a) pad = finished industrial lot of \u22481 acre (NOT a building pad); (b) $1.2M/pad, range $1.0\u20131.4M; (c) implied $1.2M/acre. needs_human_check stays true \u2014 human verdict required before production use. Replaces the $450k assumption (2026-09-23). land_value_per_acre.industrial ($475k, assumption) left UNCHANGED \u2014 outside the agreed triple; its industrial-land data gap backlog entry now references this listing sample.",
+        "range": [
+          1000000,
+          1400000
+        ],
+        "source": "Rohan's live SLC industrial listings via Caddy 2026-09-24: LandSearch (crawled Jun 2026) \u2014 4 industrial properties near SLC, avg $1,372,549/acre (landsearch.com/industrial/salt-lake-city-ut); 1924 S 7200 W, 2.33-acre M-1-zoned yard listed $2,350,000 \u2248 $1.01M/acre (commercialsearch.com, crawled Aug 2026); Salt Lake County development land avg $1,128,855/acre (LandSearch 2026). Brokerage listings, NOT closed comps.",
+        "unit": "USD per finished industrial lot (~1-acre pad)",
+        "value": 1200000
+      },
+      "label": "M-1 Light Manufacturing (Salt Lake City) \u2014 industrial"
+    },
+    "MU-11": {
+      "finished_lot_revenue": {
+        "confidence": "assumption",
+        "date": "2026-09-23",
+        "notes": "MU-11 lots are typically small-lot SFR / townhome pads, not East Bench estate lots. VERIFY against MLS finished-lot sales.",
+        "range": [
+          120000,
+          180000
+        ],
+        "source": "Derived: lot-share math (20\u201325% of ~$550k\u2013$700k attached/townhome product) + SLC central-city premium; no SLC finished-lot comp pulled",
+        "unit": "USD per finished lot",
+        "value": 150000
+      },
+      "label": "MU-11 Mixed Use (Salt Lake City) \u2014 high-density residential/mixed-use"
+    },
+    "MU-5": {
+      "finished_lot_revenue": {
+        "confidence": "assumption",
+        "date": "2026-09-23",
+        "notes": "VERIFY against MLS finished-lot sales.",
+        "range": [
+          110000,
+          160000
+        ],
+        "source": "Derived: lot-share math on ~$500k\u2013$600k attached product; MU-5/MU-6 split is judgment, not a measured spread",
+        "unit": "USD per finished lot",
+        "value": 135000
+      },
+      "label": "MU-5 Mixed Use (Salt Lake City) \u2014 medium-density mixed-use"
+    },
+    "MU-6": {
+      "finished_lot_revenue": {
+        "confidence": "assumption",
+        "date": "2026-09-23",
+        "notes": "VERIFY against MLS finished-lot sales.",
+        "range": [
+          110000,
+          160000
+        ],
+        "source": "Derived: lot-share math on ~$500k\u2013$600k attached product; MU-5/MU-6 split is judgment, not a measured spread",
+        "unit": "USD per finished lot",
+        "value": 135000
+      },
+      "label": "MU-6 Mixed Use (Salt Lake City) \u2014 medium-density mixed-use"
+    },
+    "OS": {
+      "finished_lot_revenue": {
+        "confidence": "assumption",
+        "date": "2026-09-23",
+        "notes": "Model returns 0 revenue and the CLI warns. Pro forma will show costs only (negative profit) \u2014 intended, not an error.",
+        "source": "Policy: OS zoning does not permit private residential/industrial subdivision",
+        "unit": "USD per finished lot",
+        "value": 0
+      },
+      "label": "OS Open Space (Salt Lake City) \u2014 not privately subdividable"
+    },
+    "PL": {
+      "finished_lot_revenue": {
+        "confidence": "assumption",
+        "date": "2026-09-23",
+        "notes": "Model returns 0 revenue and the CLI warns. Pro forma will show costs only (negative profit) \u2014 intended, not an error.",
+        "source": "Policy: PL zoning does not permit private residential/industrial subdivision",
+        "unit": "USD per finished lot",
+        "value": 0
+      },
+      "label": "PL Public Lands (Salt Lake City) \u2014 not privately subdividable"
+    }
+  },
+  "land_value_per_acre": {
+    "_note": "Informational for MarketGraph (raw land acquisition benchmarking). NOT mapped to finance keys by --economics.",
+    "east_bench_residential": {
+      "confidence": "assumption",
+      "date": "2026-09-23",
+      "notes": "No live assessor pull performed \u2014 VERIFY.",
+      "range": [
+        300000,
+        600000
+      ],
+      "source": "Salt Lake County Assessor land-valuation patterns + brokerage market coverage as known prior to 2026-09-23; constrained-supply East Bench premium",
+      "unit": "USD per acre, vacant developable residential land",
+      "value": 450000
+    },
+    "industrial": {
+      "confidence": "assumption",
+      "date": "2026-09-23",
+      "notes": "EXPLICIT DATA GAP for SLC proper \u2014 VERIFY against industrial brokerage reports.",
+      "range": [
+        350000,
+        600000
+      ],
+      "source": "Regional industrial land benchmarks as known prior to 2026-09-23",
+      "unit": "USD per acre, vacant industrial land",
+      "value": 475000
+    },
+    "valley_floor_residential": {
+      "confidence": "assumption",
+      "date": "2026-09-23",
+      "notes": "No live assessor pull performed \u2014 VERIFY.",
+      "range": [
+        150000,
+        300000
+      ],
+      "source": "Salt Lake County Assessor land-valuation patterns as known prior to 2026-09-23",
+      "unit": "USD per acre, vacant developable residential land",
+      "value": 220000
+    }
+  },
+  "market_context": {
+    "finished_lot_share_of_home_price": {
+      "confidence": "sourced",
+      "date": "2026-09-23",
+      "notes": "National figure; Utah / Wasatch Front runs above national average on land cost. Used only as a sanity bound for district derivations. CORRECTED 2026-09-24: prior value 0.21 / range [0.18,0.25] misattributed the 2022 survey figure (17.8%) to the 2024 survey; Caddy's 0.137 confirmed against the live survey table and adopted. Prior range withdrawn; a Wasatch-Front local range is pending broker/local data.",
+      "range": null,
+      "source": "NAHB Cost of Construction Survey (2024 data, published Jan 2025): finished lot = 13.7% of average new-home sales price ($91,057 of $665,298). Eye on Housing, \"Cost of Constructing a Home in 2024\", http://eyeonhousing.org/2025/01/cost-of-constructing-a-home-in-2024/",
+      "unit": "fraction",
+      "value": 0.137
+    },
+    "slc_metro_median_home_price": {
+      "confidence": "sourced",
+      "date": "2026-09-23",
+      "notes": "Anchor for lot-share math below. Publications known prior to build; NOT live-retrieved 2026-09-23.",
+      "range": [
+        520000,
+        570000
+      ],
+      "source": "Kem C. Gardner Policy Institute (Univ. of Utah), State of the State's Housing Market reports 2023\u20132024; Zillow ZHVI Salt Lake City metro 2024\u20132025",
+      "unit": "USD",
+      "value": 545000
+    }
+  },
+  "road_cost_per_lf": {
+    "confidence": "assumption",
+    "date": "2026-09-23",
+    "notes": "Covers asphalt, curb/gutter, sidewalk, and utility mains in ROW. Excludes offsite upsizing and landscaping. VERIFY against SLC Engineering / UDOT bid tabs.",
+    "range": [
+      425,
+      650
+    ],
+    "source": "RSMeans-type 2024 unit-cost buildup, synthesized here: 28-ft asphalt section ~$140/lf + curb & gutter both sides ~$65/lf + 5-ft sidewalks both sides ~$110/lf + wet/dry utilities (water, sewer, storm, joint trench) ~$160\u2013$210/lf; 2025\u20132026 Utah inflation applied by judgment. No live bid tab pulled.",
+    "unit": "USD per linear foot of residential street, full improvements",
+    "value": 525
+  },
+  "soft_costs": {
+    "fixed_planning_value": {
+      "confidence": "assumption",
+      "date": "2026-09-23",
+      "notes": "This is what --economics maps to soft_costs_fixed. Replace with pct-of-hard computation in MarketGraph v2.",
+      "range": [
+        100000,
+        200000
+      ],
+      "source": "\u224820% of a ~$750k reference hard-cost subdivision; judgment",
+      "unit": "USD per project (planning placeholder)",
+      "value": 150000
+    },
+    "pct_of_hard_costs": {
+      "confidence": "assumption",
+      "date": "2026-09-23",
+      "notes": "Carried for MarketGraph v2, which should compute soft costs dynamically from hard costs. The finance mapping below uses the fixed planning value instead.",
+      "range": [
+        0.15,
+        0.25
+      ],
+      "source": "Industry norms: civil design 8\u201312% of hard costs + entitlement/platting/permitting & impact fees 5\u20138% + developer overhead 3\u20135%",
+      "unit": "fraction of hard (infra) costs",
+      "value": 0.2
+    }
+  }
+}

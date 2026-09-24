@@ -1,0 +1,13 @@
+{
+  "_note": "PROVISIONAL - placeholder zoning for pipeline demo only. NOT verified against Salt Lake City ordinances.",
+  "min_lot_area_sqft": 2500,
+  "min_frontage_ft": 25,
+  "min_lot_width_ft": 25,
+  "max_lot_depth_ft": 140,
+  "setback_front_ft": 10,
+  "setback_side_ft": 4,
+  "setback_rear_ft": 10,
+  "max_lot_coverage": 0.6,
+  "road_width_ft": 24,
+  "zone_label": "SLC multi-family infill (PROVISIONAL demo)"
+}

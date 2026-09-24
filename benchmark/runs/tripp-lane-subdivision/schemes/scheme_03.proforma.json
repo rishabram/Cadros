@@ -8,12 +8,12 @@
     "road_length_ft": 407.7,
     "source": "Placeholder assumptions for demo pro forma. Override per project; MarketGraph (\u00a74) will supply these from market evidence."
   },
-  "lot_count": 7,
-  "revenue": 665000.0,
+  "lot_count": 8,
+  "revenue": 760000.0,
   "infra_cost": 203850.0,
   "soft_costs": 120000.0,
   "contingency": 32385.0,
   "total_cost": 356235.0,
-  "profit": 308765.0,
-  "margin": 0.4643
+  "profit": 403765.0,
+  "margin": 0.5313
 }

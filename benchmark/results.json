@@ -23,40 +23,40 @@
     },
     {
       "approved_lots": 12,
-      "neron_top_ranked_lots": 9,
+      "neron_top_ranked_lots": 10,
       "plat_id": "tripp-lane-subdivision",
-      "relative_error": 0.25,
+      "relative_error": 0.1667,
       "schemes": [
         {
-          "lots": 9,
+          "lots": 10,
           "scheme_id": "scheme_00"
         },
         {
-          "lots": 8,
+          "lots": 9,
           "scheme_id": "scheme_01"
         },
         {
+          "lots": 8,
+          "scheme_id": "scheme_03"
+        },
+        {
           "lots": 7,
+          "scheme_id": "scheme_05"
+        },
+        {
+          "lots": 9,
           "scheme_id": "scheme_02"
         },
         {
           "lots": 7,
-          "scheme_id": "scheme_03"
-        },
-        {
-          "lots": 6,
-          "scheme_id": "scheme_05"
-        },
-        {
-          "lots": 6,
           "scheme_id": "scheme_06"
         },
         {
-          "lots": 7,
+          "lots": 8,
           "scheme_id": "scheme_04"
         },
         {
-          "lots": 6,
+          "lots": 7,
           "scheme_id": "scheme_07"
         }
       ],
@@ -82,36 +82,54 @@
         },
         {
           "lots": 73,
-          "scheme_id": "scheme_01"
-        },
-        {
-          "lots": 64,
           "scheme_id": "scheme_02"
         },
         {
-          "lots": 62,
+          "lots": 74,
+          "scheme_id": "scheme_01"
+        },
+        {
+          "lots": 66,
           "scheme_id": "scheme_03"
         },
         {
-          "lots": 60,
+          "lots": 65,
           "scheme_id": "scheme_04"
         },
         {
-          "lots": 59,
+          "lots": 64,
           "scheme_id": "scheme_05"
         },
         {
-          "lots": 57,
+          "lots": 62,
           "scheme_id": "scheme_06"
         },
         {
-          "lots": 49,
+          "lots": 62,
           "scheme_id": "scheme_07"
         }
       ],
       "status": "scored",
       "within_15pct": false,
       "zoning_source": "South Jordan PC staff report 2024-08-13 (PLPP202400077; https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e72fea9797d942dea406cf9a66df2c8f/ITEM-Attachment-001-db29936d323c4d84ac6cc6e58e7c07b1.pdf, HTTP 200 verified 2026-09-24) with attached adopted Design Guidelines/Development Standards; South Jordan PC minutes 2024-08-13 (https://www.utah.gov/pmn/files/1160983.pdf); South Jordan Standard Drawings S-1. Per-dimension citations in min_lot_area_source / min_frontage_source / road_width_source."
+    },
+    {
+      "approved_lots": 91,
+      "plat_id": "daybreak-v11b-plat2",
+      "reason": "no reason recorded",
+      "status": "not_scored"
+    },
+    {
+      "approved_lots": null,
+      "plat_id": "daybreak-v12b-plat4",
+      "reason": "no reason recorded",
+      "status": "not_scored"
+    },
+    {
+      "approved_lots": 2,
+      "plat_id": "taylorsville-fields-sub",
+      "reason": "no reason recorded",
+      "status": "not_scored"
     }
   ],
   "scored_plats": 2,

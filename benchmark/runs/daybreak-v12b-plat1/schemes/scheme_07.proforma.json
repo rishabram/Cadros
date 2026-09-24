@@ -5,15 +5,15 @@
     "road_cost_per_lf": 500.0,
     "soft_costs_fixed": 120000.0,
     "contingency_pct": 0.1,
-    "road_length_ft": 801.7,
+    "road_length_ft": 1359.5,
     "source": "Placeholder assumptions for demo pro forma. Override per project; MarketGraph (\u00a74) will supply these from market evidence."
   },
-  "lot_count": 49,
-  "revenue": 4655000.0,
-  "infra_cost": 400850.0,
+  "lot_count": 62,
+  "revenue": 5890000.0,
+  "infra_cost": 679750.0,
   "soft_costs": 120000.0,
-  "contingency": 52085.0,
-  "total_cost": 572935.0,
-  "profit": 4082065.0,
-  "margin": 0.8769
+  "contingency": 79975.0,
+  "total_cost": 879725.0,
+  "profit": 5010275.0,
+  "margin": 0.8506
 }

@@ -4,24 +4,35 @@ Build plan §5/§6: LLMs may propose operations, but this engine owns exact
 coordinates and topology. There is intentionally no model call anywhere
 in this module.
 
-Strategy (scaffold v0, single spine-road subdivision class):
-  1. Rotate the parcel into a local frame at the candidate road angle.
-  2. Cut a road corridor (band) through the parcel at a fractional offset.
-  3. Subdivide the developable area on each side of the road into lots by
-     slicing vertical strips; each strip's frontage is measured along the
-     road edge and its area is the strip clipped to the parcel.
-  4. Filter strips against min area / min frontage; rotate back to the
-     parcel frame.
+Strategy (scaffold v0, two subdivision classes):
+  spine_road:
+    1. Rotate the parcel into a local frame at the candidate road angle.
+    2. Cut a road corridor (band) through the parcel at a fractional offset.
+    3. Subdivide the developable area on each side of the road into lots by
+       slicing vertical strips; each strip's frontage is measured along the
+       road edge and its area is the strip clipped to the parcel.
+    4. Filter strips against min area / min frontage; rotate back to the
+       parcel frame.
+  culdesac (narrow-parcel / bulb strategy — Tripp Lane GEOMETRY fix):
+    1. A stem corridor runs from the parcel edge to a circular bulb
+       (turnaround); the bulb radius defaults to the citable 50-ft
+       turnaround ROW radius.
+    2. Module bands tile along both sides of the stem, stopping short of
+       the bulb.
+    3. Wedge-shaped lots ring the bulb (frontage = bulb arc); the stem
+       connection sector is excluded.
+    4. Same area/frontage filters; rotate back to the parcel frame.
 
 Varying (angle, road offset, lot module width) yields materially different
 schemes: different lot counts, road lengths, and orientations.
 """
 from __future__ import annotations
 
+import math
 from typing import Dict, List, Optional, Tuple
 
 from shapely.affinity import rotate
-from shapely.geometry import LineString, MultiPolygon, Polygon, box
+from shapely.geometry import LineString, MultiPolygon, Point, Polygon, box
 from shapely.ops import unary_union
 
 from .schema import Lot, Road, Scheme, fingerprint_geometry
@@ -72,6 +83,227 @@ def _frontage_along_road(lot_poly: Polygon, edge_line: LineString) -> float:
     if inter.is_empty:
         return 0.0
     return float(inter.length)
+
+
+def _annular_sector(
+    cx: float, cy: float, r_in: float, r_out: float,
+    t1: float, t2: float, n: int = 32,
+) -> Polygon:
+    """Polygonal annular sector (wedge) spanning angles [t1, t2].
+
+    r_in is deliberately allowed to be smaller than a bulb radius so the
+    wedge overlaps the bulb disk; after the road is subtracted the lot's
+    inner edge is exactly the bulb boundary (clean boolean, no slivers).
+    """
+    pts = []
+    for k in range(n + 1):
+        a = t1 + (t2 - t1) * k / n
+        pts.append((cx + r_out * math.cos(a), cy + r_out * math.sin(a)))
+    for k in range(n + 1):
+        a = t2 - (t2 - t1) * k / n
+        pts.append((cx + r_in * math.cos(a), cy + r_in * math.sin(a)))
+    return Polygon(pts)
+
+
+# Cul-de-sac turnaround ROW radius (ft). Murray Code §16.16.180 codifies the
+# 50-ft turnaround radius; it is the citable default for the bulb strategy.
+CULDESAC_BULB_RADIUS_FT = 50.0
+
+
+def _build_culdesac_scheme_with_reason(
+    parcel_poly: Polygon,
+    zoning: Dict,
+    *,
+    scheme_id: str,
+    parcel_id: str,
+    angle_deg: float,
+    stem_offset_frac: float,
+    bulb_frac: float,
+    bulb_radius_ft: float,
+    lot_module_ft: float,
+) -> Tuple[Optional[Scheme], str]:
+    """Build one cul-de-sac scheme: a stem road terminating in a bulb.
+
+    Strategy (addresses the Tripp Lane GEOMETRY miss — accuracy_taxonomy.md):
+    narrow parcels where a through spine road wastes the wide end. A stem
+    corridor runs from the parcel edge to a circular bulb; lots tile along
+    the stem on both sides and wedge-shaped lots ring the bulb (their
+    frontage is the bulb arc). Deterministic; same inputs → same scheme.
+
+    Returns (scheme_or_None, reason_code) with the same reason vocabulary
+    as _build_scheme_with_reason.
+    """
+    min_area = float(zoning["min_lot_area_sqft"])
+    min_frontage = float(zoning["min_frontage_ft"])
+    road_width = float(zoning["road_width_ft"])
+    tol = 0.98  # allow 2% numerical slack on area/frontage
+
+    centroid = parcel_poly.centroid
+    local = rotate(parcel_poly, -angle_deg, origin=centroid, use_radians=False)
+    minx, miny, maxx, maxy = local.bounds
+    if maxx - minx < 2 * lot_module_ft or maxy - miny < road_width * 2:
+        return None, REASON_PARCEL_TOO_SMALL  # parcel too small for this configuration
+
+    stem_x = minx + stem_offset_frac * (maxx - minx)
+    bulb_cy = miny + bulb_frac * (maxy - miny)
+    bulb = Point(stem_x, bulb_cy).buffer(bulb_radius_ft, resolution=96)
+    stem = box(stem_x - road_width / 2, miny - EXTEND,
+               stem_x + road_width / 2, bulb_cy)
+    road_poly = stem.union(bulb).intersection(local)
+    road_poly = _largest_polygon(road_poly)
+    if road_poly is None or road_poly.area < 1.0:
+        return None, REASON_ROAD_MISSED
+
+    develop = local.difference(road_poly)
+    lots: List[Lot] = []
+    lot_idx = 0
+
+    def _add_lot(lot_poly: Polygon, frontage: float) -> Optional[Polygon]:
+        """Validate, repair, and record one lot. Returns the final local
+        polygon, or None if the lot was rejected."""
+        nonlocal lot_idx
+        if lot_poly.area < min_area * tol or frontage < min_frontage * tol:
+            return None
+        # Guard against boolean-op slivers: repair validity before rotating.
+        # buffer(0) collapses self-touches; the area change is negligible
+        # (observed +0.2 sqft on an 8,478 sqft lot) and the area gate below
+        # re-verifies the repaired polygon.
+        if not lot_poly.is_valid:
+            lot_poly = lot_poly.buffer(0)
+            lot_poly = _largest_polygon(lot_poly)
+            if lot_poly is None or lot_poly.area < min_area * tol:
+                return None
+        world = rotate(lot_poly, angle_deg, origin=centroid, use_radians=False)
+        world_coords = [[round(px, 2), round(py, 2)] for px, py in world.exterior.coords]
+        world_poly = Polygon(world_coords)
+        if not world_poly.is_valid:
+            # Rounding after rotation can re-break validity (collapsed
+            # vertices); repair and re-extract. Area change is negligible.
+            world_poly = world_poly.buffer(0)
+            world_poly = _largest_polygon(world_poly)
+            if world_poly is None:
+                return None
+            world_coords = [[round(px, 2), round(py, 2)] for px, py in world_poly.exterior.coords]
+            world_poly = Polygon(world_coords)
+            if not world_poly.is_valid:
+                return None
+        if world_poly.area < min_area * tol:
+            return None
+        # Clip to the parent: rotation+rounding can push a vertex a
+        # hundredth of a foot outside (observed <=0.33 sqft). Clipping
+        # keeps "lots contained in parent" exact, not approximate. The
+        # clipped coords keep full precision (no re-rounding) so the clip
+        # boundary is not re-broken by rounding.
+        world_poly = world_poly.intersection(parcel_poly)
+        world_poly = _largest_polygon(world_poly)
+        if world_poly is None or world_poly.area < min_area * tol:
+            return None
+        world_coords = [[px, py] for px, py in world_poly.exterior.coords]
+        lots.append(
+            Lot(
+                lot_id=f"{scheme_id}-L{lot_idx:02d}",
+                polygon=world_coords,
+                area_sqft=round(float(world_poly.area), 1),
+                frontage_ft=round(float(frontage), 1),
+            )
+        )
+        lot_idx += 1
+        return lot_poly
+
+    # --- stem lots: module bands along both sides of the stem, stopping
+    # --- short of the bulb (the bulb's wedge lots own that ground).
+    stem_top = bulb_cy - bulb_radius_ft
+    stem_lots: List[Polygon] = []
+    for side, x_lo, x_hi in (
+        ("west", minx, stem_x - road_width / 2),
+        ("east", stem_x + road_width / 2, maxx),
+    ):
+        edge_x = stem_x - road_width / 2 if side == "west" else stem_x + road_width / 2
+        edge_line = LineString([(edge_x, miny - EXTEND), (edge_x, stem_top)])
+        y = miny
+        while y < stem_top - 1e-6:
+            strip = box(x_lo, y, x_hi, y + lot_module_ft)
+            lot_poly = _largest_polygon(develop.intersection(strip))
+            y += lot_module_ft
+            if lot_poly is None:
+                continue
+            placed = _add_lot(lot_poly, _frontage_along_road(lot_poly, edge_line))
+            if placed is not None:
+                stem_lots.append(placed)
+
+    # Carve the placed stem lots out before the wedges so bulb lots can
+    # never double-count ground (wedges dip below stem_top at their edges).
+    if stem_lots:
+        develop = develop.difference(unary_union(stem_lots))
+
+    # --- bulb lots: wedge sectors ringing the bulb, excluding the sector
+    # --- where the stem connects (straight down from the bulb center).
+    half_excl = math.atan((road_width / 2) / bulb_radius_ft)
+    start = -math.pi / 2 + half_excl
+    end = 3 * math.pi / 2 - half_excl
+    dtheta = lot_module_ft / bulb_radius_ft  # arc frontage ~= lot module
+    bulb_circle = bulb.exterior
+    t = start
+    while t < end - 1e-9:
+        t2 = min(t + dtheta, end)
+        wedge = _annular_sector(
+            stem_x, bulb_cy,
+            bulb_radius_ft - 2.0, bulb_radius_ft + 300.0,
+            t, t2,
+        )
+        lot_poly = _largest_polygon(develop.intersection(wedge))
+        t = t2
+        if lot_poly is None:
+            continue
+        inter = lot_poly.boundary.intersection(bulb_circle)
+        frontage = 0.0 if inter.is_empty else float(inter.length)
+        _add_lot(lot_poly, frontage)
+
+    if not lots:
+        return None, REASON_NO_CONFORMING_LOTS
+
+    # Road centerlines: stem segment + bulb loop (closed). Length counts
+    # both for infra costing; DXF iterates roads.
+    stem_cl = LineString([(stem_x, miny), (stem_x, bulb_cy)])
+    stem_cl = stem_cl.intersection(local)
+    if stem_cl.is_empty:
+        return None, REASON_NO_CENTERLINE
+    if stem_cl.geom_type == "MultiLineString":
+        stem_cl = max(stem_cl.geoms, key=lambda g: g.length)
+    stem_world = rotate(stem_cl, angle_deg, origin=centroid, use_radians=False)
+    bulb_world = rotate(bulb_circle, angle_deg, origin=centroid, use_radians=False)
+    roads = [
+        Road(
+            road_id=f"{scheme_id}-R0",
+            centerline=[[round(px, 2), round(py, 2)] for px, py in stem_world.coords],
+            width_ft=road_width,
+            length_ft=round(float(stem_cl.length), 1),
+        ),
+        Road(
+            road_id=f"{scheme_id}-R1",
+            centerline=[[round(px, 2), round(py, 2)] for px, py in bulb_world.coords],
+            width_ft=road_width,
+            length_ft=round(float(bulb_circle.length), 1),
+        ),
+    ]
+
+    scheme = Scheme(
+        scheme_id=scheme_id,
+        parcel_id=parcel_id,
+        lots=lots,
+        roads=roads,
+        params={
+            "strategy": "culdesac",
+            "angle_deg": angle_deg,
+            "stem_offset_frac": stem_offset_frac,
+            "bulb_frac": bulb_frac,
+            "bulb_radius_ft": bulb_radius_ft,
+            "lot_module_ft": lot_module_ft,
+            "road_width_ft": road_width,
+        },
+    )
+    scheme.fingerprint = fingerprint_geometry(scheme)
+    return scheme, REASON_OK
 
 
 def build_scheme(
@@ -209,20 +441,40 @@ def _build_scheme_with_reason(
 
 
 def candidate_params(zoning: Dict) -> List[Dict]:
-    """Seed parameter grid — the 'search' in constrained design-space search."""
+    """Seed parameter grid — the 'search' in constrained design-space search.
+
+    Two strategies: the historic spine-road grid (unchanged, 24 configs) and
+    the cul-de-sac grid (stem + bulb; addresses narrow-parcel under-yield).
+    Every config carries a "strategy" key; the builder dispatches on it.
+    """
     min_frontage = float(zoning["min_frontage_ft"])
     grid = []
     for angle in (0.0, 30.0, 60.0, 90.0):
         for offset in (0.35, 0.5, 0.65):
             for module in (min_frontage, round(min_frontage * 1.25, 1)):
                 grid.append(
-                    {"angle_deg": angle, "road_offset_frac": offset, "lot_module_ft": module}
+                    {"strategy": "spine_road", "angle_deg": angle,
+                     "road_offset_frac": offset, "lot_module_ft": module}
                 )
+    for angle in (0.0, 90.0):
+        for stem_offset in (0.35, 0.45, 0.55, 0.65):
+            for bulb_frac in (0.7, 0.8, 0.9):
+                for mult in (1.0, 1.125, 1.25):
+                    grid.append(
+                        {"strategy": "culdesac", "angle_deg": angle,
+                         "stem_offset_frac": stem_offset, "bulb_frac": bulb_frac,
+                         "bulb_radius_ft": CULDESAC_BULB_RADIUS_FT,
+                         "lot_module_ft": round(min_frontage * mult, 1)}
+                    )
     return grid
 
 
-def _signature(scheme: Scheme) -> Tuple[int, int]:
-    return (len(scheme.lots), int(round(scheme.params["angle_deg"] / 30.0)))
+def _signature(scheme: Scheme) -> Tuple[int, int, str]:
+    return (
+        len(scheme.lots),
+        int(round(scheme.params["angle_deg"] / 30.0)),
+        str(scheme.params.get("strategy", "spine_road")),
+    )
 
 
 def _generate_with_reasons(
@@ -245,9 +497,18 @@ def _generate_with_reasons(
     reasons: Counter = Counter()
     built: List[Scheme] = []
     for i, p in enumerate(candidate_params(zoning)):
-        s, reason = _build_scheme_with_reason(
-            parcel_poly, zoning, scheme_id=f"scheme_{i:02d}", parcel_id=parcel_id, **p
-        )
+        params = dict(p)
+        strategy = params.pop("strategy", "spine_road")
+        if strategy == "culdesac":
+            s, reason = _build_culdesac_scheme_with_reason(
+                parcel_poly, zoning, scheme_id=f"scheme_{i:02d}",
+                parcel_id=parcel_id, **params
+            )
+        else:
+            s, reason = _build_scheme_with_reason(
+                parcel_poly, zoning, scheme_id=f"scheme_{i:02d}",
+                parcel_id=parcel_id, **params
+            )
         if s is None:
             reasons[reason] += 1
             continue
@@ -350,7 +611,7 @@ def plan_generation(
         parcel_poly, zoning, parcel_id, max_schemes, min_schemes, min_lots_primary
     )
     diagnostic: Dict = {
-        "strategy": "spine_road",
+        "strategy": "spine_road+culdesac",
         "candidates_evaluated": len(candidate_params(zoning)),
         "size_threshold_ratio": SIZE_THRESHOLD_RATIO,
         "area_min_lot_ratio": round(area_ratio, 2),

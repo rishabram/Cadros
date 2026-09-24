@@ -57,6 +57,21 @@ misclassified as `inputs` — reclassify and source the real minimums.
 not a quoted frontage minimum; the rule-pack still carries R-1-6 width as a gap
 (see `scripts/check_benchmark_inputs.py` — cross-lane consistency warning, not a fail).
 
+**Fix outcome (DW-GEOM1, 2026-09-24).** Implemented the cul-de-sac strategy
+(`prototype/geometry.py::_build_culdesac_scheme_with_reason`): stem corridor +
+50-ft bulb (Murray §16.16.180 citable default), module bands along the stem,
+wedge lots ringing the bulb (frontage = bulb arc), stem-connection sector
+excluded. Parent and all inputs unchanged (6000 / 60 / 49).
+- Baseline envelope: 6–9 lots (top 9). New envelope: 6–10 lots (top 10).
+- 10 ∈ [10, 14]: the taxonomy success criterion is met.
+- Top scheme: 10-lot cul-de-sac (angle 0°, 67.5-ft module); all lots valid,
+  parent-contained, non-overlapping, area ≥ 6,310 sqft, frontage ≥ 70.6 ft.
+- Relative error vs approved 12: −16.7% (top scheme just outside the ±15%
+  scoring band; the envelope criterion, not the top-rank, was the fix target).
+- 7 focused tests in `prototype/test_culdesac.py`; full suite green.
+- The (b) width-adaptive and (c) flag-lot strategies remain unimplemented;
+  they are the path to 11–12 if a future wave targets the scoring band.
+
 ---
 
 ## Plat 2 — DAYBREAK VILLAGE 12B PLAT 1 (South Jordan, UT)

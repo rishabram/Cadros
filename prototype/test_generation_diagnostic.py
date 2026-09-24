@@ -131,7 +131,7 @@ class TestPipelineDiagnostic(unittest.TestCase):
         self.assertEqual(report["status"], "no_schemes_generated")
         gen = report["scheme_generation"]
         self.assertEqual(gen["verdict"], "no_schemes__below_size_threshold")
-        self.assertEqual(gen["strategy"], "spine_road")
+        self.assertEqual(gen["strategy"], "spine_road+culdesac")
         self.assertIn("top_blocking_reason", gen)
 
     def test_report_carries_applicable_counts(self):

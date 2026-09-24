@@ -779,13 +779,19 @@ def _split_polygon_by_axis(poly: Polygon, axis: Tuple[float, float],
         # Keep only polygonal parts.
         if inter.is_empty:
             continue
+        polys = []
         if inter.geom_type == "Polygon":
-            strips.append(inter)
+            polys = [inter]
         elif inter.geom_type == "MultiPolygon":
-            # Keep the largest; small slivers are noise.
-            polys = sorted(inter.geoms, key=lambda g: g.area, reverse=True)
-            if polys and polys[0].area > 1.0:
-                strips.append(polys[0])
+            polys = list(inter.geoms)
+        elif inter.geom_type == "GeometryCollection":
+            # Extract polygons (slab-boundary coincidences can yield lines).
+            polys = [g for g in inter.geoms if g.geom_type == "Polygon"]
+        # Keep the largest; small slivers are noise.
+        polys = sorted([p for p in polys if p.area > 1.0],
+                       key=lambda g: g.area, reverse=True)
+        if polys:
+            strips.append(polys[0])
     return strips
 
 

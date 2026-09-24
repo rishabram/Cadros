@@ -1,7 +1,7 @@
 # Approved-plat benchmark results
 
 Tolerance: +/-15%. Aim: >=70% of scored plats within tolerance.
-Scored plats: 1. Within tolerance: 0.
+Scored plats: 2. Within tolerance: 0.
 
 | plat_id | approved | neron (top-ranked) | rel err | within 15% | zoning source |
 |---|---|---|---|---|---|
@@ -9,6 +9,8 @@ Scored plats: 1. Within tolerance: 0.
 | village-at-the-boulders-ph3 | None | — | — | not scored: Parent geometry now reconstructable (8.125-ac union, see parent_polygon_source). Still not scored: (1) approval-date zoning district unsourced - 2023 amendment records show a multi-family label rendered 'R-20-43' (herriman.primegov.com agenda 4360; utah.gov/pmn/files/1048543.pdf) but that is 2023, not 2018 approval-date, and the label may be extraction-garbled; (2) road_width_ft unknown - abstract identifies a PRIVATE road at 14850 S Trap Rock Way, so Herriman's public local-street standards (60 ft ROW/32 ft asphalt, 53 ft ROW/28 ft asphalt) cannot be assigned; (3) exact 2018 approved lot count uncertain - labels VB57-VB70 suggest ~13-14 original lots (9 surviving + 4 replatted by 2021 AMD; VB64 unaccounted in abstract rows). Townhome phase, not a greenfield single-family yield test; harness honesty contract requires all four zoning dims. | — |
 | tag-row-house | 3 | — | — | not scored: not scored: zoning.status set to unknown 2026-09-24 because min_frontage_ft and road_width_ft are unsourced for 2018 RMF-45 (the harness honesty contract requires all four dims for known). not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage — not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45. | — |
 | tripp-lane-subdivision | 12 | 9 | 25.0% | no | Murray PC minutes 2022-11-17 (preliminary 5-1; https://www.murray.utah.gov/Archive/ViewFile/Item/7396) and 2023-04-06 (final 6-0; https://www.utah.gov/pmn/files/991087.pdf), both accessed 2026-09-24; Murray Code Sec. 16.16.180 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269, accessed 2026-09-24). Per-dimension citations in min_lot_area_source / min_frontage_source / road_width_source. |
+| meadows-of-murray | 26 | — | — | not scored: min_frontage_ft unsourceable: approval-date R-N-B twinhome standards (Sec. 17.140.040 as amended 2020-03-17) state 5,000 sqft minimum lot area and setbacks (front 25', rear 25', interior common side 0', interior side 8', corner side 20') but NO minimum lot width. Staff report header 'Lot Area, Width, Setbacks, and Height Standards' lists no width value. Per ZONING_POLICY, width proxy requires code-stated width minimum; none exists. Frontage is a genuine gap, not a research failure. Harness requires min_frontage_ft for scored plats. | — |
+| daybreak-v12b-plat1 | 61 | 76 | 24.6% | no | South Jordan PC staff report 2024-08-13 (PLPP202400077; https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e72fea9797d942dea406cf9a66df2c8f/ITEM-Attachment-001-db29936d323c4d84ac6cc6e58e7c07b1.pdf, HTTP 200 verified 2026-09-24) with attached adopted Design Guidelines/Development Standards; South Jordan PC minutes 2024-08-13 (https://www.utah.gov/pmn/files/1160983.pdf); South Jordan Standard Drawings S-1. Per-dimension citations in min_lot_area_source / min_frontage_source / road_width_source. |
 
 ## GreenRush swing (2026-09-24, greenfield-only follow-up)
 
@@ -139,3 +141,18 @@ coordinates.
 **Result.** 24 candidates evaluated, 8 schemes kept; top scheme: N–S spine road (the real orientation), 75-ft module, 9 conforming lots. The real plat fit 12 — human design used the cul-de-sac bulb and adapted widths, which the pipeline's rigid grid cannot replicate. Sensitivity check: road_width 25 ft → 11 lots (inside tolerance), but 25 ft is the pavement, not the dedicated corridor, so 49 ft stands; the input was chosen on principle, not tuned to the score.
 
 **Reading.** The benchmark now has a real, scored, failing comparison. The product under-yields on narrow cul-de-sac sites with human-optimized lot arrangements — a genuine product gap to close, not a data problem. Next: add more scored plats (target ~10) before drawing conclusions about the tolerance target.
+
+## GreenRush-8 (2026-09-24) — Cove at Silver Sky: confirmed built, document-blocked
+
+**Scored set remains 1/16 (Tripp Lane only).** GreenRush-8 expanded beyond Murray per the GR7 carry-forward. Best lead was Cove at Silver Sky (Herriman S2023-113, R-1-10, 11.75 ac @ ~12754 S 6200 W):
+
+- **Confirmed built:** 2025–2026 MLS new-construction listings name "COVE AT SILVER SKY" (Silver Sky Dr / Harlow Ann Way, lots 0.21–0.25 ac). The final plat was administratively approved by Herriman Engineering (no PC/Council action — per Herriman process) and recorded ~2024.
+- **Geometry leg executed:** 34 current child parcels union to ~11.65 ac vs the official 11.75 ac (0.9% diff) — but parcel-ID blocks differ across clusters (multiple phases/recordings likely) and the open UGRC service carries no subdivision names, so membership is NOT provable to benchmark standard. No parent GeoJSON built (GR5 Swaner lesson).
+- **Binding gaps (document, not research):** approved lot count has no official source (the 3-20-24 staff report PDF was unreachable — browser outage this turn); plat ROW unassigned between Herriman RD-01B (32 ft) and RD-01C (28 ft); R-1-10 Tier-2 params await context confirmation.
+- Broadbent (Herriman) re-check: still no final approval. Riverton's recent docket is infill-scale.
+
+**Next unlock (concrete):** fetch the 3-20-24 Item 4.2 staff report (Herriman S3 bucket, URL in the 2024-03-20 PC agenda) or the 2024 recorded plat from the SLCo Recorder. Either names lot count + ROW + zone and unlocks the second scored plat. Cove at Silver Sky is the prime target for the next lane with working browser access.
+
+## GreenRush-9 (2026-09-24) — Cove document gate: failed, firmly blocked
+
+**Scored set remains 1/16 (Tripp Lane only).** The exact staff-report URL was recovered from the PMN agenda PDF (`.../3-20-24/Item+4.2++Staff+Report.pdf`) but the S3 bucket returns 403 AccessDenied on all objects — a policy lock, not a bad URL. No Wayback snapshot; the 2024-03-20 PC meeting predates Herriman's PrimeGov usage; no web mirror; no recorded-plat result in search. Pivot attempt (Hollys Pond Ph 2, S2024-102) also document-blocked — the official agenda's S3 links point to a nonexistent bucket. The March 2024 Herriman PC staff reports are unrecoverable through public channels; the remaining paths (recorder visit, GRAMA) need a human. Next lanes: stop retrying Cove recovery; gate on a *reachable* staff report or recorded plat (PrimeGov item attachments, 2024–2026 meetings) before any geometry work.

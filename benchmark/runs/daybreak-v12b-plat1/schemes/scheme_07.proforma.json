@@ -1,0 +1,19 @@
+{
+  "scheme_id": "scheme_07",
+  "assumptions": {
+    "sale_price_per_lot": 95000.0,
+    "road_cost_per_lf": 500.0,
+    "soft_costs_fixed": 120000.0,
+    "contingency_pct": 0.1,
+    "road_length_ft": 801.7,
+    "source": "Placeholder assumptions for demo pro forma. Override per project; MarketGraph (\u00a74) will supply these from market evidence."
+  },
+  "lot_count": 49,
+  "revenue": 4655000.0,
+  "infra_cost": 400850.0,
+  "soft_costs": 120000.0,
+  "contingency": 52085.0,
+  "total_cost": 572935.0,
+  "profit": 4082065.0,
+  "margin": 0.8769
+}

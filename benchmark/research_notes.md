@@ -644,3 +644,28 @@ name parent parcel IDs, plat ROW widths, and lot layout in one shot.
 5. Mardam Ranch — GRAMA the staff report.
 
 **P-C zone note:** all three Tier-1 candidates are P-C (Planned Community). Lot dimensions come from the adopted village design guidelines (in the Plat 1 packet), NOT the base city code. That is legitimate — the guidelines are the controlling dimensional source — but the scoring lane must cite them, not Title 17.
+
+## GreenRush-11 — Second scored plat: Daybreak Village 12B Plat 1 (2026-09-24)
+
+**Course correction applied:** parent brief said Plat 3; GR10's full report (arrived after) recommended Plat 1 first (its packet includes the adopted Design Guidelines = the P-C dimensional source for the Village 12B series). Retargeted to Plat 1.
+
+**Document legs (all green).**
+- Staff report packet: HTTP 200 re-verified 2026-09-24 (1.4 MB PDF). URL: https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e72fea9797d942dea406cf9a66df2c8f/ITEM-Attachment-001-db29936d323c4d84ac6cc6e58e7c07b1.pdf
+- Approval: South Jordan PC minutes 2024-08-13, item H.1, File PLPP202400077 — "Motion passes 4-0, unanimous in favor" (https://www.utah.gov/pmn/files/1160983.pdf, fetched 2026-09-24). This is PRELIMINARY approval; final plat not confirmed recorded.
+- Staff report facts: 14.306 ac; 61 SF lots + 5 park lots; P-C zone; lots 2,671–10,867 sqft, avg 6,094; "Generally 7050 West 11350 South"; "The design guidelines, specific to this subdivision are attached for review."
+
+**Design Guidelines dimensional table (extracted via pdftotext, packet pp. 5–8).** Five products:
+- A. TOWNHOUSE: min 15' frontage/unit; min 50' depth; max 90% coverage
+- B. GREEN COURT/FLAG LOT: min 30' frontage (15' attached); min 50' depth; max 75% coverage
+- C. SMALL LOT: min 30', max 70' frontage; min 50' depth; max 70% coverage
+- D. STANDARD LOT: min 55', max 100' frontage; min 90' depth; max 55% coverage
+- E. LARGE LOT: min 65', max 120' frontage; min 90' depth; max 45% coverage
+- Plat-figure spot check (lots 101–125, packet sheets 2–3): areas 2,100–7,325 sqft — Small Lot / Green Court-Flag product present. Full-plat range to 10,867 sqft implies Standard/Large on other sheets: MIXED product.
+
+**Parent geometry.** UGRC/SLCo Parcels_SaltLake FeatureServer: parcel 26221030210000 (7167 W South Jordan Pkwy) — 14.253 ac geodesic vs 14.306 official (0.37%; PASSES 5% gate). Still current in UGRC (ParcelYear 2026): the pre-subdivision parent was NOT retired, i.e., final plat not yet parcelized. Direct parent — no child-union reconstruction needed. Saved as benchmark/samples/daybreak_v12b_plat1_parent.geojson (local feet, azimuthal equidistant about centroid).
+
+**Geometry-leg note (method lesson):** first attempted child-parcel hunting (envelope queries, street-name searches for Gipson/Ginger/Fayette lanes — no UGRC hits; Glass Hill Dr cluster found but belongs to a different subdivision). The direct-parent discovery (querying 10–20 ac parcels near the site) resolved it in one query. **Carry-forward: for preliminary-approval plats, check whether the parent parcel is still current in UGRC BEFORE attempting child-union reconstruction.**
+
+**Harness inputs:** min_frontage_ft=30 (Small Lot, quoted); min_lot_area_sqft=1500 (DERIVED 30'×50', documented); road_width_ft=28 (South Jordan S-1 residential). All in plats.json with per-dimension citations.
+
+**Result:** NERON top-ranked 76 vs 61 approved (24.6% over; outside ±15%). Envelope 49–76 brackets 61 (59/60/62 within tolerance); max-yield ranker picks 76. 0/2 within tolerance. See results_narrative.md for the product reading (over-yield on mixed-product P-C; ranking gap, not generation gap).

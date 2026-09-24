@@ -63,9 +63,58 @@
       "status": "scored",
       "within_15pct": false,
       "zoning_source": "Murray PC minutes 2022-11-17 (preliminary 5-1; https://www.murray.utah.gov/Archive/ViewFile/Item/7396) and 2023-04-06 (final 6-0; https://www.utah.gov/pmn/files/991087.pdf), both accessed 2026-09-24; Murray Code Sec. 16.16.180 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269, accessed 2026-09-24). Per-dimension citations in min_lot_area_source / min_frontage_source / road_width_source."
+    },
+    {
+      "approved_lots": 26,
+      "plat_id": "meadows-of-murray",
+      "reason": "min_frontage_ft unsourceable: approval-date R-N-B twinhome standards (Sec. 17.140.040 as amended 2020-03-17) state 5,000 sqft minimum lot area and setbacks (front 25', rear 25', interior common side 0', interior side 8', corner side 20') but NO minimum lot width. Staff report header 'Lot Area, Width, Setbacks, and Height Standards' lists no width value. Per ZONING_POLICY, width proxy requires code-stated width minimum; none exists. Frontage is a genuine gap, not a research failure. Harness requires min_frontage_ft for scored plats.",
+      "status": "not_scored"
+    },
+    {
+      "approved_lots": 61,
+      "neron_top_ranked_lots": 76,
+      "plat_id": "daybreak-v12b-plat1",
+      "relative_error": 0.2459,
+      "schemes": [
+        {
+          "lots": 76,
+          "scheme_id": "scheme_00"
+        },
+        {
+          "lots": 73,
+          "scheme_id": "scheme_01"
+        },
+        {
+          "lots": 64,
+          "scheme_id": "scheme_02"
+        },
+        {
+          "lots": 62,
+          "scheme_id": "scheme_03"
+        },
+        {
+          "lots": 60,
+          "scheme_id": "scheme_04"
+        },
+        {
+          "lots": 59,
+          "scheme_id": "scheme_05"
+        },
+        {
+          "lots": 57,
+          "scheme_id": "scheme_06"
+        },
+        {
+          "lots": 49,
+          "scheme_id": "scheme_07"
+        }
+      ],
+      "status": "scored",
+      "within_15pct": false,
+      "zoning_source": "South Jordan PC staff report 2024-08-13 (PLPP202400077; https://mccmeetingspublic.blob.core.usgovcloudapi.net/sojordanut-meet-e72fea9797d942dea406cf9a66df2c8f/ITEM-Attachment-001-db29936d323c4d84ac6cc6e58e7c07b1.pdf, HTTP 200 verified 2026-09-24) with attached adopted Design Guidelines/Development Standards; South Jordan PC minutes 2024-08-13 (https://www.utah.gov/pmn/files/1160983.pdf); South Jordan Standard Drawings S-1. Per-dimension citations in min_lot_area_source / min_frontage_source / road_width_source."
     }
   ],
-  "scored_plats": 1,
+  "scored_plats": 2,
   "tolerance": 0.15,
   "within_tolerance": 0
 }

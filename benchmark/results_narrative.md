@@ -142,3 +142,19 @@ coordinates.
 ## GreenRush-9 (2026-09-24) — Cove document gate: failed, firmly blocked
 
 **Scored set remains 1/16 (Tripp Lane only).** The exact staff-report URL was recovered from the PMN agenda PDF (`.../3-20-24/Item+4.2++Staff+Report.pdf`) but the S3 bucket returns 403 AccessDenied on all objects — a policy lock, not a bad URL. No Wayback snapshot; the 2024-03-20 PC meeting predates Herriman's PrimeGov usage; no web mirror; no recorded-plat result in search. Pivot attempt (Hollys Pond Ph 2, S2024-102) also document-blocked — the official agenda's S3 links point to a nonexistent bucket. The March 2024 Herriman PC staff reports are unrecoverable through public channels; the remaining paths (recorder visit, GRAMA) need a human. Next lanes: stop retrying Cove recovery; gate on a *reachable* staff report or recorded plat (PrimeGov item attachments, 2024–2026 meetings) before any geometry work.
+
+## GreenRush-11 (2026-09-24) — SECOND SCORED PLAT: Daybreak Village 12B Plat 1, South Jordan
+
+**Scored set now 2/17 (Tripp Lane + Daybreak V12B Plat 1). Pass rate 0/2 within ±15%.**
+
+**Candidate.** Daybreak Village 12B Plat 1, South Jordan (PLPP202400077), "Generally 7050 West 11350 South." Preliminary approval 2024-08-13, 4–0 (South Jordan PC minutes item H.1; https://www.utah.gov/pmn/files/1160983.pdf): 61 single-family lots + 5 park lots on 14.306 ac, P-C zone. Lot sizes 2,671–10,867 sqft, avg 6,094 (staff report). This is the first P-C (planned community) scored plat — dimensional control comes from the village-specific adopted Design Guidelines attached to the staff-report packet, not the base city code.
+
+**Inputs (all document-backed).**
+- Parent geometry: DIRECT parent parcel 26221030210000 from UGRC/SLCo Parcels_SaltLake FeatureServer — still current (preliminary approval only; final plat not yet parcelized as of 2026-09-24). Geodesic 14.253 ac vs official 14.306 ac = 0.37% difference — PASSES the 5% gate. No child-union reconstruction needed.
+- min_frontage_ft = 30: Design Guidelines SMALL LOT product, "Min. 30', Max. 70' lot frontage" (quoted). Small Lot is the binding most-permissive detached product present in the plat (approved lots down to 2,671 sqft; plat-figure lots 101–125 read 2,100–7,325 sqft).
+- min_lot_area_sqft = 1,500: DERIVED and documented as such — Small Lot states "Min. 30' lot frontage" and "Min. 50' lot depth" (guidelines state frontage/depth, not area); 30×50 = 1,500 sqft theoretical minimum compliant Small Lot. The designer built above the minimum (smallest approved 2,671 sqft); the pipeline estimates max yield under stated minimums.
+- road_width_ft = 28: South Jordan Standard Drawings S-1, "55-FOOT R.O.W. RESIDENTIAL — 28' OF ROAD SURFACE."
+
+**Result.** 8 schemes; top-ranked: **76 lots vs 61 approved = 24.6% over, outside ±15%.** Scheme envelope: 76/73/64/62/60/59/57/49. The envelope BRACKETS the approved 61 — schemes at 59, 60, 62 lots sit inside tolerance — but the max-yield ranker selects scheme_00 (76).
+
+**Reading.** The mirror image of Tripp Lane. There NERON under-yielded on a tight cul-de-sac site (9 vs 12); here it over-yields on a mixed-product P-C plat (76 vs 61) because the pipeline optimizes lot count under the most permissive product's minimums while the human designer mixed Small/Standard/Large products (avg 6,094 sqft vs the 1,500 sqft minimum) for market and urbanism reasons. Critically, the generator CAN produce realistic schemes (59–62 lots exist in the envelope) — the gap is in RANKING, not generation. The product question this raises: should the ranker prefer max yield, or model designer-like product-mix behavior? For P-C zones with multi-product guidelines, a single-product minimum input structurally overestimates. Next: score V12B Plat 3 (30 lots, same guidelines) to test whether the over-yield pattern replicates on a smaller sibling plat.

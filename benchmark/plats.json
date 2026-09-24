@@ -96,6 +96,41 @@
     "reason": "not scored: zoning.status set to unknown 2026-09-24 because min_frontage_ft and road_width_ft are unsourced for 2018 RMF-45 (the harness honesty contract requires all four dims for known). not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage \u2014 not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45.",
     "status": "unknown"
    }
+  },
+  {
+   "approved_lots": 12,
+   "approved_lots_source": "Murray PC minutes 2022-11-17 (https://www.murray.utah.gov/Archive/ViewFile/Item/7396): 'twelve (12) new lots and a new dedicated public roadway'; final approval 2023-04-06 (https://www.utah.gov/pmn/files/991087.pdf). Parcel A (detention, city-accepted) excluded from lot count.",
+   "city": "Murray",
+   "county": "Salt Lake",
+   "name": "TRIPP LANE SUBDIVISION (Project #22-088)",
+   "parent_parcel_id": null,
+   "parent_parcel_note": "Pre-subdivision parcel addressed 871 W Tripp Lane (2.78 ac, vacant); retired on subdivision, not present in current UGRC parcel data.",
+   "parent_polygon": "samples/tripp_lane_parent.geojson",
+   "parent_polygon_source": "Deterministic concave-hull (ratio 0.5) reconstruction of the pre-subdivision parent from the 13 child parcel polygons (12 lots + Parcel A) via UGRC/SLCo Parcels_SaltLake FeatureServer (EPSG:4326; valid Polygon; geodesic hull area 11278.3 m2 = 2.787 ac vs official 2.78 ac in 2022-11-17 minutes, 0.3% diff). Child membership: 13 contiguous parcels 5762-5846 S Tripp Lane, Murray (PARCEL_IDs 21144070010000-21144070130000) on the Tripp Lane extension south of 5755 S. The raw child union (2.155 ac) excludes the dedicated 49-ft public street ROW, which is not parcelized in UGRC; the hull fills that corridor deterministically. Reprojected to pipeline-native local feet (azimuthal equidistant about centroid). Built 2026-09-24 by GreenRush-6 (script agents/greenrush-6/build_tripp_parent.py, not model geometry).",
+   "plat_id": "tripp-lane-subdivision",
+   "plat_pdf": null,
+   "plat_pdf_note": "Recorded final plat not located in free corpora as of 2026-09-24; approval confirmed by official Planning Commission minutes (preliminary + final).",
+   "recorded": {
+    "applicant": "NeighborWorks of Salt Lake",
+    "final": "2023-04-06 (Planning Commission, 6-0)",
+    "preliminary": "2022-11-17 (Planning Commission, 5-1)",
+    "project": "22-088",
+    "status": "approved"
+   },
+   "scored": true,
+   "zoning": {
+    "district": "R-1-6",
+    "district_source": "Murray PC minutes 2023-04-06 p.4: 'It is located in the R-1-6 zone' (final approval); condition 6 cites Chapter 17.96 (Single-Family Medium Density Residential District R-1-6). Rezone R-1-8 -> R-1-6 recommended by PC 2021-10-21 and effective before preliminary approval 2022-11-17.",
+    "min_frontage_ft": 60,
+    "min_frontage_source": "Murray PC minutes 2022-11-17 condition 11 (https://www.murray.utah.gov/Archive/ViewFile/Item/7396, accessed 2026-09-24): 'amend lot 7 to meet the lot width requirement of sixty feet (60') at the twenty-foot (20') setback line'; 2023-04-06 minutes p.4: 'the lot frontage on Lot 7 was originally not wide enough. It now meets the requirements of the zone.' 60-ft lot width used as frontage proxy per policy (no separate frontage minimum stated in the approval record; verified absence in code text unconfirmed -- see gap).",
+    "min_lot_area_source": "Murray PC minutes 2023-04-06 p.4 (https://www.utah.gov/pmn/files/991087.pdf, accessed 2026-09-24): 'It is located in the R-1-6 zone, which requires a minimum of 6,000 square feet per lot.' (staff presentation of final plat; official city record, source-precedence 3)",
+    "min_lot_area_sqft": 6000,
+    "road_width_ft": 49,
+    "road_width_source": "Murray Code Sec. 16.16.180 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269, accessed 2026-09-24): all streets minimum 49-ft width (25-ft asphalted). Tripp Lane extension conditioned to the 49-ft city standard (PC minutes 2022-11-17 condition 10; confirmed corrected to 49 ft in 2023-04-06 minutes p.4). 49-ft ROW used as the pipeline street corridor.",
+    "source": "Murray PC minutes 2022-11-17 (preliminary 5-1; https://www.murray.utah.gov/Archive/ViewFile/Item/7396) and 2023-04-06 (final 6-0; https://www.utah.gov/pmn/files/991087.pdf), both accessed 2026-09-24; Murray Code Sec. 16.16.180 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269, accessed 2026-09-24). Per-dimension citations in min_lot_area_source / min_frontage_source / road_width_source.",
+    "source_gap": "R-1-6 code text (Chapter 17.96) not directly retrievable 2026-09-24 (amlegal API Cloudflare-blocked; chapter page links not extractable). Dimensional values come from the approving body's official minutes (source-precedence 3), which state them explicitly.",
+    "status": "known"
+   }
   }
  ],
  "research_candidates_not_scored": [

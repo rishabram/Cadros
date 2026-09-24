@@ -110,3 +110,20 @@ now: (a) approval-date zoning district for every candidate, (b) parent polygons/
 documents (recorded plats name the zone) via Herriman PrimeGov / Riverton Granicus /
 SLCo recorder research, and UGRC child-parcel union reconstruction at confirmed site
 coordinates.
+
+## GreenRush-6 (2026-09-24) — FIRST SCORED PLAT: Tripp Lane Subdivision, Murray
+
+**Scored set: 1/1. NERON estimated 9 lots vs 12 approved — relative error 25%, outside the ±15% tolerance. Pass rate 0%.** This is the benchmark's first scored comparison and it is an honest miss, not a pipeline defect to tune away.
+
+**Candidate.** Tripp Lane Subdivision, 871 W Tripp Lane, Murray UT. Preliminary approval 2022-11-17 (5–1; murray.utah.gov/Archive/ViewFile/Item/7396): 12 lots + public cul-de-sac street on a vacant 2.78-ac parcel, R-1-6. Final approval 2023-04-06, project 22-088 (6–0; utah.gov/pmn/files/991087.pdf): frontage deficiency on Lot 7 corrected, ROW widened to Murray's 49-ft standard, all R-1-6 requirements met.
+
+**Inputs (all four dims known, all cited):**
+- Approval-date district R-1-6 (final minutes: "the property was in R-1-6"; "R-1-6 zone requires 6,000 sq ft per lot").
+- min_lot_area_sqft = 6,000 (final minutes, source-precedence-3 approving-body record; direct Ch. 17.96 code text unretrieved — API Cloudflare-blocked).
+- min_frontage_ft = 60 (preliminary minutes: Lot 7 "required 60' lot width at the 20' setback line"; final minutes call it "lot frontage"; width-as-proxy documented).
+- road_width_ft = 49 (Murray Code §16.16.180: all streets minimum 49-ft width / 25-ft asphalt; approval conditioned the public ROW to 49 ft; the pipeline's road band = the dedicated corridor, not the pavement).
+- Parent geometry: concave-hull (ratio 0.5) reconstruction from the 13 child parcels (12 lots + Parcel A, 5762–5846 S Tripp Lane), 2.787 ac vs official 2.78 ac (0.3% diff). The raw child union (2.155 ac) excludes the dedicated street; the hull fills it deterministically.
+
+**Result.** 24 candidates evaluated, 8 schemes kept; top scheme: N–S spine road (the real orientation), 75-ft module, 9 conforming lots. The real plat fit 12 — human design used the cul-de-sac bulb and adapted widths, which the pipeline's rigid grid cannot replicate. Sensitivity check: road_width 25 ft → 11 lots (inside tolerance), but 25 ft is the pavement, not the dedicated corridor, so 49 ft stands; the input was chosen on principle, not tuned to the score.
+
+**Reading.** The benchmark now has a real, scored, failing comparison. The product under-yields on narrow cul-de-sac sites with human-optimized lot arrangements — a genuine product gap to close, not a data problem. Next: add more scored plats (target ~10) before drawing conclusions about the tolerance target.

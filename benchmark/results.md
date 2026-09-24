@@ -1,13 +1,14 @@
 # Approved-plat benchmark results
 
 Tolerance: +/-15%. Aim: >=70% of scored plats within tolerance.
-Scored plats: 0. Within tolerance: 0.
+Scored plats: 1. Within tolerance: 0.
 
 | plat_id | approved | neron (top-ranked) | rel err | within 15% | zoning source |
 |---|---|---|---|---|---|
 | mill-subdivision | 4 | — | — | not scored: plat does not state the zone; South Salt Lake commercial district for Sec 24 T1S R1W not determined from zoning map; Title 17 CC standards found but district assignment unsourced | — |
 | village-at-the-boulders-ph3 | None | — | — | not scored: Parent geometry now reconstructable (8.125-ac union, see parent_polygon_source). Still not scored: (1) approval-date zoning district unsourced - 2023 amendment records show a multi-family label rendered 'R-20-43' (herriman.primegov.com agenda 4360; utah.gov/pmn/files/1048543.pdf) but that is 2023, not 2018 approval-date, and the label may be extraction-garbled; (2) road_width_ft unknown - abstract identifies a PRIVATE road at 14850 S Trap Rock Way, so Herriman's public local-street standards (60 ft ROW/32 ft asphalt, 53 ft ROW/28 ft asphalt) cannot be assigned; (3) exact 2018 approved lot count uncertain - labels VB57-VB70 suggest ~13-14 original lots (9 surviving + 4 replatted by 2021 AMD; VB64 unaccounted in abstract rows). Townhome phase, not a greenfield single-family yield test; harness honesty contract requires all four zoning dims. | — |
 | tag-row-house | 3 | — | — | not scored: not scored: zoning.status set to unknown 2026-09-24 because min_frontage_ft and road_width_ft are unsourced for 2018 RMF-45 (the harness honesty contract requires all four dims for known). not scored: 0.237-acre infill PD; prototype requires greenfield parcel large enough for internal road + conforming lots (min 3000 sqft lots need ~136 ft depth; parcel is 165 ft deep with road). Approved lots are undersized via PD (1235-1339 sqft) with no street frontage — not a greenfield yield test. min_frontage_ft and road_width_ft not sourced for 2018 RMF-45. | — |
+| tripp-lane-subdivision | 12 | 9 | 25.0% | no | Murray PC minutes 2022-11-17 (preliminary 5-1; https://www.murray.utah.gov/Archive/ViewFile/Item/7396) and 2023-04-06 (final 6-0; https://www.utah.gov/pmn/files/991087.pdf), both accessed 2026-09-24; Murray Code Sec. 16.16.180 (https://codelibrary.amlegal.com/codes/murrayut/latest/murray_ut/0-0-0-9269, accessed 2026-09-24). Per-dimension citations in min_lot_area_source / min_frontage_source / road_width_source. |
 
 ## GreenRush swing (2026-09-24, greenfield-only follow-up)
 
@@ -121,3 +122,20 @@ now: (a) approval-date zoning district for every candidate, (b) parent polygons/
 documents (recorded plats name the zone) via Herriman PrimeGov / Riverton Granicus /
 SLCo recorder research, and UGRC child-parcel union reconstruction at confirmed site
 coordinates.
+
+## GreenRush-6 (2026-09-24) — FIRST SCORED PLAT: Tripp Lane Subdivision, Murray
+
+**Scored set: 1/1. NERON estimated 9 lots vs 12 approved — relative error 25%, outside the ±15% tolerance. Pass rate 0%.** This is the benchmark's first scored comparison and it is an honest miss, not a pipeline defect to tune away.
+
+**Candidate.** Tripp Lane Subdivision, 871 W Tripp Lane, Murray UT. Preliminary approval 2022-11-17 (5–1; murray.utah.gov/Archive/ViewFile/Item/7396): 12 lots + public cul-de-sac street on a vacant 2.78-ac parcel, R-1-6. Final approval 2023-04-06, project 22-088 (6–0; utah.gov/pmn/files/991087.pdf): frontage deficiency on Lot 7 corrected, ROW widened to Murray's 49-ft standard, all R-1-6 requirements met.
+
+**Inputs (all four dims known, all cited):**
+- Approval-date district R-1-6 (final minutes: "the property was in R-1-6"; "R-1-6 zone requires 6,000 sq ft per lot").
+- min_lot_area_sqft = 6,000 (final minutes, source-precedence-3 approving-body record; direct Ch. 17.96 code text unretrieved — API Cloudflare-blocked).
+- min_frontage_ft = 60 (preliminary minutes: Lot 7 "required 60' lot width at the 20' setback line"; final minutes call it "lot frontage"; width-as-proxy documented).
+- road_width_ft = 49 (Murray Code §16.16.180: all streets minimum 49-ft width / 25-ft asphalt; approval conditioned the public ROW to 49 ft; the pipeline's road band = the dedicated corridor, not the pavement).
+- Parent geometry: concave-hull (ratio 0.5) reconstruction from the 13 child parcels (12 lots + Parcel A, 5762–5846 S Tripp Lane), 2.787 ac vs official 2.78 ac (0.3% diff). The raw child union (2.155 ac) excludes the dedicated street; the hull fills it deterministically.
+
+**Result.** 24 candidates evaluated, 8 schemes kept; top scheme: N–S spine road (the real orientation), 75-ft module, 9 conforming lots. The real plat fit 12 — human design used the cul-de-sac bulb and adapted widths, which the pipeline's rigid grid cannot replicate. Sensitivity check: road_width 25 ft → 11 lots (inside tolerance), but 25 ft is the pavement, not the dedicated corridor, so 49 ft stands; the input was chosen on principle, not tuned to the score.
+
+**Reading.** The benchmark now has a real, scored, failing comparison. The product under-yields on narrow cul-de-sac sites with human-optimized lot arrangements — a genuine product gap to close, not a data problem. Next: add more scored plats (target ~10) before drawing conclusions about the tolerance target.

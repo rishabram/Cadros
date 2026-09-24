@@ -45,6 +45,9 @@ class TestToleranceMath(unittest.TestCase):
                              f"neron={neron} approved={approved}")
 
     def test_write_results_deterministic(self):
+        # save the real results files so the test leaves no fake state behind
+        real_json = open(os.path.join(BASE, "results.json")).read()
+        real_md = open(os.path.join(BASE, "results.md")).read()
         results = [
             {"status": "scored", "plat_id": "a", "approved_lots": 10,
              "neron_top_ranked_lots": 11, "schemes": [], "relative_error": 0.1,
@@ -63,16 +66,14 @@ class TestToleranceMath(unittest.TestCase):
         self.assertEqual(blob1, blob2)
         self.assertEqual(p1["pass_rate"], 1.0)
         self.assertTrue(p2["aim_met"])
-        # restore the real (empty) results so tests leave no fake state behind
-        harness.write_results([
-            {"status": "not_scored", "plat_id": pl["plat_id"],
-             "approved_lots": pl.get("approved_lots"),
-             "reason": pl["zoning"].get("reason", "")}
-            for pl in harness.load_plats()
-        ])
+        # restore the real results byte-for-byte (the scored set may be non-empty)
+        with open(os.path.join(BASE, "results.json"), "w") as f:
+            f.write(real_json)
+        with open(os.path.join(BASE, "results.md"), "w") as f:
+            f.write(real_md)
         with open(os.path.join(BASE, "results.md")) as f:
             md_restored = f.read()
-        self.assertEqual(md1 != md_restored, True)  # sanity: restore actually rewrote
+        self.assertEqual(md_restored, real_md)  # sanity: restore actually rewrote
 
 
 if __name__ == "__main__":

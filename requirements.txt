@@ -1,0 +1,17 @@
+# Cadros Platform Core Dependencies
+shapely==2.1.2
+ezdxf==1.4.4
+pydantic==2.13.5
+
+# Web Runtime & API Delivery
+fastapi==0.141.1
+uvicorn==0.53.0
+starlette>=0.46.0
+
+# Observability & Monitoring
+sentry-sdk[fastapi]==2.70.0
+
+# Testing & CI Verification
+pytest==9.1.1
+pytest-cov==7.1.0
+httpx==0.28.1

@@ -15,3 +15,9 @@ outputs/
 # Local scratch
 /tmp/
 .DS_Store
+
+# Coverage & CI artifacts
+.coverage
+coverage.xml
+htmlcov/
+venv

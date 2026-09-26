@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-25T15:00 MDT",
+  "baseline_run": "RUN-20260925-BENCH",
+  "commit": "e291d6c",
+  "files": 3,
+  "inputs": [
+    "cad_smoke_test.py",
+    "model_smoke_test.py",
+    "output/site_test.json"
+  ],
+  "inputs_hash": "fd5aeb5d3177a165",
+  "label": "demo-gate-2000"
+}

@@ -28,8 +28,9 @@ def create_process_slide(output_path="readiness/render/process.png"):
                 "Ingest county GIS & assessor records",
                 "Verify public/agency ownership",
                 "Screen dimensional geometry & access",
-                "Filter flood, slope, & hazard overlays",
-                "Map utility proximity & ROW connections"
+                # WARNING: 9:50 PM scope cut — environmental/utility filtering removed.
+                "Check lot size against the zone minimum",
+                "Confirm street frontage / access"
             ],
             "badge": "Automated Screen"
         },

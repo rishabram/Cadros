@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "100420020",
+    "owner_name_raw": "UTAH STATE PARK AND RECREATION COMMISION",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.092646947806,
+          40.2604536331655
+        ],
+        [
+          -112.092562410948,
+          40.260454061614
+        ],
+        [
+          -112.092561424598,
+          40.2603399002354
+        ],
+        [
+          -112.092645960558,
+          40.2603394711007
+        ],
+        [
+          -112.092646947806,
+          40.2604536331655
+        ]
+      ]
+    ]
+  }
+}

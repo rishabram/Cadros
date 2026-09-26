@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "100430014",
+    "owner_name_raw": "DIVISION OF PARKS AND RECREATION DEPT OF NATURAL RESOURCES",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.090911370338,
+          40.2617699578862
+        ],
+        [
+          -112.09083149394,
+          40.2618295370818
+        ],
+        [
+          -112.090189273072,
+          40.2618231002032
+        ],
+        [
+          -112.090190520832,
+          40.2617627313011
+        ],
+        [
+          -112.090911370338,
+          40.2617699578862
+        ]
+      ]
+    ]
+  }
+}

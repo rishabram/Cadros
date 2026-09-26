@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "220210040",
+    "owner_name_raw": "STATE OF UTAH DEPARTMENT OF ADMINISTRATIVE SERVICES",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.63699859334,
+          40.2334410046008
+        ],
+        [
+          -111.640479637829,
+          40.2334943056366
+        ],
+        [
+          -111.640469659343,
+          40.2338424346672
+        ],
+        [
+          -111.636990646843,
+          40.2338233018917
+        ],
+        [
+          -111.63699859334,
+          40.2334410046008
+        ]
+      ]
+    ]
+  }
+}

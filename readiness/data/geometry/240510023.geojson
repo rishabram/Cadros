@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "240510023",
+    "owner_name_raw": "NATIONAL SOCIETY OF THE SONS OF UTAH PIONEERS THE (ET AL)",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.685939221447,
+          40.1196167647455
+        ],
+        [
+          -111.685938774984,
+          40.1194520996354
+        ],
+        [
+          -111.686224759045,
+          40.1194516435045
+        ],
+        [
+          -111.686225206406,
+          40.1196163079288
+        ],
+        [
+          -111.685939221447,
+          40.1196167647455
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "16211010020000",
+    "owner_name_raw": "SUGARHOUSE PARK AUTHORITY - UDOT RIGHT OF WAY",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.850926936259,
+          40.7208232303608
+        ],
+        [
+          -111.852121562636,
+          40.7215445570693
+        ],
+        [
+          -111.851926806086,
+          40.721520427324
+        ],
+        [
+          -111.850926936259,
+          40.7208232303608
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "15143280120000",
+    "owner_name_raw": "SALT LAKE CITY CORPORATION - SLC PUBLIC SERVICES DEP",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.923133470288,
+          40.7319682592646
+        ],
+        [
+          -111.92313111221,
+          40.7315839608957
+        ],
+        [
+          -111.923221314743,
+          40.7315836355113
+        ],
+        [
+          -111.923223671922,
+          40.7319679359242
+        ],
+        [
+          -111.923133470288,
+          40.7319682592646
+        ]
+      ]
+    ]
+  }
+}

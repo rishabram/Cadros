@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "140590001",
+    "owner_name_raw": "UTAH COUNTY SOLID WASTE SPECIAL SERVICES DISTRICT",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.762928334844,
+          40.3413951605067
+        ],
+        [
+          -111.764455087247,
+          40.3413917171671
+        ],
+        [
+          -111.764458586185,
+          40.3422973368135
+        ],
+        [
+          -111.762931813121,
+          40.3423007807916
+        ],
+        [
+          -111.762928334844,
+          40.3413951605067
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "030560002",
+    "owner_name_raw": "UTAH HOMES MANAGEMENT GROUP LLC - 420 N 100 E PROTECTED SERIES",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.73868220615,
+          40.3684383130177
+        ],
+        [
+          -111.738269597363,
+          40.3684391541724
+        ],
+        [
+          -111.738268574182,
+          40.3681455131791
+        ],
+        [
+          -111.738681181172,
+          40.3681446720207
+        ],
+        [
+          -111.73868220615,
+          40.3684383130177
+        ]
+      ]
+    ]
+  }
+}

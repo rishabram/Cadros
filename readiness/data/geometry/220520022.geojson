@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "220520022",
+    "owner_name_raw": "LOS ANGELES & SALT LAKE RAILROAD",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.638770958616,
+          40.2084162926291
+        ],
+        [
+          -111.637214057854,
+          40.2080995362397
+        ],
+        [
+          -111.638885667189,
+          40.2083109607099
+        ],
+        [
+          -111.638770958616,
+          40.2084162926291
+        ]
+      ]
+    ]
+  }
+}

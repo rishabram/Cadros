@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "520490059",
+    "owner_name_raw": "UTAH TRANSIT AUTHORITY",
+    "owner_class": "UTA",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.664453670418,
+          40.22559375073
+        ],
+        [
+          -111.66445366952,
+          40.2255927884535
+        ],
+        [
+          -111.664472536835,
+          40.2255936938027
+        ],
+        [
+          -111.664453670418,
+          40.22559375073
+        ]
+      ]
+    ]
+  }
+}

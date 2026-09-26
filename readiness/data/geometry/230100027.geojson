@@ -1,0 +1,40 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "230100027",
+    "owner_name_raw": "UTAH STATE DIV OF FACILITIES CONSTRUCTION AND MANAGEMENT",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.614926583466,
+          40.179410676195
+        ],
+        [
+          -111.61443887642,
+          40.1793845898566
+        ],
+        [
+          -111.613694184727,
+          40.178128474951
+        ],
+        [
+          -111.614482605509,
+          40.1781645186607
+        ],
+        [
+          -111.614926646348,
+          40.1794106610955
+        ],
+        [
+          -111.614926583466,
+          40.179410676195
+        ]
+      ]
+    ]
+  }
+}

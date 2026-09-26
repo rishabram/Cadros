@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "210300011",
+    "owner_name_raw": "UTAH STATE DIVISION OF PARKS AND RECREATION",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.735354656793,
+          40.2395019081276
+        ],
+        [
+          -111.736098553476,
+          40.2387427132865
+        ],
+        [
+          -111.737674335028,
+          40.2397964160631
+        ],
+        [
+          -111.735354656793,
+          40.2395019081276
+        ]
+      ]
+    ]
+  }
+}

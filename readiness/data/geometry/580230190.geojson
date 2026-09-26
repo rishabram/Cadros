@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "580230190",
+    "owner_name_raw": "CENTAL (SIC) UTAH WATER CONSERVANCY DISTRICT",
+    "owner_class": "SPECIAL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.918220930748,
+          40.4055836442794
+        ],
+        [
+          -111.918058710279,
+          40.405308418992
+        ],
+        [
+          -111.918445125989,
+          40.4053026859891
+        ],
+        [
+          -111.918607347356,
+          40.4055779113001
+        ],
+        [
+          -111.918220930748,
+          40.4055836442794
+        ]
+      ]
+    ]
+  }
+}

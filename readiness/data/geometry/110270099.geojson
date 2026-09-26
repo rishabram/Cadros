@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "110270099",
+    "owner_name_raw": "METROPOLITAN WATER DISTRICT OF SALT LAKE & SANDY",
+    "owner_class": "SPECIAL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.795384867607,
+          40.4491522581875
+        ],
+        [
+          -111.79571532546,
+          40.4489174255249
+        ],
+        [
+          -111.797351500749,
+          40.4500149594695
+        ],
+        [
+          -111.797356678638,
+          40.4504749319086
+        ],
+        [
+          -111.795384867607,
+          40.4491522581875
+        ]
+      ]
+    ]
+  }
+}

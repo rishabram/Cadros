@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "071260004",
+    "owner_name_raw": "FAITH BAPTIST CHURCH OF SPRINGVILLE UTAH",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.642260732933,
+          40.1199701228952
+        ],
+        [
+          -111.64225998284,
+          40.1196078585362
+        ],
+        [
+          -111.642613885824,
+          40.1196074264494
+        ],
+        [
+          -111.642614638612,
+          40.1199696894368
+        ],
+        [
+          -111.642260732933,
+          40.1199701228952
+        ]
+      ]
+    ]
+  }
+}

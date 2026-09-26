@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "210280087",
+    "owner_name_raw": "PROVO CITY CORPORATION",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.716245369777,
+          40.2396089600541
+        ],
+        [
+          -111.716244787669,
+          40.2396083202693
+        ],
+        [
+          -111.71624531498,
+          40.2396083291837
+        ],
+        [
+          -111.716245369777,
+          40.2396089600541
+        ]
+      ]
+    ]
+  }
+}

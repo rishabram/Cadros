@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "09314870010000",
+    "owner_name_raw": "STATE OF UTAH, DIVISION OF FAC - DFCM RECEPTION DESK, 3RD FLOO",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.874002483782,
+          40.7704417403561
+        ],
+        [
+          -111.874002473002,
+          40.7703285249957
+        ],
+        [
+          -111.874399578663,
+          40.7703284372339
+        ],
+        [
+          -111.874399593036,
+          40.7704416566763
+        ],
+        [
+          -111.874002483782,
+          40.7704417403561
+        ]
+      ]
+    ]
+  }
+}

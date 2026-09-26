@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "110360252",
+    "owner_name_raw": "NORTH UTAH COUNTY WATER CONSERVANCY DISTRICT",
+    "owner_class": "SPECIAL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.823249969018,
+          40.4280871822338
+        ],
+        [
+          -111.823035155782,
+          40.4282184864041
+        ],
+        [
+          -111.823033830767,
+          40.428088467124
+        ],
+        [
+          -111.823249969018,
+          40.4280871822338
+        ]
+      ]
+    ]
+  }
+}

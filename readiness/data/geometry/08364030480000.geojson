@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08364030480000",
+    "owner_name_raw": "BOARD OF EDUCATION OF SALT LAK",
+    "owner_class": "SCHOOL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.897048131778,
+          40.7743713341693
+        ],
+        [
+          -111.89706524738,
+          40.774355952295
+        ],
+        [
+          -111.897065166531,
+          40.7743713865511
+        ],
+        [
+          -111.897048131778,
+          40.7743713341693
+        ]
+      ]
+    ]
+  }
+}

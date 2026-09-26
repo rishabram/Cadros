@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "190010157",
+    "owner_name_raw": "RLR LC UTAH LIMITED LIABILITY COMPANY",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.669709132834,
+          40.266013628761
+        ],
+        [
+          -111.670271610254,
+          40.2660158633643
+        ],
+        [
+          -111.670263346651,
+          40.2667979788924
+        ],
+        [
+          -111.669700862943,
+          40.2667957436295
+        ],
+        [
+          -111.669709132834,
+          40.266013628761
+        ]
+      ]
+    ]
+  }
+}

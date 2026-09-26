@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "15152010590000",
+    "owner_name_raw": "SALT LAKE COUNTY - SALT LAKE COUNTY REAL ESTATE",
+    "owner_class": "COUNTY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.937829164531,
+          40.7398271589765
+        ],
+        [
+          -111.937842716515,
+          40.7398265606971
+        ],
+        [
+          -111.937842182017,
+          40.7399600939205
+        ],
+        [
+          -111.937829164531,
+          40.7398271589765
+        ]
+      ]
+    ]
+  }
+}

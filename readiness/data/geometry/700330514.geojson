@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "700330514",
+    "owner_name_raw": "RICHMOND AMERICAN HOMES OF UTAH INC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.02284016694,
+          40.3252767098812
+        ],
+        [
+          -112.023033046909,
+          40.3250786897898
+        ],
+        [
+          -112.023320517682,
+          40.3252427175202
+        ],
+        [
+          -112.02312763861,
+          40.3254407364455
+        ],
+        [
+          -112.02284016694,
+          40.3252767098812
+        ]
+      ]
+    ]
+  }
+}

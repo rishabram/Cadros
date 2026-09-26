@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "160010034",
+    "owner_name_raw": "HERITAGE CUSTOM HOMES LLC",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.88064267136,
+          40.3055243770381
+        ],
+        [
+          -111.880902559362,
+          40.3059229701473
+        ],
+        [
+          -111.880511224478,
+          40.3055248052009
+        ],
+        [
+          -111.88064267136,
+          40.3055243770381
+        ]
+      ]
+    ]
+  }
+}

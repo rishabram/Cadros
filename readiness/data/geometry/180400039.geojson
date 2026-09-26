@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "180400039",
+    "owner_name_raw": "BOARD OF EDUCATION - ALPINE SCHOOL DISTRICT (ET AL)",
+    "owner_class": "SCHOOL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.702919869549,
+          40.27832395324
+        ],
+        [
+          -111.701253219812,
+          40.2783268371354
+        ],
+        [
+          -111.701253138065,
+          40.2782990083619
+        ],
+        [
+          -111.702810952414,
+          40.2783213935086
+        ],
+        [
+          -111.702919869549,
+          40.27832395324
+        ]
+      ]
+    ]
+  }
+}

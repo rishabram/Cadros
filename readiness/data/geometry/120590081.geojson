@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "120590081",
+    "owner_name_raw": "BOARD OF EDUCATION ALPINE SCHOOL DISTRICT",
+    "owner_class": "SCHOOL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.799475922971,
+          40.399626468563
+        ],
+        [
+          -111.797739778666,
+          40.4034503525927
+        ],
+        [
+          -111.797128132857,
+          40.40330215354
+        ],
+        [
+          -111.798822200973,
+          40.3996229365273
+        ],
+        [
+          -111.799475922971,
+          40.399626468563
+        ]
+      ]
+    ]
+  }
+}

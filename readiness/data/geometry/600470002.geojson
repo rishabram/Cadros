@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "600470002",
+    "owner_name_raw": "BOARD OF STATE LANDS AND FORESTRY OF THE STATE OF UTAH THE",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.03459564741,
+          40.1155376908658
+        ],
+        [
+          -112.02505843077,
+          40.1155035436481
+        ],
+        [
+          -112.025271737531,
+          40.1118701483264
+        ],
+        [
+          -112.034606546669,
+          40.1118835940071
+        ],
+        [
+          -112.03459564741,
+          40.1155376908658
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "590010095",
+    "owner_name_raw": "STATE OF UTAH DIVISION OF FORESTRY FIRE AND STATE LANDS",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.90006489459,
+          40.3318490414131
+        ],
+        [
+          -111.899975369387,
+          40.3319205564188
+        ],
+        [
+          -111.89963894133,
+          40.3316886742173
+        ],
+        [
+          -111.899719333361,
+          40.3316244417697
+        ],
+        [
+          -111.90006489459,
+          40.3318490414131
+        ]
+      ]
+    ]
+  }
+}

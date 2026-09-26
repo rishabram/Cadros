@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "16073110352000",
+    "owner_name_raw": "SALT LAKE CITY CORPORATION - HOUSING AND NEIGHBORHOOD DEVE",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.886796826352,
+          40.7446074206386
+        ],
+        [
+          -111.886797009609,
+          40.7443988189151
+        ],
+        [
+          -111.886941359892,
+          40.7443987141043
+        ],
+        [
+          -111.886941177534,
+          40.7446073158282
+        ],
+        [
+          -111.886796826352,
+          40.7446074206386
+        ]
+      ]
+    ]
+  }
+}

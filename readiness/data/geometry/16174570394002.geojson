@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "16174570394002",
+    "owner_name_raw": "UNITED STATES POSTAL SERVICE - USPS FACILITIES SERVICE OFF",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.857650144339,
+          40.7278710319664
+        ],
+        [
+          -111.857652215854,
+          40.7275188167312
+        ],
+        [
+          -111.85816464813,
+          40.727520560844
+        ],
+        [
+          -111.858163682441,
+          40.7278727794738
+        ],
+        [
+          -111.857650144339,
+          40.7278710319664
+        ]
+      ]
+    ]
+  }
+}

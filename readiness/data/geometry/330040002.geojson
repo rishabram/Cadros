@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "330040002",
+    "owner_name_raw": "DEPT NATURAL RESOURCES DIVISION OF WILDLIFE RES",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.585047771801,
+          39.8603585360112
+        ],
+        [
+          -111.575577899163,
+          39.8602955968779
+        ],
+        [
+          -111.575558999507,
+          39.8566681593585
+        ],
+        [
+          -111.585023142691,
+          39.8567273166529
+        ],
+        [
+          -111.585047771801,
+          39.8603585360112
+        ]
+      ]
+    ]
+  }
+}

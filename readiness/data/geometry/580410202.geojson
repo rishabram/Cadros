@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "580410202",
+    "owner_name_raw": "SCHOOL AND INSTITUTIONAL TRUST LANDS ADMINSTRATION",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.928926800776,
+          40.3329277859985
+        ],
+        [
+          -111.928508555061,
+          40.3328371905702
+        ],
+        [
+          -111.928992666151,
+          40.3328370255374
+        ],
+        [
+          -111.928926800776,
+          40.3329277859985
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "15141260290000",
+    "owner_name_raw": "SALT LAKE CITY CORPORATION - PROPERTY MANAGEMENT",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.922303336235,
+          40.7389521312704
+        ],
+        [
+          -111.922312571815,
+          40.7391128790671
+        ],
+        [
+          -111.922277775572,
+          40.7391215729274
+        ],
+        [
+          -111.922303336235,
+          40.7389521312704
+        ]
+      ]
+    ]
+  }
+}

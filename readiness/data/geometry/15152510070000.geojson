@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "15152510070000",
+    "owner_name_raw": "SALT LAKE COUNTY - REAL ESTATE DEPT # S3200",
+    "owner_class": "COUNTY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.937578653144,
+          40.738176153033
+        ],
+        [
+          -111.937880244534,
+          40.7381753001746
+        ],
+        [
+          -111.937881725856,
+          40.7384783712153
+        ],
+        [
+          -111.937578653144,
+          40.738176153033
+        ]
+      ]
+    ]
+  }
+}

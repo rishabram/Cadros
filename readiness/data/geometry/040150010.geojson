@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "040150010",
+    "owner_name_raw": "BOARD OF EDUCATION OF PROVO CITY SCHOOL DISTRICT",
+    "owner_class": "SCHOOL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.670918939841,
+          40.2279227186536
+        ],
+        [
+          -111.670560611755,
+          40.227921340787
+        ],
+        [
+          -111.670561724768,
+          40.227751192219
+        ],
+        [
+          -111.670920052853,
+          40.2277525694032
+        ],
+        [
+          -111.670918939841,
+          40.2279227186536
+        ]
+      ]
+    ]
+  }
+}

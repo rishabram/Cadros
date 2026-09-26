@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "050110022",
+    "owner_name_raw": "FRIENDS OF UTAH COUNTY CHILDRENS JUSTICE CENTER",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.656757143117,
+          40.2291846790785
+        ],
+        [
+          -111.656754888346,
+          40.2295722360251
+        ],
+        [
+          -111.656232486567,
+          40.2295704473797
+        ],
+        [
+          -111.656234746728,
+          40.2291828911086
+        ],
+        [
+          -111.656757143117,
+          40.2291846790785
+        ]
+      ]
+    ]
+  }
+}

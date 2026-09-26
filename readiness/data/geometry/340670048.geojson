@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "340670048",
+    "owner_name_raw": "APARTMENT D A SERIES OF THE EAST ROCK LLC A UTAH SERIES LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.705369242952,
+          40.3229323207059
+        ],
+        [
+          -111.70524732989,
+          40.3229323248152
+        ],
+        [
+          -111.705245841381,
+          40.3228362814073
+        ],
+        [
+          -111.705367753545,
+          40.3228362752433
+        ],
+        [
+          -111.705369242952,
+          40.3229323207059
+        ]
+      ]
+    ]
+  }
+}

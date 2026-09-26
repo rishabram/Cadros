@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "667610501",
+    "owner_name_raw": "UTAH STATE BUILDING OWNERSHIP AUTHORITY",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.922491967173,
+          40.3845266421948
+        ],
+        [
+          -111.923809277367,
+          40.384521877017
+        ],
+        [
+          -111.923813326973,
+          40.3851760546365
+        ],
+        [
+          -111.922495999711,
+          40.3851808211366
+        ],
+        [
+          -111.922491967173,
+          40.3845266421948
+        ]
+      ]
+    ]
+  }
+}

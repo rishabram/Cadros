@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "300580105",
+    "owner_name_raw": "BOARD OF EDUCATION OF NEBO SCHOOL DISTRICT",
+    "owner_class": "SCHOOL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.749045798291,
+          40.0356129905056
+        ],
+        [
+          -111.749084517477,
+          40.0369490797195
+        ],
+        [
+          -111.74850105631,
+          40.0369581625008
+        ],
+        [
+          -111.748447534685,
+          40.0356073623166
+        ],
+        [
+          -111.749045798291,
+          40.0356129905056
+        ]
+      ]
+    ]
+  }
+}

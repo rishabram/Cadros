@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "120610062",
+    "owner_name_raw": "UTAH STATE DEPT OF ADMINISTRATIVE SERVICES",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.785804022488,
+          40.3973466709534
+        ],
+        [
+          -111.783287238607,
+          40.3957581202908
+        ],
+        [
+          -111.785803078358,
+          40.3971209266539
+        ],
+        [
+          -111.785804022488,
+          40.3973466709534
+        ]
+      ]
+    ]
+  }
+}

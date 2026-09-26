@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "16143510230000",
+    "owner_name_raw": "UTA H DEPARTMENT OF TRASPORTAT",
+    "owner_class": "UTA",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.814678014608,
+          40.7259203868765
+        ],
+        [
+          -111.814714186171,
+          40.7259204386156
+        ],
+        [
+          -111.814741176952,
+          40.7259610497688
+        ],
+        [
+          -111.814678014608,
+          40.7259203868765
+        ]
+      ]
+    ]
+  }
+}

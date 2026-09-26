@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "16292310010000",
+    "owner_name_raw": "STATE ROAD COMMISSION - UDOT RIGHT OF WAY",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.853966265649,
+          40.7112845103022
+        ],
+        [
+          -111.853966607907,
+          40.7112129794293
+        ],
+        [
+          -111.854009075762,
+          40.7112129269977
+        ],
+        [
+          -111.853966265649,
+          40.7112845103022
+        ]
+      ]
+    ]
+  }
+}

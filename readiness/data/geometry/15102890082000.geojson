@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "15102890082000",
+    "owner_name_raw": "SALT LAKE CITY CORPORATION - HOUSING STABILITY DIVISION",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.930242578444,
+          40.7481942821656
+        ],
+        [
+          -111.930243505506,
+          40.7478923606136
+        ],
+        [
+          -111.9304600471,
+          40.7478925749881
+        ],
+        [
+          -111.930459117343,
+          40.7481944992613
+        ],
+        [
+          -111.930242578444,
+          40.7481942821656
+        ]
+      ]
+    ]
+  }
+}

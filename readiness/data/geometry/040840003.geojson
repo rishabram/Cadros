@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "040840003",
+    "owner_name_raw": "CORPORATION OF THE EPISCOPAL CHURCH IN UTAH",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.660345914474,
+          40.2369614389077
+        ],
+        [
+          -111.660345247025,
+          40.2370972848707
+        ],
+        [
+          -111.659872562506,
+          40.2370959195343
+        ],
+        [
+          -111.659873230853,
+          40.23696007494
+        ],
+        [
+          -111.660345914474,
+          40.2369614389077
+        ]
+      ]
+    ]
+  }
+}

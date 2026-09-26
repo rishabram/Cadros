@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "16064080010000",
+    "owner_name_raw": "DOWNTOWN SLC B RETAIL CONDO LL - THE DOMAIN COMPANIES LLC",
+    "owner_class": "SPECIAL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.880912082402,
+          40.7599791179114
+        ],
+        [
+          -111.880912091385,
+          40.7599516707178
+        ],
+        [
+          -111.880984283595,
+          40.7599516856873
+        ],
+        [
+          -111.880984273713,
+          40.7599791322004
+        ],
+        [
+          -111.880912082402,
+          40.7599791179114
+        ]
+      ]
+    ]
+  }
+}

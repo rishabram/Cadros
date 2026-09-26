@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "700130007",
+    "owner_name_raw": "HABITAT FOR HUMANITY OF UTAH COUNTY",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.739838258869,
+          40.3655480973013
+        ],
+        [
+          -111.73956985394,
+          40.3655473314001
+        ],
+        [
+          -111.739570045281,
+          40.3654403029541
+        ],
+        [
+          -111.739838371158,
+          40.365441069541
+        ],
+        [
+          -111.739838258869,
+          40.3655480973013
+        ]
+      ]
+    ]
+  }
+}

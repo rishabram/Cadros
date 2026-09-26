@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "681090054",
+    "owner_name_raw": "UTAH VALLEY HOME BUILDERS FOUNDATION INC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.672868864319,
+          40.0217970255693
+        ],
+        [
+          -111.672445517072,
+          40.0215852061789
+        ],
+        [
+          -111.67266202992,
+          40.0213294209438
+        ],
+        [
+          -111.673085377167,
+          40.0215412390645
+        ],
+        [
+          -111.672868864319,
+          40.0217970255693
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "170340201",
+    "owner_name_raw": "CANYON VIEW PROPERTIES OF UTAH LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.721003436817,
+          40.3049178415328
+        ],
+        [
+          -111.721023817794,
+          40.3052561821342
+        ],
+        [
+          -111.720789462608,
+          40.305256624
+        ],
+        [
+          -111.720788371155,
+          40.3049182525728
+        ],
+        [
+          -111.721003436817,
+          40.3049178415328
+        ]
+      ]
+    ]
+  }
+}

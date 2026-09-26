@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "590390006",
+    "owner_name_raw": "UNITED STATES DEPT OF INTERIOR BUREAU OF LAND MGMT",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.110805696877,
+          40.3164561961669
+        ],
+        [
+          -112.115569707171,
+          40.3164438198095
+        ],
+        [
+          -112.115565655769,
+          40.3200699626273
+        ],
+        [
+          -112.110806226883,
+          40.3200810191778
+        ],
+        [
+          -112.110805696877,
+          40.3164561961669
+        ]
+      ]
+    ]
+  }
+}

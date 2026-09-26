@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "280150040",
+    "owner_name_raw": "COUNTY OF UTAH",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.788004099026,
+          40.099732767325
+        ],
+        [
+          -111.794793927067,
+          40.099715781828
+        ],
+        [
+          -111.788004276893,
+          40.0997748843852
+        ],
+        [
+          -111.788004099026,
+          40.099732767325
+        ]
+      ]
+    ]
+  }
+}

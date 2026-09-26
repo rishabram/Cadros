@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "350490005",
+    "owner_name_raw": "CITICORP PERSON-TO-PERSON FINANCIAL CENTER OF UTAH",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.672136176814,
+          40.2896033200731
+        ],
+        [
+          -111.672125432963,
+          40.2896035811427
+        ],
+        [
+          -111.67212723139,
+          40.2893593367337
+        ],
+        [
+          -111.672137977936,
+          40.2893590784041
+        ],
+        [
+          -111.672136176814,
+          40.2896033200731
+        ]
+      ]
+    ]
+  }
+}

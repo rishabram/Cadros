@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "461190007",
+    "owner_name_raw": "STRODE PROPERTIES LLC - SERIES C A UTAH SERIES (ET AL)",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.723351136201,
+          40.3738475486193
+        ],
+        [
+          -111.723021030487,
+          40.3738483958659
+        ],
+        [
+          -111.723019768354,
+          40.3735602506646
+        ],
+        [
+          -111.72334987317,
+          40.3735594034144
+        ],
+        [
+          -111.723351136201,
+          40.3738475486193
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "16064020260000",
+    "owner_name_raw": "SALT LAKE CITY CORPORATION - ATTN: REAL ESTATE SERVICES",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.878810229453,
+          40.7619768482505
+        ],
+        [
+          -111.878810166571,
+          40.7618633224898
+        ],
+        [
+          -111.879405763977,
+          40.7618631244903
+        ],
+        [
+          -111.879405825063,
+          40.7619766495708
+        ],
+        [
+          -111.878810229453,
+          40.7619768482505
+        ]
+      ]
+    ]
+  }
+}

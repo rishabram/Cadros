@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "200300076",
+    "owner_name_raw": "BOARD OF EDUCATION PROVO SCHOOL DISTRICT",
+    "owner_class": "SCHOOL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.650405903141,
+          40.2818616931724
+        ],
+        [
+          -111.647816652167,
+          40.2819059615155
+        ],
+        [
+          -111.647787069746,
+          40.280441512173
+        ],
+        [
+          -111.650277524006,
+          40.2804483200911
+        ],
+        [
+          -111.650405903141,
+          40.2818616931724
+        ]
+      ]
+    ]
+  }
+}

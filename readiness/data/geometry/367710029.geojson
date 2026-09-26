@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "367710029",
+    "owner_name_raw": "M&T PROPERTY MANAGEMENT OF UTAH LLC 03-11-2016",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.739784372528,
+          40.0280117664358
+        ],
+        [
+          -111.739952679981,
+          40.0280269923711
+        ],
+        [
+          -111.739952699744,
+          40.0280324815487
+        ],
+        [
+          -111.739784372528,
+          40.0280117664358
+        ]
+      ]
+    ]
+  }
+}

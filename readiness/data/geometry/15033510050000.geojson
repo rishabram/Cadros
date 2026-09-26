@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "15033510050000",
+    "owner_name_raw": "S L C CORPORATION - PROPERTY MANAGEMENT",
+    "owner_class": "SPECIAL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.945829241549,
+          40.758306195587
+        ],
+        [
+          -111.948543992559,
+          40.7582972490667
+        ],
+        [
+          -111.948544281816,
+          40.7583410800639
+        ],
+        [
+          -111.945829529908,
+          40.7583501939681
+        ],
+        [
+          -111.945829241549,
+          40.758306195587
+        ]
+      ]
+    ]
+  }
+}

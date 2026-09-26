@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "495610002",
+    "owner_name_raw": "SALT LAKE EXCHANGE ACCOMMODATIONS 158 LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.875008189963,
+          40.4274958729907
+        ],
+        [
+          -111.874927392791,
+          40.427496125321
+        ],
+        [
+          -111.874926888837,
+          40.4274028232125
+        ],
+        [
+          -111.875007683313,
+          40.4274025708819
+        ],
+        [
+          -111.875008189963,
+          40.4274958729907
+        ]
+      ]
+    ]
+  }
+}

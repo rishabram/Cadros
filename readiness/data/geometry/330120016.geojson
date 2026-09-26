@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "330120016",
+    "owner_name_raw": "CORP OF PRES BISHOP CHURCH OF JESUS CHRIST OF LDS",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.200496858974,
+          39.8705628735305
+        ],
+        [
+          -111.200498947557,
+          39.8700825670842
+        ],
+        [
+          -111.203704638649,
+          39.8700907936842
+        ],
+        [
+          -111.202990185147,
+          39.8705698411335
+        ],
+        [
+          -111.200496858974,
+          39.8705628735305
+        ]
+      ]
+    ]
+  }
+}

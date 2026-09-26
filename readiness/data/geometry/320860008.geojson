@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "320860008",
+    "owner_name_raw": "STATE OF UTAH DEPT OF NATURAL RESOURCES DIVISION OF WILDLIFE RESOURCES",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.316504466518,
+          39.9644647623735
+        ],
+        [
+          -111.316503060655,
+          39.9608192497224
+        ],
+        [
+          -111.321227878351,
+          39.9608504455843
+        ],
+        [
+          -111.321225130405,
+          39.964506225655
+        ],
+        [
+          -111.316504466518,
+          39.9644647623735
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "140370170",
+    "owner_name_raw": "GUY AND PAULA FUGAL INVESTMENT LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.709012228534,
+          40.3762333691449
+        ],
+        [
+          -111.709059105321,
+          40.3761358591005
+        ],
+        [
+          -111.709104342682,
+          40.3760871536404
+        ],
+        [
+          -111.709012228534,
+          40.3762333691449
+        ]
+      ]
+    ]
+  }
+}

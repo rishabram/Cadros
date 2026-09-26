@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "590390002",
+    "owner_name_raw": "UTAH STATE DEPT OF NATURAL RESOURCES DIV OF STATE LANDS",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.110805695979,
+          40.3164562078111
+        ],
+        [
+          -112.110805159685,
+          40.3128314354207
+        ],
+        [
+          -112.115573774742,
+          40.3128177192501
+        ],
+        [
+          -112.115569724239,
+          40.3164438307687
+        ],
+        [
+          -112.110805695979,
+          40.3164562078111
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "070830017",
+    "owner_name_raw": "UTAH STATE DEPT ADMIN SERV DIV OF FACILITIES CONST & MANAG",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.642643819486,
+          40.1150503291811
+        ],
+        [
+          -111.642644753734,
+          40.1155000008716
+        ],
+        [
+          -111.642172913631,
+          40.1155014696434
+        ],
+        [
+          -111.642171978485,
+          40.1150500131663
+        ],
+        [
+          -111.642643819486,
+          40.1150503291811
+        ]
+      ]
+    ]
+  }
+}

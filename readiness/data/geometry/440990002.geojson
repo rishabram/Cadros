@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "440990002",
+    "owner_name_raw": "DUNN MR LLC SERIES SF 719 A SEPARATE SERIES OF DUNN MR LLC A UTAH (ET AL)",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.642253715294,
+          40.1185084826281
+        ],
+        [
+          -111.642254887596,
+          40.1183026531471
+        ],
+        [
+          -111.642445554116,
+          40.1183041665105
+        ],
+        [
+          -111.642444382713,
+          40.1185099953
+        ],
+        [
+          -111.642253715294,
+          40.1185084826281
+        ]
+      ]
+    ]
+  }
+}

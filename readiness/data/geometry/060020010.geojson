@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "060020010",
+    "owner_name_raw": "HOUSING AUTHORITY OF UTAH COUNTY THE",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.606857931753,
+          40.1623574018362
+        ],
+        [
+          -111.606454617835,
+          40.1623577711788
+        ],
+        [
+          -111.606454179457,
+          40.1620747662745
+        ],
+        [
+          -111.606857491579,
+          40.1620743969304
+        ],
+        [
+          -111.606857931753,
+          40.1623574018362
+        ]
+      ]
+    ]
+  }
+}

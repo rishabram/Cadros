@@ -58,7 +58,11 @@ def create_process_slide(output_path="readiness/render/process.png"):
                 "City locks objective standards checklist",
                 "Pre-clear density & building envelopes",
                 "Remove legislative hearing bottlenecks",
+<<<<<<< HEAD
+                "State carries entitlement risk end-to-end"
+=======
                 "Enact administrative 60-day shot clock"
+>>>>>>> origin/main
             ],
             "badge": "Intervention Core"
         },
@@ -151,7 +155,11 @@ def create_process_slide(output_path="readiness/render/process.png"):
     ax.plot([0, 1], [0.12, 0.12], color="#1E293B", lw=1.5, zorder=2)
 
     ax.text(0.06, 0.065, "KEY INNOVATION", fontsize=11, fontweight="bold", color="#38BDF8")
+<<<<<<< HEAD
+    ax.text(0.06, 0.035, "State carries entitlement risk before RFP issuance — cities keep zoning authority, state funds the analysis, nonprofit delivers the tool at low cost. Builders compete on speed and affordability.", fontsize=13, color="#CBD5E1")
+=======
     ax.text(0.06, 0.035, "De-risking public land development before RFP issuance: city absorbs entitlement uncertainty so builders compete on speed and affordability, not discretionary zoning battles.", fontsize=13, color="#CBD5E1")
+>>>>>>> origin/main
 
     ax.text(0.94, 0.05, "Cadros Command Architecture · Hack-A-House 2026", fontsize=12, color="#64748B", ha="right")
 

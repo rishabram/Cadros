@@ -5,7 +5,6 @@ Depicts: Check -> Classify -> Pre-approve (C parcels, with the city) -> Offer wi
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
-from PIL import Image
 
 def create_process_slide(output_path="readiness/render/process.png"):
     fig = plt.figure(figsize=(19.2, 10.8), dpi=100)
@@ -16,7 +15,7 @@ def create_process_slide(output_path="readiness/render/process.png"):
     # Header / Title Banner
     ax.text(0.06, 0.92, "CADROS | COUNTY HOUSING READINESS LAB", fontsize=15, fontweight="bold", color="#38BDF8", family="sans-serif")
     ax.text(0.06, 0.85, "Public Land Activation Workflow", fontsize=38, fontweight="heavy", color="#F8FAFC", family="sans-serif")
-    ax.text(0.06, 0.80, "From fragmented county public land records to pre-approved, builder-ready attainable housing RFPs", fontsize=18, color="#94A3B8", family="sans-serif")
+    ax.text(0.06, 0.80, "From fragmented county public land records to pre-approved, builder-ready attainable housing sites", fontsize=18, color="#94A3B8", family="sans-serif")
 
     # 4 Steps Architecture
     steps = [
@@ -51,28 +50,24 @@ def create_process_slide(output_path="readiness/render/process.png"):
         {
             "num": "03",
             "name": "PRE-APPROVE",
-            "sub": "City & CRA Partnership",
+            "sub": "City & State Partnership",
             "color": "#F59E0B",
             "points": [
                 "Focus on Category C public parcels",
                 "City locks objective standards checklist",
                 "Pre-clear density & building envelopes",
                 "Remove legislative hearing bottlenecks",
-<<<<<<< HEAD
                 "State carries entitlement risk end-to-end"
-=======
-                "Enact administrative 60-day shot clock"
->>>>>>> origin/main
             ],
             "badge": "Intervention Core"
         },
         {
             "num": "04",
-            "name": "OFFER WITH RFP",
+            "name": "OFFER",
             "sub": "Turnkey Builder Dispatch",
             "color": "#8B5CF6",
             "points": [
-                "Deploy standardized RFP starter kit",
+                "Deploy standardized site solicitation kit",
                 "Prescribe attainable home targets ($400k-$500k)",
                 "Residual land pricing solves for feasibility",
                 "Require local builder deed-restrictions",
@@ -90,7 +85,7 @@ def create_process_slide(output_path="readiness/render/process.png"):
 
     for i, s in enumerate(steps):
         cx = start_x + i * (card_width + card_gap)
-        
+
         # Draw Card Box
         rect = patches.FancyBboxPatch(
             (cx, card_y), card_width, card_height,
@@ -155,13 +150,9 @@ def create_process_slide(output_path="readiness/render/process.png"):
     ax.plot([0, 1], [0.12, 0.12], color="#1E293B", lw=1.5, zorder=2)
 
     ax.text(0.06, 0.065, "KEY INNOVATION", fontsize=11, fontweight="bold", color="#38BDF8")
-<<<<<<< HEAD
-    ax.text(0.06, 0.035, "State carries entitlement risk before RFP issuance — cities keep zoning authority, state funds the analysis, nonprofit delivers the tool at low cost. Builders compete on speed and affordability.", fontsize=13, color="#CBD5E1")
-=======
-    ax.text(0.06, 0.035, "De-risking public land development before RFP issuance: city absorbs entitlement uncertainty so builders compete on speed and affordability, not discretionary zoning battles.", fontsize=13, color="#CBD5E1")
->>>>>>> origin/main
+    ax.text(0.06, 0.035, "State carries entitlement risk before site solicitation \u2014 cities keep zoning authority, state funds the analysis, nonprofit delivers the tool at low cost. Builders compete on speed and affordability.", fontsize=13, color="#CBD5E1")
 
-    ax.text(0.94, 0.05, "Cadros Command Architecture · Hack-A-House 2026", fontsize=12, color="#64748B", ha="right")
+    ax.text(0.94, 0.05, "Cadros Command Architecture \u00b7 Hack-A-House 2026", fontsize=12, color="#64748B", ha="right")
 
     plt.savefig(output_path, dpi=100)
     plt.close()

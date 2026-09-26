@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "210510065",
+    "owner_name_raw": "GREAT STOCK COMPANY OF VAST INTERNATIONAL IMPORT INC",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.668135824343,
+          40.2071823083059
+        ],
+        [
+          -111.667356848448,
+          40.207177000283
+        ],
+        [
+          -111.667361808945,
+          40.2069329110499
+        ],
+        [
+          -111.668136053414,
+          40.2069381875331
+        ],
+        [
+          -111.668135824343,
+          40.2071823083059
+        ]
+      ]
+    ]
+  }
+}

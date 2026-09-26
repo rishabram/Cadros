@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "290610019",
+    "owner_name_raw": "CENTRAL UTAH WATER CONSERVANCY DISTRICT",
+    "owner_class": "SPECIAL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.642263071248,
+          40.0420485423461
+        ],
+        [
+          -111.642260822765,
+          40.0409617513657
+        ],
+        [
+          -111.644617440623,
+          40.0409588463669
+        ],
+        [
+          -111.644619726836,
+          40.0420456380813
+        ],
+        [
+          -111.642263071248,
+          40.0420485423461
+        ]
+      ]
+    ]
+  }
+}

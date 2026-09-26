@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "130650030",
+    "owner_name_raw": "WOODSIDE HOMES OF UTAH LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.810076752095,
+          40.3584501118402
+        ],
+        [
+          -111.810039339958,
+          40.3602035542552
+        ],
+        [
+          -111.810062734783,
+          40.3584501262152
+        ],
+        [
+          -111.810076752095,
+          40.3584501118402
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08341780350000",
+    "owner_name_raw": "SALT LAKE CO - REAL ESTATE DEPT # S3200",
+    "owner_class": "COUNTY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.943239036564,
+          40.7766181597885
+        ],
+        [
+          -111.943239068005,
+          40.7766186101205
+        ],
+        [
+          -111.94323010192,
+          40.7766253018349
+        ],
+        [
+          -111.943239036564,
+          40.7766181597885
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "170690003",
+    "owner_name_raw": "DJB TRIPLE K PROPERTIES - SERIES A A UTAH SERIES LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.693397900014,
+          40.3008744785245
+        ],
+        [
+          -111.693663143771,
+          40.3008745114097
+        ],
+        [
+          -111.693665750682,
+          40.3011873630836
+        ],
+        [
+          -111.693400506925,
+          40.3011873295135
+        ],
+        [
+          -111.693397900014,
+          40.3008744785245
+        ]
+      ]
+    ]
+  }
+}

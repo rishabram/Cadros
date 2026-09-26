@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08341040400000",
+    "owner_name_raw": "SALT LAKE CITY SCHOOL DISTRICT - PAUL SHULTE",
+    "owner_class": "SCHOOL_DISTRICT",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.945366970301,
+          40.7803314937691
+        ],
+        [
+          -111.945671637522,
+          40.780329266043
+        ],
+        [
+          -111.945671369824,
+          40.7805351184989
+        ],
+        [
+          -111.945366093545,
+          40.7805373414566
+        ],
+        [
+          -111.945366970301,
+          40.7803314937691
+        ]
+      ]
+    ]
+  }
+}

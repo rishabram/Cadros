@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "440160050",
+    "owner_name_raw": "HOUSING AUTHORITY OF UTAH COUNTY",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.688513958341,
+          40.3044694857828
+        ],
+        [
+          -111.688511991031,
+          40.3037559603975
+        ],
+        [
+          -111.688746949885,
+          40.3044702578582
+        ],
+        [
+          -111.688513958341,
+          40.3044694857828
+        ]
+      ]
+    ]
+  }
+}

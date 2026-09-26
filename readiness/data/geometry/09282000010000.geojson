@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "09282000010000",
+    "owner_name_raw": "UNITED STATES OF AMERICA - BUREAU OF RECLAMATION",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.838947383617,
+          40.7985800721754
+        ],
+        [
+          -111.838900878733,
+          40.7949611405972
+        ],
+        [
+          -111.843654481146,
+          40.7949399998804
+        ],
+        [
+          -111.843678403282,
+          40.7985689923679
+        ],
+        [
+          -111.838947383617,
+          40.7985800721754
+        ]
+      ]
+    ]
+  }
+}

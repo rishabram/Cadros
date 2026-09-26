@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "210420036",
+    "owner_name_raw": "UTAH POWER & LIGHT COMPANY",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.677432378726,
+          40.2258981332336
+        ],
+        [
+          -111.677804734004,
+          40.2258975632778
+        ],
+        [
+          -111.677805721253,
+          40.2262784264857
+        ],
+        [
+          -111.677432378726,
+          40.2258981332336
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "15033760340000",
+    "owner_name_raw": "SALT LAKE CITY CORPORATION - PUBLIC UTILITIES DEPARTMENT",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.942048628675,
+          40.7583146780411
+        ],
+        [
+          -111.94204069745,
+          40.7567187974517
+        ],
+        [
+          -111.942081701051,
+          40.7567186797315
+        ],
+        [
+          -111.942086050693,
+          40.7583145705305
+        ],
+        [
+          -111.942048628675,
+          40.7583146780411
+        ]
+      ]
+    ]
+  }
+}

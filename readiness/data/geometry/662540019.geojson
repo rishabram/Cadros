@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "662540019",
+    "owner_name_raw": "UTAH LIFESTYLE PROPERTY MANAGEMENT LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.665421717426,
+          40.0809032544569
+        ],
+        [
+          -111.665711107,
+          40.0809016880241
+        ],
+        [
+          -111.665711769058,
+          40.0811759149484
+        ],
+        [
+          -111.665422374094,
+          40.0811764778722
+        ],
+        [
+          -111.665421717426,
+          40.0809032544569
+        ]
+      ]
+    ]
+  }
+}

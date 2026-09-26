@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "09311590010000",
+    "owner_name_raw": "STATE OF UTAH - DIVISION  OF FACILITIES",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.890264581166,
+          40.7768207047681
+        ],
+        [
+          -111.890595898707,
+          40.7768206952445
+        ],
+        [
+          -111.890455615996,
+          40.7771532295151
+        ],
+        [
+          -111.890264581166,
+          40.7768207047681
+        ]
+      ]
+    ]
+  }
+}

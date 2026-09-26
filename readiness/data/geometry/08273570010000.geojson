@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08273570010000",
+    "owner_name_raw": "UTAH DEPARTMENT OF TRANSPORTAT - UDOT RIGHT OF WAY",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.947926196883,
+          40.7846196293053
+        ],
+        [
+          -111.948178907346,
+          40.7845536921593
+        ],
+        [
+          -111.948178959448,
+          40.7846191246134
+        ],
+        [
+          -111.947926196883,
+          40.7846196293053
+        ]
+      ]
+    ]
+  }
+}

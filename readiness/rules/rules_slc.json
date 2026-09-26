@@ -1,0 +1,79 @@
+{
+  "edition": "2026 S-21",
+  "store": "caddy_canonical_store_view",
+  "version": "2026-09-24",
+  "rules": [
+    {
+      "rule_id": "MU-5-01",
+      "citation": "21A.25.040 (Table 21A.25.040.C.1)",
+      "quote": "Height Maximum: 40 feet.",
+      "canonical_params": {"value": "40", "unit": "feet"},
+      "human_verification": {"result": "VERIFIED", "verified_by": "Rohan", "verified_on": "2026-09-23"},
+      "_caddy_rule_name": "Maximum building height",
+      "district": "MU-5"
+    },
+    {
+      "rule_id": "MU-5-02",
+      "citation": "21A.25.040 (Table 21A.25.040.C.1)",
+      "quote": "Front and Corner Side Yard Minimum: 10 feet.",
+      "canonical_params": {"value": "10", "unit": "feet"},
+      "human_verification": {"result": "VERIFIED", "verified_by": "Rohan", "verified_on": "2026-09-23"},
+      "_caddy_rule_name": "Minimum front and corner side yard",
+      "district": "MU-5"
+    },
+    {
+      "rule_id": "MU-5-03",
+      "citation": "21A.25.040 (Table 21A.25.040.C.1)",
+      "quote": "Interior Side Yard Minimum: 4 feet.",
+      "canonical_params": {"value": "4", "unit": "feet"},
+      "human_verification": {"result": "VERIFIED", "verified_by": "Rohan", "verified_on": "2026-09-23"},
+      "_caddy_rule_name": "Minimum interior side yard",
+      "district": "MU-5"
+    },
+    {
+      "rule_id": "MU-5-04",
+      "citation": "21A.25.040 (Table 21A.25.040.C.1)",
+      "quote": "Rear Yard Minimum: 10 feet.",
+      "canonical_params": {"value": "10", "unit": "feet"},
+      "human_verification": {"result": "VERIFIED", "verified_by": "Rohan", "verified_on": "2026-09-23"},
+      "_caddy_rule_name": "Minimum rear yard",
+      "district": "MU-5"
+    },
+    {
+      "rule_id": "R-1-8-01",
+      "citation": "21A.24.060 (Table 21A.24.060.B)",
+      "quote": "Minimum Lot Area: 8,000 square feet.",
+      "canonical_params": {"value": "8000", "unit": "sqft"},
+      "human_verification": {"result": "VERIFIED", "verified_by": "Rohan", "verified_on": "2026-09-23"},
+      "_caddy_rule_name": "Minimum lot area",
+      "district": "R-1-8"
+    },
+    {
+      "rule_id": "R-1-8-02",
+      "citation": "21A.24.060 (Table 21A.24.060.B)",
+      "quote": "Minimum Lot Width: 65 feet.",
+      "canonical_params": {"value": "65", "unit": "feet"},
+      "human_verification": {"result": "VERIFIED", "verified_by": "Rohan", "verified_on": "2026-09-23"},
+      "_caddy_rule_name": "Minimum lot width/frontage",
+      "district": "R-1-8"
+    },
+    {
+      "rule_id": "R-1-6-01",
+      "citation": "21A.24.070 (Table 21A.24.070.B)",
+      "quote": "Minimum Lot Area: 6,000 square feet.",
+      "canonical_params": {"value": "6000", "unit": "sqft"},
+      "human_verification": {"result": "VERIFIED", "verified_by": "Rohan", "verified_on": "2026-09-23"},
+      "_caddy_rule_name": "Minimum lot area",
+      "district": "R-1-6"
+    },
+    {
+      "rule_id": "R-1-6-02",
+      "citation": "21A.24.070 (Table 21A.24.070.B)",
+      "quote": "Minimum Lot Width: 50 feet.",
+      "canonical_params": {"value": "50", "unit": "feet"},
+      "human_verification": {"result": "VERIFIED", "verified_by": "Rohan", "verified_on": "2026-09-23"},
+      "_caddy_rule_name": "Minimum lot width/frontage",
+      "district": "R-1-6"
+    }
+  ]
+}

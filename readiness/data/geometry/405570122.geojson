@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "405570122",
+    "owner_name_raw": "MRQS HOLDINGS LLC - SERIES LAM REALTY A SERIES IN A UTAH SERIES (ET AL)",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.910723485386,
+          40.4056984029507
+        ],
+        [
+          -111.910515276564,
+          40.405699428332
+        ],
+        [
+          -111.910514768118,
+          40.4056390559864
+        ],
+        [
+          -111.910722976041,
+          40.4056380299201
+        ],
+        [
+          -111.910723485386,
+          40.4056984029507
+        ]
+      ]
+    ]
+  }
+}

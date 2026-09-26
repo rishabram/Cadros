@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "310520003",
+    "owner_name_raw": "UNITED STATES OF AMERICA",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.242112352963,
+          40.0635645386702
+        ],
+        [
+          -111.242107628723,
+          40.0682568041308
+        ],
+        [
+          -111.238392335049,
+          40.0683041110593
+        ],
+        [
+          -111.242112352963,
+          40.0635645386702
+        ]
+      ]
+    ]
+  }
+}

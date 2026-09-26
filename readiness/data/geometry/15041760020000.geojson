@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "15041760020000",
+    "owner_name_raw": "SALT LAKE CITY DEPARTMENT OF A - SALT LAKE CITY CORPORATION",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.961738030633,
+          40.7653610820885
+        ],
+        [
+          -111.962080670541,
+          40.7653495327224
+        ],
+        [
+          -111.962583383045,
+          40.7653236430845
+        ],
+        [
+          -111.961739458955,
+          40.765789871381
+        ],
+        [
+          -111.961738030633,
+          40.7653610820885
+        ]
+      ]
+    ]
+  }
+}

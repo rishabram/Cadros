@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "690984030",
+    "owner_name_raw": "MILLROSE PROPERTIES UTAH LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.962112851787,
+          40.3984781675064
+        ],
+        [
+          -111.962112795194,
+          40.3984780826759
+        ],
+        [
+          -111.96211288772,
+          40.3984781114088
+        ],
+        [
+          -111.962112851787,
+          40.3984781675064
+        ]
+      ]
+    ]
+  }
+}

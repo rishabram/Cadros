@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "300130026",
+    "owner_name_raw": "UTAH ASSOCIATED MUNICIPAL POWER SYSTEMS",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.730194885616,
+          40.0630406593759
+        ],
+        [
+          -111.729843907546,
+          40.0632344575224
+        ],
+        [
+          -111.728144090213,
+          40.0613955086243
+        ],
+        [
+          -111.728420327553,
+          40.0611208459062
+        ],
+        [
+          -111.730194885616,
+          40.0630406593759
+        ]
+      ]
+    ]
+  }
+}

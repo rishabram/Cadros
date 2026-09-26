@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "657190011",
+    "owner_name_raw": "ASPEN CONSTRUCTION & DEVELOPMENT-UTAH",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.703766267599,
+          40.2509223048605
+        ],
+        [
+          -111.703752370662,
+          40.2509291671712
+        ],
+        [
+          -111.703749927244,
+          40.2509270602794
+        ],
+        [
+          -111.703766267599,
+          40.2509223048605
+        ]
+      ]
+    ]
+  }
+}

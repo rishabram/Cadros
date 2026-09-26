@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08262610020000",
+    "owner_name_raw": "STATE ROAD COMMISSION OF UTAH - UDOT RIGHT OF WAY",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.916667891844,
+          40.792771205804
+        ],
+        [
+          -111.916666414115,
+          40.792414404943
+        ],
+        [
+          -111.916846979979,
+          40.7924139730807
+        ],
+        [
+          -111.916848458606,
+          40.7927707746242
+        ],
+        [
+          -111.916667891844,
+          40.792771205804
+        ]
+      ]
+    ]
+  }
+}

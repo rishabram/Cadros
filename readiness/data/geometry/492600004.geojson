@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "492600004",
+    "owner_name_raw": "UTAH HOMES MANAGEMENT GROUP LLC - 1504 N 1200 W PROTECTED SERIES LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.724740761674,
+          40.3248550935423
+        ],
+        [
+          -111.72430256258,
+          40.324856201653
+        ],
+        [
+          -111.724301702892,
+          40.3245940603562
+        ],
+        [
+          -111.724734812131,
+          40.3245938425684
+        ],
+        [
+          -111.724740761674,
+          40.3248550935423
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "580040052",
+    "owner_name_raw": "STATE ROAD COMMISSION OF UTAH (ET AL)",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.91336367982,
+          40.4495544595627
+        ],
+        [
+          -111.913368902625,
+          40.4495530424646
+        ],
+        [
+          -111.913364247555,
+          40.4495552675751
+        ],
+        [
+          -111.91336367982,
+          40.4495544595627
+        ]
+      ]
+    ]
+  }
+}

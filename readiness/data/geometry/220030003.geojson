@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "220030003",
+    "owner_name_raw": "UTAH STATE DEPT OF NATURAL RESOURCES WILDLIFE DIV",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.590073089434,
+          40.2470784164074
+        ],
+        [
+          -111.58532461191,
+          40.2471179703454
+        ],
+        [
+          -111.585248886627,
+          40.2433000153635
+        ],
+        [
+          -111.590006276337,
+          40.2432987584914
+        ],
+        [
+          -111.590073089434,
+          40.2470784164074
+        ]
+      ]
+    ]
+  }
+}

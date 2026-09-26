@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "270561013",
+    "owner_name_raw": "EDGE HOMES UTAH LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.580766909603,
+          40.0802758680692
+        ],
+        [
+          -111.580994110607,
+          40.0804258688042
+        ],
+        [
+          -111.58104656144,
+          40.0804823191817
+        ],
+        [
+          -111.580766909603,
+          40.0802758680692
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "180310131",
+    "owner_name_raw": "MUNICIPAL BUILDING AUTHORITY OF UTAH COUNTY",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.705922951917,
+          40.2762777011134
+        ],
+        [
+          -111.70592350438,
+          40.2764588256798
+        ],
+        [
+          -111.705808286462,
+          40.2762779032937
+        ],
+        [
+          -111.705922951917,
+          40.2762777011134
+        ]
+      ]
+    ]
+  }
+}

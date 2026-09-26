@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08362060110000",
+    "owner_name_raw": "REDEVELOPMENT AGENCY OF SALT L - EXECUTIVE DIRECTOR",
+    "owner_class": "CRA",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.897706215996,
+          40.7809715466414
+        ],
+        [
+          -111.897706238454,
+          40.7808747982124
+        ],
+        [
+          -111.898175630648,
+          40.7808748356242
+        ],
+        [
+          -111.898175609986,
+          40.7809715860939
+        ],
+        [
+          -111.897706215996,
+          40.7809715466414
+        ]
+      ]
+    ]
+  }
+}

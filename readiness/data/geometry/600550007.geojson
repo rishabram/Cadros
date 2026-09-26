@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "600550007",
+    "owner_name_raw": "UNITED STATES OF AMERICA FOR THE BUREAU OF LAND MANAGEMENT (ET AL)",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.119902485703,
+          40.0790266839967
+        ],
+        [
+          -112.115156192882,
+          40.0790574773749
+        ],
+        [
+          -112.115138388273,
+          40.0717409037538
+        ],
+        [
+          -112.119873585104,
+          40.0717490167536
+        ],
+        [
+          -112.119902485703,
+          40.0790266839967
+        ]
+      ]
+    ]
+  }
+}

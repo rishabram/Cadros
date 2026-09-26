@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "580150057",
+    "owner_name_raw": "UTAH STATE DEPT OF NATURAL RESOURCES",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.178570275625,
+          40.4506843249418
+        ],
+        [
+          -112.178604747575,
+          40.447070648263
+        ],
+        [
+          -112.183139765625,
+          40.447007179994
+        ],
+        [
+          -112.183069806627,
+          40.4506228356513
+        ],
+        [
+          -112.178570275625,
+          40.4506843249418
+        ]
+      ]
+    ]
+  }
+}

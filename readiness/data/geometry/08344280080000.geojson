@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08344280080000",
+    "owner_name_raw": "STATE OF UTAH, DIV OF FACILITI",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.932048137368,
+          40.775842016338
+        ],
+        [
+          -111.932299444662,
+          40.7754806224808
+        ],
+        [
+          -111.932302568104,
+          40.7759459482299
+        ],
+        [
+          -111.932048137368,
+          40.775842016338
+        ]
+      ]
+    ]
+  }
+}

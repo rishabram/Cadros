@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "290430006",
+    "owner_name_raw": "SAN PEDRO LOS ANGELES AND SALT LAKE RAILROAD CO",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.767715324043,
+          39.9973167404571
+        ],
+        [
+          -111.767712370382,
+          39.9965559853444
+        ],
+        [
+          -111.771012483394,
+          39.9973091010097
+        ],
+        [
+          -111.767715324043,
+          39.9973167404571
+        ]
+      ]
+    ]
+  }
+}

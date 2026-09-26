@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "040260014",
+    "owner_name_raw": "UTAH REGIONAL HOUSING CORPORATION",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.6658554483,
+          40.2293311758513
+        ],
+        [
+          -111.666121300216,
+          40.2293320640047
+        ],
+        [
+          -111.666119756012,
+          40.2296037533486
+        ],
+        [
+          -111.665853901401,
+          40.2296028651989
+        ],
+        [
+          -111.6658554483,
+          40.2293311758513
+        ]
+      ]
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "190250236",
+    "owner_name_raw": "STORCO UTAH LIMITED PARTNERSHIP",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.707488500759,
+          40.2644380066845
+        ],
+        [
+          -111.70744764538,
+          40.2643881587707
+        ],
+        [
+          -111.707713136174,
+          40.2643914490632
+        ],
+        [
+          -111.707488500759,
+          40.2644380066845
+        ]
+      ]
+    ]
+  }
+}

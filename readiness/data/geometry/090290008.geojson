@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "090290008",
+    "owner_name_raw": "DAUGHTERS OF THE UTAH PIONEERS CAMP SALEM",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.678399975678,
+          40.05407007431
+        ],
+        [
+          -111.678399261517,
+          40.0541153550948
+        ],
+        [
+          -111.678365932224,
+          40.0541527002195
+        ],
+        [
+          -111.678366645486,
+          40.0541074194595
+        ],
+        [
+          -111.678399975678,
+          40.05407007431
+        ]
+      ]
+    ]
+  }
+}

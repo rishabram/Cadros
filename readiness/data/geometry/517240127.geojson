@@ -1,0 +1,40 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "517240127",
+    "owner_name_raw": "MRQS HOLDINGS LLC - SERIES FMM RIDGEHOUSE A SERIES IN A UTAH SERIES (ET AL)",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.948107264007,
+          40.3823387352832
+        ],
+        [
+          -111.947865429447,
+          40.3825437400652
+        ],
+        [
+          -111.947733997837,
+          40.3824530634763
+        ],
+        [
+          -111.947690859838,
+          40.3824231378623
+        ],
+        [
+          -111.947934374247,
+          40.3822189894346
+        ],
+        [
+          -111.948107264007,
+          40.3823387352832
+        ]
+      ]
+    ]
+  }
+}

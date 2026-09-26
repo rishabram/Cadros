@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "14131520050000",
+    "owner_name_raw": "UTAH DEPARTMENT OF TRANSPORTAT - RIGHT OF WAY, 4TH FLOOR",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.024477214493,
+          40.7326079556366
+        ],
+        [
+          -112.024477125559,
+          40.7325901149014
+        ],
+        [
+          -112.024662536037,
+          40.7325895655681
+        ],
+        [
+          -112.024663816137,
+          40.7327533095622
+        ],
+        [
+          -112.024477214493,
+          40.7326079556366
+        ]
+      ]
+    ]
+  }
+}

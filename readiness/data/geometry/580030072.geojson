@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "580030072",
+    "owner_name_raw": "PROVO RIVER WATER USERS ASSOCIATION",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.921389661556,
+          40.4396518503306
+        ],
+        [
+          -111.921565742132,
+          40.4396539574891
+        ],
+        [
+          -111.921504812999,
+          40.4397236837496
+        ],
+        [
+          -111.921389661556,
+          40.4396518503306
+        ]
+      ]
+    ]
+  }
+}

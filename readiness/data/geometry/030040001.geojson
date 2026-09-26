@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "030040001",
+    "owner_name_raw": "UTAH COMMUNITY FEDERAL CREDIT UNION",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.702053062673,
+          40.310160747735
+        ],
+        [
+          -111.702495246694,
+          40.3101599825748
+        ],
+        [
+          -111.702519914431,
+          40.3102148377548
+        ],
+        [
+          -111.702077730411,
+          40.3102156029143
+        ],
+        [
+          -111.702053062673,
+          40.310160747735
+        ]
+      ]
+    ]
+  }
+}

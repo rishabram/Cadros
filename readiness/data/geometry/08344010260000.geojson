@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08344010260000",
+    "owner_name_raw": "STATE OF UTAH, DIV FAC CONSTR",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.937154090476,
+          40.77393881105
+        ],
+        [
+          -111.937371019244,
+          40.7741719307603
+        ],
+        [
+          -111.937154398598,
+          40.7741721062737
+        ],
+        [
+          -111.937154090476,
+          40.77393881105
+        ]
+      ]
+    ]
+  }
+}

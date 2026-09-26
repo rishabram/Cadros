@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "130470017",
+    "owner_name_raw": "UTAH DEPARTMENT OF TRANSPORTATION",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.804583274756,
+          40.3725754725381
+        ],
+        [
+          -111.804054999792,
+          40.372576846089
+        ],
+        [
+          -111.804054309886,
+          40.3724215764938
+        ],
+        [
+          -111.804583274756,
+          40.3725754725381
+        ]
+      ]
+    ]
+  }
+}

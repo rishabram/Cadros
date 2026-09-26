@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "417170001",
+    "owner_name_raw": "PLANNED PARENTHOOD ASSOCIATION OF UTAH",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.72396751703,
+          40.3168561035564
+        ],
+        [
+          -111.724476231179,
+          40.3168504753578
+        ],
+        [
+          -111.724489548703,
+          40.3172802966022
+        ],
+        [
+          -111.723983194428,
+          40.3172847603648
+        ],
+        [
+          -111.72396751703,
+          40.3168561035564
+        ]
+      ]
+    ]
+  }
+}

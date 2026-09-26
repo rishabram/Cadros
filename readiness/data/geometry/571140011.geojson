@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "571140011",
+    "owner_name_raw": "UTAH CITY WEST PUBLIC INFRASTRUCTURE DISTRICT NO 1",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.755918249778,
+          40.312270642196
+        ],
+        [
+          -111.758567043784,
+          40.3120498400895
+        ],
+        [
+          -111.758607002645,
+          40.3123619146007
+        ],
+        [
+          -111.755999578752,
+          40.3125914047718
+        ],
+        [
+          -111.755918249778,
+          40.312270642196
+        ]
+      ]
+    ]
+  }
+}

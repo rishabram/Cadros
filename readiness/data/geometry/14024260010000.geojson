@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "14024260010000",
+    "owner_name_raw": "UNITED STATES OF AMERICA - GENERAL SERVICES ADMIN",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -112.027868371758,
+          40.7621056816448
+        ],
+        [
+          -112.027862170688,
+          40.7612727362399
+        ],
+        [
+          -112.029077234636,
+          40.7612674963498
+        ],
+        [
+          -112.029083501283,
+          40.7621067532879
+        ],
+        [
+          -112.027868371758,
+          40.7621056816448
+        ]
+      ]
+    ]
+  }
+}

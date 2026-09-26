@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "452000033",
+    "owner_name_raw": "TAC LLC A UTAH SERIES LIMITED LIABILITY COMPANY - SERIES 4",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.664485099775,
+          40.2373751744851
+        ],
+        [
+          -111.66439557547,
+          40.2373748597253
+        ],
+        [
+          -111.664396134222,
+          40.237281552914
+        ],
+        [
+          -111.664485657628,
+          40.2372818663028
+        ],
+        [
+          -111.664485099775,
+          40.2373751744851
+        ]
+      ]
+    ]
+  }
+}

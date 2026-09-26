@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "210500138",
+    "owner_name_raw": "UNITED WAY OF CENTRAL AND SOUTHERN UTAH",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.66102125443,
+          40.2228367432077
+        ],
+        [
+          -111.662182609904,
+          40.2228246535599
+        ],
+        [
+          -111.662180856392,
+          40.2238473508475
+        ],
+        [
+          -111.661034656395,
+          40.2238594862674
+        ],
+        [
+          -111.66102125443,
+          40.2228367432077
+        ]
+      ]
+    ]
+  }
+}

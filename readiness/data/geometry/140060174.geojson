@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "140060174",
+    "owner_name_raw": "DESERET TITLE HOLDING CORPORATION",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.735073496685,
+          40.393037521213
+        ],
+        [
+          -111.735152139697,
+          40.3930373645375
+        ],
+        [
+          -111.735159395389,
+          40.3941076272041
+        ],
+        [
+          -111.735077167202,
+          40.394107792087
+        ],
+        [
+          -111.735073496685,
+          40.393037521213
+        ]
+      ]
+    ]
+  }
+}

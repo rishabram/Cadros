@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "526410186",
+    "owner_name_raw": "FOREST SERVICE DEPARTMENT OF AGRICULTURE",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.601494009445,
+          40.1829458930933
+        ],
+        [
+          -111.601207756788,
+          40.1829457544602
+        ],
+        [
+          -111.601207649889,
+          40.1829288480897
+        ],
+        [
+          -111.601493890867,
+          40.1829271494913
+        ],
+        [
+          -111.601494009445,
+          40.1829458930933
+        ]
+      ]
+    ]
+  }
+}

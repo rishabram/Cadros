@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "060050008",
+    "owner_name_raw": "UTAH COUNTY SV MAIN ON MAIN MIXED USE LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.612359419369,
+          40.1615508584981
+        ],
+        [
+          -111.612359824509,
+          40.1617978557672
+        ],
+        [
+          -111.611990943016,
+          40.161798210696
+        ],
+        [
+          -111.611990539672,
+          40.1615512134283
+        ],
+        [
+          -111.612359419369,
+          40.1615508584981
+        ]
+      ]
+    ]
+  }
+}

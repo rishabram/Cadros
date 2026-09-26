@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "410780022",
+    "owner_name_raw": "880 WEST SERIES OF THE EAST ROCK LLC A UTAH SERIES LLC",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.673883547365,
+          40.2249708018023
+        ],
+        [
+          -111.673476061671,
+          40.2249714684746
+        ],
+        [
+          -111.673475078015,
+          40.224713465109
+        ],
+        [
+          -111.673882848476,
+          40.2247128087224
+        ],
+        [
+          -111.673883547365,
+          40.2249708018023
+        ]
+      ]
+    ]
+  }
+}

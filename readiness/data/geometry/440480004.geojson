@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "440480004",
+    "owner_name_raw": "CATHOLIC DIOCESE OF SALT LAKE CITY REAL ESTATE CORPORATION",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.960955794752,
+          39.953750520976
+        ],
+        [
+          -111.959728057372,
+          39.9537646589354
+        ],
+        [
+          -111.959662383338,
+          39.9520815112631
+        ],
+        [
+          -111.960907338727,
+          39.9520665169859
+        ],
+        [
+          -111.960955794752,
+          39.953750520976
+        ]
+      ]
+    ]
+  }
+}

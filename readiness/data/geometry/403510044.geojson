@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "403510044",
+    "owner_name_raw": "STATE OF UTAH DEPARTMENT OF NATURAL RESOURCES DIVISION OF WI",
+    "owner_class": "STATE",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.603794079255,
+          40.1800524444535
+        ],
+        [
+          -111.60374793729,
+          40.1799262389599
+        ],
+        [
+          -111.603879518021,
+          40.1798576186907
+        ],
+        [
+          -111.603896071277,
+          40.1799170119018
+        ],
+        [
+          -111.603794079255,
+          40.1800524444535
+        ]
+      ]
+    ]
+  }
+}

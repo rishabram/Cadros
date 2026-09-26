@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "290110007",
+    "owner_name_raw": "SESD-SOUTH UTAH VALLEY ELECTRIC SERVICE DISTRICT",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.768243745432,
+          40.0382786537078
+        ],
+        [
+          -111.769067325376,
+          40.0382767527294
+        ],
+        [
+          -111.769006122258,
+          40.0410178211194
+        ],
+        [
+          -111.768285645552,
+          40.0410267321126
+        ],
+        [
+          -111.768243745432,
+          40.0382786537078
+        ]
+      ]
+    ]
+  }
+}

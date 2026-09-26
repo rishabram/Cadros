@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "556890023",
+    "owner_name_raw": "CASTA LLC A UTAH LIMITED LIABILITY COMPANY",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.850908405811,
+          40.4295032579642
+        ],
+        [
+          -111.850642664387,
+          40.4295040539093
+        ],
+        [
+          -111.850642311349,
+          40.4294351471865
+        ],
+        [
+          -111.850908052773,
+          40.429434349873
+        ],
+        [
+          -111.850908405811,
+          40.4295032579642
+        ]
+      ]
+    ]
+  }
+}

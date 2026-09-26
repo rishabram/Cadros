@@ -1,0 +1,36 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "08321000086004",
+    "owner_name_raw": "SALT LAKE CITY CORPORATION - SLC AIRPORT AUTHORITY",
+    "owner_class": "CITY",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.978912024032,
+          40.778692741287
+        ],
+        [
+          -111.979145692905,
+          40.778676133943
+        ],
+        [
+          -111.979164178437,
+          40.7788264338605
+        ],
+        [
+          -111.97893051136,
+          40.7788430398064
+        ],
+        [
+          -111.978912024032,
+          40.778692741287
+        ]
+      ]
+    ]
+  }
+}

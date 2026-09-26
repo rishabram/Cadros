@@ -1,0 +1,32 @@
+{
+  "type": "Feature",
+  "properties": {
+    "parcel_id": "230020031",
+    "owner_name_raw": "SPRINGVILLE CITY",
+    "owner_class": "UNCLASSIFIED",
+    "epsg": "EPSG:4326"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -111.607901373465,
+          40.1898403487622
+        ],
+        [
+          -111.607869810259,
+          40.1898403782702
+        ],
+        [
+          -111.607867856423,
+          40.1885982875359
+        ],
+        [
+          -111.607901373465,
+          40.1898403487622
+        ]
+      ]
+    ]
+  }
+}

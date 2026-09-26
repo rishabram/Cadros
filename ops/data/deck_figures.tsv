@@ -1,0 +1,9 @@
+# figure	value	run_id   (tab separated; one row per number that appears in a deck or demo)
+blind benchmark pass rate	1/7	RUN-20260925-BENCH
+scored plats	15	RUN-20260925-BENCH
+valid engine runs	14	RUN-20260925-BENCH
+Daybreak lot yield	69	RUN-20260924-DAYBREAK2
+Clara Crossing yield	exact	RUN-20260924-CLARA2
+Pacific Springs yield	48	RUN-20260923-PACIFIC
+mix-prior uplift	+0 picks	RUN-20260925-RANK3
+500-parcel screen errors	0	

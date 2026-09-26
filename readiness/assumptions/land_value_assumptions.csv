@@ -1,0 +1,13 @@
+fits_type,tier,hard_cost,soft_cost,infra_per_unit,builder_margin,version
+single_family,low,220000,35000,20000,40000,v1.0-chat2
+single_family,mid,260000,45000,30000,50000,v1.0-chat2
+single_family,high,310000,60000,45000,65000,v1.0-chat2
+townhome,low,180000,30000,15000,35000,v1.0-chat2
+townhome,mid,220000,40000,22000,45000,v1.0-chat2
+townhome,high,270000,55000,32000,55000,v1.0-chat2
+cottage_cluster,low,190000,32000,18000,38000,v1.0-chat2
+cottage_cluster,mid,235000,42000,25000,48000,v1.0-chat2
+cottage_cluster,high,285000,58000,38000,60000,v1.0-chat2
+default,low,200000,32000,18000,38000,v1.0-chat2
+default,mid,240000,42000,25000,48000,v1.0-chat2
+default,high,290000,58000,38000,60000,v1.0-chat2

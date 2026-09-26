@@ -1,0 +1,15 @@
+parcel_id,site_name,address,zone_code,land_use_code,owner_name_raw,owner_class,data_source_note
+15011040040000,Parry Stone Block,100 S 600 W,G-MU,V,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,APN from crexi/buildingsaltlake; zone G-MU per SLC GIS; land_use V=vacant (assessor)
+15011040050000,Parry Stone Block,Dansie Dr at 100 S,G-MU,V,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,Contiguous parcel in Parry Block assembly; zone G-MU per SLC zoning layer
+15011030060000,Peacock Block,300 S 500 W,G-MU,UNKNOWN,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,Zone G-MU per Rio Grande District boundary; land_use_code not confirmed in accessible assessor record
+15011030070000,Peacock Block,300 S 550 W,G-MU,UNKNOWN,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,Zone G-MU per Rio Grande District boundary; land_use_code UNKNOWN
+15011030010000,Rio Grande Block D,200 S 500 W,G-MU,UNKNOWN,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,Rio Grande District Block D; zone G-MU (D-4 rezone approved Mar 2026); land_use UNKNOWN
+15011030020000,Rio Grande Block E,250 S 500 W,G-MU,UNKNOWN,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,Rio Grande District Block E; same rezone context; land_use UNKNOWN
+16091040010000,Historic Ballpark,77 W 1300 S,MU-8,S,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,Smith's Ballpark; zone MU-8 per Jul 2026 council action (from MU-11); land_use S=sports/recreation
+16091040020000,Historic Ballpark,Ballpark N Parking Parcel,MU-8,UNKNOWN,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,North parking parcel in 13.5-acre Ballpark NEXT site; zone MU-8; land_use UNKNOWN
+08144500010000,Major Street Parcels,1000 W North Temple,MU-5,V,REDEVELOPMENT AGENCY OF SALT LAKE CITY,CRA,North Temple corridor CRA parcels; zone MU-5 per SLC GIS; land_use V=vacant
+08144500020000,Major Street Parcels,1050 W North Temple,MU-5,V,REDEVELOPMENT AGENCY OF SALT LAKE CITY,CRA,Contiguous North Temple corridor parcel; zone MU-5; land_use V=vacant
+16104700010000,Second West Parcels,200 W 900 S,MU-5,V,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,Second West corridor CRA parcel; zone MU-5 per SLC zoning map; land_use V=vacant
+16104700020000,Second West Parcels,250 W 900 S,MU-5,V,SALT LAKE CITY COMMUNITY REINVESTMENT AGENCY,CRA,Second West corridor CRA parcel; zone MU-5; land_use V=vacant
+16173540010000,West Montrose,1600 W 300 N,R-MU,UNKNOWN,SALT LAKE CITY,CITY,West Montrose neighborhood infill site; zone R-MU per SLC zoning; land_use UNKNOWN pending assessor pull
+22071050010000,Sugar House,1085 E Simpson Ave,MU-3,V,REDEVELOPMENT AGENCY OF SALT LAKE CITY,CRA,Sugar House RDA site (former fire station / Deseret Industries area); zone MU-3; land_use V=vacant
